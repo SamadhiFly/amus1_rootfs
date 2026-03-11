@@ -1,0 +1,15 @@
+Package: less
+Version: 471-r0
+Description: Text file viewer similar to more
+ Less is a program similar to more, i.e. a terminal based program for
+ viewing text files and the output from other programs. Less offers many
+ features beyond those that more does.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+ | BSD-2-Clause
+Architecture: cortexa9-vfp-neon
+OE: less
+Homepage: http://www.greenwoodsoftware.com/
+Depends: update-alternatives-opkg, libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Source: http://www.greenwoodsoftware.com/less/less-471.tar.gz file://0001-Fix-possible-buffer-overrun-with-invalid-UTF-8.patch

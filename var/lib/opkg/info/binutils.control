@@ -1,0 +1,20 @@
+Package: binutils
+Version: 2.24-r0
+Description: GNU binary utilities
+ The GNU Binutils are a collection of binary tools. The main ones are ld
+ (GNU Linker), and as (GNU Assembler). This package also includes addition
+ tools such as addr2line (Converts addresses into filenames and line
+ numbers), ar (utility for creating, modifying and extracting archives),
+ nm (list symbols in object files), objcopy (copy and translate object
+ files), objdump (Display object information), and other tools and related
+ libraries.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: binutils
+Homepage: http://www.gnu.org/software/binutils/
+Depends: update-alternatives-opkg, libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: binutils-symlinks
+Source: http://ftp.gnu.org/gnu/binutils/binutils-2.24.tar.bz2 file://binutils-uclibc-100-uclibc-conf.patch file://binutils-uclibc-300-001_ld_makefile_patch.patch file://binutils-uclibc-300-006_better_file_error.patch file://binutils-uclibc-300-012_check_ldrunpath_length.patch file://binutils-uclibc-gas-needs-libm.patch file://libtool-2.4-update.patch file://libiberty_path_fix.patch file://binutils-poison.patch file://libtool-rpath-fix.patch file://binutils-armv5e.patch file://mips64-default-ld-emulation.patch file://binutils-xlp-support.patch file://fix-pr15815.patch file://fix-pr2404.patch file://fix-pr16476.patch file://fix-pr16428.patch file://replace_macros_with_static_inline.patch file://0001-Fix-MMIX-build-breakage-from-bfd_set_section_vma-cha.patch file://binutils-uninitialised-warning.patch file://binutils_CVE-2014-8484.patch file://binutils_CVE-2014-8485.patch file://binutils_CVE-2014-8501.patch file://binutils_CVE-2014-8502_1.patch file://binutils_CVE-2014-8502.patch file://binutils_CVE-2014-8503.patch file://binutils_CVE-2014-8504.patch file://binutils_CVE-2014-8737.patch file://Fix-tc-i386.c-Werror-logical-not-parentheses-error.patch file://0001-Add-momit_lock_prefix-no-yes-option.patch file://Add-wdc.ext.clear-and-wdc.ext.flush.patch file://Add-mlittle-endian-and-mbig-endian.patch file://Disable-the-warning-message-for-eh_frame_hdr.patch file://Fix-relaxation-of-assembler-resolved-reference.patch file://Fixup-debug_loc-sections-after-linker-relaxati.patch file://upstream-change-to-garbage-collection-s.patch

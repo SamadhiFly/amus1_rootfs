@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Customer Login Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.main {
+				position: relative;
+				overflow: hidden;
+				height: 100%;
+				width: 100%;
+			}
+			.logo {
+				position: absolute; 
+				top: 0; 
+				left: 0;
+				right: 0;
+				height: 20%; 
+				overflow: hidden;
+			}
+      .login {
+				position: fixed;
+				top: 20%;
+				height: 60%;
+        left: 0;
+        right: 0;
+        overflow: auto;
+      }
+			.foot {
+				position: absolute; 
+				left: 0;
+				right: 0;
+				bottom: 0; 
+				height: auto;
+				overflow: hidden;
+    		color: white;
+    		background-color: grey;
+    		text-align: left;
+			}
+			img {
+    		display: block;
+    		margin: auto;
+				max-width: 80%;
+				max-height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="logo">
+				<img src="./include/starlight-logo.png">
+			</div>
+			<div class="login">
+				<form name="f1" method="post" action="">
+					<table border="0" width="100%" cellspacing="1" cellpadding="0" class="font1">
+						<tr>	
+							<td id="VipAccountTitle" height="60" width="31%" align="center">
+								Account
+							</td>
+							<td height="60" width="68%" align="left">
+								<input id="VipDefaultAccount" name="username" type="text" maxlength="26" class="input-border" value="">
+							</td>
+						</tr>
+						<tr>
+							<td id="VipPasswordTitle" height="60" width="31%" align="center">
+								Password
+							</td>
+							<td height="60" width="68%" align="left">
+								<input id="VipDefaultPassword" name="password" type="password" maxlength="16" class="input-border" value="">
+							</td>
+						</tr>
+    				<tr>
+							<td height="60" width="31%" align="center">
+								&nbsp;
+							</td>
+							<td height="60" width="68%" align="left">
+								<input id="login" type="submit" name="login" value="Login">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="foot">
+				<p>Please login</p>
+			</div>
+		</div>
+	</body>
+</html>
+

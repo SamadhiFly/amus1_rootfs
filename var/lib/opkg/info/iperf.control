@@ -1,0 +1,14 @@
+Package: iperf
+Version: 2.0.5-r0
+Description: iperf version 2.0.5-r0
+ Iperf is a tool to measure maximum TCP bandwidth, allowing the tuning of
+ various parameters and UDP characteristics
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-2-Clause
+Architecture: cortexa9-vfp-neon
+OE: iperf
+Homepage: http://dast.nlanr.net/Projects/Iperf/
+Depends: libgcc1 (>= linaro-4.9), libstdc++6 (>= linaro-4.9), libc6 (>= 2.21)
+Source: http://downloads.sourceforge.net/iperf/iperf-2.0.5.tar.gz file://iperf-2.0.5_ManPage.patch file://0001-fix-out-of-tree-config.patch

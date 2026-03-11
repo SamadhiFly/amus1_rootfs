@@ -1,0 +1,14 @@
+2024-11-22 07:05:39: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2024-11-22 07:05:39: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 
+2024-11-22 07:35:29: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2024-11-22 07:35:29: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 
+2024-11-22 08:02:29: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2024-11-22 08:02:29: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 
+2024-11-22 08:29:30: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2024-11-22 08:29:30: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 
+2024-11-22 08:56:30: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2024-11-22 08:56:30: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 
+2024-11-22 09:23:32: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2024-11-22 09:23:32: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 
+2026-03-02 03:53:23: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/log.c.164) server started 
+2026-03-02 03:53:23: (/home/thiss/zynq_yocto/build/tmp/work/cortexa9-vfp-neon-poky-linux-gnueabi/lighttpd/1.4.35-r1/lighttpd-1.4.35/src/server.c.1045) WARNING: unknown config-key: server.upload-max-filesize (ignored) 

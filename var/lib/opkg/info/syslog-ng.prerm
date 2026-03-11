@@ -1,0 +1,5 @@
+#!/bin/sh
+	update-alternatives --remove  syslog-init /etc/init.d/syslog.syslog-ng
+if [ -z "$D" ]; then
+	/etc/init.d/syslog stop
+fi

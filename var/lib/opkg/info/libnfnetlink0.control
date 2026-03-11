@@ -1,0 +1,18 @@
+Package: libnfnetlink0
+Version: 1.0.1-r0
+Description: Low-level library for netfilter related kernel/userspace communication
+ libnfnetlink is the low-level library for netfilter related
+ kernel/userspace communication. It provides a generic messaging
+ infrastructure for in-kernel netfilter subsystems (such as nfnetlink_log,
+ nfnetlink_queue, nfnetlink_conntrack) and their respective users and/or
+ management tools in userspace.
+Section: devel/libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: libnfnetlink
+Homepage: http://www.netfilter.org/projects/libnfnetlink/index.html
+Depends: libc6 (>= 2.21)
+Provides: libnfnetlink
+Source: http://www.netfilter.org/projects/libnfnetlink/files/libnfnetlink-1.0.1.tar.bz2;name=tar

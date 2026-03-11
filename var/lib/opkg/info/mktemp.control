@@ -1,0 +1,13 @@
+Package: mktemp
+Version: 1.7-r3
+Description: Enables safe temporary file creation from shell scripts
+ Enables safe temporary file creation from shell scripts.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: ISC
+Architecture: cortexa9-vfp-neon
+OE: mktemp
+Homepage: http://www.mktemp.org/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: ftp://ftp.mktemp.org/pub/mktemp/mktemp-1.7.tar.gz file://disable-strip.patch file://fix-parallel-make.patch

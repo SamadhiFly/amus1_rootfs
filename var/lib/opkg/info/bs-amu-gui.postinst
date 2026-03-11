@@ -1,0 +1,75 @@
+#!/bin/sh
+
+#================================================================
+# BIRD Technologies
+# Wang
+# February 2019
+#
+# This script performs post install actions for the
+# bs-amu-gui package.
+#
+#================================================================
+
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+
+case "$1" in
+    configure)
+    echo ""
+    echo "===== Postinstall Commencing : bs-amu-gui ====="
+    echo ""
+
+    if [ -f /var/www/backend/admin.sqlite ]; then
+        if [ ! -f /home/bird/data/admin.sqlite ]; then
+            echo "[admin.sqlite] Generate the administrator database."
+            sqlite3 /home/bird/data/admin.sqlite "pragma jounal=wal"
+            cat /var/www/backend/admin.sqlite | sqlite3 /home/bird/data/admin.sqlite
+        fi
+		
+        if [ -f /home/bird/data/admin.sqlite ]; then
+            echo "[admin.sqlite] update the administrator database."
+            sqlite3 /home/bird/data/admin.sqlite "pragma jounal=wal"
+            cat /var/www/backend/admin.sqlite | sqlite3 /home/bird/data/admin.sqlite
+        fi		
+
+        if [ -f /tmp/config.sqlite ]; then
+            echo "[config.sqlite] Authorize read permissions for cf database for php users "
+            chown www-data:root /tmp/config.sqlite
+        fi
+    fi
+
+# Authorize php
+    echo "[admin.sqlite] Authorize read and write permissions for php users."
+    chown -R www-data:root /home/bird/data
+    chown www-data:root /home/bird/data/admin.sqlite
+    chown -R www-data:root /tmp/
+    chown -R www-data:root /var/www/backend/
+    chown www-data:root /tmp/config.sqlite
+
+    echo ""
+    echo "===== Postinstall Complete : bs-amu-gui ====="
+    echo ""
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+
+

@@ -1,0 +1,75 @@
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+# 
+# All AMUS cron jobs are defined in this file: 
+# sudo crontab -u root /path/to/this_file
+######################################################################
+
+# set environment
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Restart pmt at the start of the day
+# -- SH
+0 0 * * * /etc/init.d/bs-amu-pmt restart
+
+# check in every 1 minutes if pmt is running
+# -- SH
+* * * * * /usr/bin/pgrep bs-amu-pmt || /etc/init.d/bs-amu-pmt start
+
+# update timestamp file every minute
+# -- SH
+* * * * * /usr/bin/bs-amu-timestamp
+
+# reset watchdog timerout to 5min in every minute
+# -- SH
+* * * * * test -x /usr/bin/set_watchdog_timer && /usr/bin/set_watchdog_timer 5
+
+# monitor lighttpd every 10 mins
+# --SH
+*/10 * * * * test -x /usr/bin/bs-amu-monitor-lighttpd && /usr/bin/bs-amu-monitor-lighttpd 
+
+# check daily on 00:15 to make sure no more than 45 days of historical status are kept
+15 0 * * * test -x /usr/bin/bs-amu-clean-hstatus && /usr/bin/bs-amu-clean-hstatus -d 45
+
+# check at 15/45 min every hour to make sure size of /home/bird/data/logs/backup directory
+# no bigger than 500Mb and no log backup file older than 180 days
+15,45 * * * * test -x /usr/bin/bs-amu-clean-logs && /usr/bin/bs-amu-clean-logs
+
+# check daily on 00:45 to make sure no more than 45 days of events are kept
+45 0 * * * test -x /usr/bin/bs-amu-clean-events && /usr/bin/bs-amu-clean-events -d 45
+
+#update system clock and hardware clock if gps is fixe, in every 20 mins
+# --SH
+*/20 * * * * test -x /usr/bin/bs-amu-updateclock  && /usr/bin/bs-amu-updateclock
+
+# check every 10min to make sure logs sizes not exceed 50mb limit   
+# -- SH
+* * * * * test -f /usr/share/amu/pmt/logrotate.conf && /usr/sbin/logrotate /usr/share/amu/pmt/logrotate.conf 
+
+# detect modem info and modem info is changed then write it to HI, in every 25 mins
+# --ZBA
+*/25 * * * * test -x /usr/bin/detect_modem_info  && /usr/bin/detect_modem_info
+
+# check every 30 mins to make sure the size of /home/bird/data/ssf directory
+# is not exceeded 100MB and there is no ssf file is older than 90 days
+*/30 * * * * test -x /usr/bin/bs-amu-clean-ssf && /usr/bin/bs-amu-clean-ssf
+
+# check every 40 mins to upgrade from Bird media box
+# --ZBA
+*/40 * * * * test -x /usr/bin/chk_upgrade.py && /usr/bin/chk_upgrade.py
+
+# check every 30 mins to OTA upgrade from network
+# --ZBA
+*/30 * * * * test -x /usr/bin/chk_ota_upgrade.py && /usr/bin/chk_ota_upgrade.py
+
+# Backup gcoh database file at the start of the day
+# --ZBA
+0 0 * * * test -x /usr/bin/bs-amu-backup-gcoh && /usr/bin/bs-amu-backup-gcoh
+
+# Delete ant_disabled at the start of the day
+# --ZML
+0 0 * * * /bin/rm /tmp/ant_disabled
+

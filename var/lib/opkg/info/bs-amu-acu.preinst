@@ -1,0 +1,45 @@
+#!/bin/sh
+
+#================================================================
+# THISS Technologies
+# Peter Stootman
+# February 2019
+#
+# This script performs pre install actions for the
+# bs-amu-acu package.
+#
+#================================================================
+
+set -e
+
+# summary of how this script can be called:
+#        * <new-preinst> `install'
+#        * <new-preinst> `install' <old-version>
+#        * <new-preinst> `upgrade' <old-version>
+#        * <old-preinst> `abort-upgrade' <new-version>
+
+
+case "$1" in
+    install|upgrade)
+    echo ""
+    echo "===== Preinstall Commencing : bs-amu-acu ====="
+    #if pgrep bs-amu-acu ; then
+    #  pkill -kill bs-amu-acu
+    #fi
+    echo ""
+    echo "===== Preinstall Complete : bs-amu-acu ====="
+    echo ""
+    ;;
+
+    abort-upgrade)
+    ;;
+
+    *)
+        echo "preinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+
+

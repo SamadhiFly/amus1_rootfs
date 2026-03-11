@@ -1,0 +1,123 @@
+#!/bin/bash
+
+#================================================================
+# THISS Technologies Pte Ltd
+# March 2016
+#
+# Start the UTA process 
+#
+#================================================================
+
+# Define the names.
+DESC="UTA"
+MODULE_NAME="tt-cu-uta"
+BIN_PATH="/usr/bin"
+MODULE_BIN="${BIN_PATH}/${MODULE_NAME}"
+PID_PATH="/var/run"
+
+# Include environment.
+if test -f /usr/share/cu/uta/tt-cu-environment; then
+  . /usr/share/cu/uta/tt-cu-environment
+else
+  echo "Environment file /usr/share/cu/uta/tt-cu-environment missing!"
+  exit 1;
+fi
+
+# Make sure the binary exists
+test -x $MODULE_BIN || exit 0
+
+do_start() {
+    log "Starting $MODULE_NAME..."
+ 
+    #if [ -c /dev/rpmsg0 ];
+    #then		
+    #   chown thiss:thiss  /dev/rpmsg0
+    #fi
+    
+    # make sure to start at a clean state
+    #MODULE_LOADED=$(lsmod | grep rpmsg_user_dev_driver)
+    #if [ ! -z "$MODULE_LOADED" ]; then
+    #  modprobe -r rpmsg_user_dev_driver
+    #fi
+
+    #MODULE_LOADED=$(lsmod | grep virtio_rpmsg_bus)
+    #if [ ! -z "$MODULE_LOADED" ]; then
+    #  modprobe -r virtio_rpmsg_bus
+    #fi
+
+    #MODULE_LOADED=$(lsmod | grep zynq_remoteproc)
+    #if [ ! -z "$MODULE_LOADED" ]; then
+    #  modprobe -r zynq_remoteproc
+    #fi
+
+		#if [ -f /usr/share/cu/dsp/tcu400/pl.bin ] && [ -c /dev/xdevcfg ]; then
+		#	cat /usr/share/cu/dsp/tcu400/pl.bin > /dev/xdevcfg
+		#fi
+
+    HW_ID=$(/usr/bin/tt-cu-hwid)
+    if [ -z "$HW_ID" ]; then
+        HW_ID='tcu421' # by default set it to TCU421
+    fi
+    
+    DB_HOST_OPTION=''
+    if [[ $HW_ID == *"mda"* ]] ; then
+        DB_HOST_OPTION='-h 192.168.99.2'    
+    fi
+                
+    EXT_SBINT_IP_ADDRESS=$(sudo -u thiss ${PGSQL} -d cu_db $DB_HOST_OPTION -q -A -t -c "select property_value from module_properties where module_properties_idx = 15001")
+        
+    START_OPTIONS='--set debug_level=5'    
+    if [ -n "$EXT_SBINT_IP_ADDRESS" ]; then
+        START_OPTIONS="$START_OPTIONS --set ext_sbint_if_addr=$EXT_SBINT_IP_ADDRESS"   
+    fi
+
+	echo "HW_ID: $HW_ID"
+	echo "DB_HOST_OPTION: $DB_HOST_OPTION"
+	echo "EXT_SBINT_IP_ADDRESS: $EXT_SBINT_IP_ADDRESS"
+	
+	if /sbin/start-stop-daemon -S -p ${PID_PATH}/${MODULE_NAME}.pid -x ${MODULE_BIN} -- $START_OPTIONS; then
+        log "${MODULE_NAME} started ok"
+    else
+        log "${MODULE_NAME} failed to start"
+    fi
+}
+    
+do_stop(){
+    log "Stopping $MODULE_NAME..."
+    if /sbin/start-stop-daemon -K -p ${PID_PATH}/${MODULE_NAME}.pid -R 3 -n ${MODULE_NAME}; then
+        log "${MODULE_NAME} stopped ok"
+    else        
+        pgrep -f ${MODULE_BIN} 
+        result=$?
+        if [ "$result" -eq 0 ]; then # Module still running
+            log "${MODULE_NAME} failed to stop using start-stop-daemon, force stop now..."
+            pkill -kill -f /usr/bin/${MODULE_BIN}
+            log "${MODULE_NAME} stopped ok"   	    	                
+        fi        
+    fi			
+}
+
+case "$1" in
+  start)
+    do_start
+    ;;
+
+  stop)
+    do_stop
+    ;;
+
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+
+  reload|force-reload)
+    ;;
+
+  *)
+    echo "Usage: /etc/init.d/${MODULE_NAME} {start|stop|reload|force-reload|restart}"
+    exit 1
+esac
+
+exit 0

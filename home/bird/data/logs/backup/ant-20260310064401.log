@@ -1,0 +1,1990 @@
+N,50,02/03/26,03:54:19.396238: MHA number of points = 400 from Start=62474744 to End=66474744
+C,130,02/03/26,03:54:19.397065: [PRODUCTEVENT] 116, C, BLDC Motor fault on, EL high current, restarting ANT [average DAC=617.39 (over last 4000ms) > max amplitude 617.50]
+N,130,02/03/26,03:54:19.397142: [PRODUCTFAULT] Fault Code=3202, Status=1, EL BLDC motor fault 
+E,35,02/03/26,03:54:19.397234: SSF write request sent to ACU
+71.475846 : Fatal error (Module=ant Thread=Init File=../ant/ant_state_machine_common.c Line=429
+)N,130,02/03/26,03:54:28.180386: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,03:54:28.232938: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,03:54:28.251152: HI config FV2 read from RT DB OK
+P,35,02/03/26,03:54:28.251215: HI config validated OK
+P,35,02/03/26,03:54:28.252171: HI config file loaded and parsed OK
+P,35,02/03/26,03:54:28.252216: The HI information is initialized
+P,35,02/03/26,03:54:28.252241: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,03:54:28.252261: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,03:54:28.252857: ANT config read from RT DB OK
+P,35,02/03/26,03:54:28.252898: ANT config validated OK
+N,130,02/03/26,03:54:28.255460: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,03:54:28.255981: GCOH DB loaded and parsed OK
+N,35,02/03/26,03:54:28.256231: GCOH DB content validated OK
+N,35,02/03/26,03:54:28.256637: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,03:54:28.256677: Antenna encoder calibration file validated OK
+N,35,02/03/26,03:54:28.256975: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,03:54:28.257009: Antenna compass calibration file validated OK
+P,35,02/03/26,03:54:28.257551: PID config file loaded and parsed OK
+N,67,02/03/26,03:54:28.257603: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,03:54:28.257625: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,03:54:28.257665: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,03:54:28.257716: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,03:54:28.257806: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,03:54:28.257839: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,03:54:28.257868: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,03:54:28.257898: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,03:54:28.257928: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,03:54:28.257957: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,03:54:28.415435: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,03:54:30.415608: [PL IMAGE LOAD START]
+A,35,02/03/26,03:54:30.449294: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,03:54:30.460574: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72BC0000 Size=65536 fd=65
+A,35,02/03/26,03:54:30.462826: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BBC0000 Size=117440512 fd=66
+N,130,02/03/26,03:54:30.503014: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,03:54:30.503097: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,03:54:30.503133: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,03:54:30.503157: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,03:54:30.503190: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,03:54:30.503209: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,03:54:30.558484: TSK_Serial_Sensors created OK
+P,32,02/03/26,03:54:30.808554: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,03:54:30.808598: FPGA version running = 3.9
+N,130,02/03/26,03:54:30.808660: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,03:54:30.808686: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,03:54:30.808733: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,03:54:30.808755: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,03:54:30.808798: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,03:54:30.808821: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,03:54:30.809578: HI: amu_model        : AMUS6.1
+P,32,02/03/26,03:54:30.809609: HI: az_encoder_model : r2
+P,32,02/03/26,03:54:30.809628: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,03:54:30.809725: MIO12 exported successfully
+N,32,02/03/26,03:54:30.809932: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,03:54:30.809969: ADC PL module enabled, divider=49
+N,52,02/03/26,03:54:30.818560: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,03:54:30.821716: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,03:54:30.822775: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,03:54:30.823076: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,03:54:30.823119: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,03:54:30.823474: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,03:54:31.588803: AZ encoder initialised
+N,35,02/03/26,03:54:31.589666: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:54:31.589755: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:54:31.589788: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,03:54:31.589960: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,03:54:31.589983: GPS processing initialised
+P,32,02/03/26,03:54:31.589998: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,03:54:31.590015: SB switch initially high
+P,35,02/03/26,03:54:31.590031: SK switch initially high
+P,35,02/03/26,03:54:31.590048: EXTSW2 switch initially high
+P,35,02/03/26,03:54:31.590065: EXTSW3 switch initially high
+N,35,02/03/26,03:54:31.592025: TSK_Serial_Sensors: Active
+N,43,02/03/26,03:54:31.595638: AZ stabilisation off
+N,35,02/03/26,03:54:31.596665: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:54:31.596708: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,03:54:31.596735: Init: AZ gyro saved offset not usable: Age=40155624011 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:54:31.597001: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:54:31.597027: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,03:54:31.597050: Init: EL gyro saved offset not usable: Age=40155624005 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:54:31.597257: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:54:31.597283: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,03:54:31.597304: Init: RL gyro saved offset not usable: Age=40155624004 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,03:54:31.597325: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,52,02/03/26,03:54:31.597397: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330772us
+N,35,02/03/26,03:54:31.597515: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,03:54:31.597540: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,03:54:31.597559: SubState = 'RL move to 0' (after 60008ms)
+W,44,02/03/26,03:54:31.597984: EL time since last update 78.677s
+N,52,02/03/26,03:54:31.598506: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,03:54:31.599039: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+E,38,02/03/26,03:54:31.599125: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,03:54:31.599162: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,03:54:31.599216: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,52,02/03/26,03:54:31.599415: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 335265us
+N,35,02/03/26,03:54:31.605350: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,03:54:31.605450: SK move to limit started
+N,52,02/03/26,03:54:31.703272: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:54:31.703335: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:54:32.601202: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,03:54:32.601258: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,03:54:32.603267: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,03:54:32.603321: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,03:54:32.705262: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:54:32.705313: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:54:32.705336: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,03:54:32.705379: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 102 ms
+N,52,02/03/26,03:54:32.705403: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,03:54:32.705473: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,03:54:32.705497: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,03:54:32.705875: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,03:54:32.705908: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,03:54:32.705954: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,03:54:32.706004: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,03:54:32.711260: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,03:54:33.707278: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,03:54:33.707323: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,03:54:33.707364: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,03:54:33.707447: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1003 ms
+N,52,02/03/26,03:54:33.707474: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,03:54:33.707496: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,03:54:35.585141: SK switch change, now low
+N,48,02/03/26,03:54:35.585281: Get the last saved SK degs:39.702000
+N,48,02/03/26,03:54:35.585328: SK move to limit done, spend 3979 ms
+N,130,02/03/26,03:54:35.585367: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3979 ms
+
+N,48,02/03/26,03:54:35.595255: SK move to start started : using saved value=2.202
+N,35,02/03/26,03:54:35.596200: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,03:54:35.645143: SK switch change, now high
+N,48,02/03/26,03:54:39.575350: SK move to start done
+N,48,02/03/26,03:54:39.765591: SubState = 'EL move to start' (after 8168ms)
+N,48,02/03/26,03:54:45.815540: SubState = 'AZ move to start' (after 6050ms)
+N,43,02/03/26,03:54:45.825754: AZ stabilisation off
+N,48,02/03/26,03:54:46.815502: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,03:54:46.825500: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,03:54:46.835789: AZ stabilisation on (by gyro)
+N,48,02/03/26,03:54:46.835845: State = 'Operating' (after 75246ms)
+N,48,02/03/26,03:54:46.835880: SubState = 'Initial' (after 10ms)
+N,35,02/03/26,03:54:56.298888: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,03:54:56.309352: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:54:56.314922: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,03:54:56.325558: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:54:56.331357: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+W,44,02/03/26,03:55:18.975516: EL time since last update 0.060s
+W,35,02/03/26,03:55:18.976197: Missed real-time task deadline, expiries = 5
+N,50,02/03/26,03:55:22.135322: MHA number of points = 396 from Start=125213842 to End=129213842
+C,130,02/03/26,03:55:22.136109: [PRODUCTEVENT] 116, C, BLDC Motor fault on, RL high current, restarting ANT [average DAC=-617.71 (over last 4000ms) > max amplitude 617.50]
+N,130,02/03/26,03:55:22.136182: [PRODUCTFAULT] Fault Code=3203, Status=1, RL BLDC motor fault 
+E,35,02/03/26,03:55:22.136291: SSF write request sent to ACU
+134.214921 : Fatal error (Module=ant Thread=Init File=../ant/ant_state_machine_common.c Line=454
+)N,130,02/03/26,03:55:32.479994: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,03:55:32.532941: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,03:55:32.544507: HI config FV2 read from RT DB OK
+P,35,02/03/26,03:55:32.544569: HI config validated OK
+P,35,02/03/26,03:55:32.545480: HI config file loaded and parsed OK
+P,35,02/03/26,03:55:32.545536: The HI information is initialized
+P,35,02/03/26,03:55:32.545566: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,03:55:32.545587: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,03:55:32.546218: ANT config read from RT DB OK
+P,35,02/03/26,03:55:32.546264: ANT config validated OK
+N,130,02/03/26,03:55:32.548980: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,03:55:32.549519: GCOH DB loaded and parsed OK
+N,35,02/03/26,03:55:32.549768: GCOH DB content validated OK
+N,35,02/03/26,03:55:32.550199: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,03:55:32.550240: Antenna encoder calibration file validated OK
+N,35,02/03/26,03:55:32.550608: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,03:55:32.550649: Antenna compass calibration file validated OK
+P,35,02/03/26,03:55:32.551296: PID config file loaded and parsed OK
+N,67,02/03/26,03:55:32.551349: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,03:55:32.551371: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,03:55:32.551408: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,03:55:32.551512: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,03:55:32.551554: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,03:55:32.551587: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,03:55:32.551618: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,03:55:32.551649: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,03:55:32.551679: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,03:55:32.551709: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,03:55:32.705902: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,03:55:34.706078: [PL IMAGE LOAD START]
+A,35,02/03/26,03:55:34.740272: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,03:55:34.751597: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B60000 Size=65536 fd=65
+A,35,02/03/26,03:55:34.753789: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB60000 Size=117440512 fd=66
+N,130,02/03/26,03:55:34.793967: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,03:55:34.794052: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,03:55:34.794088: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,03:55:34.794111: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,03:55:34.794144: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,03:55:34.794163: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,03:55:34.849461: TSK_Serial_Sensors created OK
+P,32,02/03/26,03:55:35.099541: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,03:55:35.099597: FPGA version running = 3.9
+N,130,02/03/26,03:55:35.099667: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,03:55:35.099694: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,03:55:35.099745: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,03:55:35.099769: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,03:55:35.099813: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,03:55:35.099837: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,03:55:35.100549: HI: amu_model        : AMUS6.1
+P,32,02/03/26,03:55:35.100581: HI: az_encoder_model : r2
+P,32,02/03/26,03:55:35.100599: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,03:55:35.100697: MIO12 exported successfully
+N,32,02/03/26,03:55:35.100912: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,03:55:35.100950: ADC PL module enabled, divider=49
+N,52,02/03/26,03:55:35.112525: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,03:55:35.115683: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,03:55:35.116738: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,03:55:35.117035: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,03:55:35.117080: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,03:55:35.117436: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,03:55:35.882804: AZ encoder initialised
+N,35,02/03/26,03:55:35.883658: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:55:35.883740: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:55:35.883773: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,03:55:35.883937: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,03:55:35.883969: GPS processing initialised
+P,32,02/03/26,03:55:35.883985: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,03:55:35.884001: SB switch initially high
+P,35,02/03/26,03:55:35.884055: SK switch initially high
+P,35,02/03/26,03:55:35.884075: EXTSW2 switch initially high
+P,35,02/03/26,03:55:35.884091: EXTSW3 switch initially high
+N,43,02/03/26,03:55:35.889722: AZ stabilisation off
+N,35,02/03/26,03:55:35.890741: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:55:35.890779: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,03:55:35.890804: Init: AZ gyro saved offset not usable: Age=40155688305 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:55:35.891042: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:55:35.891069: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,03:55:35.891090: Init: EL gyro saved offset not usable: Age=40155688299 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:55:35.891302: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:55:35.891327: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,03:55:35.891352: Init: RL gyro saved offset not usable: Age=40155688298 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,03:55:35.891374: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,03:55:35.891635: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,03:55:35.891663: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,03:55:35.891684: SubState = 'RL move to 0' (after 60008ms)
+W,44,02/03/26,03:55:35.892116: EL time since last update 142.971s
+E,38,02/03/26,03:55:35.892817: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,03:55:35.892865: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,03:55:35.892924: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,35,02/03/26,03:55:35.892998: TSK_Serial_Sensors: Active
+N,52,02/03/26,03:55:35.898356: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330773us
+N,35,02/03/26,03:55:35.899216: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,03:55:35.899282: SK move to limit started
+N,52,02/03/26,03:55:35.899490: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,03:55:35.899949: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,03:55:35.900120: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 345305us
+N,52,02/03/26,03:55:35.994311: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:55:35.994395: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:55:36.902158: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,03:55:36.902202: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,03:55:36.904180: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,03:55:36.904216: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,03:55:36.996163: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:55:36.996206: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:55:36.996228: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,03:55:36.996255: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 92 ms
+N,52,02/03/26,03:55:36.996276: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,03:55:36.996338: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,03:55:36.996360: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,03:55:36.996728: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,03:55:36.996778: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,03:55:36.996826: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,03:55:36.996869: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,03:55:37.002185: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,03:55:37.998172: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,03:55:37.998245: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,03:55:37.998269: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,03:55:37.998343: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1002 ms
+N,52,02/03/26,03:55:37.998382: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,03:55:37.998406: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,03:55:39.879168: SK switch change, now low
+N,48,02/03/26,03:55:39.879317: Get the last saved SK degs:39.702000
+N,48,02/03/26,03:55:39.879368: SK move to limit done, spend 3980 ms
+N,130,02/03/26,03:55:39.879405: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,48,02/03/26,03:55:39.889282: SK move to start started : using saved value=2.202
+N,35,02/03/26,03:55:39.890271: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,03:55:39.929176: SK switch change, now high
+N,48,02/03/26,03:55:43.869356: SK move to start done
+N,48,02/03/26,03:55:44.049410: SubState = 'EL move to start' (after 8157ms)
+N,48,02/03/26,03:55:50.109450: SubState = 'AZ move to start' (after 6060ms)
+N,43,02/03/26,03:55:50.119667: AZ stabilisation off
+N,48,02/03/26,03:55:51.109502: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,03:55:51.119500: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,03:55:51.129722: AZ stabilisation on (by gyro)
+N,48,02/03/26,03:55:51.129775: State = 'Operating' (after 75246ms)
+N,48,02/03/26,03:55:51.129806: SubState = 'Initial' (after 10ms)
+N,35,02/03/26,03:56:00.684383: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,03:56:00.694711: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:56:00.700168: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,03:56:00.710752: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:56:00.716280: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,50,02/03/26,03:56:05.279333: MHA number of points = 400 from Start=168357851 to End=172357851
+C,130,02/03/26,03:56:05.280147: [PRODUCTEVENT] 116, C, BLDC Motor fault on, AZ high current, restarting ANT [average DAC=-617.20 (over last 4000ms) > max amplitude 617.50]
+N,130,02/03/26,03:56:05.280233: [PRODUCTFAULT] Fault Code=3201, Status=1, AZ BLDC motor fault 
+E,35,02/03/26,03:56:05.280336: SSF write request sent to ACU
+177.358962 : Fatal error (Module=ant Thread=Init File=../ant/ant_state_machine_common.c Line=402
+)N,130,02/03/26,03:56:14.149605: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,03:56:14.193951: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,03:56:14.208613: HI config FV2 read from RT DB OK
+P,35,02/03/26,03:56:14.208674: HI config validated OK
+P,35,02/03/26,03:56:14.209580: HI config file loaded and parsed OK
+P,35,02/03/26,03:56:14.209625: The HI information is initialized
+P,35,02/03/26,03:56:14.209651: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,03:56:14.209672: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,03:56:14.210295: ANT config read from RT DB OK
+P,35,02/03/26,03:56:14.210331: ANT config validated OK
+N,130,02/03/26,03:56:14.212942: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,03:56:14.213476: GCOH DB loaded and parsed OK
+N,35,02/03/26,03:56:14.213724: GCOH DB content validated OK
+N,35,02/03/26,03:56:14.214132: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,03:56:14.214172: Antenna encoder calibration file validated OK
+N,35,02/03/26,03:56:14.214471: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,03:56:14.214506: Antenna compass calibration file validated OK
+P,35,02/03/26,03:56:14.215040: PID config file loaded and parsed OK
+N,67,02/03/26,03:56:14.215092: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,03:56:14.215115: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,03:56:14.215153: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,03:56:14.215203: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,03:56:14.215237: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,03:56:14.215267: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,03:56:14.215298: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,03:56:14.215337: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,03:56:14.215368: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,03:56:14.215399: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,03:56:14.370136: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,03:56:16.370293: [PL IMAGE LOAD START]
+A,35,02/03/26,03:56:16.404034: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,03:56:16.415361: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B70000 Size=65536 fd=65
+A,35,02/03/26,03:56:16.417559: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB70000 Size=117440512 fd=66
+N,130,02/03/26,03:56:16.457735: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,03:56:16.457820: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,03:56:16.457856: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,03:56:16.457881: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,03:56:16.457950: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,03:56:16.457972: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,03:56:16.513235: TSK_Serial_Sensors created OK
+P,32,02/03/26,03:56:16.763305: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,03:56:16.763384: FPGA version running = 3.9
+N,130,02/03/26,03:56:16.763469: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,03:56:16.763499: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,03:56:16.763543: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,03:56:16.763567: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,03:56:16.763605: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,03:56:16.763628: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,03:56:16.764337: HI: amu_model        : AMUS6.1
+P,32,02/03/26,03:56:16.764369: HI: az_encoder_model : r2
+P,32,02/03/26,03:56:16.764388: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,03:56:16.764485: MIO12 exported successfully
+N,32,02/03/26,03:56:16.764702: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,03:56:16.764741: ADC PL module enabled, divider=49
+N,52,02/03/26,03:56:16.773324: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,03:56:16.776474: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,03:56:16.777529: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,03:56:16.777840: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,03:56:16.777884: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,03:56:16.778240: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,03:56:17.543623: AZ encoder initialised
+N,35,02/03/26,03:56:17.544501: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:56:17.544599: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:56:17.544633: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,03:56:17.544792: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,03:56:17.544815: GPS processing initialised
+P,32,02/03/26,03:56:17.544830: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,03:56:17.544846: SB switch initially high
+P,35,02/03/26,03:56:17.544863: SK switch initially high
+P,35,02/03/26,03:56:17.544880: EXTSW2 switch initially high
+P,35,02/03/26,03:56:17.544896: EXTSW3 switch initially high
+E,130,02/03/26,03:56:17.545391: DB_Event_Insert_Data err_msg:database is locked
+N,35,02/03/26,03:56:17.546689: TSK_Serial_Sensors: Active
+N,43,02/03/26,03:56:17.550554: AZ stabilisation off
+N,35,02/03/26,03:56:17.551931: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:56:17.551979: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,03:56:17.552005: Init: AZ gyro saved offset not usable: Age=40155729967 ms (usable in range 0 to 600000 ms)
+N,52,02/03/26,03:56:17.552039: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330772us
+N,35,02/03/26,03:56:17.552237: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:56:17.552263: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,03:56:17.552286: Init: EL gyro saved offset not usable: Age=40155729960 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:56:17.552481: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:56:17.552506: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,03:56:17.552527: Init: RL gyro saved offset not usable: Age=40155729959 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,03:56:17.552548: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,03:56:17.552747: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,03:56:17.552773: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,03:56:17.552793: SubState = 'RL move to 0' (after 60008ms)
+N,52,02/03/26,03:56:17.553094: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+W,44,02/03/26,03:56:17.553248: EL time since last update 184.632s
+N,52,02/03/26,03:56:17.553588: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,03:56:17.553840: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 335179us
+E,38,02/03/26,03:56:17.554003: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,03:56:17.554039: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,03:56:17.554233: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,35,02/03/26,03:56:17.560031: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,03:56:17.560111: SK move to limit started
+N,52,02/03/26,03:56:17.657972: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:56:17.658037: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:56:18.555857: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,03:56:18.555920: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,03:56:18.557894: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,03:56:18.557940: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,03:56:18.659901: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:56:18.659977: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:56:18.660002: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,03:56:18.660029: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 102 ms
+N,52,02/03/26,03:56:18.660050: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,03:56:18.660116: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,03:56:18.660143: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,03:56:18.660522: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,03:56:18.660550: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,03:56:18.660597: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,03:56:18.660640: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,03:56:18.665900: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,03:56:19.661933: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,03:56:19.661995: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,03:56:19.662033: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,03:56:19.662099: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1002 ms
+N,52,02/03/26,03:56:19.662128: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,03:56:19.662149: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           N,130,02/03/26,03:56:52.317040: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,03:56:52.374541: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,03:56:52.480579: HI config FV2 read from RT DB OK
+P,35,02/03/26,03:56:52.480663: HI config validated OK
+P,35,02/03/26,03:56:52.484631: HI config file loaded and parsed OK
+P,35,02/03/26,03:56:52.484705: The HI information is initialized
+P,35,02/03/26,03:56:52.484752: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,03:56:52.484787: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,03:56:52.486031: ANT config read from RT DB OK
+P,35,02/03/26,03:56:52.486089: ANT config validated OK
+N,130,02/03/26,03:56:52.499792: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,03:56:52.501186: GCOH DB loaded and parsed OK
+N,35,02/03/26,03:56:52.501447: GCOH DB content validated OK
+N,35,02/03/26,03:56:52.502434: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,03:56:52.502482: Antenna encoder calibration file validated OK
+N,35,02/03/26,03:56:52.503296: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,03:56:52.503337: Antenna compass calibration file validated OK
+P,35,02/03/26,03:56:52.505212: PID config file loaded and parsed OK
+N,67,02/03/26,03:56:52.505271: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,03:56:52.505294: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,03:56:52.505334: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,03:56:52.505387: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,03:56:52.505421: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,03:56:52.505451: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,03:56:52.505482: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,03:56:52.505524: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,03:56:52.505554: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,03:56:52.505584: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,03:56:52.682202: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,03:56:54.682397: [PL IMAGE LOAD START]
+A,35,02/03/26,03:56:54.716481: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,03:56:54.727776: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B50000 Size=65536 fd=65
+A,35,02/03/26,03:56:54.729975: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB50000 Size=117440512 fd=66
+N,130,02/03/26,03:56:54.770158: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,03:56:54.770251: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,03:56:54.770288: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,03:56:54.770355: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,03:56:54.770387: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,03:56:54.770424: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,03:56:54.825715: TSK_Serial_Sensors created OK
+P,32,02/03/26,03:56:55.075783: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,03:56:55.075832: FPGA version running = 3.9
+N,130,02/03/26,03:56:55.075895: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,03:56:55.075922: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,03:56:55.075964: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,03:56:55.075987: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,03:56:55.076036: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,03:56:55.076060: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,03:56:55.076767: HI: amu_model        : AMUS6.1
+P,32,02/03/26,03:56:55.076797: HI: az_encoder_model : r2
+P,32,02/03/26,03:56:55.076815: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,03:56:55.077100: MIO12 exported successfully
+N,32,02/03/26,03:56:55.077378: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,03:56:55.077423: ADC PL module enabled, divider=49
+N,52,02/03/26,03:56:55.088859: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,03:56:55.092031: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,03:56:55.093092: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,03:56:55.093422: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,03:56:55.093469: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,03:56:55.093820: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,03:56:55.859171: AZ encoder initialised
+N,35,02/03/26,03:56:55.860028: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:56:55.860119: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:56:55.860152: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,03:56:55.860334: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,03:56:55.860383: GPS processing initialised
+P,32,02/03/26,03:56:55.860400: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,03:56:55.860417: SB switch initially high
+P,35,02/03/26,03:56:55.860434: SK switch initially high
+P,35,02/03/26,03:56:55.860451: EXTSW2 switch initially high
+P,35,02/03/26,03:56:55.860468: EXTSW3 switch initially high
+N,35,02/03/26,03:56:55.861462: TSK_Serial_Sensors: Active
+N,43,02/03/26,03:56:55.866196: AZ stabilisation off
+N,52,02/03/26,03:56:55.866824: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330776us
+N,52,02/03/26,03:56:55.867783: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,03:56:55.868296: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,03:56:55.868614: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 337522us
+N,35,02/03/26,03:56:55.869220: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:56:55.869262: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,03:56:55.869288: Init: AZ gyro saved offset not usable: Age=40155768284 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:56:55.870389: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:56:55.870434: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,03:56:55.870460: Init: EL gyro saved offset not usable: Age=40155768278 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:56:55.872458: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:56:55.872519: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,03:56:55.872546: Init: RL gyro saved offset not usable: Age=40155768279 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,03:56:55.872590: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,03:56:55.873836: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,03:56:55.873890: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,03:56:55.873915: SubState = 'RL move to 0' (after 60014ms)
+W,44,02/03/26,03:56:55.874399: EL time since last update 20.943s
+E,38,02/03/26,03:56:55.875073: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,03:56:55.875135: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,03:56:55.875296: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,35,02/03/26,03:56:55.875570: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,03:56:55.875626: SK move to limit started
+N,52,02/03/26,03:56:55.970778: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:56:55.970856: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:56:56.870683: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,03:56:56.870745: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,03:56:56.872719: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,03:56:56.872774: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,03:56:56.972700: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:56:56.972765: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:56:56.972789: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,03:56:56.972820: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 100 ms
+N,52,02/03/26,03:56:56.972842: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,03:56:56.972908: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,03:56:56.972982: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,03:56:56.976744: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,03:56:56.976798: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,03:56:56.976882: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,03:56:56.976984: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,03:56:56.978692: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+P,35,02/03/26,03:56:57.575626: SK switch change, now low
+W,48,02/03/26,03:56:57.575782: SK arrived limit spend 1700 ms, difference from nominal time is -2270 ms,(last set SK target angle:39.702000
+W,130,02/03/26,03:56:57.575874: [PRODUCTEVENT] 902, W, Warning, SK arrived limit spend 1700 ms, difference from nominal time is -2270 ms,(last set SK target angle:39.702000
+
+N,48,02/03/26,03:56:57.575943: SK move to limit done, spend 1700 ms
+N,130,02/03/26,03:56:57.575978: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 1700 ms
+
+N,48,02/03/26,03:56:57.585624: SK move to start started : using saved value=2.202
+N,35,02/03/26,03:56:57.586632: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,03:56:57.625605: SK switch change, now high
+N,52,02/03/26,03:56:57.972658: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,03:56:57.972710: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,03:56:57.972733: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,03:56:57.972779: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 999 ms
+N,52,02/03/26,03:56:57.972807: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,03:56:57.972827: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+N,48,02/03/26,03:57:01.565646: SK move to start done
+N,48,02/03/26,03:57:04.015916: SubState = 'EL move to start' (after 8142ms)
+N,48,02/03/26,03:57:10.075791: SubState = 'AZ move to start' (after 6059ms)
+N,43,02/03/26,03:57:10.086025: AZ stabilisation off
+N,48,02/03/26,03:57:11.085779: SubState = 'SK move to limit' (after 1009ms)
+N,48,02/03/26,03:57:11.095789: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,03:57:11.106022: AZ stabilisation on (by gyro)
+N,48,02/03/26,03:57:11.106068: State = 'Operating' (after 75246ms)
+N,48,02/03/26,03:57:11.106097: SubState = 'Initial' (after 10ms)
+N,35,02/03/26,03:57:20.589655: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,03:57:20.599850: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:57:20.605202: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,03:57:20.615451: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:57:20.621065: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,50,02/03/26,03:57:31.425693: MHA number of points = 400 from Start=52493803 to End=56493803
+C,130,02/03/26,03:57:31.426470: [PRODUCTEVENT] 116, C, BLDC Motor fault on, AZ high current, restarting ANT [average DAC=-617.15 (over last 4000ms) > max amplitude 617.50]
+N,130,02/03/26,03:57:31.426544: [PRODUCTFAULT] Fault Code=3201, Status=1, AZ BLDC motor fault 
+E,35,02/03/26,03:57:31.426834: SSF write request sent to ACU
+61.495050 : Fatal error (Module=ant Thread=Init File=../ant/ant_state_machine_common.c Line=402
+)N,130,02/03/26,03:57:42.420717: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,03:57:42.473310: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,03:57:42.490006: HI config FV2 read from RT DB OK
+P,35,02/03/26,03:57:42.490066: HI config validated OK
+P,35,02/03/26,03:57:42.490978: HI config file loaded and parsed OK
+P,35,02/03/26,03:57:42.491022: The HI information is initialized
+P,35,02/03/26,03:57:42.491048: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,03:57:42.491068: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,03:57:42.491655: ANT config read from RT DB OK
+P,35,02/03/26,03:57:42.491694: ANT config validated OK
+N,130,02/03/26,03:57:42.494313: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,03:57:42.494844: GCOH DB loaded and parsed OK
+N,35,02/03/26,03:57:42.495090: GCOH DB content validated OK
+N,35,02/03/26,03:57:42.495508: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,03:57:42.495549: Antenna encoder calibration file validated OK
+N,35,02/03/26,03:57:42.495849: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,03:57:42.495883: Antenna compass calibration file validated OK
+P,35,02/03/26,03:57:42.496441: PID config file loaded and parsed OK
+N,67,02/03/26,03:57:42.496493: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,03:57:42.496514: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,03:57:42.496551: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,03:57:42.496601: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,03:57:42.496637: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,03:57:42.496669: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,03:57:42.496698: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,03:57:42.496727: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,03:57:42.496757: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,03:57:42.496786: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,03:57:42.647295: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,03:57:44.647471: [PL IMAGE LOAD START]
+A,35,02/03/26,03:57:44.681663: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,03:57:44.693004: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=7660F000 Size=65536 fd=65
+A,35,02/03/26,03:57:44.695241: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB00000 Size=117440512 fd=66
+N,130,02/03/26,03:57:44.735476: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,03:57:44.735578: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,03:57:44.735618: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,03:57:44.735643: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,03:57:44.735672: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,03:57:44.735699: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,03:57:44.791041: TSK_Serial_Sensors created OK
+P,32,02/03/26,03:57:45.041183: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,03:57:45.041273: FPGA version running = 3.9
+N,130,02/03/26,03:57:45.041350: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,03:57:45.041380: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,03:57:45.041425: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,03:57:45.041448: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,03:57:45.041486: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,03:57:45.041508: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,03:57:45.042251: HI: amu_model        : AMUS6.1
+P,32,02/03/26,03:57:45.042289: HI: az_encoder_model : r2
+P,32,02/03/26,03:57:45.042309: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,03:57:45.042415: MIO12 exported successfully
+N,32,02/03/26,03:57:45.042656: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,03:57:45.042696: ADC PL module enabled, divider=49
+N,52,02/03/26,03:57:45.055375: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,03:57:45.058643: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,03:57:45.059764: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,03:57:45.060098: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,03:57:45.060145: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,03:57:45.060546: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,03:57:45.825888: AZ encoder initialised
+N,35,02/03/26,03:57:45.826780: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:57:45.826866: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,03:57:45.826897: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,03:57:45.827058: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,03:57:45.827079: GPS processing initialised
+P,32,02/03/26,03:57:45.827095: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,03:57:45.827122: SB switch initially high
+P,35,02/03/26,03:57:45.827139: SK switch initially high
+P,35,02/03/26,03:57:45.827155: EXTSW2 switch initially high
+P,35,02/03/26,03:57:45.827172: EXTSW3 switch initially high
+N,43,02/03/26,03:57:45.832597: AZ stabilisation off
+N,35,02/03/26,03:57:45.833861: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:57:45.833920: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,03:57:45.833949: Init: AZ gyro saved offset not usable: Age=40155818248 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:57:45.834214: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:57:45.834248: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,03:57:45.834289: Init: EL gyro saved offset not usable: Age=40155818242 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,03:57:45.834531: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,03:57:45.834563: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,03:57:45.834587: Init: RL gyro saved offset not usable: Age=40155818241 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,03:57:45.834637: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,03:57:45.834888: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,03:57:45.834960: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,03:57:45.834985: SubState = 'RL move to 0' (after 60008ms)
+W,44,02/03/26,03:57:45.835432: EL time since last update 70.904s
+E,38,02/03/26,03:57:45.836143: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,03:57:45.836181: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,03:57:45.836237: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,35,02/03/26,03:57:45.837038: TSK_Serial_Sensors: Active
+N,35,02/03/26,03:57:45.842369: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,52,02/03/26,03:57:45.842440: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330771us
+N,48,02/03/26,03:57:45.842449: SK move to limit started
+N,52,02/03/26,03:57:45.843495: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,03:57:45.844076: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,03:57:45.844153: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 348787us
+N,52,02/03/26,03:57:45.936205: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:57:45.936258: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:57:46.846202: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,03:57:46.846245: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,03:57:46.848151: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,03:57:46.848185: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,03:57:46.938197: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,03:57:46.938241: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,03:57:46.938262: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,03:57:46.938292: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 90 ms
+N,52,02/03/26,03:57:46.938314: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,03:57:46.938378: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,03:57:46.938402: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,03:57:46.938753: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,03:57:46.938780: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,03:57:46.938824: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,03:57:46.938867: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,03:57:46.944216: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,03:57:47.938232: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,03:57:47.938284: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,03:57:47.938306: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,03:57:47.938379: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,02/03/26,03:57:47.938418: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,03:57:47.938457: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,03:57:49.822250: SK switch change, now low
+N,48,02/03/26,03:57:49.822396: Get the last saved SK degs:39.702000
+N,48,02/03/26,03:57:49.822447: SK move to limit done, spend 3980 ms
+N,130,02/03/26,03:57:49.822486: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,48,02/03/26,03:57:49.832363: SK move to start started : using saved value=2.202
+N,35,02/03/26,03:57:49.833323: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,03:57:49.872252: SK switch change, now high
+N,48,02/03/26,03:57:53.812403: SK move to start done
+N,48,02/03/26,03:57:54.002491: SubState = 'EL move to start' (after 8167ms)
+N,48,02/03/26,03:58:00.072488: SubState = 'AZ move to start' (after 6070ms)
+N,43,02/03/26,03:58:00.082739: AZ stabilisation off
+N,48,02/03/26,03:58:01.072565: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,03:58:01.082581: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,03:58:01.092819: AZ stabilisation on (by gyro)
+N,48,02/03/26,03:58:01.092881: State = 'Operating' (after 75266ms)
+N,48,02/03/26,03:58:01.092913: SubState = 'Initial' (after 11ms)
+N,35,02/03/26,03:58:10.647672: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,03:58:10.657898: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:58:10.663430: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,03:58:10.674342: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,03:58:10.679850: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+W,44,02/03/26,04:00:59.647519: EL time since last update 0.055s
+W,35,02/03/26,04:00:59.648442: Missed real-time task deadline, expiries = 4
+N,130,02/03/26,05:37:31.176417: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,05:37:31.234067: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,05:37:31.328877: HI config FV2 read from RT DB OK
+P,35,02/03/26,05:37:31.328947: HI config validated OK
+P,35,02/03/26,05:37:31.331705: HI config file loaded and parsed OK
+P,35,02/03/26,05:37:31.331762: The HI information is initialized
+P,35,02/03/26,05:37:31.331792: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,05:37:31.331813: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,05:37:31.332620: ANT config read from RT DB OK
+P,35,02/03/26,05:37:31.332661: ANT config validated OK
+N,130,02/03/26,05:37:31.346411: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,05:37:31.347837: GCOH DB loaded and parsed OK
+N,35,02/03/26,05:37:31.348096: GCOH DB content validated OK
+N,35,02/03/26,05:37:31.349052: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,05:37:31.349097: Antenna encoder calibration file validated OK
+N,35,02/03/26,05:37:31.349928: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,05:37:31.349968: Antenna compass calibration file validated OK
+P,35,02/03/26,05:37:31.351784: PID config file loaded and parsed OK
+N,67,02/03/26,05:37:31.351849: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,05:37:31.351874: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,05:37:31.351914: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,05:37:31.351966: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,05:37:31.352001: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,05:37:31.352031: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,05:37:31.352060: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,05:37:31.352090: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,05:37:31.352119: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,05:37:31.352148: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,05:37:31.535412: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,05:37:33.535609: [PL IMAGE LOAD START]
+A,35,02/03/26,05:37:33.570050: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,05:37:33.581306: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B98000 Size=65536 fd=65
+A,35,02/03/26,05:37:33.583549: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB98000 Size=117440512 fd=66
+N,130,02/03/26,05:37:33.623756: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,05:37:33.623850: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,05:37:33.623886: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,05:37:33.623910: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,05:37:33.623944: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,05:37:33.623964: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,05:37:33.679230: TSK_Serial_Sensors created OK
+P,32,02/03/26,05:37:33.929298: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,05:37:33.929342: FPGA version running = 3.9
+N,130,02/03/26,05:37:33.929402: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,05:37:33.929462: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,05:37:33.929507: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,05:37:33.929529: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,05:37:33.929568: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,05:37:33.929590: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,05:37:33.930302: HI: amu_model        : AMUS6.1
+P,32,02/03/26,05:37:33.930331: HI: az_encoder_model : r2
+P,32,02/03/26,05:37:33.930349: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,05:37:33.930620: MIO12 exported successfully
+N,32,02/03/26,05:37:33.930908: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,05:37:33.930951: ADC PL module enabled, divider=49
+N,52,02/03/26,05:37:33.942529: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,05:37:33.945692: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,05:37:33.946746: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,05:37:33.947075: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,05:37:33.947121: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,05:37:33.947470: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,05:37:34.712790: AZ encoder initialised
+N,35,02/03/26,05:37:34.713604: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,05:37:34.713693: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,05:37:34.713726: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,05:37:34.713910: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,05:37:34.713933: GPS processing initialised
+P,32,02/03/26,05:37:34.713949: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,05:37:34.713965: SB switch initially high
+P,35,02/03/26,05:37:34.713981: SK switch initially high
+P,35,02/03/26,05:37:34.714014: EXTSW2 switch initially high
+P,35,02/03/26,05:37:34.714032: EXTSW3 switch initially high
+N,35,02/03/26,05:37:34.718237: TSK_Serial_Sensors: Active
+N,43,02/03/26,05:37:34.719917: AZ stabilisation off
+N,52,02/03/26,05:37:34.723563: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330774us
+N,52,02/03/26,05:37:34.724520: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,05:37:34.724976: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,05:37:34.727355: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 342787us
+N,35,02/03/26,05:37:34.730566: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,05:37:34.730626: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,05:37:34.730675: Init: AZ gyro saved offset not usable: Age=40161807145 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,05:37:34.751543: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,05:37:34.751594: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,05:37:34.751621: Init: EL gyro saved offset not usable: Age=40161807159 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,05:37:34.759088: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,05:37:34.759136: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,05:37:34.759163: Init: RL gyro saved offset not usable: Age=40161807166 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,05:37:34.759188: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,05:37:34.760459: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,05:37:34.760503: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,05:37:34.760528: SubState = 'RL move to 0' (after 60047ms)
+W,44,02/03/26,05:37:34.760954: EL time since last update 20.830s
+E,38,02/03/26,05:37:34.761644: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,05:37:34.761689: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,05:37:34.761754: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+W,35,02/03/26,05:37:34.761909: Missed real-time task deadline, expiries = 4
+N,35,02/03/26,05:37:34.761980: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,05:37:34.762049: SK move to limit started
+N,52,02/03/26,05:37:34.823489: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,05:37:34.823588: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,05:37:35.725566: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,05:37:35.725637: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,05:37:35.727479: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1003 ms
+N,52,02/03/26,05:37:35.727543: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,05:37:35.827517: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,05:37:35.827585: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,05:37:35.827637: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,05:37:35.827685: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 100 ms
+N,52,02/03/26,05:37:35.827711: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,05:37:35.827779: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,05:37:35.827803: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,05:37:35.832757: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,05:37:35.832851: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,05:37:35.832937: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,05:37:35.833035: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,05:37:35.833394: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,05:37:36.827425: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,05:37:36.827499: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,05:37:36.827522: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,05:37:36.827589: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,02/03/26,05:37:36.827617: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,05:37:36.827638: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,05:37:38.739110: SK switch change, now low
+N,48,02/03/26,05:37:38.739251: Get the last saved SK degs:39.702000
+N,48,02/03/26,05:37:38.739301: SK move to limit done, spend 3977 ms
+N,130,02/03/26,05:37:38.739424: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3977 ms
+
+N,48,02/03/26,05:37:38.749227: SK move to start started : using saved value=2.202
+N,35,02/03/26,05:37:38.750262: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,05:37:38.789106: SK switch change, now high
+N,48,02/03/26,05:37:42.729280: SK move to start done
+N,48,02/03/26,05:37:42.879485: SubState = 'EL move to start' (after 8119ms)
+N,48,02/03/26,05:37:49.959347: SubState = 'AZ move to start' (after 7079ms)
+N,43,02/03/26,05:37:49.969598: AZ stabilisation off
+N,48,02/03/26,05:37:50.959428: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,05:37:50.969445: SubState = 'SK move to start' (after 9ms)
+N,43,02/03/26,05:37:50.979705: AZ stabilisation on (by gyro)
+N,48,02/03/26,05:37:50.979758: State = 'Operating' (after 76266ms)
+N,48,02/03/26,05:37:50.979788: SubState = 'Initial' (after 10ms)
+N,35,02/03/26,05:37:59.378391: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,05:37:59.388671: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,05:37:59.393979: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,05:37:59.404334: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,05:37:59.410192: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,130,02/03/26,05:39:34.909817: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,05:39:34.973026: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,05:39:35.084058: HI config FV2 read from RT DB OK
+P,35,02/03/26,05:39:35.084128: HI config validated OK
+P,35,02/03/26,05:39:35.086880: HI config file loaded and parsed OK
+P,35,02/03/26,05:39:35.086934: The HI information is initialized
+P,35,02/03/26,05:39:35.086962: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,05:39:35.086982: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,05:39:35.087806: ANT config read from RT DB OK
+P,35,02/03/26,05:39:35.087852: ANT config validated OK
+N,130,02/03/26,05:39:35.101196: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,05:39:35.102681: GCOH DB loaded and parsed OK
+N,35,02/03/26,05:39:35.102948: GCOH DB content validated OK
+N,35,02/03/26,05:39:35.103961: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,05:39:35.104024: Antenna encoder calibration file validated OK
+N,35,02/03/26,05:39:35.104968: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,05:39:35.105024: Antenna compass calibration file validated OK
+P,35,02/03/26,05:39:35.107058: PID config file loaded and parsed OK
+N,67,02/03/26,05:39:35.107131: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,05:39:35.107156: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,05:39:35.107193: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,05:39:35.107250: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,05:39:35.107286: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,05:39:35.107317: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,05:39:35.107346: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,05:39:35.107376: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,05:39:35.107406: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,05:39:35.107435: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,05:39:35.307001: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,05:39:37.307192: [PL IMAGE LOAD START]
+A,35,02/03/26,05:39:37.341143: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,05:39:37.352451: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72BD0000 Size=65536 fd=65
+A,35,02/03/26,05:39:37.354645: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BBD0000 Size=117440512 fd=66
+N,130,02/03/26,05:39:37.394833: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,05:39:37.394927: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,05:39:37.394963: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,05:39:37.394987: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,05:39:37.395056: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,05:39:37.395078: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,05:39:37.450343: TSK_Serial_Sensors created OK
+P,32,02/03/26,05:39:37.700410: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,05:39:37.700462: FPGA version running = 3.9
+N,130,02/03/26,05:39:37.700525: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,05:39:37.700552: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,05:39:37.700595: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,05:39:37.700618: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,05:39:37.700656: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,05:39:37.700680: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,05:39:37.701391: HI: amu_model        : AMUS6.1
+P,32,02/03/26,05:39:37.701422: HI: az_encoder_model : r2
+P,32,02/03/26,05:39:37.701441: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,05:39:37.701713: MIO12 exported successfully
+N,32,02/03/26,05:39:37.702025: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,05:39:37.702070: ADC PL module enabled, divider=49
+N,52,02/03/26,05:39:37.713602: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,05:39:37.716771: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,05:39:37.717825: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,05:39:37.718153: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,05:39:37.718197: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,05:39:37.718549: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,05:39:38.483942: AZ encoder initialised
+N,35,02/03/26,05:39:38.485266: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,05:39:38.485374: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,05:39:38.485411: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,05:39:38.485581: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,05:39:38.485619: GPS processing initialised
+P,32,02/03/26,05:39:38.485635: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,05:39:38.485652: SB switch initially high
+P,35,02/03/26,05:39:38.485668: SK switch initially high
+P,35,02/03/26,05:39:38.485727: EXTSW2 switch initially high
+P,35,02/03/26,05:39:38.485746: EXTSW3 switch initially high
+N,43,02/03/26,05:39:38.491406: AZ stabilisation off
+N,35,02/03/26,05:39:38.494235: TSK_Serial_Sensors: Active
+P,35,02/03/26,05:39:38.504509: Serial Sensor Update Missed real-time task deadline, expiries = 3
+N,52,02/03/26,05:39:38.504874: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330774us
+N,35,02/03/26,05:39:38.505542: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,05:39:38.505599: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,05:39:38.505626: Init: AZ gyro saved offset not usable: Age=40161930920 ms (usable in range 0 to 600000 ms)
+N,52,02/03/26,05:39:38.505906: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,05:39:38.506428: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,05:39:38.506496: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 350872us
+N,35,02/03/26,05:39:38.510178: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,05:39:38.510223: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,05:39:38.510249: Init: EL gyro saved offset not usable: Age=40161930918 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,05:39:38.513130: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,05:39:38.513186: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,05:39:38.513215: Init: RL gyro saved offset not usable: Age=40161930920 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,05:39:38.513242: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,05:39:38.514344: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,05:39:38.514410: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,05:39:38.514435: SubState = 'RL move to 0' (after 60029ms)
+W,44,02/03/26,05:39:38.514886: EL time since last update 20.584s
+E,38,02/03/26,05:39:38.515571: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,05:39:38.515614: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,05:39:38.515684: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+W,35,02/03/26,05:39:38.515838: Missed real-time task deadline, expiries = 2
+N,35,02/03/26,05:39:38.515895: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,05:39:38.515954: SK move to limit started
+N,52,02/03/26,05:39:38.595810: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,05:39:38.595880: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,05:39:39.507414: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,05:39:39.507484: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,05:39:39.509468: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1003 ms
+N,52,02/03/26,05:39:39.509522: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,05:39:39.597512: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,05:39:39.597594: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,05:39:39.597623: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,05:39:39.597655: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 88 ms
+N,52,02/03/26,05:39:39.597678: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,05:39:39.597745: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,05:39:39.597779: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,05:39:39.599542: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,05:39:39.599590: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,05:39:39.599651: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,05:39:39.599738: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,05:39:39.603551: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,05:39:40.597436: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,05:39:40.597486: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,05:39:40.597509: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,05:39:40.597556: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,02/03/26,05:39:40.597582: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,05:39:40.597601: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,05:39:42.500822: SK switch change, now low
+N,48,02/03/26,05:39:42.500963: Get the last saved SK degs:39.702000
+N,48,02/03/26,05:39:42.501012: SK move to limit done, spend 3985 ms
+N,130,02/03/26,05:39:42.501053: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3985 ms
+
+N,48,02/03/26,05:39:42.510945: SK move to start started : using saved value=2.202
+N,35,02/03/26,05:39:42.511896: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,05:39:42.560821: SK switch change, now high
+N,48,02/03/26,05:39:46.491004: SK move to start done
+N,48,02/03/26,05:39:46.661202: SubState = 'EL move to start' (after 8146ms)
+N,48,02/03/26,05:39:52.731108: SubState = 'AZ move to start' (after 6070ms)
+N,43,02/03/26,05:39:52.741396: AZ stabilisation off
+N,48,02/03/26,05:39:53.731102: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,05:39:53.741196: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,05:39:53.751508: AZ stabilisation on (by gyro)
+N,48,02/03/26,05:39:53.751574: State = 'Operating' (after 75266ms)
+N,48,02/03/26,05:39:53.751615: SubState = 'Initial' (after 11ms)
+N,35,02/03/26,05:40:03.164699: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,05:40:03.174912: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,05:40:03.180259: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,05:40:03.190685: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,05:40:03.196413: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+P,35,02/03/26,05:41:42.790829: SB switch change, now low
+P,35,02/03/26,05:41:45.460827: SB switch change, now high
+P,35,02/03/26,05:41:45.470826: SB switch change, now low
+P,35,02/03/26,05:41:45.490828: SB switch change, now high
+P,35,02/03/26,05:41:45.500828: SB switch change, now low
+P,35,02/03/26,05:41:45.520827: SB switch change, now high
+P,35,02/03/26,05:41:45.530829: SB switch change, now low
+P,35,02/03/26,05:41:45.550828: SB switch change, now high
+P,35,02/03/26,05:41:45.560826: SB switch change, now low
+P,35,02/03/26,05:41:45.580827: SB switch change, now high
+P,35,02/03/26,05:41:49.930913: SB switch change, now low
+P,35,02/03/26,05:41:57.220828: SB switch change, now high
+P,35,02/03/26,05:41:57.230827: SB switch change, now low
+P,35,02/03/26,05:41:57.240828: SB switch change, now high
+P,35,02/03/26,05:41:57.250828: SB switch change, now low
+P,35,02/03/26,05:41:57.260825: SB switch change, now high
+P,35,02/03/26,05:41:57.270828: SB switch change, now low
+P,35,02/03/26,05:41:57.280826: SB switch change, now high
+P,35,02/03/26,05:41:57.290827: SB switch change, now low
+P,35,02/03/26,05:41:57.300827: SB switch change, now high
+P,35,02/03/26,05:41:57.310827: SB switch change, now low
+P,35,02/03/26,05:41:57.320826: SB switch change, now high
+P,35,02/03/26,05:41:57.330828: SB switch change, now low
+P,35,02/03/26,05:41:57.340827: SB switch change, now high
+P,35,02/03/26,05:41:57.350841: SB switch change, now low
+P,35,02/03/26,05:41:57.360829: SB switch change, now high
+P,35,02/03/26,05:41:57.370827: SB switch change, now low
+P,35,02/03/26,05:41:57.400843: SB switch change, now high
+P,35,02/03/26,05:41:57.410841: SB switch change, now low
+P,35,02/03/26,05:41:57.440841: SB switch change, now high
+P,35,02/03/26,05:41:57.450829: SB switch change, now low
+P,35,02/03/26,05:41:57.460843: SB switch change, now high
+P,35,02/03/26,05:41:57.470841: SB switch change, now low
+P,35,02/03/26,05:41:59.120844: SB switch change, now high
+P,35,02/03/26,05:41:59.130828: SB switch change, now low
+P,35,02/03/26,05:41:59.180828: SB switch change, now high
+P,35,02/03/26,05:41:59.190829: SB switch change, now low
+P,35,02/03/26,05:41:59.240829: SB switch change, now high
+P,35,02/03/26,05:41:59.250844: SB switch change, now low
+P,35,02/03/26,05:41:59.260829: SB switch change, now high
+P,35,02/03/26,05:41:59.270825: SB switch change, now low
+P,35,02/03/26,05:41:59.280829: SB switch change, now high
+P,35,02/03/26,05:41:59.290830: SB switch change, now low
+P,35,02/03/26,05:41:59.300827: SB switch change, now high
+P,35,02/03/26,05:41:59.310846: SB switch change, now low
+P,35,02/03/26,05:41:59.320828: SB switch change, now high
+P,35,02/03/26,05:41:59.330834: SB switch change, now low
+P,35,02/03/26,05:41:59.340843: SB switch change, now high
+P,35,02/03/26,05:41:59.350827: SB switch change, now low
+P,35,02/03/26,05:41:59.360828: SB switch change, now high
+P,35,02/03/26,05:41:59.370843: SB switch change, now low
+P,35,02/03/26,05:41:59.380841: SB switch change, now high
+P,35,02/03/26,05:41:59.390826: SB switch change, now low
+P,35,02/03/26,05:41:59.400844: SB switch change, now high
+P,35,02/03/26,05:41:59.410828: SB switch change, now low
+P,35,02/03/26,05:41:59.420827: SB switch change, now high
+P,35,02/03/26,05:41:59.430840: SB switch change, now low
+P,35,02/03/26,05:41:59.440829: SB switch change, now high
+P,35,02/03/26,05:41:59.450827: SB switch change, now low
+P,35,02/03/26,05:41:59.460840: SB switch change, now high
+P,35,02/03/26,05:41:59.470827: SB switch change, now low
+P,35,02/03/26,05:41:59.480826: SB switch change, now high
+P,35,02/03/26,05:41:59.490844: SB switch change, now low
+P,35,02/03/26,05:41:59.500828: SB switch change, now high
+P,35,02/03/26,05:41:59.510828: SB switch change, now low
+P,35,02/03/26,05:41:59.520841: SB switch change, now high
+P,35,02/03/26,05:41:59.530828: SB switch change, now low
+P,35,02/03/26,05:41:59.540843: SB switch change, now high
+P,35,02/03/26,05:41:59.550834: SB switch change, now low
+P,35,02/03/26,05:41:59.560846: SB switch change, now high
+P,35,02/03/26,05:41:59.570826: SB switch change, now low
+P,35,02/03/26,05:41:59.580835: SB switch change, now high
+P,35,02/03/26,05:41:59.590829: SB switch change, now low
+P,35,02/03/26,05:41:59.600841: SB switch change, now high
+P,35,02/03/26,05:41:59.610828: SB switch change, now low
+P,35,02/03/26,05:41:59.620843: SB switch change, now high
+P,35,02/03/26,05:41:59.630841: SB switch change, now low
+P,35,02/03/26,05:41:59.640827: SB switch change, now high
+P,35,02/03/26,05:41:59.650844: SB switch change, now low
+P,35,02/03/26,05:41:59.780838: SB switch change, now high
+P,35,02/03/26,05:41:59.790828: SB switch change, now low
+P,35,02/03/26,05:41:59.860841: SB switch change, now high
+P,35,02/03/26,05:41:59.870829: SB switch change, now low
+P,35,02/03/26,05:41:59.920843: SB switch change, now high
+P,35,02/03/26,05:41:59.930826: SB switch change, now low
+P,35,02/03/26,05:42:15.240841: SB switch change, now high
+N,35,02/03/26,05:55:16.726051: SBINT_Handle_Move_SK_To_Limit: start (OK)
+N,35,02/03/26,05:55:16.730993: SK_Motor_Set_Current_Count : 462222 (650.00 degs from limit)
+N,48,02/03/26,05:55:16.731079: SK move to limit started
+N,35,02/03/26,05:55:16.732068: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+P,35,02/03/26,05:55:20.710886: SK switch change, now low
+N,48,02/03/26,05:55:20.711090: SK move to limit done, spend 3980 ms
+N,130,02/03/26,05:55:20.711139: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,35,02/03/26,05:55:20.712427: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,05:55:20.750878: SK switch change, now high
+N,35,02/03/26,05:55:36.800755: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,05:55:36.811146: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,05:55:36.816459: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,05:55:36.826720: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,05:55:36.832593: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,130,02/03/26,06:21:11.907859: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,06:21:11.964204: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,06:21:12.076435: HI config FV2 read from RT DB OK
+P,35,02/03/26,06:21:12.076506: HI config validated OK
+P,35,02/03/26,06:21:12.079681: HI config file loaded and parsed OK
+P,35,02/03/26,06:21:12.079734: The HI information is initialized
+P,35,02/03/26,06:21:12.079762: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,06:21:12.079783: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,06:21:12.080625: ANT config read from RT DB OK
+P,35,02/03/26,06:21:12.080668: ANT config validated OK
+N,130,02/03/26,06:21:12.092295: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,06:21:12.093720: GCOH DB loaded and parsed OK
+N,35,02/03/26,06:21:12.093983: GCOH DB content validated OK
+N,35,02/03/26,06:21:12.094932: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,06:21:12.094975: Antenna encoder calibration file validated OK
+N,35,02/03/26,06:21:12.095779: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,06:21:12.095819: Antenna compass calibration file validated OK
+P,35,02/03/26,06:21:12.097574: PID config file loaded and parsed OK
+N,67,02/03/26,06:21:12.097634: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,06:21:12.097659: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,06:21:12.097698: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,06:21:12.097751: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,06:21:12.097787: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,06:21:12.097819: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,06:21:12.097849: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,06:21:12.097889: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,06:21:12.097920: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,06:21:12.097950: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,06:21:12.287861: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,06:21:14.288061: [PL IMAGE LOAD START]
+A,35,02/03/26,06:21:14.321847: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,06:21:14.333170: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=76632000 Size=65536 fd=65
+A,35,02/03/26,06:21:14.335366: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB00000 Size=117440512 fd=66
+N,130,02/03/26,06:21:14.375547: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,06:21:14.375639: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,06:21:14.375676: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,06:21:14.375700: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,06:21:14.375733: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,06:21:14.375753: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,06:21:14.431019: TSK_Serial_Sensors created OK
+P,32,02/03/26,06:21:14.681086: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,06:21:14.681130: FPGA version running = 3.9
+N,130,02/03/26,06:21:14.681190: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,06:21:14.681215: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,06:21:14.681257: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,06:21:14.681280: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,06:21:14.681319: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,06:21:14.681343: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,06:21:14.682051: HI: amu_model        : AMUS6.1
+P,32,02/03/26,06:21:14.682082: HI: az_encoder_model : r2
+P,32,02/03/26,06:21:14.682100: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,06:21:14.682370: MIO12 exported successfully
+N,32,02/03/26,06:21:14.682677: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,06:21:14.682721: ADC PL module enabled, divider=49
+N,52,02/03/26,06:21:14.694279: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,06:21:14.697443: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,06:21:14.698498: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,06:21:14.698826: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,06:21:14.698871: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,06:21:14.699224: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,06:21:15.464515: AZ encoder initialised
+N,35,02/03/26,06:21:15.465395: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:21:15.465488: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:21:15.465536: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,06:21:15.465727: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,06:21:15.465750: GPS processing initialised
+P,32,02/03/26,06:21:15.465766: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,06:21:15.465783: SB switch initially high
+P,35,02/03/26,06:21:15.465851: SK switch initially high
+P,35,02/03/26,06:21:15.465871: EXTSW2 switch initially high
+P,35,02/03/26,06:21:15.465898: EXTSW3 switch initially high
+N,43,02/03/26,06:21:15.471822: AZ stabilisation off
+N,35,02/03/26,06:21:15.474741: TSK_Serial_Sensors: Active
+N,52,02/03/26,06:21:15.484420: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330776us
+N,52,02/03/26,06:21:15.485390: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,06:21:15.485880: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,06:21:15.486223: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 349829us
+N,35,02/03/26,06:21:15.499133: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:21:15.499183: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,06:21:15.499210: Init: AZ gyro saved offset not usable: Age=40164427914 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:21:15.502649: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:21:15.502700: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,06:21:15.502743: Init: EL gyro saved offset not usable: Age=40164427910 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:21:15.503879: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:21:15.503923: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,06:21:15.503969: Init: RL gyro saved offset not usable: Age=40164427910 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,06:21:15.503995: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,06:21:15.505544: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,06:21:15.505589: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,06:21:15.505612: SubState = 'RL move to 0' (after 60040ms)
+W,44,02/03/26,06:21:15.506066: EL time since last update 20.575s
+E,38,02/03/26,06:21:15.506888: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,06:21:15.506941: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,06:21:15.507004: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+W,35,02/03/26,06:21:15.507195: Missed real-time task deadline, expiries = 3
+N,35,02/03/26,06:21:15.507261: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,06:21:15.507323: SK move to limit started
+N,52,02/03/26,06:21:15.576337: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:21:15.576395: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:21:16.488327: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,06:21:16.488410: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,06:21:16.490387: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,06:21:16.490460: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,06:21:16.578385: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:21:16.578467: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:21:16.578493: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,06:21:16.578526: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 89 ms
+N,52,02/03/26,06:21:16.578557: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,06:21:16.578629: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,06:21:16.578654: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,06:21:16.580641: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,06:21:16.580693: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,06:21:16.580772: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,06:21:16.580889: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,06:21:16.584387: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,06:21:17.578296: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,06:21:17.578359: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,06:21:17.578384: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,06:21:17.578445: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 999 ms
+N,52,02/03/26,06:21:17.578472: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,06:21:17.578507: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,06:21:19.490975: SK switch change, now low
+N,48,02/03/26,06:21:19.491124: Get the last saved SK degs:39.702000
+N,48,02/03/26,06:21:19.491171: SK move to limit done, spend 3984 ms
+N,130,02/03/26,06:21:19.491250: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3984 ms
+
+N,48,02/03/26,06:21:19.501088: SK move to start started : using saved value=2.202
+N,35,02/03/26,06:21:19.502080: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,06:21:19.540975: SK switch change, now high
+N,48,02/03/26,06:21:23.481121: SK move to start done
+N,48,02/03/26,06:21:23.641384: SubState = 'EL move to start' (after 8135ms)
+N,48,02/03/26,06:21:29.711255: SubState = 'AZ move to start' (after 6070ms)
+N,43,02/03/26,06:21:29.721520: AZ stabilisation off
+N,48,02/03/26,06:21:30.711252: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,06:21:30.721224: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,06:21:30.731457: AZ stabilisation on (by gyro)
+N,48,02/03/26,06:21:30.731531: State = 'Operating' (after 75266ms)
+N,48,02/03/26,06:21:30.731564: SubState = 'Initial' (after 11ms)
+N,35,02/03/26,06:21:40.215317: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,06:21:40.225604: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:21:40.231582: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,06:21:40.241981: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:21:40.247234: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,50,02/03/26,06:24:19.251114: MHA number of points = 400 from Start=200319565 to End=204319565
+C,130,02/03/26,06:24:19.251914: [PRODUCTEVENT] 116, C, BLDC Motor fault on, AZ high current, restarting ANT [average DAC=617.08 (over last 4000ms) > max amplitude 617.50]
+N,130,02/03/26,06:24:19.252004: [PRODUCTFAULT] Fault Code=3201, Status=1, AZ BLDC motor fault 
+E,35,02/03/26,06:24:19.252100: SSF write request sent to ACU
+209.320653 : Fatal error (Module=ant Thread=Init File=../ant/ant_state_machine_common.c Line=402
+)N,130,02/03/26,06:24:33.567161: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,06:24:33.612945: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,06:24:33.681555: HI config FV2 read from RT DB OK
+P,35,02/03/26,06:24:33.681621: HI config validated OK
+P,35,02/03/26,06:24:33.682528: HI config file loaded and parsed OK
+P,35,02/03/26,06:24:33.682569: The HI information is initialized
+P,35,02/03/26,06:24:33.682597: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,06:24:33.682617: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,06:24:33.683239: ANT config read from RT DB OK
+P,35,02/03/26,06:24:33.683278: ANT config validated OK
+N,130,02/03/26,06:24:33.685796: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,06:24:33.686314: GCOH DB loaded and parsed OK
+N,35,02/03/26,06:24:33.686561: GCOH DB content validated OK
+N,35,02/03/26,06:24:33.686984: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,06:24:33.687023: Antenna encoder calibration file validated OK
+N,35,02/03/26,06:24:33.687327: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,06:24:33.687365: Antenna compass calibration file validated OK
+P,35,02/03/26,06:24:33.687929: PID config file loaded and parsed OK
+N,67,02/03/26,06:24:33.687983: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,06:24:33.688005: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,06:24:33.688042: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,06:24:33.688093: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,06:24:33.688124: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,06:24:33.688154: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,06:24:33.688184: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,06:24:33.688214: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,06:24:33.688254: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,06:24:33.688285: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,06:24:33.846662: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,06:24:35.846823: [PL IMAGE LOAD START]
+A,35,02/03/26,06:24:35.880868: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,06:24:35.889154: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B40000 Size=65536 fd=65
+A,35,02/03/26,06:24:35.893165: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB40000 Size=117440512 fd=66
+N,130,02/03/26,06:24:35.933344: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,06:24:35.933432: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,06:24:35.933467: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,06:24:35.933499: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,06:24:35.933534: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,06:24:35.933554: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,06:24:35.988820: TSK_Serial_Sensors created OK
+P,32,02/03/26,06:24:36.238888: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,06:24:36.238937: FPGA version running = 3.9
+N,130,02/03/26,06:24:36.238997: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,06:24:36.239064: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,06:24:36.239109: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,06:24:36.239132: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,06:24:36.239170: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,06:24:36.239191: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,06:24:36.239920: HI: amu_model        : AMUS6.1
+P,32,02/03/26,06:24:36.239950: HI: az_encoder_model : r2
+P,32,02/03/26,06:24:36.239968: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,06:24:36.240064: MIO12 exported successfully
+N,32,02/03/26,06:24:36.240280: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,06:24:36.240319: ADC PL module enabled, divider=49
+N,52,02/03/26,06:24:36.252001: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,06:24:36.255156: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,06:24:36.256209: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,06:24:36.256507: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,06:24:36.256551: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,06:24:36.256903: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,06:24:37.022226: AZ encoder initialised
+N,35,02/03/26,06:24:37.023145: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:24:37.023260: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:24:37.023312: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,06:24:37.023521: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,06:24:37.023550: GPS processing initialised
+P,32,02/03/26,06:24:37.023567: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,06:24:37.023584: SB switch initially high
+P,35,02/03/26,06:24:37.023599: SK switch initially high
+P,35,02/03/26,06:24:37.023637: EXTSW2 switch initially high
+P,35,02/03/26,06:24:37.023655: EXTSW3 switch initially high
+N,43,02/03/26,06:24:37.029329: AZ stabilisation off
+N,35,02/03/26,06:24:37.030629: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:24:37.030688: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,06:24:37.030716: Init: AZ gyro saved offset not usable: Age=40164629445 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:24:37.031014: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:24:37.031045: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,06:24:37.031071: Init: EL gyro saved offset not usable: Age=40164629439 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:24:37.031414: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:24:37.031469: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,06:24:37.031495: Init: RL gyro saved offset not usable: Age=40164629438 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,06:24:37.031587: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,06:24:37.031866: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,06:24:37.031882: TSK_Serial_Sensors: Active
+N,35,02/03/26,06:24:37.031939: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,06:24:37.031993: SubState = 'RL move to 0' (after 60009ms)
+W,44,02/03/26,06:24:37.032510: EL time since last update 222.101s
+E,38,02/03/26,06:24:37.033244: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,06:24:37.033352: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,06:24:37.033529: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,52,02/03/26,06:24:37.037254: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330773us
+N,52,02/03/26,06:24:37.038238: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,06:24:37.038699: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,35,02/03/26,06:24:37.038774: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,06:24:37.038825: SK move to limit started
+N,52,02/03/26,06:24:37.039031: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 344872us
+N,52,02/03/26,06:24:37.133097: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:24:37.133155: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:24:38.041230: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,06:24:38.041295: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,06:24:38.043119: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,02/03/26,06:24:38.043180: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,06:24:38.137089: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:24:38.137141: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:24:38.137183: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,06:24:38.137224: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 94 ms
+N,52,02/03/26,06:24:38.137255: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,06:24:38.137318: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,06:24:38.137349: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,06:24:38.137741: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,06:24:38.137791: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,06:24:38.137841: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,06:24:38.137893: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,06:24:38.143132: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,06:24:39.137095: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,06:24:39.137161: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,06:24:39.137186: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,06:24:39.137254: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,02/03/26,06:24:39.137281: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,06:24:39.137303: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,06:24:41.018737: SK switch change, now low
+N,48,02/03/26,06:24:41.018893: Get the last saved SK degs:39.702000
+N,48,02/03/26,06:24:41.018942: SK move to limit done, spend 3980 ms
+N,130,02/03/26,06:24:41.018983: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,48,02/03/26,06:24:41.028855: SK move to start started : using saved value=2.202
+N,35,02/03/26,06:24:41.029819: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,06:24:41.068738: SK switch change, now high
+N,48,02/03/26,06:24:45.008874: SK move to start done
+N,48,02/03/26,06:24:45.198986: SubState = 'EL move to start' (after 8167ms)
+N,48,02/03/26,06:24:51.268976: SubState = 'AZ move to start' (after 6070ms)
+N,43,02/03/26,06:24:51.279223: AZ stabilisation off
+N,48,02/03/26,06:24:52.269120: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,06:24:52.279059: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,06:24:52.289329: AZ stabilisation on (by gyro)
+N,48,02/03/26,06:24:52.289389: State = 'Operating' (after 75266ms)
+N,48,02/03/26,06:24:52.289427: SubState = 'Initial' (after 10ms)
+N,35,02/03/26,06:25:01.713784: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,06:25:01.724137: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:25:01.730287: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,06:25:01.740915: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:25:01.746608: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,130,02/03/26,06:35:22.189599: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,06:35:22.244065: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,06:35:22.343858: HI config FV2 read from RT DB OK
+P,35,02/03/26,06:35:22.343922: HI config validated OK
+P,35,02/03/26,06:35:22.346629: HI config file loaded and parsed OK
+P,35,02/03/26,06:35:22.346681: The HI information is initialized
+P,35,02/03/26,06:35:22.346711: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,06:35:22.346731: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,06:35:22.347536: ANT config read from RT DB OK
+P,35,02/03/26,06:35:22.347579: ANT config validated OK
+N,130,02/03/26,06:35:22.365051: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,06:35:22.366499: GCOH DB loaded and parsed OK
+N,35,02/03/26,06:35:22.366763: GCOH DB content validated OK
+N,35,02/03/26,06:35:22.367722: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,06:35:22.367766: Antenna encoder calibration file validated OK
+N,35,02/03/26,06:35:22.368595: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,06:35:22.368634: Antenna compass calibration file validated OK
+P,35,02/03/26,06:35:22.370386: PID config file loaded and parsed OK
+N,67,02/03/26,06:35:22.370443: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,06:35:22.370468: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,06:35:22.370508: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,06:35:22.370559: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,06:35:22.370594: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,06:35:22.370624: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,06:35:22.370654: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,06:35:22.370683: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,06:35:22.370712: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,06:35:22.370742: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,06:35:22.561166: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,06:35:24.561366: [PL IMAGE LOAD START]
+A,35,02/03/26,06:35:24.598355: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,06:35:24.606648: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=76637000 Size=65536 fd=65
+A,35,02/03/26,06:35:24.608872: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB00000 Size=117440512 fd=66
+N,130,02/03/26,06:35:24.649060: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,06:35:24.649152: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,06:35:24.649187: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,06:35:24.649254: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,06:35:24.649286: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,06:35:24.649334: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,06:35:24.704602: TSK_Serial_Sensors created OK
+P,32,02/03/26,06:35:24.954667: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,06:35:24.954712: FPGA version running = 3.9
+N,130,02/03/26,06:35:24.954776: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,06:35:24.954815: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,06:35:24.954859: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,06:35:24.954883: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,06:35:24.954922: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,06:35:24.954957: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,06:35:24.955668: HI: amu_model        : AMUS6.1
+P,32,02/03/26,06:35:24.955698: HI: az_encoder_model : r2
+P,32,02/03/26,06:35:24.955717: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,06:35:24.955989: MIO12 exported successfully
+N,32,02/03/26,06:35:24.956298: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,06:35:24.956342: ADC PL module enabled, divider=49
+N,52,02/03/26,06:35:24.967869: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,06:35:24.971035: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,06:35:24.972092: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,06:35:24.972428: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,06:35:24.972470: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,06:35:24.972822: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,06:35:25.738177: AZ encoder initialised
+N,35,02/03/26,06:35:25.739310: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:35:25.739415: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:35:25.739456: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,06:35:25.739686: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,06:35:25.739717: GPS processing initialised
+P,32,02/03/26,06:35:25.739754: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,06:35:25.739773: SB switch initially high
+P,35,02/03/26,06:35:25.739790: SK switch initially high
+P,35,02/03/26,06:35:25.739807: EXTSW2 switch initially high
+P,35,02/03/26,06:35:25.739822: EXTSW3 switch initially high
+N,43,02/03/26,06:35:25.745406: AZ stabilisation off
+N,35,02/03/26,06:35:25.748601: TSK_Serial_Sensors: Active
+N,35,02/03/26,06:35:25.749553: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:35:25.749609: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,06:35:25.749647: Init: AZ gyro saved offset not usable: Age=40165278164 ms (usable in range 0 to 600000 ms)
+N,52,02/03/26,06:35:25.753921: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330771us
+N,52,02/03/26,06:35:25.754907: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,02/03/26,06:35:25.755364: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,06:35:25.755731: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 345739us
+N,35,02/03/26,06:35:25.768773: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:35:25.768859: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,06:35:25.768888: Init: EL gyro saved offset not usable: Age=40165278176 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:35:25.775439: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:35:25.775484: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,06:35:25.775520: Init: RL gyro saved offset not usable: Age=40165278182 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,06:35:25.775546: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,06:35:25.776667: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,06:35:25.776719: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,06:35:25.776744: SubState = 'RL move to 0' (after 60037ms)
+W,44,02/03/26,06:35:25.777199: EL time since last update 20.846s
+E,38,02/03/26,06:35:25.777954: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,06:35:25.778007: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,06:35:25.778069: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+W,35,02/03/26,06:35:25.778249: Missed real-time task deadline, expiries = 3
+N,35,02/03/26,06:35:25.778324: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,06:35:25.778377: SK move to limit started
+N,52,02/03/26,06:35:25.849877: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:35:25.849963: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:35:26.755806: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,06:35:26.755880: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,06:35:26.757859: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1003 ms
+N,52,02/03/26,06:35:26.757933: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,06:35:26.851855: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:35:26.851928: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:35:26.851953: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,06:35:26.851985: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 94 ms
+N,52,02/03/26,06:35:26.852014: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,06:35:26.852078: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,06:35:26.852110: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,06:35:26.859327: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,06:35:26.859409: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,06:35:26.859489: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,06:35:26.859590: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+P,35,02/03/26,06:35:26.859639: Serial Sensor Update Missed real-time task deadline, expiries = 3
+N,52,02/03/26,06:35:26.860058: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,06:35:27.853802: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,06:35:27.853862: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,06:35:27.853886: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,06:35:27.853966: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1002 ms
+N,52,02/03/26,06:35:27.853995: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,06:35:27.854024: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,06:35:29.754902: SK switch change, now low
+N,48,02/03/26,06:35:29.755078: Get the last saved SK degs:39.702000
+N,48,02/03/26,06:35:29.755136: SK move to limit done, spend 3977 ms
+N,130,02/03/26,06:35:29.755184: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3977 ms
+
+N,48,02/03/26,06:35:29.765017: SK move to start started : using saved value=2.202
+N,35,02/03/26,06:35:29.765977: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,06:35:29.804903: SK switch change, now high
+N,48,02/03/26,06:35:33.745105: SK move to start done
+N,48,02/03/26,06:35:33.915230: SubState = 'EL move to start' (after 8138ms)
+N,48,02/03/26,06:35:39.985135: SubState = 'AZ move to start' (after 6070ms)
+N,43,02/03/26,06:35:39.995443: AZ stabilisation off
+N,48,02/03/26,06:35:40.985156: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,06:35:40.995340: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,06:35:41.005598: AZ stabilisation on (by gyro)
+N,48,02/03/26,06:35:41.005653: State = 'Operating' (after 75266ms)
+N,48,02/03/26,06:35:41.005803: SubState = 'Initial' (after 11ms)
+N,35,02/03/26,06:35:50.467585: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,06:35:50.477904: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:35:50.483371: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,06:35:50.493696: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:35:50.499119: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,50,02/03/26,06:39:45.035138: MHA number of points = 400 from Start=276103613 to End=280103613
+C,130,02/03/26,06:39:45.036019: [PRODUCTEVENT] 116, C, BLDC Motor fault on, AZ high current, restarting ANT [average DAC=-617.14 (over last 4000ms) > max amplitude 617.50]
+N,130,02/03/26,06:39:45.036098: [PRODUCTFAULT] Fault Code=3201, Status=1, AZ BLDC motor fault 
+E,35,02/03/26,06:39:45.036179: SSF write request sent to ACU
+285.104853 : Fatal error (Module=ant Thread=Init File=../ant/ant_state_machine_common.c Line=402
+)N,130,02/03/26,06:39:52.630454: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,02/03/26,06:39:52.674013: Creating TCP SBINT server socket (port 30230)
+P,35,02/03/26,06:39:52.688604: HI config FV2 read from RT DB OK
+P,35,02/03/26,06:39:52.688665: HI config validated OK
+P,35,02/03/26,06:39:52.689596: HI config file loaded and parsed OK
+P,35,02/03/26,06:39:52.689638: The HI information is initialized
+P,35,02/03/26,06:39:52.689665: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,02/03/26,06:39:52.689686: The antenna is an antenna with SB motor removed. 
+P,35,02/03/26,06:39:52.690294: ANT config read from RT DB OK
+P,35,02/03/26,06:39:52.690333: ANT config validated OK
+N,130,02/03/26,06:39:52.693129: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,02/03/26,06:39:52.693657: GCOH DB loaded and parsed OK
+N,35,02/03/26,06:39:52.693905: GCOH DB content validated OK
+N,35,02/03/26,06:39:52.694322: Antenna encoder calibration file loaded and parsed OK
+N,35,02/03/26,06:39:52.694361: Antenna encoder calibration file validated OK
+N,35,02/03/26,06:39:52.694659: Antenna compass calibration file loaded and parsed OK
+N,35,02/03/26,06:39:52.694693: Antenna compass calibration file validated OK
+P,35,02/03/26,06:39:52.695231: PID config file loaded and parsed OK
+N,67,02/03/26,06:39:52.695283: ANT: Slip Ring support, antenna_model=VS100K
+P,67,02/03/26,06:39:52.695340: Tilted arm angle assumed = 20.00 degs
+N,130,02/03/26,06:39:52.695377: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,02/03/26,06:39:52.695427: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,02/03/26,06:39:52.695477: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,02/03/26,06:39:52.695510: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,02/03/26,06:39:52.695607: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,02/03/26,06:39:52.695640: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,02/03/26,06:39:52.695671: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,02/03/26,06:39:52.695702: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,02/03/26,06:39:52.847888: [PL IMAGE LOAD - PAUSE]
+A,35,02/03/26,06:39:54.848057: [PL IMAGE LOAD START]
+A,35,02/03/26,06:39:54.882263: [PL IMAGE LOAD - COMPLETED]
+A,35,02/03/26,06:39:54.893583: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B68000 Size=65536 fd=65
+A,35,02/03/26,06:39:54.895781: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB68000 Size=117440512 fd=66
+N,130,02/03/26,06:39:54.935966: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,02/03/26,06:39:54.936050: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,02/03/26,06:39:54.936087: Detected PCB hardware version from resistors: 6
+P,35,02/03/26,06:39:54.936154: Antenna sensor config: loaded from amu_hi_config.json
+N,32,02/03/26,06:39:54.936186: ANT_Sensor_Config : State machine version = 6
+N,32,02/03/26,06:39:54.936221: ANT_Sensor_Config : Safe Mode enabled
+P,64,02/03/26,06:39:54.991526: TSK_Serial_Sensors created OK
+P,32,02/03/26,06:39:55.241594: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,02/03/26,06:39:55.241647: FPGA version running = 3.9
+N,130,02/03/26,06:39:55.241712: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,02/03/26,06:39:55.241738: PL interrupt for I2C module (ID=1) initialised
+N,130,02/03/26,06:39:55.241784: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,02/03/26,06:39:55.241807: PL interrupt for I2C module (ID=2) initialised
+N,130,02/03/26,06:39:55.241844: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,02/03/26,06:39:55.241882: PL interrupt for I2C module (ID=3) initialised
+P,32,02/03/26,06:39:55.242591: HI: amu_model        : AMUS6.1
+P,32,02/03/26,06:39:55.242621: HI: az_encoder_model : r2
+P,32,02/03/26,06:39:55.242640: HI: box_sensor_pcb   : dsb3.3
+P,35,02/03/26,06:39:55.242735: MIO12 exported successfully
+N,32,02/03/26,06:39:55.242941: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,02/03/26,06:39:55.242979: ADC PL module enabled, divider=49
+N,52,02/03/26,06:39:55.254590: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,02/03/26,06:39:55.257753: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,02/03/26,06:39:55.258808: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,02/03/26,06:39:55.259107: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,02/03/26,06:39:55.259152: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,02/03/26,06:39:55.259507: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,02/03/26,06:39:56.024878: AZ encoder initialised
+N,35,02/03/26,06:39:56.025802: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:39:56.025899: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,02/03/26,06:39:56.025940: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,02/03/26,06:39:56.026110: Not GPS master process, not opening GPS serial port
+N,38,02/03/26,06:39:56.026158: GPS processing initialised
+P,32,02/03/26,06:39:56.026175: TSK_Init: ANT Initialisation Complete
+P,35,02/03/26,06:39:56.026193: SB switch initially high
+P,35,02/03/26,06:39:56.026209: SK switch initially high
+P,35,02/03/26,06:39:56.026232: EXTSW2 switch initially high
+P,35,02/03/26,06:39:56.026248: EXTSW3 switch initially high
+N,43,02/03/26,06:39:56.032038: AZ stabilisation off
+N,35,02/03/26,06:39:56.033309: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:39:56.033361: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,02/03/26,06:39:56.033389: Init: AZ gyro saved offset not usable: Age=40165548448 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:39:56.033671: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:39:56.033724: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,02/03/26,06:39:56.033749: Init: EL gyro saved offset not usable: Age=40165548441 ms (usable in range 0 to 600000 ms)
+N,35,02/03/26,06:39:56.033982: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,02/03/26,06:39:56.034023: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,02/03/26,06:39:56.034047: Init: RL gyro saved offset not usable: Age=40165548441 ms (usable in range 0 to 600000 ms)
+N,48,02/03/26,06:39:56.034070: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,02/03/26,06:39:56.034390: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,02/03/26,06:39:56.034429: /home/bird/data/init_skew.json file validated OK
+N,48,02/03/26,06:39:56.034477: SubState = 'RL move to 0' (after 60009ms)
+N,35,02/03/26,06:39:56.034644: TSK_Serial_Sensors: Active
+W,44,02/03/26,06:39:56.034930: EL time since last update 291.103s
+E,38,02/03/26,06:39:56.035796: GPS lock lost (>3s since locked RMC message arrived)
+N,130,02/03/26,06:39:56.035847: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,02/03/26,06:39:56.035914: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,52,02/03/26,06:39:56.039982: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330772us
+N,52,02/03/26,06:39:56.040948: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,35,02/03/26,06:39:56.041354: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,02/03/26,06:39:56.041417: SK move to limit started
+N,52,02/03/26,06:39:56.041417: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,02/03/26,06:39:56.041778: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 344889us
+N,52,02/03/26,06:39:56.135884: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:39:56.135963: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:39:57.041803: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,02/03/26,06:39:57.041867: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,02/03/26,06:39:57.043806: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1003 ms
+N,52,02/03/26,06:39:57.043845: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,02/03/26,06:39:57.139810: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,02/03/26,06:39:57.139852: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,02/03/26,06:39:57.139874: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,02/03/26,06:39:57.139911: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 96 ms
+N,52,02/03/26,06:39:57.139932: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,02/03/26,06:39:57.139993: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,02/03/26,06:39:57.140015: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,02/03/26,06:39:57.140393: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,02/03/26,06:39:57.140445: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,02/03/26,06:39:57.140493: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,02/03/26,06:39:57.140571: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,02/03/26,06:39:57.145848: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,02/03/26,06:39:58.139814: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,02/03/26,06:39:58.139864: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,02/03/26,06:39:58.139888: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,02/03/26,06:39:58.139949: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,02/03/26,06:39:58.139976: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,02/03/26,06:39:58.139998: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,02/03/26,06:40:00.021326: SK switch change, now low
+N,48,02/03/26,06:40:00.021494: Get the last saved SK degs:39.702000
+N,48,02/03/26,06:40:00.021547: SK move to limit done, spend 3981 ms
+N,130,02/03/26,06:40:00.021627: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3981 ms
+
+N,48,02/03/26,06:40:00.031442: SK move to start started : using saved value=2.202
+N,35,02/03/26,06:40:00.032432: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,06:40:00.071328: SK switch change, now high
+N,48,02/03/26,06:40:04.011591: SK move to start done
+N,48,02/03/26,06:40:04.201599: SubState = 'EL move to start' (after 8167ms)
+N,48,02/03/26,06:40:10.271581: SubState = 'AZ move to start' (after 6070ms)
+N,43,02/03/26,06:40:10.281839: AZ stabilisation off
+N,48,02/03/26,06:40:11.271854: SubState = 'SK move to limit' (after 1000ms)
+N,48,02/03/26,06:40:11.281694: SubState = 'SK move to start' (after 10ms)
+N,43,02/03/26,06:40:11.291999: AZ stabilisation on (by gyro)
+N,48,02/03/26,06:40:11.292075: State = 'Operating' (after 75266ms)
+N,48,02/03/26,06:40:11.292106: SubState = 'Initial' (after 10ms)
+N,35,02/03/26,06:40:20.708220: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,06:40:20.718456: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:40:20.723763: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,06:40:20.734002: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:40:20.739319: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,06:55:49.026992: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,06:55:49.037269: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:55:49.043218: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,06:55:49.053429: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,06:55:49.058925: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+W,44,02/03/26,07:08:16.112936: EL time since last update 0.061s
+W,35,02/03/26,07:08:16.113656: Missed real-time task deadline, expiries = 5
+N,35,02/03/26,07:10:57.126442: SBINT_Handle_Move_SK_To_Limit: start (OK)
+N,35,02/03/26,07:10:57.131555: SK_Motor_Set_Current_Count : 462222 (650.00 degs from limit)
+N,48,02/03/26,07:10:57.131631: SK move to limit started
+N,35,02/03/26,07:10:57.132671: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+P,35,02/03/26,07:11:01.111348: SK switch change, now low
+N,48,02/03/26,07:11:01.111565: SK move to limit done, spend 3980 ms
+N,130,02/03/26,07:11:01.111614: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,35,02/03/26,07:11:01.112640: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,02/03/26,07:11:01.151329: SK switch change, now high
+N,35,02/03/26,07:11:17.201605: SBINT_Handle_Set_Config: OK
+N,35,02/03/26,07:11:17.211912: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,07:11:17.217014: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,02/03/26,07:11:17.227406: SBINT_Handle_Conical_Scan_Off: OK
+N,35,02/03/26,07:11:17.233107: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,130,10/03/26,06:40:14.812033: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,10/03/26,06:40:14.863692: Creating TCP SBINT server socket (port 30230)
+P,35,10/03/26,06:40:14.974776: HI config FV2 read from RT DB OK
+P,35,10/03/26,06:40:14.974852: HI config validated OK
+P,35,10/03/26,06:40:14.977859: HI config file loaded and parsed OK
+P,35,10/03/26,06:40:14.977930: The HI information is initialized
+P,35,10/03/26,06:40:14.977965: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,10/03/26,06:40:14.977987: The antenna is an antenna with SB motor removed. 
+P,35,10/03/26,06:40:14.978860: ANT config read from RT DB OK
+P,35,10/03/26,06:40:14.978913: ANT config validated OK
+N,130,10/03/26,06:40:14.991030: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,10/03/26,06:40:14.992496: GCOH DB loaded and parsed OK
+N,35,10/03/26,06:40:14.992757: GCOH DB content validated OK
+N,35,10/03/26,06:40:14.993731: Antenna encoder calibration file loaded and parsed OK
+N,35,10/03/26,06:40:14.993774: Antenna encoder calibration file validated OK
+N,35,10/03/26,06:40:14.994589: Antenna compass calibration file loaded and parsed OK
+N,35,10/03/26,06:40:14.994627: Antenna compass calibration file validated OK
+P,35,10/03/26,06:40:14.996400: PID config file loaded and parsed OK
+N,67,10/03/26,06:40:14.996458: ANT: Slip Ring support, antenna_model=VS100K
+P,67,10/03/26,06:40:14.996481: Tilted arm angle assumed = 20.00 degs
+N,130,10/03/26,06:40:14.996520: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,10/03/26,06:40:14.996571: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,10/03/26,06:40:14.996606: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,10/03/26,06:40:14.996679: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,10/03/26,06:40:14.996712: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,10/03/26,06:40:14.996743: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,10/03/26,06:40:14.996772: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,10/03/26,06:40:14.996802: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,10/03/26,06:40:15.180219: [PL IMAGE LOAD - PAUSE]
+A,35,10/03/26,06:40:17.180420: [PL IMAGE LOAD START]
+A,35,10/03/26,06:40:17.214303: [PL IMAGE LOAD - COMPLETED]
+A,35,10/03/26,06:40:17.222941: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72BB0000 Size=65536 fd=65
+A,35,10/03/26,06:40:17.225141: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BBB0000 Size=117440512 fd=66
+N,130,10/03/26,06:40:17.265323: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,10/03/26,06:40:17.265414: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,10/03/26,06:40:17.265450: Detected PCB hardware version from resistors: 6
+P,35,10/03/26,06:40:17.265520: Antenna sensor config: loaded from amu_hi_config.json
+N,32,10/03/26,06:40:17.265552: ANT_Sensor_Config : State machine version = 6
+N,32,10/03/26,06:40:17.265572: ANT_Sensor_Config : Safe Mode enabled
+P,64,10/03/26,06:40:17.320846: TSK_Serial_Sensors created OK
+P,32,10/03/26,06:40:17.570911: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,10/03/26,06:40:17.570955: FPGA version running = 3.9
+N,130,10/03/26,06:40:17.571015: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,10/03/26,06:40:17.571082: PL interrupt for I2C module (ID=1) initialised
+N,130,10/03/26,06:40:17.571128: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,10/03/26,06:40:17.571179: PL interrupt for I2C module (ID=2) initialised
+N,130,10/03/26,06:40:17.571222: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,10/03/26,06:40:17.571245: PL interrupt for I2C module (ID=3) initialised
+P,32,10/03/26,06:40:17.571978: HI: amu_model        : AMUS6.1
+P,32,10/03/26,06:40:17.572009: HI: az_encoder_model : r2
+P,32,10/03/26,06:40:17.572027: HI: box_sensor_pcb   : dsb3.3
+P,35,10/03/26,06:40:17.572304: MIO12 exported successfully
+N,32,10/03/26,06:40:17.572584: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,10/03/26,06:40:17.572630: ADC PL module enabled, divider=49
+N,52,10/03/26,06:40:17.584343: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,10/03/26,06:40:17.587508: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,10/03/26,06:40:17.588563: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,10/03/26,06:40:17.588912: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,10/03/26,06:40:17.588956: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,10/03/26,06:40:17.589311: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,10/03/26,06:40:18.354656: AZ encoder initialised
+N,35,10/03/26,06:40:18.355511: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,10/03/26,06:40:18.355593: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,10/03/26,06:40:18.355625: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,10/03/26,06:40:18.355841: Not GPS master process, not opening GPS serial port
+N,38,10/03/26,06:40:18.355870: GPS processing initialised
+P,32,10/03/26,06:40:18.355886: TSK_Init: ANT Initialisation Complete
+P,35,10/03/26,06:40:18.355902: SB switch initially high
+P,35,10/03/26,06:40:18.355918: SK switch initially high
+P,35,10/03/26,06:40:18.355935: EXTSW2 switch initially high
+P,35,10/03/26,06:40:18.355950: EXTSW3 switch initially high
+N,35,10/03/26,06:40:18.357820: TSK_Serial_Sensors: Active
+N,43,10/03/26,06:40:18.361579: AZ stabilisation off
+N,52,10/03/26,06:40:18.363165: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330772us
+N,52,10/03/26,06:40:18.364199: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,10/03/26,06:40:18.364825: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,10/03/26,06:40:18.364992: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 338738us
+N,35,10/03/26,06:40:18.365243: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,10/03/26,06:40:18.365284: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,10/03/26,06:40:18.365312: Init: AZ gyro saved offset not usable: Age=40856770780 ms (usable in range 0 to 600000 ms)
+N,35,10/03/26,06:40:18.366189: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,10/03/26,06:40:18.366236: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,10/03/26,06:40:18.366264: Init: EL gyro saved offset not usable: Age=40856770774 ms (usable in range 0 to 600000 ms)
+N,35,10/03/26,06:40:18.367623: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,10/03/26,06:40:18.367680: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,10/03/26,06:40:18.367721: Init: RL gyro saved offset not usable: Age=40856770774 ms (usable in range 0 to 600000 ms)
+N,48,10/03/26,06:40:18.367749: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,10/03/26,06:40:18.368609: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,10/03/26,06:40:18.368653: /home/bird/data/init_skew.json file validated OK
+N,48,10/03/26,06:40:18.368677: SubState = 'RL move to 0' (after 60013ms)
+W,44,10/03/26,06:40:18.369105: EL time since last update 21.438s
+E,38,10/03/26,06:40:18.369954: GPS lock lost (>3s since locked RMC message arrived)
+N,130,10/03/26,06:40:18.370008: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,10/03/26,06:40:18.370082: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,35,10/03/26,06:40:18.371118: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,10/03/26,06:40:18.371256: SK move to limit started
+N,52,10/03/26,06:40:18.465065: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,10/03/26,06:40:18.465136: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,10/03/26,06:40:19.367102: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,10/03/26,06:40:19.367171: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,10/03/26,06:40:19.369061: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1004 ms
+N,52,10/03/26,06:40:19.369121: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,10/03/26,06:40:19.469073: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,10/03/26,06:40:19.469150: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,10/03/26,06:40:19.469190: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,10/03/26,06:40:19.469233: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 101 ms
+N,52,10/03/26,06:40:19.469264: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,10/03/26,06:40:19.469327: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,10/03/26,06:40:19.469358: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,10/03/26,06:40:19.471326: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,10/03/26,06:40:19.471396: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,10/03/26,06:40:19.471473: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,10/03/26,06:40:19.471578: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,10/03/26,06:40:19.475179: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,10/03/26,06:40:20.469012: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,10/03/26,06:40:20.469077: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,10/03/26,06:40:20.469102: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,10/03/26,06:40:20.469180: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,10/03/26,06:40:20.469208: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,10/03/26,06:40:20.469236: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,10/03/26,06:40:24.401021: SK switch change, now low
+P,35,10/03/26,06:40:24.401252: SK switch change, now high
+W,48,10/03/26,06:40:24.401313: SK arrived limit spend 6030 ms, difference from nominal time is 2060 ms,(last set SK target angle:39.702000
+W,130,10/03/26,06:40:24.401394: [PRODUCTEVENT] 902, W, Warning, SK arrived limit spend 6030 ms, difference from nominal time is 2060 ms,(last set SK target angle:39.702000
+
+N,48,10/03/26,06:40:24.401455: SK move to limit done, spend 6030 ms
+N,130,10/03/26,06:40:24.401494: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 6030 ms
+
+P,35,10/03/26,06:40:24.411047: SK switch change, now low
+N,48,10/03/26,06:40:24.411260: SK move to start started : using saved value=2.202
+N,35,10/03/26,06:40:24.412363: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,10/03/26,06:40:24.451031: SK switch change, now high
+N,48,10/03/26,06:40:26.531430: SubState = 'EL move to start' (after 8163ms)
+N,48,10/03/26,06:40:28.391132: SK move to start done
+N,48,10/03/26,06:40:34.621405: SubState = 'AZ move to start' (after 8090ms)
+N,43,10/03/26,06:40:34.631659: AZ stabilisation off
+N,48,10/03/26,06:40:35.621396: SubState = 'SK move to limit' (after 1000ms)
+N,48,10/03/26,06:40:35.631541: SubState = 'SK move to start' (after 10ms)
+N,43,10/03/26,06:40:35.641657: AZ stabilisation on (by gyro)
+N,48,10/03/26,06:40:35.641714: State = 'Operating' (after 77286ms)
+N,48,10/03/26,06:40:35.641747: SubState = 'Initial' (after 10ms)
+N,35,10/03/26,06:40:43.046801: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,06:40:43.057084: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,06:40:43.062853: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,06:40:43.073180: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,06:40:43.078604: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,130,10/03/26,06:43:41.898023: ant starting: Version 1.4.41 (compiled 11:02:09 Jul 12 2023)
+N,130,10/03/26,06:43:41.954093: Creating TCP SBINT server socket (port 30230)
+P,35,10/03/26,06:43:42.079159: HI config FV2 read from RT DB OK
+P,35,10/03/26,06:43:42.079230: HI config validated OK
+P,35,10/03/26,06:43:42.082008: HI config file loaded and parsed OK
+P,35,10/03/26,06:43:42.082064: The HI information is initialized
+P,35,10/03/26,06:43:42.082094: The RM_SB_MOTOR FLAFG 's value is 1
+P,35,10/03/26,06:43:42.082116: The antenna is an antenna with SB motor removed. 
+P,35,10/03/26,06:43:42.082940: ANT config read from RT DB OK
+P,35,10/03/26,06:43:42.082983: ANT config validated OK
+N,130,10/03/26,06:43:42.095014: Open database:/home/bird/data/gcoh.sqlite OK
+N,35,10/03/26,06:43:42.096665: GCOH DB loaded and parsed OK
+N,35,10/03/26,06:43:42.097015: GCOH DB content validated OK
+N,35,10/03/26,06:43:42.098199: Antenna encoder calibration file loaded and parsed OK
+N,35,10/03/26,06:43:42.098256: Antenna encoder calibration file validated OK
+N,35,10/03/26,06:43:42.099205: Antenna compass calibration file loaded and parsed OK
+N,35,10/03/26,06:43:42.099262: Antenna compass calibration file validated OK
+P,35,10/03/26,06:43:42.101303: PID config file loaded and parsed OK
+N,67,10/03/26,06:43:42.101376: ANT: Slip Ring support, antenna_model=VS100K
+P,67,10/03/26,06:43:42.101403: Tilted arm angle assumed = 20.00 degs
+N,130,10/03/26,06:43:42.101440: [PRODUCTFAULT] Fault Code=2001, Status=0, AZ gyro sensor normal 
+N,130,10/03/26,06:43:42.101539: [PRODUCTFAULT] Fault Code=2002, Status=0, EL gyro sensor normal 
+N,130,10/03/26,06:43:42.101582: [PRODUCTFAULT] Fault Code=2003, Status=0, RL gyro sensor normal 
+N,130,10/03/26,06:43:42.101631: [PRODUCTFAULT] Fault Code=2004, Status=0, EL tilt sensor normal 
+N,130,10/03/26,06:43:42.101663: [PRODUCTFAULT] Fault Code=2005, Status=0, RL tilt sensor normal 
+N,130,10/03/26,06:43:42.101693: [PRODUCTFAULT] Fault Code=3201, Status=0, AZ BLDC motor normal 
+N,130,10/03/26,06:43:42.101722: [PRODUCTFAULT] Fault Code=3202, Status=0, EL BLDC motor normal 
+N,130,10/03/26,06:43:42.101751: [PRODUCTFAULT] Fault Code=3203, Status=0, RL BLDC motor normal 
+A,35,10/03/26,06:43:42.286157: [PL IMAGE LOAD - PAUSE]
+A,35,10/03/26,06:43:44.286354: [PL IMAGE LOAD START]
+A,35,10/03/26,06:43:44.320837: [PL IMAGE LOAD - COMPLETED]
+A,35,10/03/26,06:43:44.332119: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B48000 Size=65536 fd=65
+A,35,10/03/26,06:43:44.334314: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB48000 Size=117440512 fd=66
+N,130,10/03/26,06:43:44.374531: Interrupt (PPS) added [file=/dev/uio0 fd=67]
+N,35,10/03/26,06:43:44.374621: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,32,10/03/26,06:43:44.374656: Detected PCB hardware version from resistors: 6
+P,35,10/03/26,06:43:44.374680: Antenna sensor config: loaded from amu_hi_config.json
+N,32,10/03/26,06:43:44.374710: ANT_Sensor_Config : State machine version = 6
+N,32,10/03/26,06:43:44.374728: ANT_Sensor_Config : Safe Mode enabled
+P,64,10/03/26,06:43:44.429998: TSK_Serial_Sensors created OK
+P,32,10/03/26,06:43:44.680065: Bird Starlight : ANT process (AMUSx) version 1.4.41 compiled on 11:02:18 Jul 12 2023)
+P,32,10/03/26,06:43:44.680111: FPGA version running = 3.9
+N,130,10/03/26,06:43:44.680170: Interrupt (I2C1_Complete) added [file=/dev/uio2 fd=70]
+N,67,10/03/26,06:43:44.680196: PL interrupt for I2C module (ID=1) initialised
+N,130,10/03/26,06:43:44.680239: Interrupt (I2C2_Complete) added [file=/dev/uio3 fd=71]
+N,67,10/03/26,06:43:44.680262: PL interrupt for I2C module (ID=2) initialised
+N,130,10/03/26,06:43:44.680303: Interrupt (I2C3_Complete) added [file=/dev/uio4 fd=72]
+N,67,10/03/26,06:43:44.680342: PL interrupt for I2C module (ID=3) initialised
+P,32,10/03/26,06:43:44.681051: HI: amu_model        : AMUS6.1
+P,32,10/03/26,06:43:44.681081: HI: az_encoder_model : r2
+P,32,10/03/26,06:43:44.681099: HI: box_sensor_pcb   : dsb3.3
+P,35,10/03/26,06:43:44.681371: MIO12 exported successfully
+N,32,10/03/26,06:43:44.681732: SW1 detected low, and, /tmp/ant_disabled does not exist, proceeding with initialisation
+N,35,10/03/26,06:43:44.681781: ADC PL module enabled, divider=49
+N,52,10/03/26,06:43:44.693410: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, configured baud=115200bps (config register=54)
+N,52,10/03/26,06:43:44.696579: [TSK_ATTITUDE_BOARD]:DSB3 UART RX, PL, reset pulse complete
+N,52,10/03/26,06:43:44.697632: [TSK_ATTITUDE_BOARD]:DSB3 UART, TX via UART2
+N,130,10/03/26,06:43:44.697962: Serial port /dev/ttyUL2 (Fd=74) opened
+N,52,10/03/26,06:43:44.698006: [TSK_ATTITUDE_BOARD]:Success opening /dev/ttyUL2
+N,130,10/03/26,06:43:44.698375: Serial port (Fd=74) set attributes OK (B115200 D8 P0 S1 F0)
+N,41,10/03/26,06:43:45.463635: AZ encoder initialised
+N,35,10/03/26,06:43:45.464451: SB_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,10/03/26,06:43:45.464529: SK_Motor_Set_Current_Count : 0 (0.00 degs from limit)
+N,35,10/03/26,06:43:45.464559: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+N,131,10/03/26,06:43:45.464719: Not GPS master process, not opening GPS serial port
+N,38,10/03/26,06:43:45.464749: GPS processing initialised
+P,32,10/03/26,06:43:45.464766: TSK_Init: ANT Initialisation Complete
+P,35,10/03/26,06:43:45.464782: SB switch initially high
+P,35,10/03/26,06:43:45.464799: SK switch initially high
+P,35,10/03/26,06:43:45.464825: EXTSW2 switch initially high
+P,35,10/03/26,06:43:45.464842: EXTSW3 switch initially high
+N,35,10/03/26,06:43:45.466424: TSK_Serial_Sensors: Active
+N,43,10/03/26,06:43:45.470465: AZ stabilisation off
+N,52,10/03/26,06:43:45.471790: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 330775us
+N,52,10/03/26,06:43:45.472845: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0. 
+N,52,10/03/26,06:43:45.473378: [TSK_ATTITUDE_BOARD]:Enter state THREAD_START, state_id is 0
+N,52,10/03/26,06:43:45.473542: [TSK_ATTITUDE_BOARD]:DSB UART RX, PL, inter-byte interval = 338217us
+N,35,10/03/26,06:43:45.492120: /home/bird/data/init_az_gyro_offset.json loaded and parsed OK
+N,35,10/03/26,06:43:45.492175: /home/bird/data/init_az_gyro_offset.json file validated OK
+N,48,10/03/26,06:43:45.492203: Init: AZ gyro saved offset not usable: Age=40856977907 ms (usable in range 0 to 600000 ms)
+N,35,10/03/26,06:43:45.493370: /home/bird/data/init_el_gyro_offset.json loaded and parsed OK
+N,35,10/03/26,06:43:45.493433: /home/bird/data/init_el_gyro_offset.json file validated OK
+N,48,10/03/26,06:43:45.493463: Init: EL gyro saved offset not usable: Age=40856977901 ms (usable in range 0 to 600000 ms)
+N,35,10/03/26,06:43:45.494809: /home/bird/data/init_rl_gyro_offset.json loaded and parsed OK
+N,35,10/03/26,06:43:45.494858: /home/bird/data/init_rl_gyro_offset.json file validated OK
+N,48,10/03/26,06:43:45.494884: Init: RL gyro saved offset not usable: Age=40856977901 ms (usable in range 0 to 600000 ms)
+N,48,10/03/26,06:43:45.494907: Init: AZ/EL/RL saved gyro offsets not all usable, will perform gyro recal during tracking
+N,35,10/03/26,06:43:45.495717: /home/bird/data/init_skew.json loaded and parsed OK
+N,35,10/03/26,06:43:45.495761: /home/bird/data/init_skew.json file validated OK
+N,48,10/03/26,06:43:45.495785: SubState = 'RL move to 0' (after 60031ms)
+W,44,10/03/26,06:43:45.496209: EL time since last update 20.565s
+E,38,10/03/26,06:43:45.496946: GPS lock lost (>3s since locked RMC message arrived)
+N,130,10/03/26,06:43:45.496992: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,130,10/03/26,06:43:45.497056: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+W,35,10/03/26,06:43:45.497181: Missed real-time task deadline, expiries = 2
+N,35,10/03/26,06:43:45.497271: SK_Motor_Set_Current_Count : 426666 (600.00 degs from limit)
+N,48,10/03/26,06:43:45.497333: SK move to limit started
+N,52,10/03/26,06:43:45.573743: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,10/03/26,06:43:45.573811: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,10/03/26,06:43:46.473671: [TSK_ATTITUDE_BOARD]:Generate event id = 0
+N,52,10/03/26,06:43:46.473739: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (THREAD_START id 0) to state (INITIAL id 1)!
+N,52,10/03/26,06:43:46.475705: [TSK_ATTITUDE_BOARD]:Exit state THREAD_START, consumes time 1003 ms
+N,52,10/03/26,06:43:46.475770: [TSK_ATTITUDE_BOARD]:Enter state INITIAL, state_id is 1
+N,52,10/03/26,06:43:46.577719: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X1. 
+N,52,10/03/26,06:43:46.577792: [TSK_ATTITUDE_BOARD]:Generate event id = 2
+N,52,10/03/26,06:43:46.577817: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (INITIAL id 1) to state (HANDSHAKE id 2)!
+N,52,10/03/26,06:43:46.577862: [TSK_ATTITUDE_BOARD]:Exit state INITIAL, consumes time 102 ms
+N,52,10/03/26,06:43:46.577885: [TSK_ATTITUDE_BOARD]:Enter state HANDSHAKE, state_id is 2
+N,52,10/03/26,06:43:46.577957: [TSK_ATTITUDE_BOARD]:Fetch SYNC package 1, SW_Version: 1.0.8, Board Serial: BDSB32333N0532
+N,52,10/03/26,06:43:46.577982: [TSK_ATTITUDE_BOARD]:Sensor Board Upgrade Check!
+N,52,10/03/26,06:43:46.582828: [TSK_ATTITUDE_BOARD]:at least one upgrade file path is exist 
+N,52,10/03/26,06:43:46.582890: [TSK_ATTITUDE_BOARD]:DSB VERSION is:  1.0.8
+N,52,10/03/26,06:43:46.582971: [TSK_ATTITUDE_BOARD]:LOCAL VERSION version is:  1.0.7
+N,52,10/03/26,06:43:46.583066: [TSK_ATTITUDE_BOARD]:LOCAL VERSION <= DSB VERSION , don't upgrade it!
+N,52,10/03/26,06:43:46.583404: [TSK_ATTITUDE_BOARD]:send ack to dsb board 
+N,52,10/03/26,06:43:47.577618: [TSK_ATTITUDE_BOARD]:Rcv MAVLINK_MSG_ID_AUTOPILOT_VERSION message: MCU_Status is 0X3. 
+N,52,10/03/26,06:43:47.577673: [TSK_ATTITUDE_BOARD]:Generate event id = 3
+N,52,10/03/26,06:43:47.577697: [TSK_ATTITUDE_BOARD]:The state machine will switch from state (HANDSHAKE id 2) to state (READY id 4)!
+N,52,10/03/26,06:43:47.577759: [TSK_ATTITUDE_BOARD]:Exit state HANDSHAKE, consumes time 1000 ms
+N,52,10/03/26,06:43:47.577786: [TSK_ATTITUDE_BOARD]:Enter state READY, state_id is 4
+N,52,10/03/26,06:43:47.577816: [TSK_ATTITUDE_BOARD]:AMUS_DSB communication build copmlete
+P,35,10/03/26,06:43:49.469920: SK switch change, now low
+N,48,10/03/26,06:43:49.470074: Get the last saved SK degs:39.702000
+N,48,10/03/26,06:43:49.470124: SK move to limit done, spend 3973 ms
+N,130,10/03/26,06:43:49.470164: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3973 ms
+
+N,48,10/03/26,06:43:49.480053: SK move to start started : using saved value=2.202
+N,35,10/03/26,06:43:49.481057: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,10/03/26,06:43:49.519920: SK switch change, now high
+N,48,10/03/26,06:43:53.460102: SK move to start done
+N,48,10/03/26,06:43:53.640278: SubState = 'EL move to start' (after 8144ms)
+N,48,10/03/26,06:43:59.710195: SubState = 'AZ move to start' (after 6070ms)
+N,43,10/03/26,06:43:59.720434: AZ stabilisation off
+N,48,10/03/26,06:44:00.710310: SubState = 'SK move to limit' (after 1000ms)
+N,48,10/03/26,06:44:00.720261: SubState = 'SK move to start' (after 10ms)
+N,43,10/03/26,06:44:00.730663: AZ stabilisation on (by gyro)
+N,48,10/03/26,06:44:00.730752: State = 'Operating' (after 75266ms)
+N,48,10/03/26,06:44:00.730792: SubState = 'Initial' (after 11ms)

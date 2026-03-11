@@ -1,0 +1,14 @@
+Package: sysstat
+Version: 11.0.2-r0
+Description: System performance tools
+ The sysstat utilities are a collection of performance monitoring tools
+ for Linux.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: sysstat
+Homepage: http://sebastien.godard.pagesperso-orange.fr/
+Depends: libc6 (>= 2.21)
+Source: http://pagesperso-orange.fr/sebastien.godard/sysstat-11.0.2.tar.xz file://99_sysstat

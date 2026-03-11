@@ -1,0 +1,104 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Initialize the RT config/current status databases
+# Usage: see print_usage()
+######################################################################
+
+# SQL command for creating fault table in current status
+sql_faults=/usr/share/amu/pmt/fault.sql
+
+# Print command help.
+print_usage()
+{
+  echo "Initialize RT config and current status"
+  echo "USAGE: $(basename $0) [-r]|[help]"
+  echo "   -r: retain existing RT config and current status"     
+  echo " help: print this message"
+}
+
+if [ "$1" = "help" ]; then
+  print_usage
+  exit 0
+elif [ "$1" = "-r" ]; then
+  # Do not re-initialize if RT config and/or current status have already
+  # been initialized
+  NO_DEL=1
+fi
+
+mkdir -p /tmp/
+
+# If NV config not present, log error and exit
+if [ ! -L /home/bird/config.sqlite ]; then
+  /usr/bin/write_log -p W "WARNING: NV config is not available"
+  exit 0
+fi
+
+# Init RT config
+RT_CONFIG=/tmp/config.sqlite
+if [ -f "$RT_CONFIG" ]; then
+# RT config already init'd
+  if [ "$NO_DEL" = "1" ]; then
+    # If not allowed to reinit, just log warming
+    /usr/bin/write_log -p W "WARN: RT config has already been initialized"
+  else
+    # Otherwise we will delete the existing RT config
+    # Also note down that we need to restart AMUS SW
+    RESTART_REQUIRED=1
+    rm -f "${RT_CONFIG}*"
+    cp /home/bird/config.sqlite $RT_CONFIG
+  fi
+else
+# RT config not yet init'd, so just copy the NV config to /tmp/
+  cp /home/bird/config.sqlite $RT_CONFIG
+fi
+
+# Init current status
+current_status=/tmp/current_status.sqlite
+if [ -f "$current_status" ]; then
+# Current status already exist
+  if [ "$NO_DEL" = "1" ]; then
+    # not allow to reinit'd, so just log warming
+    /usr/bin/write_log -p W "WARN: Current status has already been initialized"
+  else
+    # otherwise delete the existing and create the current status database again
+    # also note down we need to restart AMUS SW
+    RESTART_REQUIRED=1
+    rm -f ${current_status}*
+    /usr/bin/sqlite3 $current_status "pragma jounal_mode=wal; PRAGMA auto_vacuum=full;"
+    /usr/bin/sqlite3 $current_status "begin; create table IF NOT EXISTS schema_version (version integer); insert into schema_version values (1); commit"
+    /usr/bin/sqlite3 $current_status "begin; create table if not exists status (id integer primary key autoincrement, utc_time_ms UNSIGNED BIG INT not null, module text not null, json_status text not null); commit;"
+    if [ -f "$sql_faults" ]; then
+      # Use the fatlt SQL file to creat the fault table
+      cat $sql_faults | /usr/bin/sqlite3 $current_status
+    else
+      # If the fault sql file does not exist, just log warming
+      /usr/bin/write_log -p W "WARN: initialize current status without fault table, definition file $sql_faults missing"      
+    fi
+  fi
+else
+# current status has not been init'd yet
+  /usr/bin/sqlite3 $current_status "pragma jounal_mode=wal; PRAGMA auto_vacuum=full;"
+  /usr/bin/sqlite3 $current_status "begin; create table IF NOT EXISTS schema_version (version integer); insert into schema_version values (1); commit"
+  /usr/bin/sqlite3 $current_status "begin; create table if not exists status (id integer primary key autoincrement, utc_time_ms UNSIGNED BIG INT not null, module text not null, json_status text not null); commit;"
+    
+  if [ -f "$sql_faults" ]; then
+    cat $sql_faults | /usr/bin/sqlite3 $current_status
+  else
+    /usr/bin/write_log -p W "WARN: initialize current status without fault table, definition file $sql_faults missing"
+  fi
+fi
+
+# Make it available to "www-data" user 
+chown www-data:root $current_status $RT_CONFIG
+
+# If any of RT config or current status has been re-init'd, restart all AMUS SW
+if [ "$RESTART_REQUIRED" = "1" ]; then
+  /usr/bin/write_log -p I "Restarting all AMUS modules..."
+  /usr/bin/pkill -9 bs-amu  
+fi
+

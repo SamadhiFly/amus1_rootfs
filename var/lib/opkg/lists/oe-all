@@ -1,0 +1,800 @@
+Package: ca-certificates-dbg
+Version: 20141019-r0
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 8551ea860ec92fb97e8c12927f7a2c2d
+Size: 882
+Filename: ca-certificates-dbg_20141019-r0_all.ipk
+Source: git://anonscm.debian.org/collab-maint/ca-certificates.git file://0001-update-ca-certificates-remove-c-rehash.patch file://0002-update-ca-certificates-use-SYSROOT.patch file://default-sysroot.patch file://sbindir.patch
+Description:  Common CA certificates - Debugging files  This package includes PEM files
+ of CA certificates to allow SSL-based   applications to check for the
+ authenticity of SSL connections. This   derived from Debian's CA
+ Certificates.  This package contains ELF symbols   and related sources
+ for debugging purposes.
+OE: ca-certificates
+HomePage: http://packages.debian.org/sid/ca-certificates
+License: GPL-2.0+ & MPL-2.0
+Priority: optional
+
+Package: ca-certificates-dev
+Version: 20141019-r0
+Depends: ca-certificates (= 20141019-r0)
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 1730bb0b0e6a9feface0b59334e72b8b
+Size: 914
+Filename: ca-certificates-dev_20141019-r0_all.ipk
+Source: git://anonscm.debian.org/collab-maint/ca-certificates.git file://0001-update-ca-certificates-remove-c-rehash.patch file://0002-update-ca-certificates-use-SYSROOT.patch file://default-sysroot.patch file://sbindir.patch
+Description:  Common CA certificates - Development files  This package includes PEM
+ files of CA certificates to allow SSL-based   applications to check for
+ the authenticity of SSL connections. This   derived from Debian's CA
+ Certificates.  This package contains symbolic   links, header files, and
+ related items necessary for software   development.
+OE: ca-certificates
+HomePage: http://packages.debian.org/sid/ca-certificates
+License: GPL-2.0+ & MPL-2.0
+Priority: optional
+
+Package: ca-certificates-doc
+Version: 20141019-r0
+Section: doc
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 2da7f5a0e211ea5ddcf07a16a1530933
+Size: 2152
+Filename: ca-certificates-doc_20141019-r0_all.ipk
+Source: git://anonscm.debian.org/collab-maint/ca-certificates.git file://0001-update-ca-certificates-remove-c-rehash.patch file://0002-update-ca-certificates-use-SYSROOT.patch file://default-sysroot.patch file://sbindir.patch
+Description:  Common CA certificates - Documentation files  This package includes PEM
+ files of CA certificates to allow SSL-based   applications to check for
+ the authenticity of SSL connections. This   derived from Debian's CA
+ Certificates.  This package contains   documentation.
+OE: ca-certificates
+HomePage: http://packages.debian.org/sid/ca-certificates
+License: GPL-2.0+ & MPL-2.0
+Priority: optional
+
+Package: ca-certificates
+Version: 20141019-r0
+Section: misc
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: aa92d2a9a54cfb98e12f39750f5e3c93
+Size: 173684
+Filename: ca-certificates_20141019-r0_all.ipk
+Source: git://anonscm.debian.org/collab-maint/ca-certificates.git file://0001-update-ca-certificates-remove-c-rehash.patch file://0002-update-ca-certificates-use-SYSROOT.patch file://default-sysroot.patch file://sbindir.patch
+Description:  Common CA certificates  This package includes PEM files of CA
+ certificates to allow SSL-based   applications to check for the
+ authenticity of SSL connections. This   derived from Debian's CA
+ Certificates.
+OE: ca-certificates
+HomePage: http://packages.debian.org/sid/ca-certificates
+License: GPL-2.0+ & MPL-2.0
+Priority: optional
+
+Package: liberation-fonts
+Version: 1:1.04-r4
+Depends: fontconfig-utils
+Section: x11/fonts
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 223d96f05ca8fbf98b6656f156f6473e
+Size: 1003136
+Filename: liberation-fonts_1.04-r4_all.ipk
+Source: https://fedorahosted.org/releases/l/i/liberation-fonts/liberation-fonts-1.04.tar.gz file://30-liberation-aliases.conf
+Description:  Liberation(tm) Fonts  The Liberation(tm) Fonts is a font family
+ originally created by   Ascender(c) which aims at metric compatibility
+ with Arial, Times New   Roman, Courier New.
+OE: liberation-fonts
+HomePage: https://fedorahosted.org/liberation-fonts/
+License: GPLv2
+Priority: optional
+
+Package: packagegroup-core-buildessential-dbg
+Version: 1.0-r0
+Recommends: binutils-dbg, g++-dbg, gcc-symlinks-dbg, cpp-symlinks-dbg, g++-symlinks-dbg, pkgconfig-dbg, gcc-dbg, libtool-dbg, gettext-dbg, autoconf-dbg, cpp-dbg, binutils-symlinks-dbg, automake-dbg, make-dbg, libstdc++-dbg
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 1748917c3d1710ad5b37d9810a71cc42
+Size: 774
+Filename: packagegroup-core-buildessential-dbg_1.0-r0_all.ipk
+Source: None
+Description:  Essential build dependencies - Debugging files  Essential build
+ dependencies.  This package contains ELF symbols and   related sources
+ for debugging purposes.
+OE: packagegroup-core-buildessential
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-buildessential-dev
+Version: 1.0-r0
+Depends: packagegroup-core-buildessential (= 1.0-r0)
+Recommends: binutils-dev, automake-dev, g++-symlinks-dev, pkgconfig-dev, g++-dev, cpp-dev, gettext-dev, cpp-symlinks-dev, libstdc++-dev, binutils-symlinks-dev, make-dev, libtool-dev, gcc-symlinks-dev, autoconf-dev, gcc-dev
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 2b9685401364f3db0f52268bc045d58f
+Size: 802
+Filename: packagegroup-core-buildessential-dev_1.0-r0_all.ipk
+Source: None
+Description:  Essential build dependencies - Development files  Essential build
+ dependencies.  This package contains symbolic links,   header files, and
+ related items necessary for software development.
+OE: packagegroup-core-buildessential
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-buildessential
+Version: 1.0-r0
+Depends: cpp-symlinks, gcc, binutils-symlinks, g++-symlinks, pkgconfig, gettext, automake, libstdc++, g++, libtool, libstdc++-dev, cpp, gcc-symlinks, autoconf, make, binutils
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 08c2603b90076668034babcfee3ef5a5
+Size: 706
+Filename: packagegroup-core-buildessential_1.0-r0_all.ipk
+Source: None
+Description:  Essential build dependencies  Essential build dependencies.
+OE: packagegroup-core-buildessential
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-dbg
+Version: 1.0-r6
+Provides: task-core-basic-dbg, packagegroup-core-basic-dbg
+Replaces: task-core-basic-dbg, packagegroup-core-basic-dbg
+Conflicts: task-core-basic-dbg, packagegroup-core-basic-dbg
+Recommends: packagegroup-core-full-cmdline-utils-dbg, packagegroup-core-full-cmdline-sys-services-dbg, packagegroup-core-full-cmdline-libs-dbg, packagegroup-core-full-cmdline-multiuser-dbg, packagegroup-core-full-cmdline-initscripts-dbg, packagegroup-core-full-cmdline-extended-dbg, packagegroup-core-full-cmdline-dev-utils-dbg
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 8fadeb8fb2d9886581be3f3ebac903a2
+Size: 824
+Filename: packagegroup-core-full-cmdline-dbg_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system - Debugging files  Package group
+ bringing in packages needed for a more traditional full-   featured Linux
+ system  This package contains ELF symbols and related   sources for
+ debugging purposes.
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-dev-utils
+Version: 1.0-r6
+Depends: diffutils, make, byacc, m4, patch
+Provides: packagegroup-core-dev-utils, task-core-dev-utils
+Replaces: packagegroup-core-dev-utils, task-core-dev-utils
+Conflicts: packagegroup-core-dev-utils, task-core-dev-utils
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 36369d546dc8305d63c3e84794bf5bf1
+Size: 732
+Filename: packagegroup-core-full-cmdline-dev-utils_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-dev
+Version: 1.0-r6
+Depends: packagegroup-core-full-cmdline (= 1.0-r6)
+Provides: packagegroup-core-basic-dev, task-core-basic-dev
+Replaces: packagegroup-core-basic-dev, task-core-basic-dev
+Conflicts: packagegroup-core-basic-dev, task-core-basic-dev
+Recommends: packagegroup-core-full-cmdline-extended-dev, packagegroup-core-full-cmdline-libs-dev, packagegroup-core-full-cmdline-sys-services-dev, packagegroup-core-full-cmdline-utils-dev, packagegroup-core-full-cmdline-multiuser-dev, packagegroup-core-full-cmdline-dev-utils-dev, packagegroup-core-full-cmdline-initscripts-dev
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: e7047867ef406d44bd51cc724d326114
+Size: 850
+Filename: packagegroup-core-full-cmdline-dev_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system - Development files  Package group
+ bringing in packages needed for a more traditional full-   featured Linux
+ system  This package contains symbolic links, header   files, and related
+ items necessary for software development.
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-extended
+Version: 1.0-r6
+Depends: iproute2, iputils, iptables, module-init-tools, openssl
+Provides: packagegroup-core-basic-extended, task-core-basic-extended
+Replaces: packagegroup-core-basic-extended, task-core-basic-extended
+Conflicts: packagegroup-core-basic-extended, task-core-basic-extended
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 388afde5838c7852d00aed4534909d27
+Size: 748
+Filename: packagegroup-core-full-cmdline-extended_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-initscripts
+Version: 1.0-r6
+Depends: ethtool, initscripts, sysklogd, sysvinit, busybox
+Provides: task-core-initscripts, packagegroup-core-initscripts
+Replaces: task-core-initscripts, packagegroup-core-initscripts
+Conflicts: task-core-initscripts, packagegroup-core-initscripts
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 47f5b7226ff1a9163c47b57466a3f217
+Size: 740
+Filename: packagegroup-core-full-cmdline-initscripts_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-libs
+Version: 1.0-r6
+Depends: glib-2.0
+Provides: task-core-basic-libs, packagegroup-core-basic-libs
+Replaces: task-core-basic-libs, packagegroup-core-basic-libs
+Conflicts: task-core-basic-libs, packagegroup-core-basic-libs
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 10d4f03d05a24911b5bade3f9dcb1026
+Size: 720
+Filename: packagegroup-core-full-cmdline-libs_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-multiuser
+Version: 1.0-r6
+Depends: gzip, shadow, sudo, cracklib
+Provides: packagegroup-core-multiuser, task-core-multiuser
+Replaces: packagegroup-core-multiuser, task-core-multiuser
+Conflicts: packagegroup-core-multiuser, task-core-multiuser
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: e78d84c33936a29c65adba5cfb47ef76
+Size: 732
+Filename: packagegroup-core-full-cmdline-multiuser_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-sys-services
+Version: 1.0-r6
+Depends: bzip2, rpcbind, less, dbus, pciutils, lighttpd, nfs-utils, tzdata, sysfsutils, logrotate, python-dbus, at, tcp-wrappers, libevent, gzip, libcap, libpcre, cronie, elfutils, dbus-glib
+Provides: packagegroup-core-sys-services, task-core-sys-services
+Replaces: packagegroup-core-sys-services, task-core-sys-services
+Conflicts: packagegroup-core-sys-services, task-core-sys-services
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 9cc90cc51facf627047152e586d10bb0
+Size: 820
+Filename: packagegroup-core-full-cmdline-sys-services_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline-utils
+Version: 1.0-r6
+Depends: tar, ed, makedevs, sed, findutils, file, popt, mktemp, mc-helpers-perl, pax, coreutils, gmp, mc-helpers, mc-helpers-python, bc, ncurses, mc-fish, cpio, gawk, util-linux, bash, grep, attr, mc, zlib, e2fsprogs, acl, psmisc, net-tools, time, procps
+Provides: task-core-basic-utils, packagegroup-core-basic-utils
+Replaces: task-core-basic-utils, packagegroup-core-basic-utils
+Conflicts: task-core-basic-utils, packagegroup-core-basic-utils
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 5bec04334a6d124f03d680fb1552c076
+Size: 848
+Filename: packagegroup-core-full-cmdline-utils_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-full-cmdline
+Version: 1.0-r6
+Depends: packagegroup-core-full-cmdline-sys-services, packagegroup-core-full-cmdline-libs, packagegroup-core-full-cmdline-initscripts, packagegroup-core-full-cmdline-multiuser, packagegroup-core-full-cmdline-extended, packagegroup-core-full-cmdline-dev-utils, packagegroup-core-full-cmdline-utils
+Provides: task-core-basic, packagegroup-core-basic
+Replaces: task-core-basic, packagegroup-core-basic
+Conflicts: task-core-basic, packagegroup-core-basic
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 8eb94f07c48954102d0e225a97d78f83
+Size: 756
+Filename: packagegroup-core-full-cmdline_1.0-r6_all.ipk
+Source: None
+Description:  Standard full-featured Linux system  Package group bringing in packages
+ needed for a more traditional full-   featured Linux system
+OE: packagegroup-core-full-cmdline
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-ssh-dropbear-dbg
+Version: 1.0-r1
+Recommends: dropbear-dbg
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: c64a9cdc02f77a5a6e05282b6f472802
+Size: 694
+Filename: packagegroup-core-ssh-dropbear-dbg_1.0-r1_all.ipk
+Source: None
+Description:  Dropbear SSH client/server - Debugging files  Dropbear SSH client/server.
+ This package contains ELF symbols and   related sources for debugging
+ purposes.
+OE: packagegroup-core-ssh-dropbear
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-ssh-dropbear-dev
+Version: 1.0-r1
+Depends: packagegroup-core-ssh-dropbear (= 1.0-r1)
+Recommends: dropbear-dev
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: b9c476446c980de68ad0da0795e6a2e6
+Size: 722
+Filename: packagegroup-core-ssh-dropbear-dev_1.0-r1_all.ipk
+Source: None
+Description:  Dropbear SSH client/server - Development files  Dropbear SSH
+ client/server.  This package contains symbolic links, header   files, and
+ related items necessary for software development.
+OE: packagegroup-core-ssh-dropbear
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-ssh-dropbear
+Version: 1.0-r1
+Depends: dropbear
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 970b8e0c73f0bf07a1508e3c81f42afc
+Size: 620
+Filename: packagegroup-core-ssh-dropbear_1.0-r1_all.ipk
+Source: None
+Description:  Dropbear SSH client/server  Dropbear SSH client/server.
+OE: packagegroup-core-ssh-dropbear
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-ssh-openssh-dbg
+Version: 1.0-r1
+Recommends: openssh-dbg
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 9980c99c18531407d4241c9538ee3125
+Size: 694
+Filename: packagegroup-core-ssh-openssh-dbg_1.0-r1_all.ipk
+Source: None
+Description:  OpenSSH SSH client/server - Debugging files  OpenSSH SSH client/server.
+ This package contains ELF symbols and related   sources for debugging
+ purposes.
+OE: packagegroup-core-ssh-openssh
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-ssh-openssh-dev
+Version: 1.0-r1
+Depends: packagegroup-core-ssh-openssh (= 1.0-r1)
+Recommends: openssh-dev
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 83c50b490725dab53f332e11b5bd6301
+Size: 722
+Filename: packagegroup-core-ssh-openssh-dev_1.0-r1_all.ipk
+Source: None
+Description:  OpenSSH SSH client/server - Development files  OpenSSH SSH client/server.
+ This package contains symbolic links, header   files, and related items
+ necessary for software development.
+OE: packagegroup-core-ssh-openssh
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-ssh-openssh
+Version: 1.0-r1
+Depends: openssh
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: ff9beb1874636ac6b285dfd35b8ad36c
+Size: 620
+Filename: packagegroup-core-ssh-openssh_1.0-r1_all.ipk
+Source: None
+Description:  OpenSSH SSH client/server  OpenSSH SSH client/server.
+OE: packagegroup-core-ssh-openssh
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-standalone-sdk-target-dbg
+Version: 1.0-r8
+Recommends: libsegfault-dbg, glibc-utils-dbg, glibc-gconv-cp1252-dbg, glibc-dbg, qemuwrapper-cross-dbg, glibc-localedata-i18n-dbg, libstdc++-dbg, glibc-gconv-ibm850-dbg, glibc-gconv-iso8859-15-dbg, libgcov-dbg, glibc-thread-db-dbg, glibc-gconv-iso8859-1-dbg, libgcc-dbg
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 0ab81860b450a89be48586419229fe97
+Size: 798
+Filename: packagegroup-core-standalone-sdk-target-dbg_1.0-r8_all.ipk
+Source: None
+Description:  Target packages for the standalone SDK - Debugging files  Target packages
+ for the standalone SDK.  This package contains ELF   symbols and related
+ sources for debugging purposes.
+OE: packagegroup-core-standalone-sdk-target
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-standalone-sdk-target-dev
+Version: 1.0-r8
+Depends: packagegroup-core-standalone-sdk-target (= 1.0-r8)
+Recommends: qemuwrapper-cross-dev, glibc-utils-dev, glibc-gconv-cp1252-dev, glibc-dev, glibc-thread-db-dev, glibc-gconv-ibm850-dev, libstdc++-dev, glibc-localedata-i18n-dev, libgcc-dev, libsegfault-dev, glibc-gconv-iso8859-15-dev, glibc-gconv-iso8859-1-dev, libgcov-dev
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 7489a52bc6061cb8217f527e4d11b5b5
+Size: 828
+Filename: packagegroup-core-standalone-sdk-target-dev_1.0-r8_all.ipk
+Source: None
+Description:  Target packages for the standalone SDK - Development files  Target
+ packages for the standalone SDK.  This package contains symbolic   links,
+ header files, and related items necessary for software   development.
+OE: packagegroup-core-standalone-sdk-target
+License: MIT
+Priority: optional
+
+Package: packagegroup-core-standalone-sdk-target
+Version: 1.0-r8
+Depends: glibc-dbg, glibc-thread-db, glibc, glibc-gconv-ibm850, libstdc++-dev, glibc-gconv-cp1252, libstdc++, libgcc-dev, libsegfault, libgcc, libgcov-dev, glibc-gconv-iso8859-15, glibc-utils, glibc-dev, glibc-gconv-iso8859-1, glibc-localedata-i18n, qemuwrapper-cross
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: d480966b15d85cf476f8334b946f6dee
+Size: 746
+Filename: packagegroup-core-standalone-sdk-target_1.0-r8_all.ipk
+Source: None
+Description:  Target packages for the standalone SDK  Target packages for the
+ standalone SDK.
+OE: packagegroup-core-standalone-sdk-target
+License: MIT
+Priority: optional
+
+Package: run-postinsts-dbg
+Version: 1.0-r9
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 80fe416b432cc99699d2a24b1de3e93f
+Size: 706
+Filename: run-postinsts-dbg_1.0-r9_all.ipk
+Source: file://run-postinsts file://run-postinsts.init file://run-postinsts.service
+Description:  Runs postinstall scripts on first boot of the target device - Debugging
+ files  Runs postinstall scripts on first boot of the target device.  This
+ package contains ELF symbols and related sources for debugging purposes.
+OE: run-postinsts
+License: MIT
+Priority: optional
+
+Package: run-postinsts-dev
+Version: 1.0-r9
+Depends: run-postinsts (= 1.0-r9)
+Recommends: initscripts-dev
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: f9514d3dd86db214ace6a5a51e68d57b
+Size: 752
+Filename: run-postinsts-dev_1.0-r9_all.ipk
+Source: file://run-postinsts file://run-postinsts.init file://run-postinsts.service
+Description:  Runs postinstall scripts on first boot of the target device - Development
+ files  Runs postinstall scripts on first boot of the target device.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+OE: run-postinsts
+License: MIT
+Priority: optional
+
+Package: run-postinsts
+Version: 1.0-r9
+Recommends: update-rc.d
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 8456b90dacada7a3ef7c18e8d64ec099
+Size: 1800
+Filename: run-postinsts_1.0-r9_all.ipk
+Source: file://run-postinsts file://run-postinsts.init file://run-postinsts.service
+Description:  Runs postinstall scripts on first boot of the target device  Runs
+ postinstall scripts on first boot of the target device.
+OE: run-postinsts
+License: MIT
+Priority: optional
+
+Package: tzdata-africa
+Version: 2016a-r0
+Provides: tzdata-africa
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: d35bf7bd6920751274ec831ae26df57e
+Size: 6738
+Filename: tzdata-africa_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-americas
+Version: 2016a-r0
+Provides: tzdata-americas
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: d76e4a5ed3456d6fed6cf77b52577ffc
+Size: 80874
+Filename: tzdata-americas_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-antarctica
+Version: 2016a-r0
+Provides: tzdata-antarctica
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 8055208f36ae13683d4e2c80e4c642a2
+Size: 4610
+Filename: tzdata-antarctica_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-arctic
+Version: 2016a-r0
+Provides: tzdata-arctic
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 672c9d8a557da0439237f0fcdf14c5d2
+Size: 1878
+Filename: tzdata-arctic_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-asia
+Version: 2016a-r0
+Provides: tzdata-asia
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 86de0518b8d41b01388cd48bea82f95f
+Size: 30160
+Filename: tzdata-asia_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-atlantic
+Version: 2016a-r0
+Provides: tzdata-atlantic
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 4cf230359fd1c8d9bd8435ced520a77b
+Size: 6592
+Filename: tzdata-atlantic_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-australia
+Version: 2016a-r0
+Provides: tzdata-australia
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 3fc070c56f44b5d50de043faef297313
+Size: 5882
+Filename: tzdata-australia_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-europe
+Version: 2016a-r0
+Provides: tzdata-europe
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 31b470a2e3f206cb8fcde87e9452a3d0
+Size: 21290
+Filename: tzdata-europe_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-misc
+Version: 2016a-r0
+Provides: tzdata-misc
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 82211d3406e9405ca4a010e30e899863
+Size: 13082
+Filename: tzdata-misc_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-pacific
+Version: 2016a-r0
+Provides: tzdata-pacific
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 20b5960bc104808db47764f9ee0de55f
+Size: 6624
+Filename: tzdata-pacific_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-posix
+Version: 2016a-r0
+Provides: tzdata-posix
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 7c7b042c232756014f0dafcb6f50e580
+Size: 191380
+Filename: tzdata-posix_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata-right
+Version: 2016a-r0
+Provides: tzdata-right
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: ff89ee9ff3670b4b62aaf98d4c50db24
+Size: 213482
+Filename: tzdata-right_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: tzdata
+Version: 2016a-r0
+Conflicts: timezone-asia, timezone-europe, timezone-iso3166.tab, timezone-america, timezones, timezone-zone.tab, timezone-pacific, timezone-atlantic, timezone-antarctica, timezone-arctic, timezone-africa, timezone-indian, timezone-australia
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 84459de2ab74888ac875102855908385
+Size: 42040
+Filename: tzdata_2016a-r0_all.ipk
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata
+Description:  Timezone data  Timezone data.
+OE: tzdata
+HomePage: http://www.iana.org/time-zones
+License: PD & BSD & BSD-3-Clause
+Priority: optional
+
+Package: update-rc.d-dbg
+Version: 0.7-r5
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 59d5a0ada1e7b1dd67d40e2753bce3e3
+Size: 814
+Filename: update-rc.d-dbg_0.7-r5_all.ipk
+Source: git://github.com/philb/update-rc.d.git file://add-verbose.patch file://check-if-symlinks-are-valid.patch file://fix-to-handle-priority-numbers-correctly.patch
+Description:  manage symlinks in /etc/rcN.d - Debugging files  update-rc.d is a
+ utilities that allows the management of symlinks to the   initscripts in
+ the /etc/rcN.d directory structure.  This package contains   ELF symbols
+ and related sources for debugging purposes.
+OE: update-rc.d
+License: GPLv2+
+Priority: optional
+
+Package: update-rc.d-dev
+Version: 0.7-r5
+Depends: update-rc.d (= 0.7-r5)
+Section: devel
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: 6f1a7cf19a7c598712d8498c1127e960
+Size: 844
+Filename: update-rc.d-dev_0.7-r5_all.ipk
+Source: git://github.com/philb/update-rc.d.git file://add-verbose.patch file://check-if-symlinks-are-valid.patch file://fix-to-handle-priority-numbers-correctly.patch
+Description:  manage symlinks in /etc/rcN.d - Development files  update-rc.d is a
+ utilities that allows the management of symlinks to the   initscripts in
+ the /etc/rcN.d directory structure.  This package contains   symbolic
+ links, header files, and related items necessary for software
+ development.
+OE: update-rc.d
+License: GPLv2+
+Priority: optional
+
+Package: update-rc.d
+Version: 0.7-r5
+Section: base
+Architecture: all
+Maintainer: Poky <poky@yoctoproject.org>
+MD5Sum: d526f7989036f18a57b05494bf2f4a7e
+Size: 2826
+Filename: update-rc.d_0.7-r5_all.ipk
+Source: git://github.com/philb/update-rc.d.git file://add-verbose.patch file://check-if-symlinks-are-valid.patch file://fix-to-handle-priority-numbers-correctly.patch
+Description:  manage symlinks in /etc/rcN.d  update-rc.d is a utilities that allows the
+ management of symlinks to the   initscripts in the /etc/rcN.d directory
+ structure.
+OE: update-rc.d
+License: GPLv2+
+Priority: optional
+

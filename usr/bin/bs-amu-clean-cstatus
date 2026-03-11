@@ -1,0 +1,76 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Clean up current status database
+# Usage: see print_usage()
+######################################################################
+
+sleeptime=15
+
+print_usage()
+{
+  echo "Clean current status for records older than XXX minutes"
+  echo "Usage: $(basename $0) -m minutes"
+  echo "Example: $(basename $0) -m 2"
+}
+
+while getopts ":m:" o; do
+  case "${o}" in
+    m)
+      age=$(echo "${OPTARG}" | awk '{printf("%d", $1)}')
+    ;;
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+if [ ! -f /tmp/current_status.sqlite ]; then
+  echo "current status database not found" | /usr/bin/write_log -p W
+  echo 
+  exit 1
+fi
+
+if [ "$age" -lt 2 ]; then
+  echo "ERROR: age must larger that 2 minutes"
+  echo
+  exit 1 
+fi
+
+sql_command()
+{
+  db_filename=$1
+  sql="$2"
+  sqlite3 $db_filename "$sql"
+}
+
+check_table()
+{
+  db_filename=$1
+  table_name=$2
+
+  result=$(sqlite3 $db_filename "select name from sqlite_master where name = '$table_name'")
+  if [ ! -z "$result" ]; then
+    return 0
+  fi
+
+  return 1
+}
+
+while [ 1 ] ; do
+  if ! check_table /tmp/current_status.sqlite "status" ; then
+    echo "\"status\" table not present in current status database" | /usr/bin/write_log -p W
+  else
+    current_utc=$(date +%s)
+    sql="begin; delete from status where utc_time_ms <= (${current_utc} - ${age}*60)*1000 or utc_time_ms > ${current_utc}*1000; commit"
+    sql_command  /tmp/current_status.sqlite "$sql"
+  fi
+  sleep $sleeptime
+done
+

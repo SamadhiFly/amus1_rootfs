@@ -1,0 +1,279 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to initialize AMUS network interfaces.
+# Usage: see print_usage()
+######################################################################
+
+# Linux tools required  
+IP_CMD=/sbin/ip
+UDHCPC_CMD=/sbin/udhcpc
+PYTHON_CMD=/usr/bin/python
+
+# Sample and default net config json string
+json_help=$(${PYTHON_CMD} -c "import json, sys; print json.dumps(json.load(open('/usr/share/amu/pmt/net_config.v2.default', 'r')));")
+
+print_usage()
+{
+  echo "Initialize AMU network interfaces"
+  echo "USAGE: $(basename $0) {net_config_json_string | help}"
+  echo "Sample network config: $json_help"
+  echo
+}
+
+# config json string from input
+json="$@"
+
+# print help/usage message and exit
+if [ "$json" = "help" ]; then
+  print_usage
+  exit 1
+fi
+
+# Extract field value from a json string 
+# Argument 1: field name
+# Argument 2: json string to search for
+# Return: empty string if not found, otherwise the field value
+get_json_value()
+{
+  argv=( $@ )
+  key=${argv[@]:0:1}
+  string=${argv[@]:1}
+  cmd=$(printf "import json, sys; print json.load(sys.stdin)['%s'];" $key)
+  result=$(echo $string | ${PYTHON_CMD} -c "$cmd")
+  echo "$result"
+}
+
+# Extract json object from a json string 
+# Argument 1: field name
+# Argument 2: json string to search for
+# Return: empty string if not found, otherwise the json object as a string
+get_json_object()
+{
+  argv=( $@ )
+  key=${argv[@]:0:1}
+  string=${argv[@]:1}
+  cmd=$(printf "import json, sys; print json.dumps(json.load(sys.stdin)['%s']);" $key)
+  result=$(echo $string | ${PYTHON_CMD} -c "$cmd")
+  echo "$result"
+}
+
+# Delete addresses of an Ethernet device
+# Argument: a network device name, either eth0 or eth1
+del_addresses()
+{
+  dev="$1"
+
+  # only eth0 or eth1 is supported
+  if [ "$dev" != "eth0" ] && [ "$dev" != "eth1" ]; then
+    return
+  fi
+
+  # possible interface names of a network device
+  openamip_if="openamip@$dev"
+  wan_if="wan@$dev"
+  aux_if="aux@$dev"
+
+  # delete wan interface
+  if_exist=$(${IP_CMD} link show | grep $wan_if)
+  if [ ! -z "$if_exist" ]; then
+    lan_type=$(${IP_CMD} -d link show $wan_if | grep vlan | awk '{print $1}')
+    if [ ! -z "$lan_type" ]; then
+      /usr/bin/write_log -p N "Deleting interface $wan_if..."
+      ${IP_CMD} link set dev $wan_if down
+      ${IP_CMD} link delete $wan_if type $lan_type
+    fi
+  fi
+
+  # delete openamip interface
+  if_exist=$(${IP_CMD} link show | grep $openamip_if)
+  if [ ! -z "$if_exist" ]; then
+    lan_type=$(${IP_CMD} -d link show $openamip_if | grep vlan | awk '{print $1}')
+    if [ ! -z "$lan_type" ]; then
+      /usr/bin/write_log -p N "Deleting interface $openamip_if..."
+      ${IP_CMD} link set dev $openamip_if down
+      ${IP_CMD} link delete $openamip_if type $lan_type
+    fi
+  fi
+
+  # delete aux interface
+  if_exist=$(${IP_CMD} link show | grep $aux_if)
+  if [ ! -z "$if_exist" ]; then
+    lan_type=$(${IP_CMD} -d link show $aux_if | grep vlan | awk '{print $1}')
+    if [ ! -z "$lan_type" ]; then
+      /usr/bin/write_log -p N "Deleting interface $aux_if..."
+      ${IP_CMD} link set dev $aux_if down
+      ${IP_CMD} link delete $aux_if type $lan_type
+    fi
+  fi
+ 
+  # Delete addresses on the Ethernet device too
+  addresses=$(${IP_CMD} addr show $dev | grep "inet " | awk '{print $2}')
+  for ip in ${addresses}; do
+    /usr/bin/write_log -p N "Deleting address $ip on $dev"
+    ${IP_CMD} addr del $ip dev $dev
+  done
+}
+
+#####################################
+# stop any DHCP client first
+if pgrep udhcpc ; then
+  /usr/bin/write_log -p I "Stopping UDHCPD..."
+  pkill -9 udhcpc
+fi
+
+#####################################
+# service port
+# 
+# config SERVICE port first so if later on we found the SPARE port
+# is the same as SERVICE port, we can just leave the SPARE port not
+# initialized without affecting the AMUS. 
+device=$(get_json_object "service_port" $json)
+service_port_name=$(get_json_value "device_name" $device)
+address=$(get_json_value "address" $device)
+mode=$(get_json_value "mode" $device)
+
+if [ -z "$service_port_name" ] || [ -z "$mode" ]; then
+  /usr/bin/write_log -p E "service Ethernet port is not configured"
+else
+  echo "Configuring service port $service_port_name..."
+
+  del_addresses $service_port_name
+
+  if [ "$mode" = "dhcp" ]; then
+    /usr/bin/write_log -p N "Starting DHCP on service port: $service_port_name"
+    nohup ${UDHCPC_CMD} -i $spare_port_name > /dev/null 2>&1 &
+  else
+    ${IP_CMD} addr add $address dev $service_port_name
+  fi
+
+  # virtual interfaces
+  virtual_interfaces=$(get_json_object "virtual_interfaces" $device)
+
+  # OpenAMIP
+  interface=$(get_json_object "openamip" $virtual_interfaces)
+  vlanid=$(get_json_value "vlanid" $interface)
+  mode=$(get_json_value "mode" $interface)
+  address=$(get_json_value "address" $interface)
+  interface_name="openamip@$service_port_name"
+
+  if [ ! -z "$vlanid" ]; then
+    ${IP_CMD} link add $interface_name link $service_port_name type vlan id $vlanid
+  else
+    ${IP_CMD} link add $interface_name link $service_port_name type macvlan mode bridge
+  fi
+      
+  if [ "$mode" = "dhcp" ]; then
+    /usr/bin/write_log -p N "Starting DHCP on $interface_name..."
+    nohup ${UDHCPC_CMD} -i $interface_name > /dev/null 2>&1 &
+  else
+    if [ ! -z "$address" ] && [ "$address" != "0" ]; then
+      ${IP_CMD} addr add $address dev $interface_name
+      ${IP_CMD} link set dev $interface_name up
+    fi
+  fi
+
+  # WAN
+  interface=$(get_json_object "wan" $virtual_interfaces)
+  vlanid=$(get_json_value "vlanid" $interface)
+  mode=$(get_json_value "mode" $interface)
+  address=$(get_json_value "address" $interface)
+  gw=$(get_json_value "gw" $interface)
+  dns=$(get_json_value "dns" $interface)
+  interface_name="wan@$service_port_name"
+
+  fixed_mac=`/usr/bin/get_wan_eth1_mac`
+
+  if [ ! -z "$vlanid" ]; then
+    ${IP_CMD} link add $interface_name link $service_port_name address $fixed_mac type vlan id $vlanid
+  else
+    ${IP_CMD} link add $interface_name link $service_port_name address $fixed_mac type macvlan mode bridge
+  fi
+      
+  if [ "$mode" = "dhcp" ]; then
+    /usr/bin/write_log -p N "Starting DHCP on $interface_name..."
+    nohup ${UDHCPC_CMD} -i $interface_name > /dev/null 2>&1 &
+  else
+    if [ ! -z "$address" ] && [ "$address" != "0" ]; then
+      ${IP_CMD} addr add $address dev $interface_name
+      ${IP_CMD} link set dev $interface_name up
+      if [ ! -z "$gw" ] && [ "$gw" != "0" ]; then
+        ${IP_CMD} route add default via $gw
+      fi
+      if [ ! -z "$dns" ] && [ "$dns" != "0" ]; then
+        echo nameserver $dns > /etc/resolv.conf
+      fi
+    fi
+  fi
+
+  # AUX
+  interface=$(get_json_object "aux" $virtual_interfaces)
+  vlanid=$(get_json_value "vlanid" $interface)
+  mode=$(get_json_value "mode" $interface)
+  address=$(get_json_value "address" $interface)
+  interface_name="aux@$service_port_name"
+
+  if [ ! -z "$vlanid" ]; then
+    ${IP_CMD} link add $interface_name link $service_port_name type vlan id $vlanid
+  else
+    ${IP_CMD} link add $interface_name link $service_port_name type macvlan mode bridge
+  fi
+      
+  if [ "$mode" = "dhcp" ]; then
+    /usr/bin/write_log -p N "Starting DHCP on $interface_name@$service_port_name..."
+    nohup ${UDHCPC_CMD} -i $interface_name@$service_port_name > /dev/null 2>&1 &
+  else
+    if [ ! -z "$address" ] && [ "$address" != "0" ]; then
+      ${IP_CMD} addr add $address dev $interface_name@$service_port_name
+      ${IP_CMD} link set dev $interface_name@$service_port_name  up
+    fi
+  fi
+fi
+
+#####################################
+# spare port
+#
+# Get the new config from json string
+device=$(get_json_object "spare_port" $json)
+spare_port_name=$(get_json_value "device_name" $device)
+address=$(get_json_value "address" $device)
+mode=$(get_json_value "mode" $device)
+
+# If the port is not specified in the json config, just log an error
+if [ -z "$spare_port_name" ] || [ -z "$mode" ]; then
+  /usr/bin/write_log -p E "Spare Ethernet port is not configured"
+else 
+  if [ "$spare_port_name" != "$service_port_name" ]; then
+    # Make sure SPARE port is different from SERVICE port 
+    /usr/bin/write_log -p N "Configuring spare port $spare_port_name..."
+
+    del_addresses $spare_port_name
+
+    if [ "$mode" = "dhcp" ]; then
+      /usr/bin/write_log -p N "Starting DHCP on port: $spare_port_name"
+      nohup ${UDHCPC_CMD} -i $spare_port_name > /dev/null 2>&1 &
+    else
+      ${IP_CMD} addr add $address dev $spare_port_name
+    fi
+  else
+    /usr/bin/write_log -p N "Spare port $spare_port_name cannot be the same as service port, leaving spare port unconfigured!"
+  fi
+fi
+
+###################################
+echo "OK:          netwroking init completed" | /usr/bin/write_log -p I
+#echo "CONFIG DATA: $(printf "[%s]\n" $json)" | /usr/bin/write_log -p I
+echo "================== Network Addresses ================" | /usr/bin/write_log -p I
+${IP_CMD} addr show | /usr/bin/write_log -p I
+echo "=====================================================" | /usr/bin/write_log -p I
+
+modem_model=`sqlite3 /tmp/config.sqlite "select json_extract((select json_config from config where group_name = 'HI' and active > 0 limit 1), '$.modem_model')"`
+if [ "$modem_model" = "iDirect" ];then
+   nohup /usr/bin/frpc -c /usr/share/amu/pmt/frps.ini >>/dev/null 2>&1 &
+fi
+
+

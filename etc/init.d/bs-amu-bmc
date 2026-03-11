@@ -1,0 +1,134 @@
+#!/bin/sh -e
+
+#================================================================
+# THISS Technologies
+# Peter Stootman
+# Feb 2019
+#
+# Start the bmc process
+#
+#================================================================
+
+# Define the names.
+DESC="Channel Unit"
+MODULE_NAME="bs-amu-bmc"
+BIN_PATH="/usr/bin/"
+MODULE_BIN="${BIN_PATH}${MODULE_NAME}"
+PID_PATH="/var/run/"
+
+# PL_INSTALLED_PATH_FILE="/usr/share/amu/bmc/pl.bin"
+# PL_EXECUTION_PATH_FILE="/lib/firmware/pl.bin"
+
+# Include logging functions.
+#. /lib/lsb/init-functions
+
+# Include environment.
+if test -f /usr/share/amu/bmc/bs-amu-environment; then
+  . /usr/share/amu/bmc/bs-amu-environment
+else
+  echo "Environment file /usr/share/amu/bmc/bs-amu-environment missing!"
+  exit 1;
+fi
+
+# Make sure the binary exists
+test -x $MODULE_BIN || exit 0
+
+# PS : todo review, don't start if kernel version is not appropriate (eg no UIO support)
+#KVERSION=$(uname -r | awk -F'-' '{print $1}')
+#if [ "$KVERSION" != "4.14.0" ]; then
+#    exit 1;
+#fi
+# PS : simpler way, for now just check UIO exists
+if [ ! -e /dev/uio0 ]; then
+    echo "UIO not supported, must be old kernel, not starting bs-amu-bmc"
+    exit 1;
+fi
+
+#log() {
+#  TIME=$(date --utc)
+#  echo -n "$TIME : " >>$LOG
+#  echo "$1" >>$LOG
+#}
+
+do_start()
+{
+    log "Starting $MODULE_NAME..."
+
+    # PS: for 2018.1 kernel, the .bin file has to be put into /lib/firmware
+    # if [ -f "$PL_INSTALLED_PATH_FILE" ]; then
+    # 	cp $PL_INSTALLED_PATH_FILE $PL_EXECUTION_PATH_FILE
+    # else
+    # 	echo "PL image not found!"
+    # 	exit 1;
+    # fi
+
+    # PS: not sure if changing UART ownership needed as bs-amu-bmc will run as root, anyway does no harm
+    # PS0 is linux kernel (don't touch it), PS1 is antenna, UL1 is GPS, UL2 is backpanel RS232, UL3/UL4 are MDC05 internal header RS232
+    #chown thiss /dev/ttyPS1
+    #chown thiss /dev/ttyUL1
+    #chown thiss /dev/ttyUL2
+    #chown thiss /dev/ttyUL3
+    #chown thiss /dev/ttyUL4
+
+    # PS hard kill any existing DSP in case any previous instance hasn't shut down by now
+    #if pgrep bs-amu-bmc ; then
+    #  pkill -kill bs-amu-bmc
+    #fi
+		RUNNING_PID=$(pgrep -a bs-amu-bmc | grep /usr/bin | awk '{print $1}')
+		if [ ! -z "$RUNNING_PID" ]; then
+			kill -9 $RUNNING_PID
+			sleep 2
+		fi
+
+    # OK start bs-amu-bmc module now
+    if /sbin/start-stop-daemon -S -p ${PID_PATH}${MODULE_NAME}.pid -x ${MODULE_BIN} ; then
+        return 0
+    fi
+    return 1
+}
+
+do_stop()
+{
+    log "Stopping $MODULE_NAME..."
+    if /sbin/start-stop-daemon -K -R 5 -p ${PID_PATH}/${MODULE_NAME}.pid -n ${MODULE_NAME} ; then
+    	return 0
+    fi
+    return 1
+}
+
+case "$1" in
+  start)
+    log "Starting ${DESC}" "${MODULE_NAME}"
+    if do_start; then
+      log "${MODULE_NAME} started ok"
+    else
+      log "${MODULE_NAME} failed to start"
+    fi
+    ;;
+
+  stop)
+    log "Stopping ${DESC}" "${MODULE_NAME}"
+    if do_stop; then
+      log "${MODULE_NAME} stopped"
+    else
+      log "${MODULE_NAME} failed to stop"
+    fi
+    ;;
+
+  restart)
+    log "Restarting..."
+    $0 stop
+    # PS: give MTFW2 8s rather than the usual 5 to try and shut its threads down gracefully
+    sleep 8
+    $0 start
+    ;;
+
+  reload|force-reload)
+    ;;
+
+  *)
+    log "Usage: /etc/init.d/bs-amu-${MODULE} {start|stop|reload|force-reload|restart}"
+    exit 1
+esac
+
+exit 0

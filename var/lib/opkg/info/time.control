@@ -1,0 +1,14 @@
+Package: time
+Version: 1.7-r2
+Description: Tool that measures CPU resources
+ time measures many of the CPU resources, such as time and memory, that
+ other programs use.
+Section: utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: time
+Homepage: http://www.gnu.org/software/time/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/time/time-1.7.tar.gz file://debian.patch

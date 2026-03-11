@@ -1,0 +1,94 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Start, restart or stop AMUS SW modules
+# Usage: see usage()
+######################################################################
+
+DESTINATION=$(hostname)
+
+MODULES="bs-amu-acu ba-amu-ant bs-amu-bmc"
+
+usage()
+{
+  echo "$basename($0) task(start|stop|restart) [option]"
+  echo "option: when task is stop, option of 'immediately' is allow to kill process immediately via pkill -kill"
+  echo "This command shall be run under root privilege"
+  exit 1
+}
+
+check_privilege()
+{
+  if [ "$EUID" != "0" ]; then
+    usage
+  fi
+}
+
+startstop_daemon(){
+  if [ "$1" = "start" ]; then
+    rm -f /var/run/bs_daemons_stop
+  else
+    touch /var/run/bs_daemons_stop
+  fi
+}
+
+
+all_daemons_start()
+{
+  startstop_daemon start
+}
+
+all_daemons_stop()
+{
+  startstop_daemon stop
+
+  for m in ${MODULES}
+  do
+    if [ "$STOP_IMMEDIATELY" -eq 1 ]; then
+      echo "================================================================"
+      echo "Immediately stop $m in $DESTINATION"
+      echo "================================================================"
+      pkill -kill $m
+    else
+      echo "================================================================"
+      echo "$1 $m in $DESTINATION"
+      echo "================================================================"
+      if [ -x /etc/init.d/$m ]; then
+        /etc/init.d/$m stop
+        sleep 1
+      fi
+      pgrep $m && pkill -kill $m
+    fi
+  done
+}
+
+all_daemons_restart(){
+  all_daemons_stop
+  all_daemons_start
+}
+
+check_privilege
+
+if [ -z "$1" ]; then
+  usage
+fi
+
+if [ ! "$1" = "start" ] && [ ! "$1" = "stop" ] && [ ! "$1" = "restart" ]; then
+  usage
+fi
+
+STOP_IMMEDIATELY=0
+TASK=$1
+OPTION=$2
+if [ "$TASK" = 'stop' ] && [ "$OPTION" = 'immediately' ]; then
+  STOP_IMMEDIATELY=1
+fi
+
+all_daemons_$1
+
+echo "Done"
+

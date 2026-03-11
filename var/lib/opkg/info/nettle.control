@@ -1,0 +1,13 @@
+Package: nettle
+Version: 2.7.1-r0
+Description: A low level cryptographic library
+ A low level cryptographic library.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1 & GPLv2
+Architecture: cortexa9-vfp-neon
+OE: nettle
+Homepage: http://www.lysator.liu.se/~nisse/nettle/
+Depends: libgmp10 (>= 6.0.0), libc6 (>= 2.21)
+Source: http://www.lysator.liu.se/~nisse/archive/nettle-2.7.1.tar.gz file://CVE-2015-8803_8805.patch file://CVE-2015-8804.patch

@@ -1,0 +1,48 @@
+drop table if exists role;
+drop table if exists user;
+drop table if exists params;
+CREATE TABLE role
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR (50, 255) UNIQUE,
+    items VARCHAR (1000, 2000),
+    created_at INTEGER (10, 10) DEFAULT (0),
+    updated_at INTEGER (10, 10) DEFAULT (0),
+    "is" INT (1, 1) DEFAULT (0)
+);
+INSERT INTO role
+        (id, name, items, created_at, updated_at, "is")
+    VALUES
+        (1, 'admin', '["main","antennaLog","satConfigure","eventList","hardwareConfigure","functionConfigure","AGC","NetworkPortConfiguration","ImportExport","control","uerconfigure","roleconfigure","Logstatus"]', 1575958655, 1576129191, 1);
+
+CREATE TABLE user
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    account VARCHAR (5, 255) UNIQUE,
+    password VARCHAR (1, 255) NOT NULL,
+    salting VARCHAR (10, 50) NOT NULL,
+    role INTEGER (1, 2) NOT NULL,
+    created_at INTEGER (10, 10) NOT NULL,
+    updated_at INTEGER (10, 10) NOT NULL,
+    token VARCHAR (20, 255),
+    ticket VARCHAR (20, 255)
+);
+INSERT INTO user
+        (id, account, password, salting, role, created_at, updated_at, token, ticket)
+    VALUES
+        (1, 'admin', 'dfe9e64a9bcde71a8d530083d76d2602', 'IuxV9LTA2k2rVn7LOsJS', 1, 1579188138, 1579188138, '', '');
+INSERT INTO user
+        (id, account, password, salting, role, created_at, updated_at, token, ticket)
+    VALUES
+        (2, 'administrator', 'dfe9e64a9bcde71a8d530083d76d2602', 'IuxV9LTA2k2rVn7LOsJS', 1, 1579188138, 1579188138, '', '');        
+		
+CREATE TABLE params
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    items VARCHAR (1, 50),
+	param_value VARCHAR (1, 50)
+);
+INSERT INTO params
+        (id, items, param_value)
+    VALUES
+        (1, 'showlogo', '1');		

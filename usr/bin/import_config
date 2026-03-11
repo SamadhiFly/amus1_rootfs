@@ -1,0 +1,198 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+# 
+# Command to import a given BAC file to NV config.
+# Argument: see print_usage()
+#
+######################################################################
+
+# Log event
+LOGGER_BIN=/usr/bin/bs-amu-logevent
+success="failed"
+
+# Check if a table is present in sqlite database
+# Argument 1: path to the sqlite database file
+# Argument 2: name of the table to check
+check_table()
+{
+  db_filename=$1
+  table_name=$2
+
+  result=$(/usr/bin/sqlite3 $db_filename "select name from sqlite_master where name = '$table_name'")
+  if [ ! -z "$result" ]; then
+    return 0
+  fi
+  
+  return 1
+}
+
+# Print help message
+print_usage()
+{
+  echo "Import config from password protected bac file"
+  echo "USAGE: $(basename $0) -f infile [-a] [-l] [-n] [-i info] [-c caller] [help]"
+  echo "  -f infile : path to input config file"
+  echo "  -a        : active config items only"
+  echo "  -l        : include local config items"
+  echo "  -n        : include net config items"
+  echo "  -i info   : information string"
+  echo "  -c caller : who is running this command"
+  echo "  help      : print this message and exit"             
+  echo 
+}
+
+# Process command line arguments
+while getopts ":f:alni:c:" o; do
+  case "${o}" in
+    f)
+      infile=${OPTARG}
+    ;;
+    a)
+      active_only=1
+    ;;
+    l)
+      with_local=1
+    ;;
+    n)
+      with_net=1
+    ;;
+    i)
+      info=${OPTARG}
+    ;;
+    c)
+      caller=${OPTARG}
+    ;;
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+# Print help and exit
+if [ "$1" = "help" ]; then
+  print_usage 
+  exit 0
+fi
+
+# Check if the BAC file to be import is given, if not, log error and exit
+if [ -z "$infile" ]; then
+  /usr/bin/write_log -p E "Input config file is not specified"
+  echo
+  print_usage
+  exit 1
+fi
+
+# Check if the BAC file is actually exist
+if [ ! -f "$infile" ]; then
+  /usr/bin/write_log -p E "Input config file ($infile) not found"
+  echo
+  print_usage
+  exit 1  
+fi
+
+filename=$(basename $infile)
+
+# Make sure NV config is present
+if [ ! -L /home/bird/config.sqlite ]; then
+  /usr/bin/write_log -p E "AMU config is not initialized"
+  exit 1
+fi
+
+${LOGGER_BIN} -i 302 -s 1 "{\"status\":\"start\"}"
+
+# Make a copy of NV config in memory 
+datetime=$(date -u +%Y%m%d%H%M%S)
+cp /home/bird/config.sqlite /tmp/config-${datetime}-imported.sqlite
+
+# Create source database from the input file (BAC file to be imported). Give up if any thing goes wrong here. 
+rm -f /tmp/source.sqlite
+if ! /usr/bin/unzip -P $(cat /home/bird/.zkey) -p $infile | /usr/bin/sqlite3 /tmp/source.sqlite ; then
+  ${LOGGER_BIN} -i 303 -s 1 "{\"filename\": \"$filename\", \"result\": \"$success\", \"caller\": \"$caller\", \"info\": \"$info\"}"
+  /usr/bin/write_log -p E  "Input config file($infile) is corrupted"
+  exit 1
+fi
+
+#active=" "
+#if [ "$activeonly" = "1" ]; then 
+#  active=" and c.active = 1 "
+#fi
+
+# Check if config table exists in the source database
+if ! check_table /tmp/source.sqlite config ; then
+  ${LOGGER_BIN} -i 303 -s 1 "{\"filename\": \"$filename\", \"result\": \"$success\", \"caller\": \"$caller\", \"info\": \"$info\"}"
+  /usr/bin/write_log -p E  "FAIL: Input config file($infile) contains no valid data"
+  exit 1
+fi
+
+# Construct import query
+sql="attach database '/tmp/source.sqlite' as sdb; "
+sql=${sql}"attach database '/tmp/config-$datetime-imported.sqlite' as ddb; "
+sql=${sql}"begin; "
+
+sql=${sql}"update ddb.config set active = 0 where group_type = 'system' "
+
+# if requested to import local config items, make existing 
+# local config items inactive
+if [ "$with_local" = "1" ]; then
+  sql=${sql}"or group_type = 'local' "
+fi
+
+# if requested to import network config items, make existing
+# network config items inactive
+if [ "$with_net" = "1" ]; then
+  sql=${sql}" or group_type = 'network' "
+fi
+
+sql=${sql}"; "
+
+sql=${sql}"insert into ddb.config select null, c.utc_time_ms, c.active, c.group_name, c.group_type, c.saved_name, c.json_config "
+sql=${sql}"from sdb.config c where ( c.group_type = 'system' "
+
+# if requested to import local config items
+if [ "$with_local" = "1" ]; then
+  sql=${sql}"or c.group_type = 'local' "
+fi
+
+# if requested to import network config items
+if [ "$with_net" = "1" ]; then
+  sql=${sql}"or c.group_type = 'network' "
+fi
+
+sql=${sql}") "
+
+# if requested to import only active config items
+if [ "$active_only" = "1" ]; then 
+  sql=${sql}" and c.active = 1 "
+fi
+  
+sql=${sql}"; "
+
+sql=${sql}"commit; "
+sql=${sql}"detach ddb; " 
+sql=${sql}"detach sdb; "
+
+# run the query, if success, make it the active NV config
+# then prompt user to reboot the AMU immediately
+if echo "$sql" | sqlite3 ; then
+  cp /tmp/config-$datetime-imported.sqlite /home/bird/configs/
+  ln -f -s /home/bird/configs/config-$datetime-imported.sqlite /home/bird/config.sqlite
+  #init_config
+  success="succeeded"
+  
+  ${LOGGER_BIN} -i 303 -s 5 "{\"filename\": \"$filename\", \"result\": \"$success\", \"caller\": \"$caller\", \"info\": \"$info\"}"
+  /usr/bin/write_log -p N  "SUCCESS: config imported: new config file: /home/bird/configs/config-$datetime-imported.sqlite"
+  /usr/bin/write_log -p N  "SUCCESS: (sql=$sql)"
+
+  echo 
+  echo "Please reboot/power cycle the AMU for the newly imported config to take effect" 
+else
+  ${LOGGER_BIN} -i 303 -s 1 "{\"filename\": \"$filename\", \"result\": \"$success\", \"caller\": \"$caller\", \"info\": \"$info\"}"
+  /usr/bin/write_log -p E  "FAIL: import config was not successful (sql=$sql)"
+fi
+

@@ -1,0 +1,97 @@
+#!/bin/bash -e
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to run AMUS SW update
+# Usage: see print_usage()
+######################################################################
+
+# Temporary directory will be use on the update 
+tmp_dir=$(mktemp -d)
+
+# Pring help/usage message
+print_usage()
+{
+  echo "Usage: $(basename $0) [-f /path/to/installer] [-i info] [-c caller] [-g guiOutputFile] [help]"
+  echo "  -f: path to installer .bas file"
+  echo "  -i: information for this install instance"
+  echo "  -c: process initiates the installer"
+  echo "  -g: path to installation output for GUI"
+  echo "  help: this help"
+  echo "Example: $(basename $0) -f /tmp/bs-amu_1.0.bas -i jobid-123 -c gui -g /home/bird/gui_out"  
+  echo
+}
+
+# Process command line arguments
+while getopts ":f:i:c:g:" o; do
+  case "${o}" in
+    f)
+      infile=${OPTARG}
+    ;;
+    i)
+      info=${OPTARG}
+    ;;
+    c)
+      caller=${OPTARG}
+    ;;
+    g)
+      gui_out=${OPTARG}
+    ;;
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+# If the last argument is "help", print usage messages and exit
+if [ "$1" = "help" ]; then
+  print_usage
+  exit 0
+fi
+
+# Make sure input file (the sw installer) is present. Otherwise
+# print help message and exit 
+if [ ! -f "$infile" ]; then
+  print_usage
+  exit 1
+fi
+
+# Get the file name of the SW installer
+# Use for creating event
+filename=$(basename $infile)
+
+/usr/bin/write_log -p I  "Extracting installer $infile to $tmp_dir..."
+# Unzip the installer. If failed, log error and exit
+if ! /usr/bin/unzip -P $(cat /home/bird/.zkey) -d $tmp_dir $infile; then
+  /usr/bin/write_log -p E "ERROR: failed to extract installer $infile, it may be corrupted"
+  exit 1
+fi
+
+cd $tmp_dir
+# if the SW installer does not contain the run.sh (install script)
+# the installer is considered not valid, log error and exit
+inst_script=$(find $tmp_dir -name run.sh -type f)
+if [ -z "$inst_script" ]; then
+  /usr/bin/write_log -p E "ERROR: installer is not valid - $inst_script not found"
+  exit 1
+fi
+
+# Make sure the run.sh install script is executable
+chmod a+x $inst_script
+
+# User requested to create installation information output (i.e., for use with GUI install)
+# then pass the file to run.sh
+if [ ! -z "$gui_out" ]; then
+  option="-g $gui_out"
+fi
+
+# invoke the run.sh install script
+if ! ./run.sh -f "$filename"  -i "$info" -c "$caller" "$option"; then
+  exit 1
+fi
+

@@ -1,0 +1,23 @@
+{
+  "format_version":1,
+  "valid":false,
+  "time_utc_ms":0,
+  "num_carriers":1,
+  "carriers":[
+    {
+      "carrier_id":0,
+      "carrier_name":"",
+      "type":"",
+      "sat_name":"",
+      "sat_longitude":0.0,
+      "sat_latitude":0.0,
+      "sat_skew_offset":0.0,
+      "transponder_name":"",
+      "transponder_polarisation":"",
+      "rf_centre_frequency_khz":0,
+      "rolloff_percent":0.0,
+      "symbol_rate_ksps":0,
+      "bandwidth_khz":0
+    }
+  ]
+}

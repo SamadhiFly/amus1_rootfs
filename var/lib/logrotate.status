@@ -1,0 +1,8 @@
+logrotate state -- version 2
+"/home/bird/data/logs/install.log" 2023-8-27-0:0:1
+"/home/bird/data/logs/lighttpd.error.log" 2026-3-10-6:44:1
+"/home/bird/data/logs/pmt.log" 2026-3-10-6:44:1
+"/home/bird/data/logs/bmc.log" 2026-3-10-6:44:1
+"/home/bird/data/logs/ant.log" 2026-3-10-6:44:1
+"/home/bird/data/logs/lighttpd.access.log" 2026-3-10-6:44:1
+"/home/bird/data/logs/acu.log" 2026-3-10-6:44:1

@@ -1,0 +1,97 @@
+<?
+require_once '../include/auth_admin.php';
+require_once '../include/db.php';
+require_once '../include/functions.php';
+startSession();
+
+$_SESSION['url'] = $_SERVER['PHP_SELF'];
+
+$sql = 'SELECT i.wgv2_waveform_input_id, i.description, o.chip_rate_cps, o.spreading_factor, m.description AS modulation_description, f.description AS fec_description, o.information_throughput_bps, o.operating_point_c_no_db FROM wgv2_waveform_input i LEFT JOIN wgv2_waveform_output o ON i.wgv2_waveform_input_id = o.wgv2_waveform_output_id LEFT JOIN modulation_v2 m ON m.modulation_v2_id = o.modulation LEFT JOIN fec_v2 f ON f.fec_v2_id = o.fec_type ORDER BY i.wgv2_waveform_input_id';
+$result = pg_query($sql) or die('Query failed: ' . pg_last_error());
+$row = pg_num_rows($result);
+$arr = pg_fetch_all($result);
+
+$hardwarePlatform = hardware_platform();
+?>
+<script type="text/javascript" src="../include/jscript.js"></script>
+<script>
+var id;
+
+function disableButton(disable, waveformId) {
+  var edit_elm = document.getElementById("edit");
+  var delete_elm = document.getElementById("delete");
+  var details_elm = document.getElementById("details");
+
+  if (edit_elm)
+    edit_elm.disabled = disable;
+  if (delete_elm)
+    delete_elm.disabled = disable;
+  if (details_elm)
+    details_elm.disabled = disable;
+
+  id = waveformId;
+  
+  if (disable == false)
+  {
+    if (edit_elm)
+      edit_elm.addEventListener('click', editWaveform, false);
+    if (delete_elm)
+      delete_elm.addEventListener('click', deleteWaveform, false);
+    if (details_elm)
+      details_elm.addEventListener('click', detailWaveform, false);
+  }
+}
+
+function editWaveform() {
+  openwin('edit_waveform.php?id=' + id, 'load', '1150', '650');
+}
+
+function deleteWaveform() {
+  var r = confirm("Are you sure you want to delete this waveform?");
+
+  if (r==true)
+    openwin('del_waveform.php?id=' + id, 'load', '500', '300');
+}
+
+function detailWaveform() {
+  openwin('detail_waveform.php?id=' + id, 'load', '775', '650');
+}
+</script>
+<?
+  if ($hardwarePlatform != HARDWARE_MODEL_TCU_400)
+  {
+    echo html_input('submit', 'add', '', 'Add', '', '', 'onClick="javascript:openwin(\'add_waveform.php\', \'load\', \'1150\', \'650\');"');
+    echo html_input('submit', 'edit', '', 'Edit', '', '', 'disabled');
+    echo html_input('submit', 'delete', '', 'Delete', '', '', 'disabled');
+  }
+  echo html_input('submit', 'details', '', 'View Details', '', '', 'disabled');
+
+  if ($row != 0) {
+?>
+<table id="highlightTable">
+    <tr bgcolor="#9ACEF7"><th>Waveform ID</th><th>Waveform Description</th><th>Chip Rate (kcps)</th><th>Spreading Factor</th><th>Modulation</th><th>FEC</th><th>Throughput (bps)</th><th>Required C/No (dB)</th></tr>
+    <tbody>
+      <?
+        for ($i = 0; $i < $row; $i++) {
+          if ($i % 2 == 1)
+            $bgcolor = 'bgcolor="#E1F0FD"';
+          else
+            $bgcolor = '';
+      ?>
+      <tr id="row<?=$i + 1?>" <?=$bgcolor?> onclick="onSelect('row<?=$i + 1?>', '<?=$arr[$i]['wgv2_waveform_input_id']?>')">
+        <td><?=$arr[$i]['wgv2_waveform_input_id']?></td>
+        <td><?=$arr[$i]['description']?></td>
+        <td><?=$arr[$i]['chip_rate_cps'] / 1000?></td>
+        <td><?=$arr[$i]['spreading_factor']?></td>
+        <td><?=$arr[$i]['modulation_description']?></td>
+        <td><?=$arr[$i]['fec_description']?></td>
+        <td><?=$arr[$i]['information_throughput_bps']?></td>
+        <td><?=$arr[$i]['operating_point_c_no_db']?></td>
+      </tr>
+      <? } ?>
+    </tbody>
+</table>
+<? } else { ?>
+<br />
+No Waveform Found.
+<? } ?>

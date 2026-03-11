@@ -1,0 +1,13 @@
+Package: sqlite3
+Version: 3:3.11.0-r0
+Description: Embeddable SQL database engine
+ Embeddable SQL database engine.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: PD
+Architecture: cortexa9-vfp-neon
+OE: sqlite3
+Homepage: http://www.sqlite.org
+Depends: libc6 (>= 2.21)
+Source: http://www.sqlite.org/2016/sqlite-autoconf-3110000.tar.gz file://fix-disable-static-shell.patch

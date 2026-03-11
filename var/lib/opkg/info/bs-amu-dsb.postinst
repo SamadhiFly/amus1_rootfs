@@ -1,0 +1,43 @@
+#!/bin/sh
+
+MODULE=dsb
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+
+setup_init() {
+	echo "dsb install..."
+}
+
+case "$1" in
+  configure)
+    echo ""
+    echo "===== Postinstall Commencing : bs-amu-$MODULE ====="
+    echo ""
+
+    setup_init
+
+    echo ""
+    echo "===== Postinstall Complete : bs-amu-$MODULE ====="
+    echo ""
+    ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+    ;;
+esac
+
+exit 0
+
+

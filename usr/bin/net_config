@@ -1,0 +1,83 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to configure AMUS network interfaces. If succeeded, update
+# RT config to reflect the change.
+#
+# Arguments: json string representing a complete AMUS network config.
+# Example:
+#   /usr/bin/net_config {"format_version":"2.0",\
+#     "spare_port":{"device_name":"eth0","mode":"static","address":"192.168.100.1/24"},\
+#     "service_port":{"device_name":"eth1","mode":"static","address":"10.10.10.100/24",\
+#     "virtual_interfaces":{"openamip":{"vlanid":"","mode":"static","address":"192.168.0.2/24"},\
+#     "wan":{"vlanid":"","mode":"dhcp","address":""},\
+#     "aux":{"vlanid":"","mode":"static","address":""}}}} 
+# 
+######################################################################
+
+# path to RT db 
+db_filename=/tmp/config.sqlite
+
+# If no argument provided, print help then exit  
+if [ -z "$1" ]; then
+  /usr/bin/net_init "help" 
+  exit 1
+fi
+
+# If first argument is 'help', print help message
+if [ "$1" = "help" ]; then
+  /usr/bin/net_init "help"
+  exit 0
+fi
+
+# If RT config is not initialiezed, log error and exit
+if [ ! -f "$db_filename" ]; then
+  /usr/bin/write_log -p E "ERROR: RT config is not present - unable to init net config!"
+  exit 1
+fi
+
+json="$@"
+/usr/bin/write_log -p I "Initialing networking config:[$json]"
+
+# Check if supplied argument is still in older (version 1.x) config format.
+# If yes, convert the argument to version 2.0 net config format. 
+format_version=$(echo $json | /usr/bin/python -c "import json, sys; print json.load(sys.stdin)['format_version']" | /usr/bin/awk '{printf("%d", $1)}')
+if [ "$format_version" = "1" ]; then
+  json=$(echo "$json" | /usr/bin/python /usr/share/amu/pmt/net_config_v1tov2)
+
+  # net_config_v1tov2 will return empty string if failed to convert the input.
+  if [ ! -z "$json" ]; then
+    /usr/bin/write_log -p I "Networking config has been converted to V2:[$json]"
+  else
+    /usr/bin/write_log -p E "Networking config conversion was not successful!"
+    exit 1
+  fi
+fi
+
+if [ "$format_version" = "2" ]; then
+  json=$(echo "$json" | /usr/bin/python /usr/share/amu/pmt/net_config_v2tov3)
+
+  # net_config_v2tov3 will return empty string if failed to convert the input.
+  if [ ! -z "$json" ]; then
+    /usr/bin/write_log -p I "Networking config has been converted to V3:[$json]"
+  else
+    /usr/bin/write_log -p E "Networking config conversion was not successful!"
+    exit 1
+  fi
+fi
+
+# network interfaces will be initialized by net_init command.
+# If successful, update RT config.
+if /usr/bin/net_init $json ; then 
+  /usr/bin/sqlite3 $db_filename "begin; update config set active = 0 where group_name = 'NET'; insert into config values (null, strftime('%s', 'now')*1000, 1, 'NET', 'network', '', '$json'); commit;"
+  if [ "$?" != "0" ]; then
+    /usr/bin/write_log -p W "Failed to update RT config with data:[$json]"  
+  fi
+else
+  /usr/bin/write_log -p E "Failed to init networking config with data:[$json]"
+fi
+

@@ -1,0 +1,13 @@
+Package: grep
+Version: 2.21-r0
+Description: GNU grep utility
+ GNU grep utility.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: grep
+Homepage: http://savannah.gnu.org/projects/grep/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/grep/grep-2.21.tar.xz file://grep-fix-CVE-2015-1345.patch

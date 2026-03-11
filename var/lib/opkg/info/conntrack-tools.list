@@ -1,0 +1,11 @@
+/etc/init.d/conntrack-failover
+/usr/lib/conntrack-tools/ct_helper_ftp.so
+/usr/lib/conntrack-tools/ct_helper_rpc.so
+/etc/conntrackd/
+/usr/sbin/conntrackd
+/usr/sbin/conntrack
+/usr/sbin/nfct
+/usr/lib/conntrack-tools/ct_helper_tns.so
+/usr/lib/conntrack-tools/
+/etc/init.d/conntrackd
+/etc/conntrackd/conntrackd.conf.sample

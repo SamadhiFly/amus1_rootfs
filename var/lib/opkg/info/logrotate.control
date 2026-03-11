@@ -1,0 +1,13 @@
+Package: logrotate
+Version: 3.8.8-r0
+Description: Rotates, compresses, removes and mails system log files
+ Rotates, compresses, removes and mails system log files.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9-vfp-neon
+OE: logrotate
+Homepage: https://fedorahosted.org/logrotate/
+Depends: libpopt0 (>= 1.16), libc6 (>= 2.21)
+Source: https://fedorahosted.org/releases/l/o/logrotate/logrotate-3.8.8.tar.gz file://act-as-mv-when-rotate.patch file://update-the-manual.patch file://disable-check-different-filesystems.patch

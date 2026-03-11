@@ -1,0 +1,14 @@
+Package: tar
+Version: 1.28-r0
+Description: GNU file archiving program
+ GNU tar saves many files together into a single tape or disk archive, and
+ can restore individual files from the archive.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: tar
+Homepage: http://www.gnu.org/software/tar/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/tar/tar-1.28.tar.bz2 file://remove-gets.patch

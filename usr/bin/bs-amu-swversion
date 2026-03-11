@@ -1,0 +1,21 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Print AMUS PR version
+# 
+######################################################################
+
+VERSION=0.0
+
+if [ -f /home/bird/.SWVERSION ]; then
+  VERSION=$(tail -n 1 /home/bird/.SWVERSION | awk '{print $2}')
+fi
+  
+echo "$VERSION"
+
+exit 0
+

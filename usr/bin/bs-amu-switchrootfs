@@ -1,0 +1,39 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Switch to the alternative ROOTFS on the next boot
+#
+######################################################################
+
+boot=/dev/mmcblk0p1
+mount_point=/mnt/p1
+
+mkdir -p $mount_point
+
+# BOOT partition is already mount somewhere else,
+# unmount it first
+if mount | grep "$boot" ; then
+  umount $boot
+fi
+
+mount -t vfat $boot $mount_point
+
+if [ -f $mount_point/rootfs.txt ]; then
+  source $mount_point/rootfs.txt 
+fi
+
+if [ "$root" = "/dev/mmcblk0p2" ]; then
+  echo "root=/dev/mmcblk0p3" > $mount_point/rootfs.txt 
+else
+  echo "root=/dev/mmcblk0p2" > $mount_point/rootfs.txt
+fi
+
+umount $boot
+
+# hard to reboot to make the switch take effect
+reboot
+

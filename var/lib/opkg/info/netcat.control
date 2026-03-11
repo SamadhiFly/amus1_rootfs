@@ -1,0 +1,13 @@
+Package: netcat
+Version: 0.7.1-r3
+Description: GNU Netcat
+ GNU Netcat.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9-vfp-neon
+OE: netcat
+Homepage: http://netcat.sourceforge.net
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://downloads.sourceforge.net/netcat/netcat-0.7.1.tar.bz2 file://obsolete_autoconf_macros.patch file://netcat-locale_h.patch file://make-netcat_flag_count_work.patch

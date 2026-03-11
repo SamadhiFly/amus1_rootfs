@@ -1,0 +1,14 @@
+Package: sysklogd
+Version: 1.5.1-r0
+Description: System Log Daemons
+ The sysklogd package implements two system log daemons: syslogd, klogd
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+ & BSD
+Architecture: cortexa9-vfp-neon
+OE: sysklogd
+Homepage: http://www.infodrom.org/projects/sysklogd/
+Depends: update-alternatives-opkg, initscripts-functions, libc6 (>= 2.21)
+Recommends: update-rc.d
+Source: http://www.infodrom.org/projects/sysklogd/download/sysklogd-1.5.1.tar.gz file://no-strip-install.patch file://sysklogd file://syslog.conf

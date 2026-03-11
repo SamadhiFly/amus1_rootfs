@@ -1,0 +1,14 @@
+Package: locale-base-en-us
+Version: 2.21-r0
+Description: Locale data from glibc
+ Locale data from glibc.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Depends: glibc-binary-localedata-en-us
+Provides: virtual-locale-en-us, virtual-locale-en
+Source: None

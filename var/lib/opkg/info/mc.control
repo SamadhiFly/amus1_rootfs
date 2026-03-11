@@ -1,0 +1,13 @@
+Package: mc
+Version: 4.8.13-r0
+Description: Midnight Commander is an ncurses based file manager
+ Midnight Commander is an ncurses based file manager.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: mc
+Homepage: http://www.midnight-commander.org/
+Depends: libglib-2.0-0 (>= 2.42.1), libncursesw5 (>= 5.9), libtinfo5 (>= 5.9), ncurses-terminfo, libc6 (>= 2.21)
+Source: http://www.midnight-commander.org/downloads/mc-4.8.13.tar.bz2 file://mc-CTRL.patch

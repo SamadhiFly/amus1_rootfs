@@ -1,0 +1,15 @@
+Package: libmcrypt4
+Version: 2.5.8-r0
+Description: Replacement for the old crypt() package and crypt(1) command, with extensions
+ Replacement for the old crypt() package and crypt(1) command, with
+ extensions.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1
+Architecture: cortexa9-vfp-neon
+OE: libmcrypt
+Homepage: http://mcrypt.sourceforge.net/
+Depends: libc6 (>= 2.21)
+Provides: libmcrypt
+Source: http://downloads.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz

@@ -1,0 +1,16 @@
+Package: at
+Version: 3.1.16-r0
+Description: Delayed job execution and batch processing
+ At allows for commands to be run at a particular time.  Batch will
+ execute commands when the system load levels drop to a particular level.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: at
+Depends: flex (>= 2.5.39), initscripts-functions, libc6 (>= 2.21)
+Recommends: update-rc.d
+Replaces: atd
+Conflicts: atd
+Source: ftp://ftp.debian.org/debian/pool/main/a/at/at_3.1.16.orig.tar.gz file://fix_parallel_build_error.patch file://posixtm.c file://posixtm.h file://file_replacement_with_gplv2.patch file://atd.init file://atd.service file://makefile-fix-parallel.patch

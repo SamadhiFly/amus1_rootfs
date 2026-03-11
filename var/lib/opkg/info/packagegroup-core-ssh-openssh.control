@@ -1,0 +1,12 @@
+Package: packagegroup-core-ssh-openssh
+Version: 1.0-r1
+Description: OpenSSH SSH client/server
+ OpenSSH SSH client/server.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-ssh-openssh
+Depends: openssh
+Source: None

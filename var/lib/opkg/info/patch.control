@@ -1,0 +1,14 @@
+Package: patch
+Version: 2.7.1-r0
+Description: Tool for applying a patch file
+ patch takes a patch file containing a difference listing produced by the
+ diff program and applies those differences to one or more original files,
+ producing patched versions.
+Section: utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: patch
+Depends: libattr1 (>= 2.4.47), update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/patch/patch-2.7.1.tar.gz file://patch-CVE-2015-1196.patch

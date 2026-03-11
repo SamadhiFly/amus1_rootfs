@@ -1,0 +1,8 @@
+Package: bs-amu-ant
+Version: 1.4.41
+Architecture: armhf
+Maintainer: Starlight Technologies Co., Ltd <info@starlight.net>
+Installed-Size: 8238
+Section: devel
+Priority: optional
+Description: Starlight Technologies Antenna

@@ -1,0 +1,4 @@
+/etc/init.d/syslog
+/etc/init.d/syslog.syslog-ng 200
+/etc/init.d/syslog.busybox 50
+/etc/init.d/syslog.sysklogd 100

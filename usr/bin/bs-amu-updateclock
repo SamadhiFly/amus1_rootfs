@@ -1,0 +1,61 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Update system clock and hardware clock if GPS fix is acquired
+# 
+######################################################################
+
+# GPS status is from ACU status in the current status database
+# ACU update status interval is 1 second 
+current_status=/tmp/current_status.sqlite
+
+if [ ! -f "$current_status" ]; then
+  /usr/bin/write_log -p E "Current status datebase is not available;"
+  exit 1
+fi
+
+check_table()
+{
+  db_filename=$1
+  table_name=$2
+
+  result=$(sqlite3 $db_filename "select name from sqlite_master where name = '$table_name'")
+  if [ ! -z "$result" ]; then
+    return 0
+  fi
+
+  return 1
+}
+
+if ! check_table $current_status status ; then
+  /usr/bin/write_log -p E  "Status table not found in current status database"
+  exit 1
+fi
+
+# Latest ACU status
+status=$(sqlite3 $current_status "select json_status from status where module = 'ACU' order by id desc limit 1")
+
+if [ -z "$status" ]; then
+  /usr/bin/write_log -p E  "ACU status not available"
+  exit 1
+fi
+
+# GPS fix state
+gps_state=$(echo $status | python -c "import json, sys; print json.load(sys.stdin)['gps_locked']" | awk '{print tolower($0)}')
+
+if [ "$gps_state" = "true" ]; then
+  # if GPS state is fixed
+  # then get GPS timestamp 
+  gps_time=$(echo $status | python -c "import json, sys; print json.load(sys.stdin)['gps_utc_s']")
+  # update both system clock and hardware clock
+  date -u -s "@$gps_time"
+  hwclock -u -w 
+else
+  /usr/bin/write_log -p E  "GPS is not fixed, GPS state=$gps_state"
+  exit 1
+fi
+

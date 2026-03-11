@@ -1,0 +1,9 @@
+{
+  "format_version":0,
+  "valid":false,
+  "time_utc_ms":0,
+  "hard_iron_offset_x":0.0,
+  "hard_iron_offset_y":0.0,
+  "soft_iron_rotation_angle":0.0,
+  "soft_iron_scale_factor_x":1.0
+}

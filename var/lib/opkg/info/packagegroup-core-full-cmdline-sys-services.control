@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline-sys-services
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: bzip2, rpcbind, less, dbus, pciutils, lighttpd, nfs-utils, tzdata, sysfsutils, logrotate, python-dbus, at, tcp-wrappers, libevent, gzip, libcap, libpcre, cronie, elfutils, dbus-glib
+Provides: packagegroup-core-sys-services, task-core-sys-services
+Replaces: packagegroup-core-sys-services, task-core-sys-services
+Conflicts: packagegroup-core-sys-services, task-core-sys-services
+Source: None

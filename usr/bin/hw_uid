@@ -1,0 +1,35 @@
+#!/bin/bash
+
+EEPROM_FILE="/sys/bus/i2c/devices/0-0050/eeprom"
+
+if [ ! -f "$EEPROM_FILE" ]; then
+        echo "00-00-00-00"
+	exit 0
+fi
+
+FILE_SIZE=$(stat -c %s $EEPROM_FILE)
+if [ "$FILE_SIZE" != "256" ]; then
+        echo "00-00-00-00"
+        exit 0
+fi
+
+MANUFACTURER_CODE=$(hexdump -e '"%02X"' -s 0xfa -n 1 $EEPROM_FILE)
+if [ "$MANUFACTURER_CODE" != "29" ]; then
+        echo "00-00-00-00"
+        exit 0
+fi
+
+DEVICE_CODE=$(hexdump -e '"%02X"' -s 0xfb -n 1 $EEPROM_FILE)
+if [ "$DEVICE_CODE" != "41" ]; then
+        echo "00-00-00-00"
+        exit 0
+fi
+
+UID1=$(hexdump -e '"%02X"' -s 0xfc -n 1 $EEPROM_FILE)
+UID2=$(hexdump -e '"%02X"' -s 0xfd -n 1 $EEPROM_FILE)
+UID3=$(hexdump -e '"%02X"' -s 0xfe -n 1 $EEPROM_FILE)
+UID4=$(hexdump -e '"%02X"' -s 0xff -n 1 $EEPROM_FILE)
+
+echo "$UID1-$UID2-$UID3-$UID4"
+exit 0
+

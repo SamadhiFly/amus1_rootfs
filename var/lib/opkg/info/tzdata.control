@@ -1,0 +1,13 @@
+Package: tzdata
+Version: 2016a-r0
+Description: Timezone data
+ Timezone data.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: PD & BSD & BSD-3-Clause
+Architecture: all
+OE: tzdata
+Homepage: http://www.iana.org/time-zones
+Conflicts: timezone-asia, timezone-europe, timezone-iso3166.tab, timezone-america, timezones, timezone-zone.tab, timezone-pacific, timezone-atlantic, timezone-antarctica, timezone-arctic, timezone-africa, timezone-indian, timezone-australia
+Source: ftp://ftp.iana.org/tz/releases/tzdata2016a.tar.gz;name=tzdata

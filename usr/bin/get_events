@@ -1,0 +1,148 @@
+#!/bin/bash
+
+# Date: Oct 14, 2022
+# Author: Emily Zhang Minli
+
+
+VERSION=1 # Initial draft
+
+
+print_usage()
+{
+    echo "Version $VERSION: get bmc event reportint to bmp"
+    echo "$(basename $0) -t start_s -f finish_s -e level -j job_id"
+    echo "start_s:start timestamp in seconds till 1970-01-10 00:00:00 "
+    echo "finish_s:end timestamp in seconds till 1970-01-10 00:00:00 "
+    echo "level:the level of event that allowd to be report, such as 5 "
+    echo "job_id:the job_id which is unique"
+    echo "get events from 2022-10-10 11:54:30 to 2022-10-17 11:54:30 has Info level report to bmp : get_events -t 1665374070 -f 1665978870 -e 6 -j job_id "
+    exit 1 
+}
+
+insert_event()
+{
+    local event_id=404 # Hardware information changed
+    local result=$1
+    
+    # TODO:
+    # Check software upgrade event details in BMP
+    # We can discuss more details with Rui Feng, and make it more consistent with the software upgrade process, and include additional information such as optional job ID 
+    bs-amu-logevent -i $event_id -s 1 "{\"result\":\"$result\", \"job_id\":\"$job_id\"}"
+}
+
+validate_event_level()
+{
+    if [ -z "$event_level" ]; then
+        #print_usage
+        insert_event 'failed'
+        write_log -p E "get_events failed null event_level"
+        exit 1
+    fi
+
+    if [ $event_level -ge $panic ];then
+      #do nothing  
+      do_nothing=1
+    elif [ $event_level -le $debug_3 ]; then
+      #do nothing  
+      do_nothing=2
+    else
+      echo "$event_level is error event level"
+      #print_usage
+      insert_event 'failed'
+      write_log -p E "get_events event_level is error"
+      exit 1
+    fi
+}
+
+validate_timestamp()
+{
+    if [ -z "$start_s" ]; then
+        print_usage
+        insert_event 'failed'
+        exit 1
+    fi
+    
+    if [ -z "$finish_s" ]; then
+        print_usage
+        insert_event 'failed'
+        exit 1
+    fi
+    
+    if [ $start_s -le $second_1990_s ];then
+        echo " start_s $start_s is earlier than 1990"
+        print_usage
+        insert_event 'failed'
+        exit 1
+    elif [ $finish_s -le $second_1990_s ]; then
+        echo " finish_s $finish_s is earlier than 1990"
+        print_usage
+        insert_event 'failed'
+        exit 1
+    elif [ $finish_s -le $start_s ]; then
+        echo " finish_s $finish_s is earlier than start_s $start_s "
+        print_usage
+        insert_event 'failed'
+        exit 1
+    fi
+}
+
+
+call_cli()
+{
+
+    mod_cli bmc $outputfile query_event $start_s $finish_s $event_level $job_id
+    
+    #echo "query_event $start_s $finish_s $event_level $job_id" | nc localhost 30410 &
+    #pkill nc
+    
+}
+
+########################################
+# Main start here
+#get_events -t 1665331200 -f 1666022400 -e 6 -j AW000000N0001antennaModel20200622155115
+########################################
+#default value
+event_level=5
+debug_3=9
+panic=0
+start_s=0
+finish_s=0
+#1990-01-01 00:00:00
+second_1990_s=631123200
+outputfile="/home/bird/data/logs/query_events.log"
+if [[ $# < 8 ]]; then
+    echo "input arg value is less than 8"
+    write_log -p E "get_events input arg number is less than 8"
+    print_usage
+    exit 1
+fi 
+
+while getopts "t:f:e:j:" opt; do
+    case "${opt}" in
+        t)
+            start_s=$OPTARG
+        ;;
+        f)
+            finish_s=$OPTARG
+        ;;
+        e)
+            event_level=$OPTARG
+        ;;
+        j)
+            job_id=$OPTARG           
+        ;;
+        \?)
+            echo "Invalid option ($OPTARG)"
+            print_usage                
+        ;;
+    esac
+done
+
+validate_event_level
+
+#validate_timestamp
+
+call_cli
+
+
+

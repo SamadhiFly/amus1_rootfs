@@ -1,0 +1,191 @@
+<?
+require_once '../include/auth_admin.php';
+require_once '../include/db.php';
+require_once '../include/functions.php';
+
+$info = array();
+// info is an array
+function populateNetworkHtml($info, $type){
+	$output = '';
+	
+	if($info[1] == 'N.A.'){
+		return $output;
+	}
+	
+	// WAN or virtual interface do not have MAC address
+	if($type != 'wan' && $info[1] != 'virtual'){
+		$output .= '<tr><td><b>MAC Address:</b></td><td colspan="3">'.$info[2].'</td></tr>';	
+	}
+	
+	$output .= '<tr><td><b>IP Address:</b></td><td colspan="3">'.$info[3].'</td></tr>';
+	
+	if($type == 'wan'){
+		$output .='<tr><td><b>Peer Address:</b></td><td colspan="3">'.$info[4].'</td></tr>';
+	}else{
+		$output .='<tr><td><b>Network Mask:</b></td><td colspan="3">'.$info[4].'</td></tr>';
+	}
+	
+	// virtual interface do not have MTU, TX, RX statistics
+	if($info[1] != 'virtual'){
+		$output .='<tr><td><b>MTU:</b></td><td colspan="3">'.$info[5].'</td></tr>
+		<tr><td width="150px"><b>RX Packets:</b></td><td width="175px">'.$info[6].'</td><td width="150px"><b>RX Bytes:</b></td><td width="175px">'.$info[7].'</td></tr>
+		<tr><td><b>TX Packets:</b></td><td>'.$info[8].'</td><td><b>TX Bytes:</b></td><td>'.$info[9].'</td></tr>';
+    }  
+	return $output;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// WAN
+//////////////////////////////////////////////////////////////////////////////////////////
+
+$arr_connect = db_find('SELECT property_value FROM module_properties WHERE module_properties_idx = 33');
+
+$check['true'] = '';
+$check['false'] = '';
+$check[$arr_connect['property_value']] = 'checked';
+
+
+if ($arr_connect['property_value'] == 'true')
+{
+  $manualConnectHtmlFlag = 'disabled';
+}
+else
+{
+  $manualConnectHtmlFlag = '';
+}
+
+$output = '
+  <fieldset>
+    <legend>Network Auto Connect</legend>
+    <table>
+      <tr>
+        <th>Network Auto Connect</th>
+        <td>'.html_input('radio', 'connect', 'connect_true', '', '', '', 'onClick="connect(\'network.php\', \'true\');" '.$check['true']).'<label for="connect_true">On</label>&nbsp;&nbsp;'.html_input('radio', 'connect', 'connect_false', '', '', '', 'onClick="connect(\'network.php\', \'false\');" '.$check['false']).'<label for="connect_false">Off</label></td>
+      </tr>
+    </table>
+  </fieldset>';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// WAN
+//////////////////////////////////////////////////////////////////////////////////////////
+exec('sudo /usr/bin/ppp_get_status.sh', $return);
+$wanStatus = ucfirst($return[0]);
+
+$output .= '<fieldset><legend>WAN</legend>';
+if ($wanStatus == 'Connected')
+{
+	// See PHP exec manual, we shall unset array before calling exec
+	unset($info);
+	$lastLine = exec('sudo /usr/bin/tt-cu-rc-nif wan', $info, $returnCode);
+	
+	$output .= '<table>';
+	if($returnCode == 0){
+		$output .= populateNetworkHtml($info, 'wan');
+	}
+	// Disconnect button is always clickable.
+	$output .='<tr><td colspan="4"><b>'.$wanStatus.'</b> '.html_input('button', 'disconnect', '', 'Disconnect', '', '', 'onClick="confirmation(\'network.php\', \'disconnect\');" ').' '.html_input('button', '', '', 'Configure', '', '', 'onClick="openwin(\'connect_network.php\', \'connectwin\', \'500\', \'275\');"').'</td></tr>';
+	$output .= '</table>';		
+	
+}else if ($wanStatus == 'Connecting') {
+	// Disconnect button is always clickable.
+  $output .= '
+	  <b>'.$wanStatus.'</b> '.html_input('button', 'disconnect', '', 'Disconnect', '', '', 'onClick="confirmation(\'network.php\', \'disconnect\');" ').' '.html_input('button', '', '', 'Configure', '', '', 'onClick="openwin(\'connect_network.php\', \'connectwin\', \'500\', \'275\');"');
+}else{
+  $output .= '
+      <b>'.$wanStatus.'</b>
+      '.html_input('button', 'connect', '', 'Connect', '', '', 'onClick="confirmation(\'network.php\', \'connect\');" '.' '.$manualConnectHtmlFlag).' '.html_input('button', '', '', 'Configure', '', '', 'onClick="openwin(\'connect_network.php\', \'connectwin\', \'500\', \'275\');"');
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// LAN
+//////////////////////////////////////////////////////////////////////////////////////////
+
+$output .= '</fieldset><fieldset><legend>LAN</legend>';
+
+unset($info);
+$lastLine = exec('sudo /usr/bin/tt-cu-rc-nif lan', $info, $returnCode);
+errorLog('info array ' . $returnCode . $info[0] . ' ' . $info[1] . ' ' . $info[2] . ' ' . $info[3] . ' ' . $info[4] . ' ' . $info[5] . ' ' . $info[6] . ' ' . $info[7] . ' ' . $info[8] . ' ' . $info[9]);
+
+$output .= '<table>';
+
+if($returnCode == 0){
+	$output .= populateNetworkHtml($info, 'lan');
+	errorLog('lan' . populateNetworkHtml($info, 'lan'));
+	errorLog('full' . $output);
+}
+
+$output .='<tr><th colspan="4">'.html_input('button', '', '', 'Configure', '', '', 'onClick="openwin(\'edit_network.php?id=lan&ip='.trim($info[3]).'&netmask='.trim($info[4]).'\', \'editwin\', \'480\', \'240\')"').'</th></tr>';
+$output .='</table>';
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Monitoring
+//////////////////////////////////////////////////////////////////////////////////////////
+
+$output .= '</fieldset><fieldset><legend>Monitoring</legend>';
+
+unset($info);
+$lastLine = exec('sudo /usr/bin/tt-cu-rc-nif monitor', $info, $returnCode);
+$ipAddress='';
+$networkMask='';
+$virtual='no';
+if($returnCode == 0 && $info[1] != 'N.A.'){
+	$ipAddress=$info[3];
+	$networkMask=$info[4];
+	if($info[1] == 'virtual'){
+		$virtual = 'yes';
+	}
+}
+
+$output .= '<table>';
+if($returnCode == 0){
+	$output .= populateNetworkHtml($info, 'monitor');	
+}
+
+$output .='<tr><th colspan="4">'.html_input('button', '', '', 'Configure', '', '', 'onClick="openwin(\'edit_network.php?id=monitor&ip='.trim($ipAddress).'&netmask='.trim($networkMask).'&virtual=' . $virtual . '\', \'editwin\', \'480\', \'240\')"').'</th></tr>';
+$output .='</table>';
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Routes
+//////////////////////////////////////////////////////////////////////////////////////////
+$output .= '</fieldset><fieldset><legend>Routing</legend>';
+exec('sudo tt-cu-rc-route', $route);
+
+if (count($route) > 0) {
+  $output .= '
+  <table>
+    <tr bgcolor="#9ACEF7"><th>Destination IP Address</th><th>Network Mask</th><th>Gateway</th><th>Delete</th></tr>';
+
+  $i = 0;
+
+  for ($j=0; $j<count($route); $j++) {
+    if (fmod($i, '2') == 0){
+		$bgcolor = '';
+	}else{
+		$bgcolor = 'bgcolor="#E1F0FD"';
+	}
+    $output .= '<tr '.$bgcolor.'>';
+    $status = preg_split("/[\s]+/", $route[$j]);
+    for ($k=1; $k<count($status); $k++) {
+      $output .= '<td>'.$status[$k].'</td>';
+    }
+    $output .= '<td>'.html_input('button', '', '', 'Delete', '', '', 'onclick="delNetworkConfirm(\'../file/del_network.php?&ip='.$status[1].'&netmask='.$status[2].'&gateway='.$status[3].'\', \'delnetwork\', \'480\', \'240\')"').'</td></tr>';
+
+    $i++;
+  }
+
+  $output .= '<tr><th colspan="4">'.html_input('button', '', '', 'Add Route', '', '', 'onClick="openwin(\'add_network.php\', \'addnetwork\', \'480\', \'240\')"').'</th></tr></table>';
+}
+else
+{
+  $output .= 'No Record.<br />';
+  $output .= html_input('button', '', '', 'Add Route', '', '', 'onClick="openwin(\'add_network.php\', \'addnetwork\', \'480\', \'240\')"');
+}
+
+$output .= '</fieldset>';
+
+echo $output;
+?>

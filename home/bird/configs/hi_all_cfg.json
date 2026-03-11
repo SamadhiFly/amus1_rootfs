@@ -1,0 +1,22 @@
+{
+  "format_version":2,
+  "antenna_model":"VS100K",
+  "antenna_serial":"KW002291N0095",
+  "amu_model":"AMUS6.1",
+  "amu_serial":"BAMUS62334N0096",
+  "buc_model":"NJT8376UFC9",
+  "buc_serial":"A00453A25",
+  "lnb_model":"NJR2843S",
+  "lnb_serial":"A00888D17",
+  "BMB_model":"",
+  "modem_model":"iDirect-IQ200",
+  "modem_mac":"111017",
+  "BMB_serial":"",
+  "mechanical_version":"1.0",
+  "az_encoder_model":"r2",
+  "el_encoder_model":"none",
+  "rl_encoder_model":"none",
+  "box_sensor_pcb":"dsb3.3",
+  "dish_sensor_pcb":"none",
+  "base_sensor_pcb":"none"
+}

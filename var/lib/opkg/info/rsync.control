@@ -1,0 +1,13 @@
+Package: rsync
+Version: 3.1.1-r0
+Description: File synchronization tool
+ File synchronization tool.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+
+Architecture: cortexa9-vfp-neon
+OE: rsync
+Homepage: http://rsync.samba.org/
+Depends: libattr1 (>= 2.4.47), libpopt0 (>= 1.16), libacl1 (>= 2.2.52), libc6 (>= 2.21)
+Source: http://rsync.samba.org/ftp/rsync/src/rsync-3.1.1.tar.gz file://rsyncd.conf file://acinclude.m4 file://0001-Complain-if-an-inc-recursive-path-is-not-right-for-i.patch file://rsync.git-eac858085.patch

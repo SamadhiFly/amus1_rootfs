@@ -1,0 +1,15 @@
+Package: cpio
+Version: 2.11-r5
+Description: GNU cpio is a program to manage archives of files
+ GNU cpio is a tool for creating and extracting archives, or copying files
+ from one place to another. It handles a number of cpio formats as well as
+ reading and writing tar files.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: cpio
+Homepage: http://www.gnu.org/software/cpio/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/cpio/cpio-2.11.tar.gz file://statdef.patch file://remove-gets.patch file://fix-memory-overrun.patch file://cpio-CVE-2015-1197.patch

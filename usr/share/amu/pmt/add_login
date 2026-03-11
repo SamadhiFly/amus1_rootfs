@@ -1,0 +1,28 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Add a user 'USER' with password 'PASS' to the AMUS
+######################################################################
+
+USER=$1
+PASS=$2
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+  exit 1
+fi
+
+EXISTING_USER=$(grep $USER /etc/shadow)
+if [ ! -z "$EXISTING_USER" ];then
+  echo "$USER:$PASS" | chpasswd
+  exit 0 
+fi
+
+useradd -m $USER
+echo "$USER:$PASS" | chpasswd
+
+exit 0
+

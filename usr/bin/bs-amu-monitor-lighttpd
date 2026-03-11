@@ -1,0 +1,35 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Make sure lighttpd server is running and can response to HTTP request.
+######################################################################
+
+LIGHTTPD_STARTUP_SCRIPT=/etc/init.d/lighttpd
+
+if [ ! -x "$LIGHTTPD_STARTUP_SCRIPT" ]; then
+  exit 0
+fi
+
+# service is not running, restart it
+if ! pgrep lighttpd ; then
+  $LIGHTTPD_STARTUP_SCRIPT start
+  exit 0
+fi
+
+CURL_BIN=$( which curl )
+if [ -z "$CURL_BIN" ]; then
+  exit 0
+fi
+
+# handle connection rejection
+RUNNING=$( $CURL_BIN -s -m 2 127.0.0.1 )
+if [ -z "$RUNNING" ]; then
+  $LIGHTTPD_STARTUP_SCRIPT restart
+  exit 0
+fi
+
+exit 0

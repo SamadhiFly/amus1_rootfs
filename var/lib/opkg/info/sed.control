@@ -1,0 +1,13 @@
+Package: sed
+Version: 4.2.2-r0
+Description: Stream EDitor (text filtering utility)
+ Stream EDitor (text filtering utility).
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+
+Architecture: cortexa9-vfp-neon
+OE: sed
+Homepage: http://www.gnu.org/software/sed/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/sed/sed-4.2.2.tar.gz file://sed-add-ptest.patch file://run-ptest

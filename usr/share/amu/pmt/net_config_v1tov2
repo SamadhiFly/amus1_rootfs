@@ -1,0 +1,41 @@
+######################################################################
+## Copyright BIRD/Thiss Technologies
+##
+## Date: December 20, 2019
+##
+## This python script converts format version 1.x AMUS network config json string to 
+## format version 2.0.
+###################################################################### 
+
+import json, sys
+
+# Get input config from stdin
+input_json = json.load(sys.stdin);
+
+# Check format version. If it is not 1.x, return the input withou any conversion.
+if int(float(input_json['format_version'])) != 1 :
+  print json.dumps(input_json);
+  sys.exit();
+
+# Load default 2.0 config, use it as a template.
+v2_default_file = open("/usr/share/amu/pmt/net_config.v2.default", "r");
+v2_config = json.load(v2_default_file);
+v2_default_file.close();
+
+# Update the default 2.0 config from input config, leaving fields only exist in 
+# format version 2.0 unchanged.
+v2_config['spare_port']['device_name'] = input_json['srv_port_interface'];
+v2_config['spare_port']['address'] = input_json['srv_port_address'];
+v2_config['spare_port']['mode'] = input_json['srv_port_mode'];
+
+v2_config['service_port']['device_name'] = input_json['data_port_interface'];
+
+v2_config['service_port']['virtual_interfaces']['openamip']['mode'] = input_json['data_port_mode_modem'];
+v2_config['service_port']['virtual_interfaces']['openamip']['address'] = input_json['data_port_address_modem'];
+
+v2_config['service_port']['virtual_interfaces']['wan']['mode'] = input_json['data_port_mode_wan'];
+v2_config['service_port']['virtual_interfaces']['wan']['address'] = input_json['data_port_address_wan'];
+
+# return the converted config.
+print json.dumps(v2_config);
+

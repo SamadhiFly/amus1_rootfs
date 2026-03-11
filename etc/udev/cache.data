@@ -1,0 +1,84 @@
+Linux version 4.19.0-amus6-v2.5 (oe-user@oe-host) (gcc version 8.2.0 (GCC)) #1 SMP Wed Dec 28 06:20:08 UTC 2022
+console=ttyPS0,115200 earlyprintk uio_pdrv_genirq.of_id=generic-uio
+Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  7 vcs
+ 10 misc
+ 13 input
+ 21 sg
+ 29 fb
+ 89 i2c
+ 90 mtd
+128 ptm
+136 pts
+180 usb
+189 usb_device
+204 ttyUL
+204 ttyUL
+204 ttyUL
+204 ttyUL
+204 ttyUL
+204 ttyUL
+204 ttyUL
+226 drm
+245 rpmb
+246 uio
+247 watchdog
+248 iio
+249 ptp
+250 pps
+251 rtc
+252 ttyPS
+253 ttyPS
+254 gpiochip
+
+Block devices:
+  1 ramdisk
+  7 loop
+  8 sd
+ 31 mtdblock
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd
+179 mmc
+259 blkext
+6304 1460524870 lib 10-dm.rules
+1277 1460524870 lib 11-dm-lvm.rules
+1446 1460524870 lib 13-dm-disk.rules
+3025 1460522581 lib 42-usb-hid-pm.rules
+3652 1460522581 lib 50-udev-default.rules
+646 1460522581 lib 60-cdrom_id.rules
+616 1460522581 lib 60-persistent-alsa.rules
+2400 1460522581 lib 60-persistent-input.rules
+947 1460522581 lib 60-persistent-serial.rules
+1420 1460522581 lib 60-persistent-storage-tape.rules
+5622 1460522581 lib 60-persistent-storage.rules
+769 1460522581 lib 60-persistent-v4l.rules
+166 1460522581 lib 61-accelerometer.rules
+570 1460522581 lib 75-net-description.rules
+255 1460522581 lib 75-probe_mtd.rules
+570 1460522581 lib 75-tty-description.rules
+4174 1460522581 lib 78-sound-card.rules
+565 1460522581 lib 80-drivers.rules
+483 1460524870 lib 95-dm-notify.rules
+3328 1460522581 lib 95-keyboard-force-release.rules
+11644 1460522581 lib 95-keymap.rules
+155 1460522581 lib 95-udev-late.rules
+885 1460522582 etc local.rules

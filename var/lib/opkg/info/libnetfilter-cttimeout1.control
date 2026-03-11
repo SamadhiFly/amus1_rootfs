@@ -1,0 +1,14 @@
+Package: libnetfilter-cttimeout1
+Version: 1.0.0-r0
+Description: Netfilter connection tracking timeout library
+ Userspace library providing a programming interface (API) to the Linux
+ kernel netfilter fine-grain connection tracking timeout infrastructure
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: libnetfilter-cttimeout
+Depends: libmnl0 (>= 1.0.3), libc6 (>= 2.21)
+Provides: libnetfilter-cttimeout
+Source: http://www.netfilter.org/projects/libnetfilter_cttimeout/files/libnetfilter_cttimeout-1.0.0.tar.bz2;name=tar

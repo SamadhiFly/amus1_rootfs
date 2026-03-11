@@ -1,0 +1,72 @@
+#!/bin/bash
+
+#==========================================================
+# THISS Technologies Pte Ltd
+# Nicholas Cirillo
+# Adapted from Sean Huang 'environment' template for TGM DB
+# December 17, 2007
+#
+# This scripts defines all variables common to the CU DBs
+#
+#==========================================================
+MACHINE=$(uname -m)
+SCRIPTNAME=$(basename $0)
+
+HOME_DIR=/home/thiss
+DEV_INFO=${HOME_DIR}/.device_info
+TMP_DIR=/tmp
+LOG_DIR=${HOME_DIR}/log_backup
+
+PGUSER=thiss
+CUDB=cu_db
+DATABASE=${CUDB}
+LOG=$LOG_DIR/terminal.log
+GPGHOME=${HOME_DIR}/.gnupg
+DEFAULTDATA=default.ttc
+PKG_ROOT=/usr/share/cu/db
+
+PSD_DATA_DIR=${HOME_DIR}/psd
+
+if [ "$MACHINE" != "armv7l" ];
+then
+	PGCFG=postgresql-8.2.conf
+	PGHBA=pg_hba-8.2.conf
+	PGBIN=/usr/lib/postgresql/8.2/bin
+	POSTGIS=/usr/share/postgresql-8.2-postgis/lwpostgis.sql
+	SPATIALREF=/usr/share/postgresql-8.2-postgis/spatial_ref_sys.sql
+else
+	PGCFG=postgresql.conf
+	PGHBA=pg_hba.conf
+	PGBIN=/usr/local/pgsql/bin
+	POSTGIS=/usr/local/pgsql/share/contrib/postgis-1.5/postgis.sql
+	SPATIALREF=/usr/local/pgsql/share/contrib/postgis-1.5/spatial_ref_sys.sql
+fi
+
+TMPFS_DIR=/home/${PGUSER}/pgsql_live
+PGDATA=${TMPFS_DIR}
+DATA_DIR=/home/${PGUSER}/.config
+CFG_SAVE_DIR=${DATA_DIR}/saved
+   
+SI_DIR=${DATA_DIR}/si
+SI_OTA_CONFIG_FILE=${DATA_DIR}/si_ota.sql
+    
+CFG_DATA=${DATA_DIR}/config.ttc
+CLUSTER_DATA=${DATA_DIR}/cluster.tar.gz
+
+PGCTL=${PGBIN}/pg_ctl
+PGSQL=${PGBIN}/psql
+CREATEDB=${PGBIN}/createdb
+
+log() 
+{
+  mkdir -p $LOG_DIR
+
+  echo "$@"
+	echo "[${SCRIPTNAME}]:$(date): $@" >> $LOG
+}
+
+HWID=""
+if [ -f "$DEV_INFO" ]; then
+  HWID=$(awk '{if (NR==3) print $1}' $DEV_INFO) 
+fi
+

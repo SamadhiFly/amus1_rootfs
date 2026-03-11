@@ -1,0 +1,31 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Get, change or create the password for BAS/BAC zip file
+#
+######################################################################
+
+KEYFILE=/home/bird/.zkey
+
+if [ -n "$1" ]; then
+  # Change to a new password (be careful) from input
+  echo $1 > $KEYFILE
+else
+  if [ -f $KEYFILE ]; then
+    # Print the password if the password file exists
+    echo $(head -n 1 $KEYFILE)
+  else
+    # password file not exist
+    # recreate the password file with default password.
+    key=$(echo -n "Singapore, November 2019" | md5sum | awk '{print $1}')
+    echo ${key} > ${KEYFILE}
+    echo ${key}
+  fi
+fi
+
+exit 0
+

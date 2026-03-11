@@ -1,0 +1,57 @@
+#!/bin/sh
+
+#================================================================
+# Starlight Technologies
+# Monk He
+# February 2019
+#
+# This script performs post remove actions for the
+# bs-amu-ant package.
+#
+#================================================================
+
+
+
+set -e
+
+# summary of how this script can be called:
+#        * <postrm> `remove'
+#        * <postrm> `purge'
+#        * <old-postrm> `upgrade' <new-version>
+#        * <new-postrm> `failed-upgrade' <old-version>
+#        * <new-postrm> `abort-install'
+#        * <new-postrm> `abort-install' <old-version>
+#        * <new-postrm> `abort-upgrade' <old-version>
+#        * <disappearer's-postrm> `disappear' <overwriter>
+#          <overwriter-version>
+
+
+case "$1" in
+    purge|remove)
+    echo ""
+    echo "===== Postremove Commencing : bs-amu-ant ====="
+    echo ""
+    rm -f /etc/init.d/bs-amu-ant
+    update-rc.d bs-amu-ant remove >/dev/null
+
+    # Remove the FIFO created at install
+    set +e
+    rm /usr/share/amu/mif/bs-amu-ant.events > /dev/null 2>&1
+    set -e
+    echo ""
+    echo "===== Postremove Complete : bs-amu-ant ====="
+    echo ""
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+
+

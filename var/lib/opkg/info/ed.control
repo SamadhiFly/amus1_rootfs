@@ -1,0 +1,13 @@
+Package: ed
+Version: 1.9-r0
+Description: Line-oriented text editor
+ Line-oriented text editor.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+
+Architecture: cortexa9-vfp-neon
+OE: ed
+Homepage: http://www.gnu.org/software/ed/
+Depends: libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/ed/ed-1.9.tar.gz

@@ -1,0 +1,43 @@
+#!/bin/sh
+
+#================================================================
+# THISS Technology
+# Shen Jinquan
+# Dec 27, 2021
+#
+# This script performs preinst actions for the
+# dsb package.
+#
+#================================================================
+
+set -e
+
+# summary of how this script can be called:
+#        * <new-preinst> `install'
+#        * <new-preinst> `install' <old-version>
+#        * <new-preinst> `upgrade' <old-version>
+#        * <old-preinst> `abort-upgrade' <new-version>
+
+MODULE=dsb
+
+case "$1" in
+  install|upgrade)
+    echo ""
+    echo "===== Preinstall Commencing : bs-amu-dsb ====="
+    echo ""
+    echo "===== Preinstall Complete : bs-amu-dsb ====="
+    echo ""
+    ;;
+
+  abort-upgrade)
+    ;;
+
+  *)
+    echo "preinst called with unknown argument \`$1'" >&2
+    exit 1
+    ;;
+esac
+
+exit 0
+
+

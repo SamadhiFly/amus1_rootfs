@@ -1,0 +1,15 @@
+Package: libnetfilter-queue1
+Version: 1.0.2-r0
+Description: Netfilter packet queue access library
+ Userspace library providing a programming interface (API) to access the
+ Linux kernel netfilter packet queue
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: libnetfilter-queue
+Homepage: http://www.netfilter.org/projects/libnetfilter_queue/index.html
+Depends: libnfnetlink0 (>= 1.0.1), libmnl0 (>= 1.0.3), libc6 (>= 2.21)
+Provides: libnetfilter-queue
+Source: http://www.netfilter.org/projects/libnetfilter_queue/files/libnetfilter_queue-1.0.2.tar.bz2;name=tar

@@ -1,0 +1,16 @@
+Package: udev
+Version: 182-r9
+Description: /dev/ and hotplug management daemon
+ udev is a daemon which dynamically creates and removes device nodes from
+ /dev/, handles hotplug events and loads drivers at boot time.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2.0+
+Architecture: cortexa9-vfp-neon
+OE: udev
+Homepage: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev/udev.html
+Depends: libkmod2 (>= 19+git0+fd56638aed), libblkid1 (>= 2.25.2), libc6 (>= 2.21)
+Recommends: update-rc.d, udev-cache
+Provides: hotplug
+Source: http://kernel.org/pub/linux/utils/kernel/hotplug/udev-182.tar.gz file://0001-Fixing-keyboard_force_release.sh-shell-script-path.patch file://avoid-mouse-autosuspend.patch file://run.rules file://udev.rules file://devfs-udev.rules file://links.conf file://permissions.rules file://local.rules file://udev-cache file://udev-cache.default file://add-install-ptest.patch file://fix_rule-syntax-regex-ptest.patch file://run-ptest file://init

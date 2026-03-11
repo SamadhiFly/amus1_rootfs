@@ -1,0 +1,67 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to append a log message to /home/bird/data/logs/pmt.log 
+# Arguments: see print_usage()
+######################################################################
+
+log_dir=/home/bird/data/logs
+log_backup_dir=${log_dir}/backup
+log_file=${log_dir}/pmt.log
+
+# default priority and log ID
+priority="A"
+log_id=12
+
+# Print help (usage) message
+print_usage()
+{
+  echo "Write a log message to persistent log file ${log_file}"
+  echo "Usage: $(basename $0) [-p priority_code] [-i log_id] [-h] message|-"
+  echo "  -p: priority_code"
+  echo "  -i: log_id"
+  echo "  -h: print this help message and exit"
+  echo 
+  echo "Example: $(basename $0) -p E -i 10 this is a log message"  
+  echo "Example: echo \"this is a log message\" | $(basename $0) -p E -i 10 -"
+}
+
+# Process command line argument
+while getopts ":p:i:h" opt; do
+  case "${opt}" in
+    p)
+      priority=${OPTARG}
+    ;;
+    i)
+      log_id=${OPTARG}
+    ;;
+    h)
+      print_usage
+      exit 0
+    ;;
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+# Make sure the directories are created.
+mkdir -p ${log_dir} ${log_backup_dir}
+msg="$@"
+# Construct the log message (to comply with AMU-101 specs)
+# Append it to the log file at the same time print it to stdout 
+if [ -z "$msg" ] || [ "$msg" = "-" ]; then
+	# get input from stdin so we can use pipe to create logs
+  while read msg; do
+    echo "${priority},${log_id},$(date -u +%d/%m/%y,%T.%6N): $msg" | /usr/bin/tee -a ${log_file}    
+  done
+else
+  echo "${priority},${log_id},$(date -u +%d/%m/%y,%T.%6N): $msg" | /usr/bin/tee -a ${log_file}
+fi
+

@@ -1,0 +1,1530 @@
+N,134,10/03/26,06:44:05.700899: IMU Interface framework initialised
+P,96,10/03/26,06:44:05.706050: THISS Starlight : BMC process (AMUS1) version 1.40.0 compiled on 19:28:56 Mar 12 2023)
+P,96,10/03/26,06:44:05.706126: TSK_Init: BMC Initialisation Complete
+N,135,10/03/26,06:44:05.706396: Last historical rowid initialised to 258542
+E,135,10/03/26,06:44:05.734753: josn_string:{"startup_utc":"2026-03-10 06:43:35"} key:startup_utc value:"2026-03-10 06:43:35" utc:1773125015
+N,99,10/03/26,06:44:05.748686: query_time_level_valid time duration is not right [0-0],now:1773125045
+W,135,10/03/26,06:44:05.753941: Statistics failed to send: interval-attempt=1 id=258542 retry=3 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:44:05.754295: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:44:05.755272: Event failed to send via curl: attempt=1 curl timeout=10 wait=5 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(38:0)
+W,135,10/03/26,06:44:05.774766: Statistics failed to send: interval-attempt=2 id=258542 retry=4 error=(Couldn't resolve host name) httpcode=0
+E,135,10/03/26,06:44:05.774806: josn_string:{"shutdown_utc":"2026-03-02 07:15:01"} key:shutdown_utc value:"2026-03-02 07:15:01" utc:1772435701
+N,135,10/03/26,06:44:05.775041: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:44:05.775487: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:44:05.779731: Statistics failed to send: interval-attempt=3 id=258542 retry=5 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:44:05.779793: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:44:10.757065: Event failed to send via curl: attempt=2 curl timeout=10 wait=10 left=594 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(38:0)
+E,135,10/03/26,06:44:15.707208: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:44:20.759934: Event failed to send via curl: attempt=3 curl timeout=10 wait=20 left=579 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(38:0)
+E,135,10/03/26,06:44:25.707680: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:44:35.707957: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:44:45.708207: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:44:55.708470: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:45:05.525827: Statistics failed to send: interval-attempt=1 id=258543 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:45:05.525891: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:45:05.530953: Statistics failed to send: interval-attempt=2 id=258543 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:45:05.531023: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:45:05.535801: Statistics failed to send: interval-attempt=3 id=258543 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:45:05.535862: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:45:05.708742: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:45:15.709008: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:45:25.709254: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:45:35.709651: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:45:45.710309: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:45:55.710571: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:46:05.372230: Statistics failed to send: interval-attempt=1 id=258544 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:46:05.372302: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:46:05.380426: Statistics failed to send: interval-attempt=2 id=258544 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:46:05.380503: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:46:05.386291: Statistics failed to send: interval-attempt=3 id=258544 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:46:05.386367: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:46:05.710815: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:46:15.711074: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:46:25.711430: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:46:35.711709: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:46:45.711973: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:46:55.712213: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:47:05.199889: Statistics failed to send: interval-attempt=1 id=258545 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:47:05.200216: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:47:05.208376: Statistics failed to send: interval-attempt=2 id=258545 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:47:05.208443: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:47:05.224653: Statistics failed to send: interval-attempt=3 id=258545 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:47:05.224718: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:47:05.712493: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:47:15.712758: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:47:25.713021: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:47:35.713300: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:47:45.713665: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:47:55.713940: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:48:05.016218: Statistics failed to send: interval-attempt=1 id=258546 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:48:05.016280: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:48:05.024285: Statistics failed to send: interval-attempt=2 id=258546 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:48:05.024348: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:48:05.029652: Statistics failed to send: interval-attempt=3 id=258546 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:48:05.029715: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:48:05.714184: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:48:15.714431: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:48:25.714704: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:48:35.714967: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:48:45.715230: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:48:55.715494: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:49:04.762364: Statistics failed to send: interval-attempt=1 id=258547 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:49:04.762800: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:49:04.772631: Statistics failed to send: interval-attempt=2 id=258547 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:49:04.772709: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:49:04.777710: Statistics failed to send: interval-attempt=3 id=258547 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:49:04.777782: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:49:05.715846: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:49:15.716089: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:49:25.716345: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:49:35.716587: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:49:45.716849: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:49:55.717108: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:50:04.583862: Statistics failed to send: interval-attempt=1 id=258548 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:50:04.583935: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:50:04.592147: Statistics failed to send: interval-attempt=2 id=258548 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:50:04.592236: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:50:04.597458: Statistics failed to send: interval-attempt=3 id=258548 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:50:04.597517: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:50:05.717383: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:50:15.717637: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:50:25.717877: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:50:35.718115: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:50:45.718358: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:50:55.718592: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:51:04.383847: Statistics failed to send: interval-attempt=1 id=258549 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:51:04.383912: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:51:04.392956: Statistics failed to send: interval-attempt=2 id=258549 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:51:04.393019: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:51:04.397818: Statistics failed to send: interval-attempt=3 id=258549 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:51:04.397878: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:51:05.718830: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:51:15.719067: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:51:25.719387: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:51:35.719658: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:51:45.719895: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:51:55.720187: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:52:04.179321: Statistics failed to send: interval-attempt=1 id=258550 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:52:04.179712: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:52:04.187319: Statistics failed to send: interval-attempt=2 id=258550 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:52:04.187384: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:52:04.193135: Statistics failed to send: interval-attempt=3 id=258550 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:52:04.193195: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:52:05.720493: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:52:15.720830: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:52:25.721460: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:52:35.721751: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:52:45.722006: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:52:55.722267: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:53:03.974438: Statistics failed to send: interval-attempt=1 id=258551 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:53:03.974519: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:53:03.983881: Statistics failed to send: interval-attempt=2 id=258551 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:53:03.983974: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:53:03.990548: Statistics failed to send: interval-attempt=3 id=258551 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:53:03.990692: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:53:05.722540: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:53:15.722831: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:53:25.723073: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:53:35.723313: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,06:53:45.585260: query_time_level_valid time duration is not right [0-0],now:1773125625
+W,135,10/03/26,06:53:45.588284: Event failed to send via curl: attempt=4 curl timeout=10 wait=40 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(76:0)
+E,135,10/03/26,06:53:45.723556: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:53:55.723796: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:54:03.662347: Statistics failed to send: interval-attempt=1 id=258552 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:54:03.662410: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:54:03.669878: Statistics failed to send: interval-attempt=2 id=258552 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:54:03.670389: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:54:03.675992: Statistics failed to send: interval-attempt=3 id=258552 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:54:03.676056: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:54:05.724037: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:54:15.724276: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:54:25.724545: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:54:35.724816: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:54:45.725090: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:54:55.725338: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:55:03.488328: Statistics failed to send: interval-attempt=1 id=258553 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:55:03.488585: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:55:03.496379: Statistics failed to send: interval-attempt=2 id=258553 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:55:03.496447: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:55:03.502284: Statistics failed to send: interval-attempt=3 id=258553 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:55:03.502519: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:55:05.725675: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:55:15.725933: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:55:25.726205: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:55:35.726434: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:55:45.726689: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:55:55.726976: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:56:03.179360: Statistics failed to send: interval-attempt=1 id=258554 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:56:03.179437: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:56:03.193128: Statistics failed to send: interval-attempt=2 id=258554 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:56:03.193199: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:56:03.202994: Statistics failed to send: interval-attempt=3 id=258554 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:56:03.203064: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:56:05.727243: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:56:15.727489: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:56:25.727853: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:56:35.728095: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:56:45.728369: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:56:55.728633: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:57:02.870913: Statistics failed to send: interval-attempt=1 id=258555 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:57:02.870984: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:57:02.880755: Statistics failed to send: interval-attempt=2 id=258555 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:57:02.880818: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:57:02.885753: Statistics failed to send: interval-attempt=3 id=258555 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:57:02.885830: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:57:05.728891: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:57:15.729161: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:57:25.729413: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:57:35.729632: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:57:45.729870: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:57:55.730119: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:58:02.677303: Statistics failed to send: interval-attempt=1 id=258556 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:58:02.677376: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:58:02.685690: Statistics failed to send: interval-attempt=2 id=258556 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:58:02.685752: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:58:02.690871: Statistics failed to send: interval-attempt=3 id=258556 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:58:02.690933: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:58:05.730365: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:58:15.730680: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:58:25.731097: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:58:35.731471: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:58:45.731751: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:58:55.731989: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,06:59:02.468852: Statistics failed to send: interval-attempt=1 id=258557 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:59:02.468925: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:59:02.475827: Statistics failed to send: interval-attempt=2 id=258557 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:59:02.475899: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,06:59:02.480903: Statistics failed to send: interval-attempt=3 id=258557 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,06:59:02.480973: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,06:59:05.732227: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:59:15.732462: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:59:25.732699: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:59:35.732992: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:59:45.733253: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,06:59:55.733681: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:00:02.304808: Statistics failed to send: interval-attempt=1 id=258557 retry=3 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:00:02.305074: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:00:02.314626: Statistics failed to send: interval-attempt=2 id=258557 retry=4 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:00:02.314697: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:00:02.325244: Statistics failed to send: interval-attempt=3 id=258557 retry=5 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:00:02.325318: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:00:05.733918: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:00:15.734169: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:00:25.734447: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:00:35.734713: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:00:45.734944: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:00:55.735174: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:01:02.089176: Statistics failed to send: interval-attempt=1 id=258558 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:01:02.089238: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:01:02.096181: Statistics failed to send: interval-attempt=2 id=258558 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:01:02.096444: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:01:02.102533: Statistics failed to send: interval-attempt=3 id=258558 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:01:02.102594: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:01:05.735409: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:01:15.735650: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:01:25.735890: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:01:35.736124: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:01:45.736356: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:01:55.736593: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:02:01.918215: Statistics failed to send: interval-attempt=1 id=258559 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:02:01.918295: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:02:01.926757: Statistics failed to send: interval-attempt=2 id=258559 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:02:01.926832: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:02:01.932481: Statistics failed to send: interval-attempt=3 id=258559 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:02:01.932553: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:02:05.737537: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:02:15.737790: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:02:25.738023: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:02:35.738260: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:02:45.738500: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:02:55.738735: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:03:01.666583: Statistics failed to send: interval-attempt=1 id=258560 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:03:01.666670: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:03:01.674135: Statistics failed to send: interval-attempt=2 id=258560 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:03:01.674197: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:03:01.679180: Statistics failed to send: interval-attempt=3 id=258560 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:03:01.679240: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:03:05.739039: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:03:15.739301: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:03:25.739726: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:03:35.740002: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,07:03:45.563245: query_time_level_valid time duration is not right [0-0],now:1773126225
+W,135,10/03/26,07:03:45.566197: Event failed to send via curl: attempt=5 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,07:03:45.740247: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:03:55.740496: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:04:01.502468: Statistics failed to send: interval-attempt=1 id=258561 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:04:01.502532: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:04:01.523324: Statistics failed to send: interval-attempt=2 id=258561 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:04:01.523415: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:04:01.533207: Statistics failed to send: interval-attempt=3 id=258561 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:04:01.533272: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:04:05.740741: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:04:15.741130: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:04:25.741911: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:04:35.742153: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:04:45.742389: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:04:55.742631: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:05:01.133946: Statistics failed to send: interval-attempt=1 id=258562 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:05:01.134010: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:05:01.142243: Statistics failed to send: interval-attempt=2 id=258562 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:05:01.142474: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:05:01.147784: Statistics failed to send: interval-attempt=3 id=258562 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:05:01.147858: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:05:05.742865: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:05:15.743097: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:05:25.743331: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:05:35.743573: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:05:45.743820: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:05:55.744094: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:06:00.925215: Statistics failed to send: interval-attempt=1 id=258563 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:06:00.925284: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:06:00.933855: Statistics failed to send: interval-attempt=2 id=258563 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:06:00.933922: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:06:00.938227: Statistics failed to send: interval-attempt=3 id=258563 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:06:00.938444: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:06:05.744343: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:06:15.744577: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:06:25.744823: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:06:35.745061: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:06:45.745312: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:06:55.745730: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:07:00.717482: Statistics failed to send: interval-attempt=1 id=258564 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:07:00.717696: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:07:00.725220: Statistics failed to send: interval-attempt=2 id=258564 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:07:00.725492: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:07:00.730978: Statistics failed to send: interval-attempt=3 id=258564 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:07:00.731041: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:07:05.746004: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:07:15.746268: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:07:25.746525: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:07:35.746757: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:07:45.746983: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:07:55.747229: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:08:00.513827: Statistics failed to send: interval-attempt=1 id=258565 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:08:00.513903: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:08:00.522890: Statistics failed to send: interval-attempt=2 id=258565 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:08:00.522951: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:08:00.530694: Statistics failed to send: interval-attempt=3 id=258565 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:08:00.530861: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:08:05.747465: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:08:15.747862: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:08:25.748142: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:08:35.748411: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:08:45.748665: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:08:55.748928: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:09:00.282115: Statistics failed to send: interval-attempt=1 id=258566 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:09:00.282176: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:09:00.288683: Statistics failed to send: interval-attempt=2 id=258566 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:09:00.288750: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:09:00.294283: Statistics failed to send: interval-attempt=3 id=258566 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:09:00.294347: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:09:05.749178: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:09:15.749420: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:09:25.749636: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:09:35.749880: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:09:45.750154: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:09:55.750402: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:10:00.119740: Statistics failed to send: interval-attempt=1 id=258567 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:10:00.119804: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:10:00.128311: Statistics failed to send: interval-attempt=2 id=258567 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:10:00.128386: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:10:00.133968: Statistics failed to send: interval-attempt=3 id=258567 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:10:00.134031: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:10:05.750705: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:10:15.751388: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:10:25.751648: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:10:35.752192: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:10:45.752439: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:10:55.752679: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:10:59.901108: Statistics failed to send: interval-attempt=1 id=258568 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:10:59.901171: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:10:59.909344: Statistics failed to send: interval-attempt=2 id=258568 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:10:59.909409: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:10:59.915982: Statistics failed to send: interval-attempt=3 id=258568 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:10:59.916045: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:11:05.752917: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:11:15.753152: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:11:25.753390: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:11:35.753627: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:11:45.753861: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:11:55.754099: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:11:59.666012: Statistics failed to send: interval-attempt=1 id=258569 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:11:59.666079: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:11:59.674827: Statistics failed to send: interval-attempt=2 id=258569 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:11:59.675096: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:11:59.679702: Statistics failed to send: interval-attempt=3 id=258569 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:11:59.679764: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:12:05.754338: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:12:15.754586: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:12:25.754860: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:12:35.755141: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:12:45.755371: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:12:55.755792: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:12:59.460947: Statistics failed to send: interval-attempt=1 id=258570 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:12:59.461032: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:12:59.468947: Statistics failed to send: interval-attempt=2 id=258570 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:12:59.469009: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:12:59.473803: Statistics failed to send: interval-attempt=3 id=258570 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:12:59.473866: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:13:05.756065: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:13:15.756342: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:13:25.756588: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:13:35.756828: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,07:13:45.529771: query_time_level_valid time duration is not right [0-0],now:1773126825
+W,135,10/03/26,07:13:45.533915: Event failed to send via curl: attempt=6 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,07:13:45.757125: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:13:55.757426: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:13:59.283295: Statistics failed to send: interval-attempt=1 id=258571 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:13:59.283366: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:13:59.310509: Statistics failed to send: interval-attempt=2 id=258571 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:13:59.310811: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:13:59.318722: Statistics failed to send: interval-attempt=3 id=258571 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:13:59.318783: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:14:05.758176: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:14:15.758436: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:14:25.758696: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:14:35.759002: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:14:45.759240: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:14:55.759482: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:14:59.048393: Statistics failed to send: interval-attempt=1 id=258572 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:14:59.048472: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:14:59.058418: Statistics failed to send: interval-attempt=2 id=258572 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:14:59.058530: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:14:59.068100: Statistics failed to send: interval-attempt=3 id=258572 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:14:59.068186: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:15:05.759879: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:15:15.760151: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:15:25.760468: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:15:35.760708: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:15:45.761453: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:15:55.761775: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:15:58.789362: Statistics failed to send: interval-attempt=1 id=258573 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:15:58.789451: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:15:58.797969: Statistics failed to send: interval-attempt=2 id=258573 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:15:58.798058: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:15:58.805431: Statistics failed to send: interval-attempt=3 id=258573 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:15:58.805855: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:16:05.762029: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:16:15.762276: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:16:25.762537: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:16:35.762772: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:16:45.763006: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:16:55.763251: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:16:58.565221: Statistics failed to send: interval-attempt=1 id=258574 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:16:58.565295: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:16:58.573072: Statistics failed to send: interval-attempt=2 id=258574 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:16:58.573337: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:16:58.578370: Statistics failed to send: interval-attempt=3 id=258574 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:16:58.578445: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:17:05.763486: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:17:15.763757: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:17:25.764009: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:17:35.764248: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:17:45.764485: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:17:55.764725: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:17:58.393815: Statistics failed to send: interval-attempt=1 id=258575 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:17:58.393884: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:17:58.402985: Statistics failed to send: interval-attempt=2 id=258575 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:17:58.403048: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:17:58.408752: Statistics failed to send: interval-attempt=3 id=258575 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:17:58.408812: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:18:05.766533: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:18:15.766768: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:18:25.767004: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:18:35.767241: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:18:45.767494: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:18:55.767772: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:18:58.124648: Statistics failed to send: interval-attempt=1 id=258576 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:18:58.124711: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:18:58.133223: Statistics failed to send: interval-attempt=2 id=258576 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:18:58.133288: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:18:58.137866: Statistics failed to send: interval-attempt=3 id=258576 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:18:58.137939: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:19:05.768094: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:19:15.768354: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:19:25.768596: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:19:35.768878: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:19:45.769151: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:19:55.769400: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:19:57.923318: Statistics failed to send: interval-attempt=1 id=258577 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:19:57.923394: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:19:57.931850: Statistics failed to send: interval-attempt=2 id=258577 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:19:57.931912: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:19:57.936754: Statistics failed to send: interval-attempt=3 id=258577 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:19:57.937011: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:20:05.769659: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:20:15.769895: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:20:25.770155: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:20:35.770476: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:20:45.770752: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:20:55.771138: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:20:57.743069: Statistics failed to send: interval-attempt=1 id=258578 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:20:57.743132: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:20:57.752810: Statistics failed to send: interval-attempt=2 id=258578 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:20:57.752875: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:20:57.757430: Statistics failed to send: interval-attempt=3 id=258578 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:20:57.757486: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:21:05.771927: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:21:15.772187: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:21:25.772449: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:21:35.772695: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:21:45.772945: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:21:55.773220: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:21:57.528072: Statistics failed to send: interval-attempt=1 id=258579 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:21:57.528141: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:21:57.535338: Statistics failed to send: interval-attempt=2 id=258579 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:21:57.535398: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:21:57.540485: Statistics failed to send: interval-attempt=3 id=258579 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:21:57.540545: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:22:05.773469: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:22:15.773722: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:22:25.773984: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:22:35.774258: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:22:45.774508: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:22:55.774731: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:22:57.375803: Statistics failed to send: interval-attempt=1 id=258580 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:22:57.375865: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:22:57.384687: Statistics failed to send: interval-attempt=2 id=258580 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:22:57.384750: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:22:57.389247: Statistics failed to send: interval-attempt=3 id=258580 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:22:57.389318: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:23:05.774994: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:23:15.775237: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:23:25.775496: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:23:35.775763: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,07:23:45.531785: query_time_level_valid time duration is not right [0-0],now:1773127425
+W,135,10/03/26,07:23:45.535807: Event failed to send via curl: attempt=7 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,07:23:45.776090: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:23:55.776388: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:23:56.973860: Statistics failed to send: interval-attempt=1 id=258581 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:23:56.973924: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:23:56.978230: Statistics failed to send: interval-attempt=2 id=258581 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:23:56.978299: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:23:56.984052: Statistics failed to send: interval-attempt=3 id=258581 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:23:56.984338: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:24:05.776667: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:24:15.776918: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:24:25.777164: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:24:35.777436: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:24:45.777709: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:24:55.777974: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:24:56.814020: Statistics failed to send: interval-attempt=1 id=258582 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:24:56.814084: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:24:56.823772: Statistics failed to send: interval-attempt=2 id=258582 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:24:56.823833: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:24:56.831303: Statistics failed to send: interval-attempt=3 id=258582 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:24:56.832028: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:25:05.778225: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:25:15.778490: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:25:25.778771: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:25:35.779027: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:25:45.779283: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:25:55.779634: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:25:56.604948: Statistics failed to send: interval-attempt=1 id=258583 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:25:56.605034: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:25:56.614252: Statistics failed to send: interval-attempt=2 id=258583 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:25:56.614326: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:25:56.625913: Statistics failed to send: interval-attempt=3 id=258583 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:25:56.625981: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:26:05.779885: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:26:15.780158: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:26:25.780442: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:26:35.780843: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:26:45.780897: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:26:55.781818: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:26:56.386460: Statistics failed to send: interval-attempt=1 id=258584 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:26:56.386524: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:26:56.395131: Statistics failed to send: interval-attempt=2 id=258584 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:26:56.395193: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:26:56.400387: Statistics failed to send: interval-attempt=3 id=258584 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:26:56.400453: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:27:05.782094: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:27:15.782348: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:27:25.782615: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:27:35.782889: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:27:45.783137: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:27:55.783420: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:27:56.179019: Statistics failed to send: interval-attempt=1 id=258585 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:27:56.179088: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:27:56.186235: Statistics failed to send: interval-attempt=2 id=258585 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:27:56.186303: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:27:56.217546: Statistics failed to send: interval-attempt=3 id=258585 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:27:56.217617: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:28:05.783634: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:28:15.783869: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:28:25.784117: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:28:35.784360: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:28:45.784593: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:28:55.784841: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:28:55.952759: Statistics failed to send: interval-attempt=1 id=258586 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:28:55.952820: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:28:55.963027: Statistics failed to send: interval-attempt=2 id=258586 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:28:55.963091: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:28:55.967468: Statistics failed to send: interval-attempt=3 id=258586 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:28:55.967728: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:29:05.785082: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:29:15.785351: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:29:25.785602: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:29:35.785839: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:29:45.786075: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:29:55.742433: Statistics failed to send: interval-attempt=1 id=258587 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:29:55.742497: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:29:55.749746: Statistics failed to send: interval-attempt=2 id=258587 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:29:55.749806: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:29:55.755228: Statistics failed to send: interval-attempt=3 id=258587 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:29:55.755304: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:29:55.786309: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:30:05.786539: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:30:15.786772: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:30:25.787018: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:30:35.787257: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:30:45.787490: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:30:55.536812: Statistics failed to send: interval-attempt=1 id=258587 retry=3 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:30:55.536877: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:30:55.545447: Statistics failed to send: interval-attempt=2 id=258587 retry=4 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:30:55.545700: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:30:55.550941: Statistics failed to send: interval-attempt=3 id=258587 retry=5 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:30:55.551009: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:30:55.787723: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:31:05.787962: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:31:15.788204: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:31:25.788478: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:31:35.788760: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:31:45.789023: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:31:55.419458: Statistics failed to send: interval-attempt=1 id=258588 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:31:55.419521: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:31:55.424684: Statistics failed to send: interval-attempt=2 id=258588 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:31:55.424748: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:31:55.429780: Statistics failed to send: interval-attempt=3 id=258588 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:31:55.429841: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:31:55.789270: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:32:05.789617: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:32:15.789883: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:32:25.790151: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:32:35.790399: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:32:45.790639: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:32:55.254094: Statistics failed to send: interval-attempt=1 id=258589 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:32:55.254159: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:32:55.259868: Statistics failed to send: interval-attempt=2 id=258589 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:32:55.260464: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:32:55.265381: Statistics failed to send: interval-attempt=3 id=258589 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:32:55.265844: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:32:55.790880: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:33:05.791839: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:33:15.792104: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:33:25.792378: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:33:35.792628: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,07:33:45.422663: query_time_level_valid time duration is not right [0-0],now:1773128025
+W,135,10/03/26,07:33:45.425835: Event failed to send via curl: attempt=8 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,07:33:45.792884: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:33:55.101044: Statistics failed to send: interval-attempt=1 id=258590 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:33:55.101705: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:33:55.113616: Statistics failed to send: interval-attempt=2 id=258590 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:33:55.113752: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:33:55.125575: Statistics failed to send: interval-attempt=3 id=258590 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:33:55.125652: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:33:55.793169: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:34:05.793436: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:34:15.793637: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:34:25.793872: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:34:35.794128: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:34:45.794362: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:34:54.764499: Statistics failed to send: interval-attempt=1 id=258591 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:34:54.764578: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:34:54.773972: Statistics failed to send: interval-attempt=2 id=258591 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:34:54.774035: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:34:54.778587: Statistics failed to send: interval-attempt=3 id=258591 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:34:54.778665: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:34:55.794600: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:35:05.794843: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:35:15.795076: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:35:25.795310: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:35:35.795547: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:35:45.795784: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:35:54.582905: Statistics failed to send: interval-attempt=1 id=258592 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:35:54.582969: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:35:54.590731: Statistics failed to send: interval-attempt=2 id=258592 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:35:54.590792: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:35:54.596397: Statistics failed to send: interval-attempt=3 id=258592 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:35:54.596461: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:35:55.796025: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:36:05.796257: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:36:15.796512: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:36:25.796787: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:36:35.797010: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:36:45.797273: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:36:54.220171: Statistics failed to send: interval-attempt=1 id=258593 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:36:54.220455: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:36:54.229843: Statistics failed to send: interval-attempt=2 id=258593 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:36:54.230160: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:36:54.236270: Statistics failed to send: interval-attempt=3 id=258593 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:36:54.236349: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:36:55.797689: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:37:05.797946: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:37:15.798187: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:37:25.798417: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:37:35.798664: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:37:45.798963: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:37:54.012582: Statistics failed to send: interval-attempt=1 id=258594 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:37:54.012968: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:37:54.023431: Statistics failed to send: interval-attempt=2 id=258594 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:37:54.023500: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:37:54.032851: Statistics failed to send: interval-attempt=3 id=258594 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:37:54.032926: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:37:55.799213: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:38:05.799488: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:38:15.800243: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:38:25.800573: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:38:35.800942: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:38:45.801350: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:38:53.730442: Statistics failed to send: interval-attempt=1 id=258595 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:38:53.730511: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:38:53.738435: Statistics failed to send: interval-attempt=2 id=258595 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:38:53.738506: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:38:53.744183: Statistics failed to send: interval-attempt=3 id=258595 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:38:53.744247: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:38:55.801612: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:39:05.801856: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:39:15.802091: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:39:25.802366: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:39:35.802631: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:39:45.802902: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:39:53.529776: Statistics failed to send: interval-attempt=1 id=258596 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:39:53.529841: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:39:53.538537: Statistics failed to send: interval-attempt=2 id=258596 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:39:53.538811: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:39:53.543912: Statistics failed to send: interval-attempt=3 id=258596 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:39:53.543974: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:39:55.803164: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:40:05.803400: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:40:15.803639: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:40:25.803877: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:40:35.804117: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:40:45.804350: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:40:53.309879: Statistics failed to send: interval-attempt=1 id=258597 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:40:53.310189: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:40:53.317771: Statistics failed to send: interval-attempt=2 id=258597 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:40:53.317848: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:40:53.322991: Statistics failed to send: interval-attempt=3 id=258597 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:40:53.323056: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:40:55.804613: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:41:05.804861: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:41:15.805100: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:41:25.805334: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:41:35.805569: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:41:45.805803: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:41:53.138765: Statistics failed to send: interval-attempt=1 id=258598 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:41:53.138833: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:41:53.147330: Statistics failed to send: interval-attempt=2 id=258598 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:41:53.147395: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:41:53.152610: Statistics failed to send: interval-attempt=3 id=258598 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:41:53.152671: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:41:55.806039: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:42:05.806298: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:42:15.806530: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:42:25.806777: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:42:35.807017: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:42:45.807250: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:42:52.934382: Statistics failed to send: interval-attempt=1 id=258599 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:42:52.934465: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:42:52.946141: Statistics failed to send: interval-attempt=2 id=258599 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:42:52.946213: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:42:52.955315: Statistics failed to send: interval-attempt=3 id=258599 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:42:52.955625: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:42:55.807489: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:43:05.807784: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:43:15.808074: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:43:25.808363: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:43:35.808638: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,07:43:45.394394: query_time_level_valid time duration is not right [0-0],now:1773128625
+W,135,10/03/26,07:43:45.397458: Event failed to send via curl: attempt=9 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,07:43:45.808898: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:43:52.707195: Statistics failed to send: interval-attempt=1 id=258600 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:43:52.707270: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:43:52.715784: Statistics failed to send: interval-attempt=2 id=258600 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:43:52.715849: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:43:52.720288: Statistics failed to send: interval-attempt=3 id=258600 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:43:52.720524: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:43:55.809168: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:44:05.809418: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:44:15.809643: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:44:25.809886: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:44:35.810539: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:44:45.810776: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:44:52.523725: Statistics failed to send: interval-attempt=1 id=258601 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:44:52.523819: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:44:52.532553: Statistics failed to send: interval-attempt=2 id=258601 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:44:52.532616: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:44:52.538107: Statistics failed to send: interval-attempt=3 id=258601 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:44:52.538166: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:44:55.811375: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:45:05.811738: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:45:15.812021: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:45:25.812282: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:45:35.812533: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:45:45.812825: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:45:52.189177: Statistics failed to send: interval-attempt=1 id=258602 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:45:52.189255: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:45:52.197409: Statistics failed to send: interval-attempt=2 id=258602 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:45:52.197486: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:45:52.202490: Statistics failed to send: interval-attempt=3 id=258602 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:45:52.202552: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:45:55.813072: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:46:05.813353: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:46:15.813604: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:46:25.813876: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:46:35.814161: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:46:45.814411: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:46:51.982064: Statistics failed to send: interval-attempt=1 id=258603 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:46:51.982129: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:46:51.989190: Statistics failed to send: interval-attempt=2 id=258603 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:46:51.989250: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:46:51.995178: Statistics failed to send: interval-attempt=3 id=258603 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:46:51.995240: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:46:55.814648: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:47:05.814885: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:47:15.815136: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:47:25.815393: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:47:35.815667: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:47:45.815909: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:47:51.805388: Statistics failed to send: interval-attempt=1 id=258604 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:47:51.805459: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:47:51.814719: Statistics failed to send: interval-attempt=2 id=258604 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:47:51.815007: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:47:51.819725: Statistics failed to send: interval-attempt=3 id=258604 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:47:51.819783: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:47:55.816200: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:48:05.816466: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:48:15.816709: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:48:25.816940: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:48:35.817171: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:48:45.817469: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:48:51.603132: Statistics failed to send: interval-attempt=1 id=258605 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:48:51.603205: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:48:51.610698: Statistics failed to send: interval-attempt=2 id=258605 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:48:51.611039: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:48:51.616553: Statistics failed to send: interval-attempt=3 id=258605 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:48:51.616676: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:48:55.817727: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:49:05.817967: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:49:15.818202: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:49:25.818435: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:49:35.818735: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:49:45.818986: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:49:51.425736: Statistics failed to send: interval-attempt=1 id=258606 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:49:51.425830: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:49:51.438089: Statistics failed to send: interval-attempt=2 id=258606 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:49:51.438176: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:49:51.444445: Statistics failed to send: interval-attempt=3 id=258606 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:49:51.444528: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:49:55.819245: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:50:05.819525: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:50:15.819777: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:50:25.820016: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:50:35.820563: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:50:45.821436: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:50:51.121166: Statistics failed to send: interval-attempt=1 id=258607 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:50:51.122303: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:50:51.131026: Statistics failed to send: interval-attempt=2 id=258607 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:50:51.131091: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:50:51.136743: Statistics failed to send: interval-attempt=3 id=258607 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:50:51.136805: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:50:55.821947: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:51:05.822196: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:51:15.822433: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:51:25.822686: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:51:35.822958: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:51:45.823192: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:51:50.814459: Statistics failed to send: interval-attempt=1 id=258608 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:51:50.814521: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:51:50.820415: Statistics failed to send: interval-attempt=2 id=258608 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:51:50.820479: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:51:50.825802: Statistics failed to send: interval-attempt=3 id=258608 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:51:50.825867: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:51:55.823459: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:52:05.823921: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:52:15.824202: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:52:25.824436: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:52:35.824701: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:52:45.824973: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:52:50.639342: Statistics failed to send: interval-attempt=1 id=258609 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:52:50.639414: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:52:50.647441: Statistics failed to send: interval-attempt=2 id=258609 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:52:50.647646: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:52:50.653366: Statistics failed to send: interval-attempt=3 id=258609 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:52:50.653447: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:52:55.825212: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:53:05.825479: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:53:15.825930: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:53:25.826248: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:53:35.826500: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,07:53:45.375886: query_time_level_valid time duration is not right [0-0],now:1773129225
+W,135,10/03/26,07:53:45.378895: Event failed to send via curl: attempt=10 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,07:53:45.826750: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:53:50.437001: Statistics failed to send: interval-attempt=1 id=258610 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:53:50.437077: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:53:50.472567: Statistics failed to send: interval-attempt=2 id=258610 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:53:50.472633: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:53:50.477398: Statistics failed to send: interval-attempt=3 id=258610 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:53:50.477457: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:53:55.827018: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:54:05.827267: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:54:15.827804: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:54:25.828075: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:54:35.828366: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:54:45.828614: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:54:50.169203: Statistics failed to send: interval-attempt=1 id=258611 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:54:50.169266: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:54:50.176972: Statistics failed to send: interval-attempt=2 id=258611 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:54:50.177045: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:54:50.183183: Statistics failed to send: interval-attempt=3 id=258611 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:54:50.183243: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:54:55.828851: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:55:05.829110: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:55:15.829351: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:55:25.829882: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:55:35.830212: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:55:45.830469: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:55:50.004045: Statistics failed to send: interval-attempt=1 id=258612 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:55:50.004118: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:55:50.012556: Statistics failed to send: interval-attempt=2 id=258612 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:55:50.012654: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:55:50.018762: Statistics failed to send: interval-attempt=3 id=258612 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:55:50.018831: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:55:55.830805: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:56:05.831702: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:56:15.831936: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:56:25.832191: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:56:35.832479: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:56:45.832757: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:56:49.800921: Statistics failed to send: interval-attempt=1 id=258613 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:56:49.801730: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:56:49.810844: Statistics failed to send: interval-attempt=2 id=258613 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:56:49.811868: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:56:49.818114: Statistics failed to send: interval-attempt=3 id=258613 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:56:49.818191: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:56:55.833200: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:57:05.833689: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:57:15.833954: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:57:25.834212: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:57:35.834458: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:57:45.834812: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:57:49.542293: Statistics failed to send: interval-attempt=1 id=258614 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:57:49.542356: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:57:49.549773: Statistics failed to send: interval-attempt=2 id=258614 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:57:49.549831: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:57:49.555858: Statistics failed to send: interval-attempt=3 id=258614 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:57:49.555921: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:57:55.835060: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:58:05.835297: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:58:15.835615: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:58:25.835906: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:58:35.836139: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:58:45.836387: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:58:49.371148: Statistics failed to send: interval-attempt=1 id=258615 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:58:49.371901: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:58:49.380904: Statistics failed to send: interval-attempt=2 id=258615 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:58:49.381762: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:58:49.386187: Statistics failed to send: interval-attempt=3 id=258615 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:58:49.386261: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:58:55.836648: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:59:05.836908: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:59:15.837266: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:59:25.837609: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:59:35.837848: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,07:59:45.838104: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,07:59:49.007151: Statistics failed to send: interval-attempt=1 id=258616 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:59:49.007218: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:59:49.015507: Statistics failed to send: interval-attempt=2 id=258616 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:59:49.015783: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,07:59:49.021035: Statistics failed to send: interval-attempt=3 id=258616 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,07:59:49.021735: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,07:59:55.838365: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:00:05.838642: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:00:15.838909: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:00:25.839204: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:00:35.839619: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:00:45.839903: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:00:48.819707: Statistics failed to send: interval-attempt=1 id=258617 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:00:48.820611: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:00:48.830702: Statistics failed to send: interval-attempt=2 id=258617 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:00:48.830784: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:00:48.836536: Statistics failed to send: interval-attempt=3 id=258617 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:00:48.836601: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:00:55.840165: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:01:05.840457: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:01:15.840766: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:01:25.841178: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:01:35.841733: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:01:45.842019: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:01:48.560841: Statistics failed to send: interval-attempt=1 id=258617 retry=3 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:01:48.560996: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:01:48.570513: Statistics failed to send: interval-attempt=2 id=258617 retry=4 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:01:48.570676: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:01:48.576269: Statistics failed to send: interval-attempt=3 id=258617 retry=5 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:01:48.576346: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:01:55.842307: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:02:05.842568: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:02:15.842830: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:02:25.843079: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:02:35.843370: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:02:45.843646: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:02:48.470151: Statistics failed to send: interval-attempt=1 id=258618 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:02:48.470226: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:02:48.491845: Statistics failed to send: interval-attempt=2 id=258618 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:02:48.491940: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:02:48.504090: Statistics failed to send: interval-attempt=3 id=258618 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:02:48.504173: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:02:55.843908: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:03:05.844170: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:03:15.844415: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:03:25.844651: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:03:35.844897: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,08:03:45.330447: query_time_level_valid time duration is not right [0-0],now:1773129825
+W,135,10/03/26,08:03:45.334490: Event failed to send via curl: attempt=11 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,08:03:45.845134: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:03:48.137179: Statistics failed to send: interval-attempt=1 id=258619 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:03:48.137702: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:03:48.145336: Statistics failed to send: interval-attempt=2 id=258619 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:03:48.145411: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:03:48.150493: Statistics failed to send: interval-attempt=3 id=258619 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:03:48.150626: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:03:55.845385: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:04:05.845642: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:04:15.845875: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:04:25.846116: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:04:35.846349: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:04:45.846587: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:04:47.938184: Statistics failed to send: interval-attempt=1 id=258620 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:04:47.938342: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:04:47.946955: Statistics failed to send: interval-attempt=2 id=258620 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:04:47.947028: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:04:47.953243: Statistics failed to send: interval-attempt=3 id=258620 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:04:47.953317: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:04:55.846828: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:05:05.847075: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:05:15.847336: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:05:25.847690: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:05:35.847956: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:05:45.848237: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:05:47.719246: Statistics failed to send: interval-attempt=1 id=258621 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:05:47.719322: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:05:47.728174: Statistics failed to send: interval-attempt=2 id=258621 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:05:47.728252: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:05:47.734277: Statistics failed to send: interval-attempt=3 id=258621 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:05:47.734342: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:05:55.848523: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:06:05.848774: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:06:15.849042: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:06:25.849326: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:06:35.849662: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:06:45.849926: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:06:47.543767: Statistics failed to send: interval-attempt=1 id=258622 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:06:47.543832: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:06:47.552827: Statistics failed to send: interval-attempt=2 id=258622 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:06:47.552891: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:06:47.557779: Statistics failed to send: interval-attempt=3 id=258622 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:06:47.557841: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:06:55.850570: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:07:05.851176: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:07:15.851686: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:07:25.851968: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:07:35.852260: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:07:45.852531: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:07:47.162764: Statistics failed to send: interval-attempt=1 id=258623 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:07:47.162829: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:07:47.170828: Statistics failed to send: interval-attempt=2 id=258623 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:07:47.170892: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:07:47.176242: Statistics failed to send: interval-attempt=3 id=258623 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:07:47.176304: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:07:55.852968: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:08:05.853472: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:08:15.853911: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:08:25.854150: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:08:35.854407: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:08:45.854655: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:08:46.982508: Statistics failed to send: interval-attempt=1 id=258624 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:08:46.982568: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:08:46.992243: Statistics failed to send: interval-attempt=2 id=258624 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:08:46.992320: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:08:46.997185: Statistics failed to send: interval-attempt=3 id=258624 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:08:46.997256: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:08:55.854896: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:09:05.855213: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:09:15.855452: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:09:25.855702: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:09:35.855934: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:09:45.856167: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:09:46.773250: Statistics failed to send: interval-attempt=1 id=258625 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:09:46.773314: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:09:46.781071: Statistics failed to send: interval-attempt=2 id=258625 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:09:46.781701: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:09:46.786805: Statistics failed to send: interval-attempt=3 id=258625 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:09:46.786865: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:09:55.856410: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:10:05.856682: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:10:15.856927: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:10:25.857175: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:10:35.857435: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:10:45.857830: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:10:46.594804: Statistics failed to send: interval-attempt=1 id=258626 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:10:46.594873: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:10:46.609072: Statistics failed to send: interval-attempt=2 id=258626 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:10:46.609138: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:10:46.616014: Statistics failed to send: interval-attempt=3 id=258626 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:10:46.616094: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:10:55.858081: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:11:05.858344: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:11:15.858615: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:11:25.858895: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:11:35.859127: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:11:45.859381: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:11:46.347771: Statistics failed to send: interval-attempt=1 id=258627 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:11:46.347837: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:11:46.355362: Statistics failed to send: interval-attempt=2 id=258627 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:11:46.355433: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:11:46.360402: Statistics failed to send: interval-attempt=3 id=258627 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:11:46.360469: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:11:55.859630: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:12:05.859869: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:12:15.860330: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:12:25.860613: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:12:35.860852: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:12:45.861255: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:12:46.177482: Statistics failed to send: interval-attempt=1 id=258628 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:12:46.177645: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:12:46.185834: Statistics failed to send: interval-attempt=2 id=258628 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:12:46.185897: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:12:46.190372: Statistics failed to send: interval-attempt=3 id=258628 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:12:46.190440: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:12:55.861649: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:13:05.861887: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:13:15.862168: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:13:25.862419: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:13:35.862747: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+N,99,10/03/26,08:13:45.298328: query_time_level_valid time duration is not right [0-0],now:1773130425
+W,135,10/03/26,08:13:45.301911: Event failed to send via curl: attempt=12 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+W,135,10/03/26,08:13:45.811668: Statistics failed to send: interval-attempt=1 id=258629 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:13:45.811732: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:13:45.819452: Statistics failed to send: interval-attempt=2 id=258629 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:13:45.819758: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:13:45.825344: Statistics failed to send: interval-attempt=3 id=258629 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:13:45.825419: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:13:45.862987: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:13:55.863226: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:14:05.863583: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:14:15.863847: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:14:25.864196: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:14:35.864453: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:14:45.602396: Statistics failed to send: interval-attempt=1 id=258630 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:14:45.602459: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:14:45.611046: Statistics failed to send: interval-attempt=2 id=258630 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:14:45.611126: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:14:45.616269: Statistics failed to send: interval-attempt=3 id=258630 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:14:45.616331: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:14:45.864723: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:14:55.864978: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:15:05.865214: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:15:15.865457: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:15:25.865690: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:15:35.865921: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:15:45.394458: Statistics failed to send: interval-attempt=1 id=258631 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:15:45.394530: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:15:45.403980: Statistics failed to send: interval-attempt=2 id=258631 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:15:45.404055: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:15:45.408950: Statistics failed to send: interval-attempt=3 id=258631 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:15:45.409018: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:15:45.866163: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:15:55.866402: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:16:05.866653: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:16:15.866886: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:16:25.867127: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:16:35.867391: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:16:45.201221: Statistics failed to send: interval-attempt=1 id=258632 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:16:45.201761: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:16:45.209937: Statistics failed to send: interval-attempt=2 id=258632 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:16:45.210014: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:16:45.216720: Statistics failed to send: interval-attempt=3 id=258632 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:16:45.216797: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:16:45.867838: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:16:55.868200: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:17:05.868488: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:17:15.868733: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:17:25.869002: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:17:35.869263: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:17:44.839207: Statistics failed to send: interval-attempt=1 id=258632 retry=3 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:17:44.839285: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:17:44.850845: Statistics failed to send: interval-attempt=2 id=258632 retry=4 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:17:44.851880: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:17:44.857912: Statistics failed to send: interval-attempt=3 id=258632 retry=5 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:17:44.857974: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:17:45.869662: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:17:55.869935: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:18:05.870198: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:18:15.870486: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:18:25.870728: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:18:35.871362: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:18:44.593263: Statistics failed to send: interval-attempt=1 id=258633 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:18:44.593339: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:18:44.602014: Statistics failed to send: interval-attempt=2 id=258633 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:18:44.602090: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:18:44.607143: Statistics failed to send: interval-attempt=3 id=258633 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:18:44.607221: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:18:45.871835: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:18:55.872093: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:19:05.872343: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:19:15.872604: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:19:25.872874: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:19:35.873314: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:19:44.406792: Statistics failed to send: interval-attempt=1 id=258634 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:19:44.406856: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:19:44.415818: Statistics failed to send: interval-attempt=2 id=258634 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:19:44.415884: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:19:44.421205: Statistics failed to send: interval-attempt=3 id=258634 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:19:44.421874: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:19:45.873711: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:19:55.873967: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:20:05.874222: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:20:15.874493: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:20:25.875428: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:20:35.875171: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:20:44.217851: Statistics failed to send: interval-attempt=1 id=258635 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:20:44.217914: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:20:44.225384: Statistics failed to send: interval-attempt=2 id=258635 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:20:44.225449: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:20:44.231666: Statistics failed to send: interval-attempt=3 id=258635 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:20:44.231744: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:20:45.875417: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:20:55.875632: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:21:05.875867: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:21:15.876134: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:21:25.876390: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:21:35.876717: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:21:44.022036: Statistics failed to send: interval-attempt=1 id=258636 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:21:44.022099: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:21:44.029782: Statistics failed to send: interval-attempt=2 id=258636 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:21:44.029862: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:21:44.035305: Statistics failed to send: interval-attempt=3 id=258636 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:21:44.035381: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:21:45.876990: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:21:55.877220: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:22:05.877471: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:22:15.877879: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:22:25.878126: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:22:35.878395: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:22:43.821140: Statistics failed to send: interval-attempt=1 id=258637 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:22:43.821210: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:22:43.827800: Statistics failed to send: interval-attempt=2 id=258637 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:22:43.827867: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:22:43.834801: Statistics failed to send: interval-attempt=3 id=258637 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:22:43.834863: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:22:45.878660: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:22:55.878932: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:23:05.879183: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:23:15.879444: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:23:25.879712: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:23:35.879989: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:23:43.565747: Statistics failed to send: interval-attempt=1 id=258638 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:23:43.565821: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:23:43.579375: Statistics failed to send: interval-attempt=2 id=258638 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:23:43.579483: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:23:43.589633: Statistics failed to send: interval-attempt=3 id=258638 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:23:43.589708: BMP host :http://outer.birdsat.net:26604 
+N,99,10/03/26,08:23:45.264721: query_time_level_valid time duration is not right [0-0],now:1773131025
+W,135,10/03/26,08:23:45.268007: Event failed to send via curl: attempt=13 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,08:23:45.880264: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:23:55.880600: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:24:05.880879: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:24:15.881287: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:24:25.881736: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:24:35.881971: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:24:43.335865: Statistics failed to send: interval-attempt=1 id=258639 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:24:43.335929: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:24:43.343746: Statistics failed to send: interval-attempt=2 id=258639 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:24:43.343807: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:24:43.349255: Statistics failed to send: interval-attempt=3 id=258639 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:24:43.349322: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:24:45.882241: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:24:55.882521: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:25:05.882770: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:25:15.883015: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:25:25.883259: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:25:35.883678: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:25:43.133896: Statistics failed to send: interval-attempt=1 id=258640 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:25:43.133958: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:25:43.142992: Statistics failed to send: interval-attempt=2 id=258640 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:25:43.143055: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:25:43.147803: Statistics failed to send: interval-attempt=3 id=258640 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:25:43.147880: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:25:45.883906: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:25:55.884174: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:26:05.884433: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:26:15.884662: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:26:25.884946: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:26:35.885259: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:26:42.928196: Statistics failed to send: interval-attempt=1 id=258641 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:26:42.928267: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:26:42.935813: Statistics failed to send: interval-attempt=2 id=258641 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:26:42.935877: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:26:42.940771: Statistics failed to send: interval-attempt=3 id=258641 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:26:42.940930: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:26:45.885885: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:26:55.886161: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:27:05.886418: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:27:15.886687: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:27:25.886930: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:27:35.887211: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:27:42.726060: Statistics failed to send: interval-attempt=1 id=258642 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:27:42.726125: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:27:42.735912: Statistics failed to send: interval-attempt=2 id=258642 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:27:42.735978: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:27:42.741543: Statistics failed to send: interval-attempt=3 id=258642 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:27:42.741790: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:27:45.887625: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:27:55.887877: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:28:05.888103: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:28:15.888359: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:28:25.888647: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:28:35.888932: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:28:42.483777: Statistics failed to send: interval-attempt=1 id=258643 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:28:42.483842: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:28:42.492516: Statistics failed to send: interval-attempt=2 id=258643 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:28:42.492591: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:28:42.498174: Statistics failed to send: interval-attempt=3 id=258643 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:28:42.498241: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:28:45.889174: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:28:55.889414: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:29:05.889662: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:29:15.889925: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:29:25.890188: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:29:35.890493: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:29:42.182452: Statistics failed to send: interval-attempt=1 id=258644 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:29:42.182515: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:29:42.192146: Statistics failed to send: interval-attempt=2 id=258644 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:29:42.192392: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:29:42.196744: Statistics failed to send: interval-attempt=3 id=258644 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:29:42.196804: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:29:45.890797: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:29:55.891305: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:30:05.891587: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:30:15.892029: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:30:25.892290: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:30:35.892568: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:30:41.972141: Statistics failed to send: interval-attempt=1 id=258645 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:30:41.972217: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:30:41.979711: Statistics failed to send: interval-attempt=2 id=258645 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:30:41.979769: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:30:41.984975: Statistics failed to send: interval-attempt=3 id=258645 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:30:41.985042: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:30:45.892878: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:30:55.893147: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:31:05.893412: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:31:15.893638: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:31:25.893874: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:31:35.894113: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:31:41.784090: Statistics failed to send: interval-attempt=1 id=258646 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:31:41.784170: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:31:41.793500: Statistics failed to send: interval-attempt=2 id=258646 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:31:41.793779: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:31:41.798313: Statistics failed to send: interval-attempt=3 id=258646 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:31:41.798388: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:31:45.894347: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:31:55.894582: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:32:05.894850: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:32:15.895099: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:32:25.895336: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:32:35.895575: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:32:41.579873: Statistics failed to send: interval-attempt=1 id=258647 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:32:41.580657: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:32:41.591896: Statistics failed to send: interval-attempt=2 id=258647 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:32:41.591963: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:32:41.600705: Statistics failed to send: interval-attempt=3 id=258647 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:32:41.600782: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:32:45.895816: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:32:55.896048: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:33:05.896279: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:33:15.896510: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:33:25.896752: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:33:35.896982: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:33:41.218237: Statistics failed to send: interval-attempt=1 id=258648 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:33:41.218298: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:33:41.223053: Statistics failed to send: interval-attempt=2 id=258648 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:33:41.223112: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:33:41.227847: Statistics failed to send: interval-attempt=3 id=258648 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:33:41.227906: BMP host :http://outer.birdsat.net:26604 
+N,99,10/03/26,08:33:45.235593: query_time_level_valid time duration is not right [0-0],now:1773131625
+W,135,10/03/26,08:33:45.238762: Event failed to send via curl: attempt=14 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,08:33:45.897226: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:33:55.897478: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:34:05.897912: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:34:15.898148: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:34:25.898387: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:34:35.898623: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:34:41.070232: Statistics failed to send: interval-attempt=1 id=258649 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:34:41.070566: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:34:41.077907: Statistics failed to send: interval-attempt=2 id=258649 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:34:41.077968: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:34:41.082971: Statistics failed to send: interval-attempt=3 id=258649 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:34:41.083031: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:34:45.898918: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:34:55.899183: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:35:05.899435: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:35:15.899916: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:35:25.900163: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:35:35.900453: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:35:40.913849: Statistics failed to send: interval-attempt=1 id=258650 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:35:40.913913: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:35:40.922830: Statistics failed to send: interval-attempt=2 id=258650 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:35:40.922904: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:35:40.927192: Statistics failed to send: interval-attempt=3 id=258650 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:35:40.927253: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:35:45.900811: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:35:55.901063: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:36:05.901845: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:36:15.902091: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:36:25.902329: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:36:35.902562: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:36:40.706563: Statistics failed to send: interval-attempt=1 id=258651 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:36:40.706624: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:36:40.714386: Statistics failed to send: interval-attempt=2 id=258651 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:36:40.714670: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:36:40.719396: Statistics failed to send: interval-attempt=3 id=258651 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:36:40.719468: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:36:45.902815: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:36:55.903100: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:37:05.903363: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:37:15.903776: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:37:25.904030: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:37:35.904266: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:37:40.567891: Statistics failed to send: interval-attempt=1 id=258652 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:37:40.567990: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:37:40.583286: Statistics failed to send: interval-attempt=2 id=258652 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:37:40.583380: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:37:40.594324: Statistics failed to send: interval-attempt=3 id=258652 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:37:40.594402: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:37:45.904501: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:37:55.904750: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:38:05.905024: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:38:15.905284: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:38:25.905619: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:38:35.906133: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:38:40.263931: Statistics failed to send: interval-attempt=1 id=258653 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:38:40.264023: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:38:40.270927: Statistics failed to send: interval-attempt=2 id=258653 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:38:40.271001: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:38:40.276173: Statistics failed to send: interval-attempt=3 id=258653 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:38:40.276237: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:38:45.906367: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:38:55.906599: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:39:05.906830: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:39:15.907067: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:39:25.907301: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:39:35.907532: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:39:40.079233: Statistics failed to send: interval-attempt=1 id=258654 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:39:40.079308: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:39:40.087692: Statistics failed to send: interval-attempt=2 id=258654 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:39:40.087766: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:39:40.092366: Statistics failed to send: interval-attempt=3 id=258654 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:39:40.092429: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:39:45.907779: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:39:55.908010: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:40:05.908277: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:40:15.908570: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:40:25.908809: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:40:35.909041: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:40:39.877982: Statistics failed to send: interval-attempt=1 id=258655 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:40:39.878057: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:40:39.884968: Statistics failed to send: interval-attempt=2 id=258655 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:40:39.885035: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:40:39.889529: Statistics failed to send: interval-attempt=3 id=258655 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:40:39.889760: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:40:45.909278: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:40:55.909514: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:41:05.909761: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:41:15.910029: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:41:25.910302: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:41:35.910635: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:41:39.714041: Statistics failed to send: interval-attempt=1 id=258656 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:41:39.714111: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:41:39.724049: Statistics failed to send: interval-attempt=2 id=258656 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:41:39.724119: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:41:39.729656: Statistics failed to send: interval-attempt=3 id=258656 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:41:39.729723: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:41:45.911021: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:41:55.911374: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:42:05.912319: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:42:15.912569: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:42:25.912803: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:42:35.913047: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:42:39.454315: Statistics failed to send: interval-attempt=1 id=258657 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:42:39.454736: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:42:39.468236: Statistics failed to send: interval-attempt=2 id=258657 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:42:39.468329: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:42:39.476987: Statistics failed to send: interval-attempt=3 id=258657 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:42:39.477478: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:42:45.913309: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:42:55.913567: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:43:05.913805: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:43:15.914082: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:43:25.914375: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:43:35.914646: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:43:39.221012: Statistics failed to send: interval-attempt=1 id=258658 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:43:39.221772: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:43:39.229214: Statistics failed to send: interval-attempt=2 id=258658 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:43:39.229287: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:43:39.233557: Statistics failed to send: interval-attempt=3 id=258658 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:43:39.233805: BMP host :http://outer.birdsat.net:26604 
+N,99,10/03/26,08:43:45.203872: query_time_level_valid time duration is not right [0-0],now:1773132225
+W,135,10/03/26,08:43:45.207065: Event failed to send via curl: attempt=15 curl timeout=10 wait=60 left=599 address=http://outer.birdsat.net:26604, error=Couldn't resolve host name httpcode=0 event count(100:0)
+E,135,10/03/26,08:43:45.914926: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:43:55.915209: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:44:05.915442: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:44:15.915698: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:44:25.915935: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:44:35.916172: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:44:39.033914: Statistics failed to send: interval-attempt=1 id=258659 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:44:39.033987: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:44:39.041732: Statistics failed to send: interval-attempt=2 id=258659 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:44:39.041793: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:44:39.046831: Statistics failed to send: interval-attempt=3 id=258659 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:44:39.046892: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:44:45.916405: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:44:55.916649: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:45:05.916905: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:45:15.917149: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:45:25.917381: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:45:35.917614: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:45:38.854544: Statistics failed to send: interval-attempt=1 id=258660 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:45:38.854623: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:45:38.863152: Statistics failed to send: interval-attempt=2 id=258660 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:45:38.863227: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:45:38.867742: Statistics failed to send: interval-attempt=3 id=258660 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:45:38.867804: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:45:45.917849: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:45:55.918091: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:46:05.918324: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:46:15.918567: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:46:25.918798: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:46:35.919055: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:46:38.673517: Statistics failed to send: interval-attempt=1 id=258661 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:46:38.673788: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:46:38.677971: Statistics failed to send: interval-attempt=2 id=258661 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:46:38.678043: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:46:38.682904: Statistics failed to send: interval-attempt=3 id=258661 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:46:38.682967: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:46:45.919307: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:46:55.919717: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:47:05.920465: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:47:15.920526: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:47:25.921340: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:47:35.921756: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+W,135,10/03/26,08:47:38.504314: Statistics failed to send: interval-attempt=1 id=258662 retry=0 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:47:38.504391: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:47:38.519834: Statistics failed to send: interval-attempt=2 id=258662 retry=1 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:47:38.521065: BMP host :http://outer.birdsat.net:26604 
+W,135,10/03/26,08:47:38.530500: Statistics failed to send: interval-attempt=3 id=258662 retry=2 error=(Couldn't resolve host name) httpcode=0
+N,135,10/03/26,08:47:38.530961: BMP host :http://outer.birdsat.net:26604 
+E,135,10/03/26,08:47:45.922030: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:47:55.922283: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:48:05.922527: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address
+E,135,10/03/26,08:48:15.922758: Failed to obtain IP address: interface=wan@eth1 errro=Cannot assign requested address

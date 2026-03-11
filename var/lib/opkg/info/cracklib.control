@@ -1,0 +1,13 @@
+Package: cracklib
+Version: 2.9.2-r1
+Description: Password strength checker library
+ Password strength checker library.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9-vfp-neon
+OE: cracklib
+Homepage: http://sourceforge.net/projects/cracklib
+Depends: libz1 (>= 1.2.8), libc6 (>= 2.21)
+Source: http://downloads.sourceforge.net/cracklib/cracklib-2.9.2.tar.gz file://0001-packlib.c-support-dictionary-byte-order-dependent.patch file://0002-craklib-fix-testnum-and-teststr-failed.patch

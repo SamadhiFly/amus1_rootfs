@@ -1,0 +1,8 @@
+Package: bs-amu-acu
+Version: 1.1.51
+Architecture: armhf
+Maintainer: THISS Technologies Pte Ltd <info@thiss.net>
+Installed-Size: 6649
+Section: devel
+Priority: optional
+Description: THISS Technologies Starlight Antenna

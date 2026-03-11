@@ -1,0 +1,4 @@
+/mnt/.psplash/
+/usr/bin/psplash-write
+/etc/init.d/
+/etc/init.d/psplash.sh

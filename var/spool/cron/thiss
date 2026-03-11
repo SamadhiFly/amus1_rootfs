@@ -1,0 +1,10 @@
+# Command to install cron jobs (CBM03/CBM05/IDU100/TCU100) defined in this file: 
+# sudo crontab -u root /path/to/this_file
+
+# set environment
+SHELL=/bin/bash
+PATH=/usr/local/pgsql/bin:/usr/lib/postgresql/8.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# getting the antenna data
+*/2 * * * * /home/thiss/tsl-query
+

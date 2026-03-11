@@ -1,0 +1,13 @@
+Package: diffutils
+Version: 3.3-r0
+Description: Diffutils contains tools used for finding differences between files
+ Diffutils contains the GNU diff, diff3, sdiff, and cmp utilities. These
+ programs are usually used for creating patch files.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+
+Architecture: cortexa9-vfp-neon
+OE: diffutils
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/diffutils/diffutils-3.3.tar.xz file://run-ptest

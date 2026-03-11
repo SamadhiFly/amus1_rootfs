@@ -1,0 +1,61 @@
+#!/bin/bash
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to export NV config to a BAC file.
+# Argument: see print_usage() below
+# 
+######################################################################
+
+# Display help (command usage)
+print_usage()
+{
+  echo "Export NV config as password protected file (BAC)"
+  echo "USAGE: $(basename $0) outfile [activeonly]"
+  echo "  outfile => path to file of the exported BAC file"
+  echo "  activeonly => only export active only config items (1), default is 0 (all config items)" 
+  echo 
+}
+
+# Make sure output file name is given, otherwise exit
+if [ -z "$1" ]; then
+  /usr/bin/write_log -p E "requires export output file name"
+  echo
+  print_usage
+  exit 1
+fi
+
+# If first argument is "help", print usage and exit
+if [ "$1" = "help" ]; then
+  print_usage
+  exit 0 
+fi
+
+outfile=$1
+
+# If NV config file not present, log error and exit
+if [ ! -f /home/bird/config.sqlite ]; then
+  /usr/bin/write_log -p E  "NV config to be exported is not initialized"
+  exit 1
+fi
+
+# If password file not found, log error and exit
+if [ ! -f /home/bird/.zkey ]; then
+  /usr/bin/write_log -p E "key file for export config is not available"
+  exit 1
+fi
+
+# Make a copy of NV config in memory with unique file name
+datetime=$(date -u +%Y%m%d%H%M%S)
+cp /home/bird/config.sqlite /tmp/config-$datetime.sqlite
+
+# if requested to export active config items, delete non-active items in the copy
+if [ "$2" = "1" ]; then
+  /usr/bin/sqlite3 /tmp/config-$datetime.sqlite "begin; delete from config where active != 1; commit;"
+fi
+
+# Dump the copied db and create the BAC file.
+/usr/bin/sqlite3 /tmp/config-$datetime.sqlite ".dump" | /usr/bin/zip -P $(cat /home/bird/.zkey) > $outfile
+

@@ -1,0 +1,11 @@
+Package: device-tree
+Version: 1.0-r0
+Description: Device Trees for BSPs
+ Device Tree generation and packaging for BSP Device Trees.
+Section: bsp
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: microzed_zynq7
+OE: device-tree
+Source: file://microzed/microzed-zynq7.dts file://common/zynq7-base.dtsi file://microzed/microzed-zynq7-board.dtsi

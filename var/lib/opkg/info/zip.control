@@ -1,0 +1,13 @@
+Package: zip
+Version: 3.0-r2
+Description: Compressor/archiver for creating and modifying .zip files
+ Compressor/archiver for creating and modifying .zip files.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD-3-Clause
+Architecture: cortexa9-vfp-neon
+OE: zip
+Homepage: http://www.info-zip.org
+Depends: libc6 (>= 2.21)
+Source: ftp://ftp.info-zip.org/pub/infozip/src/zip30.tgz

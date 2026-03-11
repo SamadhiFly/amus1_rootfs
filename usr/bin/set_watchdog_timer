@@ -1,0 +1,81 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to set or clear ST M41T6X RTC 
+# Usage: see print_usage()
+######################################################################
+
+PROG=$(basename $0)
+I2CSET="/usr/sbin/i2cset"
+I2CDETECT="/usr/sbin/i2cdetect"
+SET_CMD="${I2CSET} -f -y 0 "
+
+# Print help/usage message then exit
+print_usage()
+{
+  echo "Set or cancel watchdog timeout (in minutes before reseting CPU)"
+  echo "command: ${PROG} {timeout}"
+  echo "Example"
+  echo "1) To set a 15 minutes timeout:"
+  echo "   ${PROG} 15"
+  echo "2) To disable timeout:"
+  echo "   ${PROG} 0"
+  exit 0 
+}
+
+# If no argument provided, just print help message then exit
+if [ -z "$1" ]; then
+  print_usage
+  exit 1
+fi
+
+# Check if a valid argument is provided, if not, print usage and exit
+if ! printf "%d" $1 ; then
+  /usr/bin/write_log -p E "Invalid watchdog timeout value: $1!"
+  print_usage
+  exit 1
+fi
+
+# If /usr/sbin/i2cset is not installed, log error and exit 
+if [ ! -x ${I2CSET} ]; then
+  /usr/bin/write_log -p E "${I2CSET} is not installed!"
+  exit 1
+fi
+
+# Make sure the M41T6X RTC clock is present at the address 0X68 of the I2C bus
+# otherwise log error and exit 
+DEVICES=$(${I2CDETECT} -y -r 0 0x68 0x68 | grep UU)
+if [ -z "$DEVICES" ]; then
+  /usr/bin/write_log -p E  "Watchdog device at address 0x68 is not present"
+  exit 1
+fi
+
+# M41T62 RTC watchdog register address
+REG_ADDR=0x09
+# M41T62 chip I2C address
+CHIP_ADDR=0x68
+# timeout in minutes or 0 (forever, i.e., no timeout)
+TIMEOUT=$(printf "%d" $1)
+RESOLUTION_BYTE=0x20 # timeout resolution is in minutes
+CANCEL_BYTE=0xff
+
+# as per M41T62 datasheet
+if [ ${TIMEOUT} -eq 0 ]; then
+  /usr/bin/write_log -p I  "Disabling watchdog timer..."
+  OUT_BYTE=${CANCEL_BYTE}
+else
+  /usr/bin/write_log -p I "Update watchdog timer to reset Zynq CPU in $TIMEOUT minuts..."
+  OUT_BYTE=$(( $(( $(( ${TIMEOUT} | ${RESOLUTION_BYTE} ))<<2 )) & 0xfc ))
+fi
+
+# print the register value to be used to update the watchdog
+echo "Output_byte=$(printf "0x%x" ${OUT_BYTE})"
+# Set the watchdog
+$SET_CMD ${CHIP_ADDR} ${REG_ADDR} ${OUT_BYTE}
+
+exit 0
+

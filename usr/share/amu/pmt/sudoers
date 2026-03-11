@@ -1,0 +1,30 @@
+# /etc/sudoers
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# See the man page for details on how to write a sudoers file.
+# Defaults
+
+Defaults        !lecture,tty_tickets,!fqdn
+
+# Uncomment to allow members of group sudo to not need a password
+# %sudo ALL=NOPASSWD: ALL
+
+# Host alias specification
+
+# User alias specification
+User_Alias      AMU_USER       = www-data, netop, admin, bird
+# Cmnd alias specification
+Cmnd_Alias      AMU_CMND_NOPASSWD      = /usr/bin/bs-amu-*, /usr/bin/nohup, /etc/init.d/bs-amu-*, /usr/bin/opkg, /bin/kill, /sbin/reboot, /sbint/shutdown, /usr/bin/pkill, /sbin/arp, /sbin/ip, /usr/sbin/iptables, /usr/sbin/conntrack, /usr/sbin/tcpdump, /etc/init.d/lighttpd, /usr/bin/ssh, /usr/bin/scp, /usr/bin/amu_help, /usr/bin/export_config, /usr/bin/import_config, /usr/bin/init_config, /usr/bin/install_sw, /usr/bin/mod_cli, /usr/bin/net_config, /usr/bin/report_status, /usr/bin/save_config, /usr/bin/install_bop.py  
+
+# User privilege specification
+root    ALL=(ALL) ALL
+
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+%bird ALL=(ALL) ALL
+
+# No password required to run these commands
+AMU_USER ALL = (ALL) NOPASSWD: AMU_CMND_NOPASSWD
+

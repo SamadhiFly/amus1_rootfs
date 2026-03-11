@@ -1,0 +1,13 @@
+Package: conntrack-tools
+Version: 1.4.0-r0
+Description: Connection tracking userspace tools for Linux
+ Connection tracking userspace tools for Linux.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: conntrack-tools
+Depends: libnetfilter-cttimeout1 (>= 1.0.0), libc6 (>= 2.21), libnetfilter-conntrack3 (>= 1.0.2), libmnl0 (>= 1.0.3), libnetfilter-queue1 (>= 1.0.2), libnetfilter-cthelper0 (>= 1.0.0), libnfnetlink0 (>= 1.0.1)
+Recommends: update-rc.d
+Source: http://www.netfilter.org/projects/conntrack-tools/files/conntrack-tools-1.4.0.tar.bz2;name=tar file://conntrack-failover file://init

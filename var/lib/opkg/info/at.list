@@ -1,0 +1,12 @@
+/var/spool/at/jobs/.SEQ
+/usr/bin/atrm
+/usr/bin/batch
+/var/spool/at/
+/etc/init.d/atd
+/usr/sbin/atrun
+/usr/bin/atq
+/var/spool/at/spool/
+/etc/at.deny
+/usr/bin/at
+/usr/sbin/atd
+/var/spool/at/jobs/

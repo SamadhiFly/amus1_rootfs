@@ -1,0 +1,58 @@
+#!/bin/bash -e
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Log AMUS power up/down events 
+######################################################################
+
+LOGGER_BIN=/usr/bin/bs-amu-logevent
+HOME_DIR=/home/bird/data
+TIMESTAMP_FILE=${HOME_DIR}/.timestamp
+
+mkdir -p ${HOME_DIR}
+
+#[337]  Incorrect power on/off reported time 1.15 begin
+#Reasons:For easier parsing
+TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S")
+#[337]  Incorrect power on/off reported time 1.15 end
+
+# To fix ZT BUG557, install_sw is not updated during PMT installation
+# but at here on the next time AMU is powered on.
+/usr/bin/rsync /usr/share/amu/pmt/install_sw  /usr/bin/
+chmod a+x /usr/bin/install_sw
+
+case "$1" in
+  start)
+    if [ -f ${TIMESTAMP_FILE} ]; then
+      # On power up, if the timestamp file exists,
+      # the timestamp in it is considered to be the 
+      # last power down time. 
+      SHUTDOWN_TIME=$(cat ${TIMESTAMP_FILE})
+      ${LOGGER_BIN} -i 100 -s 1 "{\"shutdown_utc\":\"${SHUTDOWN_TIME}\"}"
+    fi
+    
+    # now log the power up event.
+    ${LOGGER_BIN} -i 101 -s 1 "{\"startup_utc\":\"${TIMESTAMP}\"}"
+    ;;
+
+  stop)
+    # log the power down event and delete the timestamp file
+    ${LOGGER_BIN} -i 100 -s 1 "{\"shutdown_utc\":\"${TIMESTAMP}\"}"
+
+    if [ -f ${TIMESTAMP_FILE} ]; then
+      rm ${TIMESTAMP_FILE}
+    fi
+    ;;
+  reload|force-reload|restart)
+    ;;
+
+  *)
+    echo "Usage: /etc/init.d/tt-cu-power-cycle {start|stop|reload|force-reload|restart}"
+    exit 1
+esac
+
+exit 0
+

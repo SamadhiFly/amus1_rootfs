@@ -1,0 +1,13 @@
+Package: php-cli
+Version: 5.5.21-r0
+Description: A server-side, HTML-embedded scripting language
+ A server-side, HTML-embedded scripting language.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: PHP-3.0
+Architecture: cortexa9-vfp-neon
+OE: php
+Homepage: http://www.php.net
+Depends: libssl1.0.0 (>= 1.0.2d), libmysqlclient18 (>= 5.5.41), libxml2 (>= 2.9.2), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcrypto1.0.0 (>= 1.0.2d), libsqlite3-0 (>= 3.8.7.4), libc6 (>= 2.21), php, libbz2-0 (>= 1.0.6)
+Source: http://php.net/distributions/php-5.5.21.tar.bz2 file://acinclude-xml2-config.patch file://0001-php-don-t-use-broken-wrapper-for-mkdir.patch file://0001-acinclude-use-pkgconfig-for-libxml2-config.patch file://CVE-2015-7803.patch file://CVE-2015-7804.patch file://CVE-2016-1903.patch file://iconv.patch file://imap-fix-autofoo.patch file://pear-makefile.patch file://phar-makefile.patch file://php_exec_native.patch file://php-fpm.conf file://php-fpm-apache.conf file://configure.patch file://pthread-check-threads-m4.patch file://70_mod_php5.conf

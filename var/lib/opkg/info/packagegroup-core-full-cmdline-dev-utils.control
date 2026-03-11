@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline-dev-utils
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: diffutils, make, byacc, m4, patch
+Provides: packagegroup-core-dev-utils, task-core-dev-utils
+Replaces: packagegroup-core-dev-utils, task-core-dev-utils
+Conflicts: packagegroup-core-dev-utils, task-core-dev-utils
+Source: None

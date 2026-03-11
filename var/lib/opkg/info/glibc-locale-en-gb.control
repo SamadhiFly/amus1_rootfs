@@ -1,0 +1,15 @@
+Package: glibc-locale-en-gb
+Version: 2.21-r0
+Description: Locale data from glibc - en_GB translations
+ Locale data from glibc.  This package contains language translation files
+ for the en_GB locale.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9-vfp-neon
+OE: glibc-locale
+Homepage: http://www.gnu.org/software/libc/index.html
+Recommends: virtual-locale-en-gb
+Provides: glibc-locale, en-gb-translation
+Source: None

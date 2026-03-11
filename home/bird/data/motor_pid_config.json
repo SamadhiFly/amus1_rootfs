@@ -1,0 +1,52 @@
+{
+    "AMU_PCB_Type_Str": "AMUS6.1",
+    "Antenna_Type": "VS100K",
+    "BLDC_SCALE_FACTOR": {
+        "AZ": 1.149999976158142,
+        "EL": 1,
+        "RL": 1
+    },
+    "BUC_Type_Str": "NJT8376UFC9",
+    "CSQ": {
+        "AZ_Conical_Control_Radius_DPS": 1.25,
+        "AZ_EL_Conical_Control_Phase_Difference_Degs": 300,
+        "Conical_Scan_Fraction_Complete_Correction": 0.5289999842643738,
+        "EL_Conical_Control_Radius_DPS": 1.350000023841858
+    },
+    "DAC_AMPLITUDE_SCALE": {
+        "AZ": 650,
+        "EL": 650,
+        "RL": 650
+    },
+    "Format_Version": 1,
+    "HI_Tool_Version": "3.9",
+    "INFO_Special_Models": "",
+    "PID": {
+        "AZ": {
+            "Gain_Conical_I": 100,
+            "Gain_Conical_Off_D": 17,
+            "Gain_Conical_Off_P": 200,
+            "Gain_Conical_On_D": 30,
+            "Gain_Conical_On_P": 300,
+            "Gain_Sum_I": 500
+        },
+        "EL": {
+            "Gain_Conical_I": 170,
+            "Gain_Conical_Off_D": 15.5,
+            "Gain_Conical_Off_P": 300,
+            "Gain_Conical_On_D": 25,
+            "Gain_Conical_On_P": 300,
+            "Gain_Sum_I": 500
+        },
+        "RL": {
+            "Gain_Conical_I": 100,
+            "Gain_Conical_Off_D": 20,
+            "Gain_Conical_Off_P": 300,
+            "Gain_Conical_On_D": 30,
+            "Gain_Conical_On_P": 250,
+            "Gain_Sum_I": 500
+        }
+    },
+    "RL_Error_IIR_Coefficient_Conical_Scan_On": 0.9980000257492065,
+    "Sensor_Type_Str": "dsb3.3"
+}

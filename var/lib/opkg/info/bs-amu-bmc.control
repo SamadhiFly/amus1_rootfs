@@ -1,0 +1,8 @@
+Package: bs-amu-bmc
+Version: 1.40.0
+Architecture: armhf
+Maintainer: THISS Technologies Pte Ltd <info@thiss.net>
+Installed-Size: 5223
+Section: devel
+Priority: optional
+Description: THISS Technologies Starlight Antenna

@@ -1,0 +1,1 @@
+/usr/local/var/www/ps/gui/frontend/build/index.php

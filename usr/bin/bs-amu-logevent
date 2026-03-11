@@ -1,0 +1,64 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Write an event to events database as well as to the PMT log.
+# Usage: see print_usage()
+######################################################################
+
+severities=('P' 'C' 'A' 'E' 'W' 'N' 'I' '1' '2' '3')
+
+print_usage()
+{
+  echo "Generate an event and log it"
+  echo "Usage: $(basename $0) -i event_id -s severity event_string"
+}
+
+db_events=/home/bird/data/events.sqlite
+if [ ! -f "$db_events" ]; then
+  echo "SQLITE db has not been initialized!"
+  exit 1
+fi
+
+while getopts ":i:s:" opt; do
+  case "${opt}" in
+    i)
+      eventid=${OPTARG}
+    ;;
+    s)
+      severity=${OPTARG}
+    ;;
+    *)
+      print_usage
+      exit 1 
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+if [ -z "${eventid}" ] || [ -z "${severity}" ]; then
+  print_usage
+  exit 1
+fi
+if [ "$severity" -gt 9 ] || [ "$severity" -lt 0 ]; then
+  /usr/bin/write_log -p E "Invalid severity($severity), eventid($eventid)"
+  exit 1
+else
+  severity_code=${severities[$severity]}
+fi
+
+sql_command()
+{
+  db_filename=$1
+
+  sql="$2"
+
+  /usr/bin/sqlite3 $db_filename "$sql"
+}
+
+sql_command $db_events "begin; insert into events values (null, strftime('%s', 'now')*1000*1000, 'PMT', ${eventid}, ${severity}, '${@}', 0); commit;"
+/usr/bin/write_log -p $severity_code "Logged event id=${eventid}, info=$@"
+

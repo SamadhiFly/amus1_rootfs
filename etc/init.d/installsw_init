@@ -1,0 +1,93 @@
+#!/bin/sh -e
+
+#================================================================
+# THISS Technologies Pte Ltd
+# SH
+# August 2013
+#
+# Start the sw_installation process during startup if it was interrupted 
+#
+#================================================================
+
+# Include environment.
+if test -f /usr/share/cu/mdm/tt-cu-environment; then
+  . /usr/share/cu/mdm/tt-cu-environment
+else
+  echo "Environment file /usr/share/cu/mdm/tt-cu-environment missing!"
+  exit 1;
+fi
+
+REBOOT_REQUIRED="no"
+
+do_start() {
+	if test -f /usr/share/cu/mdm/installsw_common; then
+  	. /usr/share/cu/mdm/installsw_common
+	else
+  	log "Software installation process common variables file not available!"
+  	return
+	fi
+
+	if test -f ${AUTO_INST_CMD_FILE}; then
+		. ${AUTO_INST_CMD_FILE}
+	else
+		log "There is no interrupted software installation found!"
+		return
+	fi
+
+	log "*****************************************************"
+	log "Starting previously interrupted software installation"
+	log "**Software directory: ${RUN_HOME}"
+	log "**Install command: $RUN_CMD"
+	log "**Install config: $CFGFILE"
+	log "*****************************************************"
+	  
+	if [ ! -d $RUN_HOME ] || [ ! -x $RUN_HOME/$RUN_CMD ] || [ ! -f $RUN_HOME/$CFGFILE ]; then
+		log "Unable to restart installation - file(s) is/are missing" 
+		rm -f $AUTO_INST_CMD_FILE
+		return
+	fi
+
+	$RUN_HOME/$RUN_CMD $CFGFILE
+
+	REBOOT_REQUIRED="yes"
+
+	# make sure only try automatic install once 
+	# no matter what is the outcome, remove the auto install command file 
+	test -f "$AUTO_INST_CMD_FILE" && rm -f "$AUTO_INST_CMD_FILE"
+}
+
+do_stop() 
+{
+	return
+}
+
+case "$1" in
+  start)
+		log "===================AUTO SOFTWARE INSTALLATION BEGIN============================"
+    do_start
+		log "=================== AUTO SOFTWARE INSTALLATION END ============================"
+
+		if [ "$REBOOT_REQUIRED" = "yes" ]; then
+			log "Auto software installation completed"
+			log "Restarting device...."
+			reboot
+		fi
+    ;;
+
+  stop)
+    do_stop
+    ;;
+
+  restart)
+    ;;
+
+  reload|force-reload)
+    ;;
+
+  *)
+    echo "Usage: /etc/init.d/instsw.init start"
+    exit 1
+esac
+
+exit 0
+

@@ -1,0 +1,17 @@
+Package: cronie
+Version: 1.4.12-r0
+Description: Cron daemon for executing programs at set times
+ Cronie contains the standard UNIX daemon crond that runs specified
+ programs at scheduled times and related tools. It is based on the
+ original cron and has security and configuration enhancements like the
+ ability to use pam and SELinux.
+Section: utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: ISC & BSD-3-Clause & BSD-2-Clause & GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: cronie
+Homepage: https://fedorahosted.org/cronie/
+Depends: shadow, initscripts-functions, base-passwd, libc6 (>= 2.21), base-files
+Recommends: update-rc.d
+Source: https://fedorahosted.org/releases/c/r/cronie/cronie-1.4.12.tar.gz file://crond.init file://crontab file://crond.service

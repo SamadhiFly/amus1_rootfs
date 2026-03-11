@@ -1,0 +1,62 @@
+#!/bin/sh
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: August 2, 2021
+# Author:zhang bingan
+#
+# Write the eth1 randomly assigned MAC address to the EEPROM, The next 
+# boot will use this MAC
+# Command to get the wan@eth1 mac address
+######################################################################
+version=1
+
+fixed_eth1_mac()
+{
+  eth1_random_mac=`ifconfig | grep eth1 | awk '{print $5}' | head -n 1`
+  if [ -z "$eth1_random_mac" ]; then
+    exit 1
+  fi
+  random_mac1=`echo $eth1_random_mac | awk -F':' '{print $1}'`
+  random_mac2=`echo $eth1_random_mac | awk -F':' '{print $2}'`
+  random_mac3=`echo $eth1_random_mac | awk -F':' '{print $3}'`
+  random_mac4=`echo $eth1_random_mac | awk -F':' '{print $4}'`
+  random_mac5=`echo $eth1_random_mac | awk -F':' '{print $5}'`
+  random_mac6=`echo $eth1_random_mac | awk -F':' '{print $6}'`
+  
+  eeprom_mac1=`ethtool -e eth1 | grep 0x0000 | awk '{print $3}'`
+  eeprom_mac2=`ethtool -e eth1 | grep 0x0000 | awk '{print $4}'`
+  eeprom_mac3=`ethtool -e eth1 | grep 0x0000 | awk '{print $5}'`
+
+  #Write the randomly assigned MAC address to the EEPROM
+  #Prevent repeated writing MAC to EEPROM
+  if [ "$random_mac1" != "$eeprom_mac1" ] || [ "$random_mac2" != "$eeprom_mac2" ] || [ "$random_mac3" != "$eeprom_mac3" ]; then
+    ethtool -E eth1 magic 0x9500 offset 0x0001 length 1 value 0x$random_mac1
+    ethtool -E eth1 magic 0x9500 offset 0x0002 length 1 value 0x$random_mac2
+    ethtool -E eth1 magic 0x9500 offset 0x0003 length 1 value 0x$random_mac3
+    ethtool -E eth1 magic 0x9500 offset 0x0004 length 1 value 0x$random_mac4
+    ethtool -E eth1 magic 0x9500 offset 0x0005 length 1 value 0x$random_mac5
+    ethtool -E eth1 magic 0x9500 offset 0x0006 length 1 value 0x$random_mac6
+  fi
+}
+
+
+
+###################################
+# main()
+###################################
+
+fixed_eth1_mac
+
+if [ "$random_mac2" = "bd" ];then
+  #Change the second byte of the random MAC address 'bd' as the WAN_eth1 MAC
+  wan_eth1_fixed_mac=`echo $random_mac1":db:"$random_mac3":"$random_mac4":"$random_mac5":"$random_mac6`
+else
+  wan_eth1_fixed_mac=`echo $random_mac1":bd:"$random_mac3":"$random_mac4":"$random_mac5":"$random_mac6`
+fi
+
+echo $wan_eth1_fixed_mac
+
+
+

@@ -1,0 +1,42 @@
+===============================================================================
+COPYRIGHT NOTICE
+===============================================================================
+
+THISS Technologies Pte Ltd
+
+102/F Pasir Panjang Road, #06-01
+Citilink Warehouse Complex
+Singapore 118530
+
+<http://www.thiss.net> 
+===============================================================================
+
+This is non-free software written by Nicholas Cirillo et al. and copyrighted by
+THISS Technologies of Singapore.
+
+This package was debianized by yuyang <info@thiss.net> on
+Thu, 29 Nov 2007 17:55:18 +0800.
+
+Copyright:
+
+    <Copyright (C) 2007 Nicholas Cirillo>
+    <Copyright (C) 2007 Peter Stootman>
+    <Copyright (C) 2007 Cai Yuan>
+    <Copyright (C) 2007 Yu Yang>
+    <Copyright (C) 2007 Sean Huang>
+    <Copyright (C) 2007 Hui Wooi Chng>
+
+License:
+
+    This software is non-free and may not be distributed without express written
+    permission from THISS Technologies. 
+    
+    All source code, binary images and packages are entirely the intellectual 
+    property of THISS Technologies and may not be copied or modified in any way.
+    
+    License fees for the use of this software are applicable at the discretion of 
+    THISS Technologies. For more information contact <info@thiss.net> or visit
+    <http://www.thiss.net>.
+
+The Debian packaging is (C) 2007, yuyang <info@thiss.net> 
+===============================================================================

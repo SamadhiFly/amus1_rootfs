@@ -1,0 +1,14 @@
+/usr/lib/php5/
+/usr/lib/php5/php/data/
+/usr/lib/php5/php/Structures/Graph/Manipulator/
+/usr/lib/php5/php/data/Structures_Graph/LICENSE
+/usr/lib/php5/php/XML/
+/usr/lib/php5/php/XML/Util.php
+/usr/lib/php5/php/Structures/Graph.php
+/usr/lib/php5/php/Structures/Graph/Node.php
+/usr/lib/php5/php/Structures/Graph/
+/usr/lib/php5/php/data/Structures_Graph/
+/usr/lib/php5/php/Structures/
+/usr/lib/php5/php/Structures/Graph/Manipulator/TopologicalSorter.php
+/usr/lib/php5/php/
+/usr/lib/php5/php/Structures/Graph/Manipulator/AcyclicTest.php

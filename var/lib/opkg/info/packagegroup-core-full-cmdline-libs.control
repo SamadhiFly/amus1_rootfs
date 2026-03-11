@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline-libs
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: glib-2.0
+Provides: task-core-basic-libs, packagegroup-core-basic-libs
+Replaces: task-core-basic-libs, packagegroup-core-basic-libs
+Conflicts: task-core-basic-libs, packagegroup-core-basic-libs
+Source: None

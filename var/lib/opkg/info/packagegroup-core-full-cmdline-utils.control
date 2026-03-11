@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline-utils
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: tar, ed, makedevs, sed, findutils, file, popt, mktemp, mc-helpers-perl, pax, coreutils, gmp, mc-helpers, mc-helpers-python, bc, ncurses, mc-fish, cpio, gawk, util-linux, bash, grep, attr, mc, zlib, e2fsprogs, acl, psmisc, net-tools, time, procps
+Provides: task-core-basic-utils, packagegroup-core-basic-utils
+Replaces: task-core-basic-utils, packagegroup-core-basic-utils
+Conflicts: task-core-basic-utils, packagegroup-core-basic-utils
+Source: None

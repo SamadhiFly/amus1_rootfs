@@ -1,0 +1,144 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Log PMT current status
+######################################################################
+
+sql_command()
+{
+  db_filename=$1
+
+  sql="$2"
+
+  sqlite3 $db_filename "$sql"
+}
+
+# Log once in every 15 seconds
+sleeptime=15
+
+while [ 1 ]; do
+  sleep $sleeptime
+
+  db_status=/tmp/current_status.sqlite
+  if [ ! -f "$db_status" ]; then
+    /usr/bin/write_log -p E "Current status database is not initialized!"
+    continue
+  fi
+  
+  # Get last reported status (used to detect changes)
+  last_status=$(sqlite3 $db_status "select json_status from status where module = 'PMT' order by id desc limit 1") 
+
+  # system
+  utc_ms=$(( $(date -u +%s) * 1000 )) 
+  format_version=1
+  cpu_used_percent=$(top -b -n 1  | grep "%Cpu(s):" | awk '{print (100 - $8)}')
+  ram_used_percent=$(top -b -n 1  | grep "KiB Mem :" | awk  '{print $8/$4*100}')
+  linux_uptime_s=$(printf "%d" $(( $(date +%s) - $(date -d "$(uptime -s)" +%s) )) )
+
+  flash_used_percent="["
+
+  for i in {1..10}; do
+    dev=mmcblk0p${i}
+    # For unmount partitions we will report 0% used instead, as mount and umount these 
+    # partitions may interfere with software update process [BUG 366] making backing up 
+    # the primary partition to secondary partition unsuccessful.  
+    if mount | grep $dev ; then
+      flash_used_percent="${flash_used_percent}$(df | grep $dev | awk '{printf("%d", $5)}')"
+    else
+      flash_used_percent="${flash_used_percent}0.0"
+    fi
+
+    if [ "$i" -ne 10 ]; then
+      flash_used_percent="${flash_used_percent},"
+    fi
+  done
+
+  flash_used_percent="${flash_used_percent}]"
+
+  # network
+  srv_port=$(sqlite3 /tmp/config.sqlite "select json_config from config where group_type  = 'network' and active = 1" | python -c "import sys, json; print json.load(sys.stdin)['spare_port']['device_name']")
+  if [ "$srv_port" = "eth0" ]; then
+    data_port="eth1"
+  else
+    data_port="eth0"
+  fi
+  srv_link_speed=$(ethtool $srv_port | grep Speed: | awk '{print $2}' | sed s/[^0-9]//g)
+  srv_link_duplex=$(ethtool $srv_port | grep Duplex: | awk '{print $2}')
+  if [ $(ethtool $srv_port | grep detected: | awk '{print $3}') = "yes" ]; then
+    srv_link_state="Up"
+  else
+    srv_link_state="Down"
+  fi
+  srv_ip_address=$(ip addr show dev $srv_port | grep "inet " | awk '{print $2}')
+  data_link_speed=$(ethtool $data_port | grep Speed: | awk '{print $2}' | sed s/[^0-9]//g)
+  data_link_duplex=$(ethtool $data_port | grep Duplex: | awk '{print $2}')
+  if [ $(ethtool $data_port | grep detected: | awk '{print $3}') = "yes" ]; then 
+    data_link_state="Up"
+  else
+    data_link_state="Down"
+  fi
+  data_modem_ip_address=$(ip addr show dev "openamip@$data_port" | grep "inet " | awk '{print $2}')
+  data_wan_ip_address=$(ip addr show dev "wan@$data_port" | grep "inet " | awk '{print $2}')
+
+  # versions
+  sw_version=$(tail -1  /home/bird/.SWVERSION | awk '{print $2}')
+  fs_version=$(cat /home/bird/.ROOTFS_VERSION)
+  os_version=$(uname -r | awk -F"-" '{print $3}' | sed s/v//g)
+  cfg_version=$(sqlite3 /tmp/config.sqlite "select version from schema_version limit 1")
+  sw_last_updated_time=$(tail -1 /home/bird/.SWVERSION | awk '{print $1}')
+  config_last_saved_time=$(date -d "$(ls -al $(readlink -f /home/bird/config.sqlite) | awk '{printf( "%s %s %s",  $6, $7, $8) }')")
+
+  # Update current status datebase for the new PMT status
+  json=$(printf '{"format_version":%d,"utc_ms":%d,"cpu_used_percent":%f,"ram_used_percent":%f,"linux_uptime_s":%ld,"flash_used_percent":%s,"srv_link_speed":%d,"srv_link_duplex":"%s","srv_link_state":"%s","srv_ip_address":"%s","data_link_speed":%d,"data_link_duplex":"%s","data_link_state":"%s","data_modem_ip_address":"%s","data_wan_ip_address":"%s","sw_version":"%s","fs_version":"%s","os_version":"%s","cfg_version":"%s","sw_last_updated_time":"%s","config_last_saved_time":"%s"}' "$format_version" "$utc_ms" "$cpu_used_percent" "$ram_used_percent" "$linux_uptime_s" "$flash_used_percent" "$srv_link_speed" "$srv_link_duplex" "$srv_link_state" "$srv_ip_address" "$data_link_speed" "$data_link_duplex" "$data_link_state" "$data_modem_ip_address" "$data_wan_ip_address" "$sw_version" "$fs_version" "$os_version" "$cfg_version" "$sw_last_updated_time" "$config_last_saved_time")
+
+  echo "[$json]"
+  sqlite3 $db_status "begin; insert into status values (null, strftime('%s', 'now')*1000, 'PMT', '${json}'); commit;"
+
+  # log event if eth0/1 state changed
+  prev_srv_link_state=$(echo $last_status | python -c "import json, sys; print json.load(sys.stdin)['srv_link_state']")
+  if [ "$prev_srv_link_state" != "$srv_link_state" ]; then
+    if [ "$srv_link_state" = "Down" ]; then
+      if [ "$srv_port" = "eth0" ]; then
+        event_id=104
+      else
+        event_id=106
+      fi
+      bs-amu-logevent -i $event_id -s 1 "{\"info\":\"$srv_port $srv_link_state\"}"
+    fi
+    
+    if [ "$srv_link_state" = "Up" ]; then
+      if [ "$srv_port" = "eth0" ]; then
+        event_id=105
+      else
+        event_id=107
+      fi
+      bs-amu-logevent -i $event_id -s 1 "{\"info\":\"$srv_port $srv_link_state\"}"
+    fi
+  fi
+
+  prev_data_link_state=$(echo $last_status | python -c "import json, sys; print json.load(sys.stdin)['data_link_state']")
+  if [ "$prev_data_link_state" != "$data_link_state" ]; then
+    if [ "$data_link_state" = "Down" ]; then
+      if [ "$data_port" = "eth0" ]; then
+        event_id=104
+      else
+        event_id=106
+      fi
+      bs-amu-logevent -i $event_id -s 1 "{\"info\":\"$data_port $data_link_state\"}"
+    fi
+
+    if [ "$data_link_state" = "Up" ]; then
+      if [ "$data_port" = "eth0" ]; then
+        event_id=105
+      else
+        event_id=107
+      fi
+      bs-amu-logevent -i $event_id -s 1 "{\"info\":\"$data_port $data_link_state\"}"
+    fi
+  fi
+done
+

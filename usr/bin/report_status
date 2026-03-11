@@ -1,0 +1,40 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to report various AMUS status.
+# Current only support network status.
+# 
+# Usage: /usr/bin/report_status status_type
+# 
+######################################################################
+
+case "$1" in
+  net)
+    # network status
+    bs-amu-netstatus
+  ;;
+
+  summary)
+    # AMUS status summary 
+  ;;
+
+  gps)
+    # GPS status
+  ;;
+
+  help)
+    echo "Report AMU status"
+    echo "USAGE: $(basename $0) status_type"
+    echo "  status_type: ['net'|'summary'|'gps']"
+    echo
+  ;;
+    
+  *)
+    echo "Status type unknown"
+  ;;
+esac
+

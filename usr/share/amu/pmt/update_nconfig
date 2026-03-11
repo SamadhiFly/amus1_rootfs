@@ -1,0 +1,49 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Command to update NV network config if it is still in 2.x format.
+# 
+######################################################################
+
+# path to NV config 
+db_filename=/home/bird/config.sqlite
+
+# exit if NV config is not found (i.e., not yet initialized)
+if [ ! -f $db_filename ]; then
+  exit
+fi
+
+json=$(/usr/bin/sqlite3 $db_filename "select json_config  from config where group_name = 'NET' and active = 1")
+
+format_version=$(echo $json | /usr/bin/python -c "import json, sys; print json.load(sys.stdin)['format_version']" | /usr/bin/awk '{printf("%d", $1)}' )
+
+# This script only works with format version 2.x.
+if [ "$format_version" != "2" ]; then
+  exit
+fi
+
+# Invoke net_config_v2tov3 script to do the conversion
+json=$(echo "$json" | /usr/bin/python /usr/share/amu/pmt/net_config_v2tov3)
+
+# net_config_v2tov3 will either return an valid 2.0 format net config or empty string
+# If we get empty string here, we know that the conversion has failed.
+if [ -z "$json" ]; then
+  exit
+fi
+
+# If conversion was successful, update NV database
+echo "Updating net config version to V3: [$json]" 
+/usr/bin/sqlite3 $db_filename "begin; update config set active = 0 where group_name = 'NET'; insert into config values (null, strftime('%s', 'now')*1000, 1, 'NET', 'network', '', '$json'); commit;"
+
+# If RT config has been initialized, update RT config as well so
+# both NV and RT config are in sync. 
+db_filename=/tmp/config.sqlite
+
+if [ -f $db_filename ]; then
+  /usr/bin/sqlite3 $db_filename "begin; update config set active = 0 where group_name = 'NET'; insert into config values (null, strftime('%s', 'now')*1000, 1, 'NET', 'network', '', '$json'); commit;"
+fi
+

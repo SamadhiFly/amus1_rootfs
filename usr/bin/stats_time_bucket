@@ -1,0 +1,141 @@
+#!/bin/bash
+
+# Date: March 25, 2020
+# Author: Angelo Zhang Bing An
+
+
+#VERSION=1 # Initial draft
+VERSION=2 #fixed bug[550] 2020.09.23 angelo 
+
+print_usage()
+{
+    echo "Version $VERSION: set the time bucket for post stats"
+    echo "$(basename $0) -s utc_start -e utc_end -m mode[normal/full] -j job_id"
+    echo "Example Need normal stats from 1970.1.1-1970.1.2 : $(basename $0) -s 1970.1.1(utc) -e 1970.1.2(utc) -m 'normal' -j job_id"
+    exit 1 
+}
+
+insert_event()
+{
+    local event_id=404 # Hardware information changed
+    local result=$1
+    
+    # TODO:
+    # Check software upgrade event details in BMP
+    # We can discuss more details with Rui Feng, and make it more consistent with the software upgrade process, and include additional information such as optional job ID 
+    bs-amu-logevent -i $event_id -s 1 "{\"result\":\"$result\", \"job_id\":\"$job_id\"}"
+}
+
+validate_arg()
+{
+    expr $utc_start "+" 1 &> /dev/null
+    if [ $? -ne 0 ]; then
+        insert_event 'utc_start is not number'
+        print_usage
+        exit 1
+    fi
+
+    expr $utc_end "+" 1 &> /dev/null
+    if [ $? -ne 0 ]; then
+        insert_event 'utc_end is not number'
+        print_usage
+        exit 1
+    fi
+
+    if [ $utc_start -ge $utc_end ]; then
+        insert_event 'utc_end < utc_start'
+        print_usage
+        exit 1
+    fi
+    #utc time to utc time ms
+    #[550] Failed to obtain antenna history period data
+    #root case: Bug535 was fixed, the table entry in the historical state
+    #database was stored utc_time_ms as ms, use us to query database
+    utc_start=$(($utc_start*1000))
+    utc_end=$(($utc_end*1000))
+
+    if [[ $mode == "normal" ]];then
+    #do nothing
+    do_nothing=1
+    elif [[ $mode == "full" ]]; then
+    #do nothing  
+    do_nothing=2
+    else
+        echo "'$mode' is error input"
+        print_usage
+        exit 1
+    fi
+}
+
+bmc_cli()
+{
+    echo stats_time_bucket | nc localhost 30410 &
+    pkill nc
+}
+
+update_db()
+{
+    local historical_db=/home/bird/data/historical_status.sqlite
+    local bmc_db=/home/bird/data/bmc_private.sqlite
+    local old_ustart=$(sqlite3 $bmc_db "select utc_start from bmc_time_bucket order by id desc limit 1")
+    local old_uend=$(sqlite3 $bmc_db "select utc_end from bmc_time_bucket order by id desc limit 1")
+    if [[ $old_ustart == $utc_start ]] && [[ $old_uend == $utc_end ]]; then
+        insert_event 'stats_time bucket, same utc time'
+        exit 1
+    fi
+    local nums=$(sqlite3 $historical_db "select count(*) from acu_status where utc_time_ms > $utc_start and utc_time_ms < $utc_end")
+    if [[ $nums == 0 ]];then
+        insert_event 'stats time bucket, query nums eq 0'
+        exit 1
+    fi
+    local id_list=$(sqlite3 $historical_db "select id from acu_status where utc_time_ms > $utc_start and utc_time_ms < $utc_end")
+    local id=$(echo ${id_list} | sed 's/ /,/g')
+#TODO update id to db
+#    sqlite3 $bmc_db "update bmc_time_bucket set utc_start=$utc_start,  utc_end=$utc_end,  format_id='$mode', id_list=json('[$id]')"
+    sqlite3 $bmc_db "insert into bmc_time_bucket (utc_start, utc_end, format_id, id_list) values ($utc_start, $utc_end, '$mode', json('[$id]'))"
+    if [ $? -eq 1 ]; then
+        insert_event 'stats time bucket, Failed to update database'
+        exit 1
+    fi
+}
+
+########################################
+# Main start here
+########################################
+
+if [[ $# != 8 ]]; then
+    echo "input arg list num is error"
+    print_usage
+    exit 1
+fi 
+
+while getopts "s:e:m:j:" opt; do
+    case "${opt}" in
+        s)
+            utc_start=$OPTARG
+        ;;
+        e)
+            utc_end=$OPTARG           
+        ;;
+        m)
+            mode=$OPTARG           
+        ;;
+        j)
+            job_id=$OPTARG           
+        ;;
+        \?)
+            echo "Invalid option ($OPTARG)"
+            print_usage                
+        ;;
+    esac
+done
+
+echo "ustart:$utc_start uend:$utc_end mode:$mode"
+validate_arg
+#update arg list to db 
+update_db
+#call bmc cli
+bmc_cli
+
+insert_event 'successful'
+

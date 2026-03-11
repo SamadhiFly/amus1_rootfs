@@ -1,0 +1,45 @@
+#!/bin/bash -e
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Check if a process is running given its pid file
+# Usage: see print_usage()
+# Return: 0 if process is still running, 1 otherwise 
+######################################################################
+
+print_usage()
+{
+  echo "Check if a process is running given its pid file"
+  echo "$(basename $0) /path/to/pid_file"
+  exit 1
+}
+
+if [ -z "$1" ]; then
+  print_usage
+  exit 1
+fi
+
+if [ ! -f "$1" ]; then
+  exit 1
+else
+  PID=$(awk 'NR==1 {printf "%d", $1}' $1)
+  if [ "$PID" = "0" ]; then
+    exit 1
+  fi
+
+  RESULT=$(ps -o pid= -p $PID | awk 'NR==1 {printf "%d", $1}')
+  if [ "$RESULT" = "0" ]; then
+    exit 1
+  fi
+
+  if [ "$PID" = "$RESULT" ]; then 
+    echo "$RESULT"
+    exit 0
+  else
+    exit 1
+  fi
+fi
+

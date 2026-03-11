@@ -1,0 +1,12 @@
+<?
+include 'include/auth.php';
+include 'include/header.php';
+?>
+<noframes>This interface requires a frame-enabled browser.</noframes>
+<frameset cols="20%,80%">
+  <frame src="file/menu.php" name="menu">
+  <frame src="file/display.php" name="display">
+</frameset>
+<?
+include('include/footer.php');
+?>

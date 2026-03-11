@@ -1,0 +1,12 @@
+Package: vlan
+Version: 1.9-r0
+Description: VLAN provides vconfig utility
+ VLAN provides vconfig utility.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9-vfp-neon
+OE: vlan
+Depends: libc6 (>= 2.21)
+Source: http://vlan.sourcearchive.com/downloads/1.9-3ubuntu9/vlan_1.9.orig.tar.gz file://no-HOME-includes.patch

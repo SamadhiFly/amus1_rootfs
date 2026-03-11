@@ -1,0 +1,13 @@
+Package: geos
+Version: 3.4.2-r0
+Description: geos version 3.4.2-r0
+ GEOS - Geometry Engine, Open Source
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: LGPLv2.1+
+Architecture: cortexa9-vfp-neon
+OE: geos
+Homepage: http://trac.osgeo.org/geos/
+Depends: geoslib, libgeos-c1
+Source: http://download.osgeo.org/geos/geos-3.4.2.tar.bz2 file://geos-config-Add-includedir-variable.patch

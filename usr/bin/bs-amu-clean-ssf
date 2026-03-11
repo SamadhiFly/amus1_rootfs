@@ -1,0 +1,58 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Clean up /home/bird/data/ssf directory.
+# Usage: see print_usage()
+######################################################################
+
+ssf_dir=/home/bird/data/ssf
+mlimit=100 #default no more than 100MB
+dlimit=90  #default no older than 90 days
+
+print_usage()
+{
+  echo "Remove older SSF files 1) if $ssf_dir size exceeds ${mlimit}MB or 2) SSF files are older than $dlimit days"
+  echo "Usage: $(basename $0) [-m mb] [-d days]"
+}
+
+while getopts ":m:d:" opt; do
+  case "${opt}" in
+    m)
+      mlimit=$(echo "${OPTARG}" | awk '{printf("%d", $1)}')
+    ;;
+    d)
+      dlimit=$(echo "${OPTARG}" | awk '{printf("%d", $1)}')
+    ;;    
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+mkdir -p ${ssf_dir}
+
+older_files=$( find ${ssf_dir}/ -name "*.ssf" -type f -mtime +${dlimit} -print )
+if [ ! -z "$older_files" ]; then
+  for f in $older_files ; do
+    echo "Removing older file: $f" | /usr/bin/write_log -p W
+    rm -rf ${f}
+  done    
+fi
+
+while true ; do
+  dir_size=$(du -m ${ssf_dir} | tail -n 1 | awk '{printf("%d", $1)}')
+  if [[ $dir_size -ge $mlimit ]]; then
+    to_del=$(ls -t -1 ${ssf_dir}/ | tail -1)
+    echo "SSF dir size=${dir_size}MB, removing file: $to_del" | /usr/bin/write_log -p W
+    rm -rf ${ssf_dir}/${to_del}
+  else
+    break
+  fi
+done
+

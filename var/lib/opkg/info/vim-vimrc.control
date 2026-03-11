@@ -1,0 +1,11 @@
+Package: vim-vimrc
+Version: 7.4.481-r0
+Description: Vi IMproved - enhanced vi editor
+ Vi IMproved - enhanced vi editor.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: vim
+Architecture: cortexa9-vfp-neon
+OE: vim
+Source: hg://vim.googlecode.com/hg/;protocol=https;module=vim file://disable_acl_header_check.patch;patchdir=.. file://vim-add-knob-whether-elf.h-are-checked.patch;patchdir=..

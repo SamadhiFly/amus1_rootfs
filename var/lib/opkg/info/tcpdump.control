@@ -1,0 +1,13 @@
+Package: tcpdump
+Version: 4.6.1-r0
+Description: A sophisticated network protocol analyzer
+ A sophisticated network protocol analyzer.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9-vfp-neon
+OE: tcpdump
+Homepage: http://www.tcpdump.org/
+Depends: libcrypto1.0.0 (>= 1.0.2d), libpcap1 (>= 1.6.2), libc6 (>= 2.21)
+Source: http://www.tcpdump.org/release/tcpdump-4.6.1.tar.gz file://configure.patch file://unnecessary-to-check-libpcap.patch file://tcpdump-configure-dlpi.patch file://tcpdump-cross-getaddrinfo.patch file://add-ptest.patch file://run-ptest

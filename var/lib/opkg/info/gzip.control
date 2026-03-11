@@ -1,0 +1,15 @@
+Package: gzip
+Version: 1.6-r0
+Description: Standard GNU compressor
+ GNU Gzip is a popular data compression program originally written by
+ Jean-loup Gailly for the GNU project. Mark Adler wrote the decompression
+ part
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+
+Architecture: cortexa9-vfp-neon
+OE: gzip
+Homepage: http://www.gnu.org/software/gzip/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://ftp.gnu.org/gnu/gzip/gzip-1.6.tar.gz file://wrong-path-fix.patch

@@ -1,0 +1,8 @@
+Package: bs-amu-dsb
+Version: 1.0.8
+Architecture: all
+Maintainer: THISS Technologies Pte Ltd <info@thiss.net>
+Installed-Size: 1785
+Section: devel
+Priority: optional
+Description: AMU Product Management Tools.

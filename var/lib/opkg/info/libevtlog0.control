@@ -1,0 +1,20 @@
+Package: libevtlog0
+Version: 0.2.13-r0
+Description: Replacement syslog API
+ The EventLog library aims to be a replacement of the               simple
+ syslog() API provided on UNIX systems. The               major difference
+ between EventLog and syslog is that               EventLog tries to add
+ structure to messages. EventLog               provides an interface to
+ build, format and output an               event record. The exact format
+ and output method can               be customized by the administrator
+ via a configuration               file. his package is the runtime part
+ of the library.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9-vfp-neon
+OE: eventlog
+Depends: libc6 (>= 2.21)
+Provides: eventlog
+Source: http://www.balabit.com/downloads/files/syslog-ng/open-source-edition/3.4.2/source/eventlog_0.2.13.tar.gz

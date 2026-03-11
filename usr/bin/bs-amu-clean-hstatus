@@ -1,0 +1,74 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Clean up historical status database
+# Usage: see print_usage()
+######################################################################
+
+print_usage()
+{
+  echo "Clean historical status for records older than XXX days"
+  echo "Usage: $(basename $0) -d days"
+  echo "Example: $(basename $0) -d 45"
+}
+
+while getopts ":d:" o; do
+  case "${o}" in
+    d)
+      age=$(echo "${OPTARG}" | awk '{printf("%d", $1)}')
+    ;;
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+if [ ! -f /home/bird/data/historical_status.sqlite ]; then
+  echo "historical status database not found" | /usr/bin/write_log -p W
+  echo 
+  exit 1
+fi
+
+if [ "$age" -lt 30 ]; then
+  echo "ERROR: age must be larger that 30 days"
+  echo
+  exit 1 
+fi
+
+sql_command()
+{
+  db_filename=$1
+  sql="$2"
+  sqlite3 $db_filename "$sql"
+}
+
+check_table()
+{
+  db_filename=$1
+  table_name=$2
+
+  result=$(sqlite3 $db_filename "select name from sqlite_master where name = '$table_name'")
+  if [ ! -z "$result" ]; then
+    return 0
+  fi
+
+  return 1
+}
+
+tables="acu_status ant_status bmc_status pmt_status"
+for t in $tables ; do
+if check_table /home/bird/data/historical_status.sqlite $t ; then
+  sql="begin; delete from $t where utc_time_ms <= (strftime('%s', 'now')*1000 - $age*24*60*60*1000); commit"
+  sql_command  /home/bird/data/historical_status.sqlite "$sql"
+else
+  echo "table \"$t\" not present in historical status" | /usr/bin/write_log -p W
+  echo
+fi
+done
+

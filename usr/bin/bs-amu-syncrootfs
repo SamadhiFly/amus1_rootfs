@@ -1,0 +1,63 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Synchronize primary rootfs partition to secondary rootfs partition
+# Usage: see print_usage()
+######################################################################
+
+print_usage()
+{
+  echo "Sync active root fs contents to backup root;"
+  echo "$(basename $0)"
+  echo
+}
+
+boot=/dev/mmcblk0p1
+rootfs1=/dev/mmcblk0p2
+rootfs2=/dev/mmcblk0p3
+
+boot_dir=/mnt/p1
+rootfs1_dir=/mnt/p2
+rootfs2_dir=/mnt/p3
+
+mkdir -p $boot_dir $rootfs1_dir $rootfs2_dir
+
+# BOOT partition may already mount
+# to somewhere else, unmount it first
+if mount | grep "$boot" ; then
+  umount $boot
+fi
+
+mount -t vfat $boot $boot_dir
+
+if [ -f $boot_dir/rootfs.txt ]; then
+  source $boot_dir/rootfs.txt
+fi
+
+umount $boot
+
+if [ "$root" = "/dev/mmcblk0p2" ]; then
+  backup=/dev/mmcblk0p3
+  backup_dir=$rootfs2_dir  
+else
+  backup=/dev/mmcblk0p2
+  backup_dir=$rootfs1_dir
+fi
+
+# BACKUP partition may also mount already
+# to somewhere else, umountit first
+if mount | grep "$backup" ; then
+  umount $backup
+fi
+
+mount -t ext4 $backup $backup_dir
+
+# sync the current rootfs to the backup
+rsync -azx / $backup_dir/
+
+umount $backup_dir
+

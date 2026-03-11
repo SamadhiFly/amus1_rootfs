@@ -1,0 +1,35 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Print AMUS Product CLI help
+######################################################################
+
+cmd_list="help install_sw init_config import_config export_config save_config reboot openamip report_status net_config mod_cli"
+
+for cmd in $cmd_list ; do
+  if [ "$cmd" = "help" ]; then
+    echo "AMU Product CLI help"
+    echo "USAGE: $(basename $0)"
+    echo 
+    continue
+  fi
+
+  if [ "$cmd" = "reboot" ]; then
+    echo "Reboot AMU"
+    echo "USAGE: /sbin/reboot"
+    echo 
+    continue
+  fi
+
+  if which $cmd ; then
+    $cmd help   
+  else
+    echo "Command: $cmd in not available"
+    echo 
+  fi
+done
+

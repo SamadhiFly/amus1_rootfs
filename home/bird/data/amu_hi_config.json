@@ -1,0 +1,91 @@
+{
+    "AMU": {
+        "AMU_PCB_ID": 11,
+        "AMU_PCB_Str": "AMUS6.1",
+        "AZ_DAC_Start_Level": 320,
+        "EL_DAC_Start_Level": 320,
+        "PCB_BLDC_Scal_Ratio_Res": 1,
+        "RL_DAC_Start_Level": 320,
+        "Tuner_Str": "STID135",
+        "Tuner_Type_ID": 4
+    },
+    "BUC": {
+        "BUC_Model": "NJT8376UFC9",
+        "BUC_Pwr_Type": 16
+    },
+    "Encoder": {
+        "AZ_ENCODER": {
+            "Encoder_Attribute": 2,
+            "Encoder_Gear_Teeth": 20,
+            "Encoder_Str": "r2",
+            "Encoder_Type": 3,
+            "Rel_Counts_Per_Pulses": 2,
+            "Rel_Pulses_Per_Revolution": 1024
+        },
+        "EL_ENCODER": {
+            "Encoder_Attribute": 2,
+            "Encoder_Gear_Teeth": 0,
+            "Encoder_Str": "r1",
+            "Encoder_Type": 0,
+            "Rel_Counts_Per_Pulses": 0,
+            "Rel_Pulses_Per_Revolution": 0
+        },
+        "RL_ENCODER": {
+            "Encoder_Attribute": 2,
+            "Encoder_Gear_Teeth": 0,
+            "Encoder_Str": "r1",
+            "Encoder_Type": 0,
+            "Rel_Counts_Per_Pulses": 0,
+            "Rel_Pulses_Per_Revolution": 0
+        }
+    },
+    "Format_Version": 1,
+    "HI_Tool_Version": "3.9",
+    "Model": {
+        "AZ_Encoder_Reverse_Tag": true,
+        "AZ_Equivalent_Base_Gear_Teeth": 640,
+        "AZ_Motor_Gear_Teeth": 20,
+        "Analog_Gyro_Reverse_Tag": false,
+        "Analog_Tilt_Reverse_Tag": false,
+        "Ant_Model_Str": "VS100K",
+        "Ant_Model_valid": true,
+        "Antenna_Size": 100,
+        "EL_Reverse_Tag": true,
+        "QMC5883_Reverse_Tag": true,
+        "SB_Reverse_Tag": true,
+        "SK_Pulses_Per_Feed_Degree": 711.111083984375,
+        "Skew_Limit_Degree": -37.5,
+        "Slip_Ring_Enabled": true,
+        "Tilt_Arm_Angle_Degs": 20
+    },
+    "Motor_Safety_Checks_Enabled": true,
+    "Safe_Mode": {
+        "ASH_FFT_Ampulite_Threshold": 4,
+        "EL_Adjust_Degrees": 45,
+        "Enable": true
+    },
+    "Sensor": {
+        "RM_SB_Motor_Flag": true,
+        "Sensor_Str": "dsb3.3",
+        "Sensor_Type": 2
+    },
+    "Sensor_Config": {
+        "Analog_Gyro_Enabled": false,
+        "Analog_Tilt_Enabled": false,
+        "Attitude_Board_Enabled": true,
+        "Attitude_Board_Uart_Device": "/dev/ttyUL2",
+        "Bit_Rate_BPS": 115200,
+        "IIC_ID": 1,
+        "Operating_Compass_Sensor_ID": 4,
+        "Operating_Gyro_Sensor_ID": 4,
+        "Operating_Tilt_Sensor_ID": 4,
+        "QMC5883_Enabled": false
+    },
+    "Sensor_Connector_ID": 1,
+    "Sensor_SPI_Enabled": true,
+    "Sensor_Safety_Checks_Enabled": true,
+    "State_Machine": {
+        "SM_Enable": true,
+        "SM_Version": 6
+    }
+}

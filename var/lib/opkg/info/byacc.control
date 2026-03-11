@@ -1,0 +1,15 @@
+Package: byacc
+Version: 20141128-r0
+Description: Berkeley LALR Yacc parser generator
+ A parser generator utility that reads a grammar specification from a file
+ and generates an LR(1) parser for it.  The parsers consist of a set of
+ LALR(1) parsing tables and a driver routine written in the C programming
+ language.
+Section: devel
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: PD
+Architecture: cortexa9-vfp-neon
+OE: byacc
+Depends: libc6 (>= 2.21)
+Source: ftp://invisible-island.net/byacc/byacc-20141128.tgz

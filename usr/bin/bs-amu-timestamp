@@ -1,0 +1,20 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Periodically write to timestamp file, use for determining 
+# last AMUS power off time
+######################################################################
+
+TIMESTAMP_FILE=/home/bird/data/.timestamp
+
+#[337]  Incorrect power on/off reported time ZBA 2020.1.15 begin
+#Reasons:For easier parsing
+
+/bin/date -u +"%Y-%m-%d %H:%M:%S" >${TIMESTAMP_FILE}
+
+#[337]  Incorrect power on/off reported time ZBA 2020.1.15 end
+

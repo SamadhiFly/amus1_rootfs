@@ -1,0 +1,123 @@
+#!/bin/sh
+
+MODULE=pmt
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+
+setup_init() {
+  cp -f /usr/share/amu/$MODULE/php.ini     /etc/
+  # To fix ZT BUG557, install_sw is not updated during PMT installation
+  # but on the next time AMU is powered on.
+  # cp -f /usr/share/amu/$MODULE/install_sw  /usr/bin
+  cp -f /usr/share/amu/$MODULE/write_log   /usr/bin
+
+  echo "Updating lighttpd config file..."
+  cp -f /usr/share/amu/$MODULE/lighttpd.conf /etc/lighttpd.conf
+    
+  # update /etc/profile 
+  echo "Updating Zynq profile..."
+  cp /usr/share/amu/$MODULE/profile.zynq /etc/profile
+    
+  echo "Installing watchdog timer script..."
+  cp /usr/share/amu/$MODULE/set_watchdog_timer /usr/bin/
+
+  echo "Updating init script..."
+  cp /usr/share/amu/pmt/bs-amu-$MODULE.init /etc/init.d/bs-amu-$MODULE
+
+  echo "Updating power cycle startup script..."
+  mv /usr/bin/bs-amu-power-cycle /etc/init.d
+     
+  if [ -x /etc/init.d/bs-amu-$MODULE ]; then
+    echo "Installing init script at startup..."
+    update-rc.d bs-amu-$MODULE defaults 99 01 > /dev/null
+  fi
+
+  if [ -x /etc/init.d/bs-amu-power-cycle ]; then
+    echo "Installing bs-amu-power-cycle script at startup..."
+    # Must run before crond 90 as one of the cron job is updating
+    # the timestamp file every 1m
+    update-rc.d bs-amu-power-cycle defaults 80 01 > /dev/null
+  fi
+
+  # login accouts
+  if [ -x  /usr/share/amu/$MODULE/add_login ]; then
+    echo "Update root login password..." 
+    /usr/share/amu/$MODULE/add_login root starlight2021
+
+    echo "Update bird login password..." 
+    /usr/share/amu/$MODULE/add_login bird bird
+  
+    echo "Update admin login password..." 
+    /usr/share/amu/$MODULE/add_login admin 123456a
+
+    echo "Update netop login password..." 
+    /usr/share/amu/$MODULE/add_login netop 123456
+  fi
+
+  # update sudoers  
+  cp /usr/share/amu/$MODULE/sudoers /etc   
+
+  # Install/update cron jobs  
+  if [ -f /usr/share/amu/$MODULE/cron.jobs ]; then
+    echo "Updating cron jobs..."
+    crontab -u root /usr/share/amu/$MODULE/cron.jobs
+  fi
+
+  if [ -f /home/root/.fresh ]; then
+    echo "Init sqlite..."
+    if sqlite_init ; then
+      rm /home/root/.fresh
+    fi
+  #else
+  #  /usr/share/amu/pmt/update_nconfig
+  fi
+
+  if [ ! -f /usr/share/amu/pmt/frps.ini ]; then
+    cp /usr/share/amu/pmt/frps.ini.bak /usr/share/amu/pmt/frps.ini
+  fi
+  
+  # Disable the AngStorm way of maintaining system time and hardware clock
+  # as we have GPS 
+  rm -f /etc/timestamp
+  if [ -x /etc/init.d/save-rtc.sh ]; then
+    rm -f /etc/init.d/save-rtc.sh
+    update-rc.d -f save-rtc.sh remove
+  fi
+  
+  echo "Starting $MODULE..."
+  /etc/init.d/bs-amu-$MODULE restart
+}
+
+case "$1" in
+  configure)
+    echo ""
+    echo "===== Postinstall Commencing : bs-amu-$MODULE ====="
+    echo ""
+
+    setup_init
+
+    echo ""
+    echo "===== Postinstall Complete : bs-amu-$MODULE ====="
+    echo ""
+    ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+    ;;
+esac
+
+exit 0
+
+

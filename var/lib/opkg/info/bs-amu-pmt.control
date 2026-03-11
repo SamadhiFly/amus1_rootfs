@@ -1,0 +1,8 @@
+Package: bs-amu-pmt
+Version: 0.53.0
+Architecture: all
+Maintainer: THISS Technologies Pte Ltd <info@thiss.net>
+Installed-Size: 3359
+Section: devel
+Priority: optional
+Description: AMU Product Management Tools.

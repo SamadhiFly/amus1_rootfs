@@ -1,0 +1,76 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Save RT config to persistent storage so it becomes the active NV config.
+# Usage: see print_usage()
+#
+######################################################################
+
+# default
+active_only=0
+
+# Print help
+print_usage()
+{
+  echo "Save RT config to persistent storage"
+  echo "Usage: $(basename $0) [active|help]"
+  echo "  active: save only active config items" 
+  echo "  help  : this message"
+  echo 
+}
+
+# Make sure the saved config get a unque file name. 
+save_date=$(date -u +%Y%m%d%H%M%S)
+outfile="/home/bird/configs/config-$save_date.sqlite"
+
+# Print usage/help 
+if [ "$1" = "help" ]; then
+  print_usage
+  exit 0
+fi
+
+# Got request to only save active config items
+if [ "$1" = "active" ]; then
+  active_only=1  
+fi
+
+# if RT config not exist, log error and exit
+if [ ! -f /tmp/config.sqlite ]; then
+  /usr/bin/write_log -p E "Source RT Config not found!"
+  exit 1
+fi
+
+# Create an full dump of the RT config
+/usr/bin/sqlite3 /tmp/config.sqlite ".dump" > /tmp/$save_date.sql
+
+# If failed to create the dump, log error and exit
+if [ ! -f /tmp/$save_date.sql ] ; then
+  /usr/bin/write_log -p E "Save config was not successful"
+  exit 1  
+fi  
+
+# Create the database file in persistent storage from the dump.
+/usr/bin/sqlite3 $outfile < /tmp/$save_date.sql
+
+if [ ! -f "$outfile" ]; then
+  /usr/bin/write_log -p E "Save config was not successful"
+  exit 1    
+fi
+
+# If the request is to save only active config items, delete all non-active
+# config items.
+if [ "$active_only" = "1" ]; then
+ sql="begin; delete from config where active != 1; commit"
+ sqlite3 $outfile "$sql"
+ sqlite3 $outfile "VACUUM;"
+fi
+
+# Make it the active NV config
+ln -f -s $outfile /home/bird/config.sqlite
+
+exit 0
+

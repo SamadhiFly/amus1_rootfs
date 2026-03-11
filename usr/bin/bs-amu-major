@@ -1,0 +1,19 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Extract mijor version number from input (in the form of major.minor.variant)
+######################################################################
+
+if [ -z "$1" ]; then
+  echo "0"
+else
+  MAJOR=$(echo $1 | awk -F'.' '{print $1}')
+  echo $MAJOR
+fi
+
+exit 0
+

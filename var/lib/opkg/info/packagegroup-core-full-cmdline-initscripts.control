@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline-initscripts
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: ethtool, initscripts, sysklogd, sysvinit, busybox
+Provides: task-core-initscripts, packagegroup-core-initscripts
+Replaces: task-core-initscripts, packagegroup-core-initscripts
+Conflicts: task-core-initscripts, packagegroup-core-initscripts
+Source: None

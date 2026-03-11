@@ -1,0 +1,2582 @@
+Package: shadow-securetty
+Version: 4.2.1-r3
+Status: install ok installed
+Architecture: microzed_zynq7
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: openssl-misc
+Version: 1.0.2d-r0
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+
+Package: libbz2-0
+Version: 1.0.6-r5
+Depends: libc6 (>= 2.21)
+Provides: libbz2
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: syslog-ng
+Version: 3.5.4.1-r0
+Depends: libssl1.0.0 (>= 1.0.2d), libcrypto1.0.0 (>= 1.0.2d), syslog-ng-libs (>= 3.5.4.1), gawk, update-rc.d, libc6 (>= 2.21), libglib-2.0-0 (>= 2.42.1), update-alternatives-opkg, libevtlog0 (>= 0.2.13)
+Recommends: update-rc.d
+Provides: syslog-ng-systemd
+Replaces: syslog-ng-systemd
+Conflicts: syslog-ng-systemd
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: sqlite3
+Version: 3:3.11.0-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001001
+
+Package: libmcrypt4
+Version: 2.5.8-r0
+Depends: libc6 (>= 2.21)
+Provides: libmcrypt
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: libevtlog0
+Version: 0.2.13-r0
+Depends: libc6 (>= 2.21)
+Provides: eventlog
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: iputils-arping
+Version: s20121221-r0
+Depends: libcap2 (>= 2.24), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: lighttpd-module-indexfile
+Version: 1.4.35-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: busybox-syslog
+Version: 1.23.1-r0
+Depends: update-alternatives-opkg
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/syslog-startup.conf.busybox 638acd6813015513fbd0c91d5918be4e
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: iputils-ping6
+Version: s20121221-r0
+Depends: libcap2 (>= 2.24), update-alternatives-opkg, libgnutls-openssl27 (>= 3.3.12), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: ltrace
+Version: 1:7.2+git0+f44b284219-r0
+Depends: elfutils, libstdc++6 (>= linaro-4.9), libelf1 (>= 0.161), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1488959596
+
+Package: sysstat
+Version: 11.0.2-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1488959715
+
+Package: libwrap0
+Version: 7.6-r10
+Depends: libc6 (>= 2.21)
+Provides: libwrap
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: perl-module-tie-hash
+Version: 5.20.0-r1
+Depends: perl-module-carp, perl-module-warnings-register, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460961080
+Auto-Installed: yes
+
+Package: libxdmcp6
+Version: 1:1.1.1-r0
+Depends: libc6 (>= 2.21)
+Provides: libxdmcp
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: php-cli
+Version: 5.5.21-r0
+Depends: libssl1.0.0 (>= 1.0.2d), libmysqlclient18 (>= 5.5.41), libxml2 (>= 2.9.2), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcrypto1.0.0 (>= 1.0.2d), libsqlite3-0 (>= 3.8.7.4), libc6 (>= 2.21), php, libbz2-0 (>= 1.0.6)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490266914
+
+Package: libc6
+Version: 2.21-r0
+Provides: rtld(GNU_HASH), eglibc, glibc
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: opkg
+Version: 1:0.2.4-r0
+Depends: update-alternatives-opkg, opkg-arch-config, run-postinsts, libopkg1 (>= 0.2.4), libc6 (>= 2.21)
+Provides: opkg-collateral
+Replaces: opkg-collateral, opkg-nogpg
+Conflicts: opkg-collateral
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/opkg/opkg.conf 882b918d3b6f80af40390aaca25d3f2e
+Installed-Time: 1460950349
+
+Package: python-readline
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), libreadline6 (>= 6.3), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: python-netclient
+Version: 2.7.9-r1
+Depends: python-mime, python-datetime, python-core, python-io, python-logging, python-crypt, python-lang
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: iperf
+Version: 2.0.5-r0
+Depends: libgcc1 (>= linaro-4.9), libstdc++6 (>= linaro-4.9), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+
+Package: bs-amu-gui
+Version: 0.3.12
+Status: install user installed
+Architecture: all
+Installed-Time: 1693019151
+
+Package: util-linux-mkfs
+Version: 2.25.2-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: python-datetime
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), python-codecs, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libcom-err2
+Version: 1.42.9-r0
+Depends: libc6 (>= 2.21)
+Provides: libcomerr
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: python-codecs
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), python-lang, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libnetfilter-queue1
+Version: 1.0.2-r0
+Depends: libnfnetlink0 (>= 1.0.1), libmnl0 (>= 1.0.3), libc6 (>= 2.21)
+Provides: libnetfilter-queue
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+Auto-Installed: yes
+
+Package: elfutils
+Version: 0.161-r0
+Depends: libstdc++6 (>= linaro-4.9), libdw1 (>= 0.161), libelf1 (>= 0.161), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: pax
+Version: 3.4-r2
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: diffutils
+Version: 3.3-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: busybox
+Version: 1.23.1-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Recommends: update-rc.d, busybox-syslog, busybox-udhcpc
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: psmisc
+Version: 22.21-r0
+Depends: fuser, pstree, killall
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: makedevs
+Version: 1.0.1-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: util-linux-umount
+Version: 2.25.2-r1
+Depends: libmount1 (>= 2.25.2), update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: glibc-locale-en-gb
+Version: 2.21-r0
+Recommends: virtual-locale-en-gb
+Provides: glibc-locale, en-gb-translation
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950368
+
+Package: lsof
+Version: 4.88-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1488959596
+
+Package: libssl1.0.0
+Version: 1.0.2d-r0
+Depends: libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21)
+Provides: libssl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: packagegroup-core-ssh-openssh
+Version: 1.0-r1
+Depends: openssh
+Status: install user installed
+Architecture: all
+Installed-Time: 1460950348
+
+Package: packagegroup-core-full-cmdline
+Version: 1.0-r6
+Depends: packagegroup-core-full-cmdline-sys-services, packagegroup-core-full-cmdline-libs, packagegroup-core-full-cmdline-initscripts, packagegroup-core-full-cmdline-multiuser, packagegroup-core-full-cmdline-extended, packagegroup-core-full-cmdline-dev-utils, packagegroup-core-full-cmdline-utils
+Provides: task-core-basic, packagegroup-core-basic
+Replaces: task-core-basic, packagegroup-core-basic
+Conflicts: task-core-basic, packagegroup-core-basic
+Status: install user installed
+Architecture: all
+Installed-Time: 1460950348
+
+Package: syslog-ng-libs
+Version: 3.5.4.1-r0
+Depends: libssl1.0.0 (>= 1.0.2d), libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21), libglib-2.0-0 (>= 2.42.1), libevtlog0 (>= 0.2.13), libuuid1 (>= 2.25.2)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: update-alternatives-opkg
+Version: 0.1.8+git0+53274f0875-r0
+Provides: update-alternatives-cworth, update-alternatives
+Replaces: update-alternatives-cworth
+Conflicts: update-alternatives-cworth
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: cronie
+Version: 1.4.12-r0
+Depends: shadow, initscripts-functions, base-passwd, libc6 (>= 2.21), base-files
+Recommends: update-rc.d
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/crontab 5c934de17b03d73b6a36d20ebb036fdd
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: lighttpd-module-fastcgi
+Version: 1.4.35-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: lighttpd-module-rewrite
+Version: 1.4.35-r1
+Depends: libpcre1 (>= 8.38), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: python-json
+Version: 2.7.9-r1
+Depends: libpython2.7-1.0 (>= 2.7.9), python-codecs, python-math, python-core, libc6 (>= 2.21), python-re
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001001
+
+Package: binutils
+Version: 2.24-r0
+Depends: update-alternatives-opkg, libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: binutils-symlinks
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1463535612
+
+Package: bs-amu-acu
+Version: 1.1.51
+Status: install user installed
+Architecture: armhf
+Installed-Time: 1693019140
+
+Package: busybox-udhcpc
+Version: 1.23.1-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: python-lang
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: i2c-tools-misc
+Version: 3.1.1-r0
+Depends: perl
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: perl-module-io-select
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-exporter, perl-module-vars, perl-module-warnings-register, perl
+Provides: perl-module-arm-poky-linux-gnueabi-io-select
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+
+Package: openssh-ssh
+Version: 6.7p1-r0
+Depends: libcrypto1.0.0 (>= 1.0.2d), update-alternatives-opkg, libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: ssh
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/ssh/ssh_config d67fa61ccbd8e0dbdfd2fb29d28cf715
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: bash
+Version: 4.3-r1
+Depends: update-alternatives-opkg, libc6 (>= 2.21), libtinfo5 (>= 5.9), base-files
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: openssh
+Version: 6.7p1-r0
+Depends: openssh-scp, openssh-ssh, openssh-keygen, openssh-sshd
+Recommends: update-rc.d
+Conflicts: dropbear
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: m4
+Version: 1.4.17-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: conntrack-tools
+Version: 1.4.0-r0
+Depends: libnetfilter-cttimeout1 (>= 1.0.0), libc6 (>= 2.21), libnetfilter-conntrack3 (>= 1.0.2), libmnl0 (>= 1.0.3), libnetfilter-queue1 (>= 1.0.2), libnetfilter-cthelper0 (>= 1.0.0), libnfnetlink0 (>= 1.0.1)
+Recommends: update-rc.d
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+
+Package: libffi6
+Version: 3.2.1-r0
+Depends: libgcc1 (>= linaro-4.9), libc6 (>= 2.21)
+Provides: libffi
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: strace
+Version: 4.9-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1488959596
+
+Package: openssl
+Version: 1.0.2d-r0
+Depends: libssl1.0.0 (>= 1.0.2d), libc6 (>= 2.21), libcrypto1.0.0 (>= 1.0.2d)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: dbus-1
+Version: 1.8.10-r0
+Depends: libx11-6 (>= 1.6.2), libexpat1 (>= 2.1.0), libdbus-1-3 (>= 1.8.10), libc6 (>= 2.21), base-files, shadow, initscripts-functions, base-passwd
+Recommends: update-rc.d
+Provides: dbus, dbus-x11
+Replaces: dbus-x11
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/dbus-1/system.conf 65144a694a566e2efe424636cfd6c53d
+ /etc/dbus-1/session.conf e88aa2383587cc773443d9be08e5a838
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: nettle
+Version: 2.7.1-r0
+Depends: libgmp10 (>= 6.0.0), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: time
+Version: 1.7-r2
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: vlan
+Version: 1.9-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001001
+
+Package: perl-module-io-socket-unix
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-carp, perl-module-io-socket, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252160
+Auto-Installed: yes
+
+Package: modutils-initscripts
+Version: 1.0-r7
+Recommends: update-rc.d
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: glibc-binary-localedata-en-gb
+Version: 2.21-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: lvm2
+Version: 2.02.97-r4.0
+Depends: libudev0 (>= 182), bash, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/lvm/lvm.conf 8ca8f0cdab06cf78cf57bbc997357f60
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: initscripts-functions
+Version: 1.0-r155
+Depends: update-alternatives-opkg
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: net-tools
+Version: 1.60-25-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: minicom
+Version: 2.7-r0
+Depends: libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: mc
+Version: 4.8.13-r0
+Depends: libglib-2.0-0 (>= 2.42.1), libncursesw5 (>= 5.9), libtinfo5 (>= 5.9), ncurses-terminfo, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: acl
+Version: 2.2.52-r0
+Depends: libacl1 (>= 2.2.52), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: libopkg1
+Version: 1:0.2.4-r0
+Depends: libc6 (>= 2.21)
+Provides: libopkg
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950349
+Auto-Installed: yes
+
+Package: lighttpd-module-dirlisting
+Version: 1.4.35-r1
+Depends: libpcre1 (>= 8.38), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: iputils-clockdiff
+Version: s20121221-r0
+Depends: libcap2 (>= 2.24), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: libuuid1
+Version: 2.25.2-r1
+Depends: libc6 (>= 2.21)
+Provides: util-linux-libuuid
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: mc-locale-en-gb
+Version: 4.8.13-r0
+Recommends: virtual-locale-en-gb
+Provides: en-gb-translation, mc-locale
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950368
+
+Package: sysfsutils
+Version: 2.1.0-r5
+Depends: libsysfs2 (>= 2.1.0), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: perl-module-fcntl
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-exporter, libc6 (>= 2.21), perl-module-xsloader, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460961080
+Auto-Installed: yes
+
+Package: iputils-traceroute6
+Version: s20121221-r0
+Depends: libcap2 (>= 2.24), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: mc-helpers
+Version: 4.8.13-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: base-files
+Version: 3.0.14-r89
+Status: install ok installed
+Architecture: microzed_zynq7
+Conffiles:
+ /etc/fstab 34d3473dd8a73b0f4da6f4e61d4f3ec5
+ /etc/hostname 5709bb77e9a5f25648e12228f1dd8259
+ /etc/shells a0b758b0ae1eaefda1dfb8b031f7a903
+ /etc/motd d41d8cd98f00b204e9800998ecf8427e
+ /etc/nsswitch.conf 109e33e2c91d1853b5bc56078a96aa18
+ /etc/profile 37eedfe899acf962aa838346805561c9
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: openssh-sshd
+Version: 6.7p1-r0
+Depends: libc6 (>= 2.21), libz1 (>= 1.2.8), openssh-keygen, libcrypto1.0.0 (>= 1.0.2d), base-files, shadow, base-passwd
+Provides: sshd
+Conflicts: dropbear
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/ssh/sshd_config b0b3093d1eff3543b4e0ba122970ddf4
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: sysvinit-inittab
+Version: 2.88dsf-r10
+Status: install ok installed
+Architecture: microzed_zynq7
+Conffiles:
+ /etc/inittab ed6b8bf8813b380388910c83a4cf64ec
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: util-linux-sfdisk
+Version: 2.25.2-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: grep
+Version: 2.21-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: shadow-base
+Version: 4.2.1-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: dosfstools
+Version: 2.11-r5
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+
+Package: libstdc++6
+Version: linaro-4.9-r2015.03
+Depends: libgcc1 (>= linaro-4.9), libc6 (>= 2.21)
+Provides: libstdc++
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: coreutils
+Version: 8.23-r0
+Depends: libcap2 (>= 2.24), libattr1 (>= 2.4.47), update-alternatives-opkg, libgmp10 (>= 6.0.0), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libsmartcols1
+Version: 2.25.2-r1
+Depends: libc6 (>= 2.21)
+Provides: util-linux-libsmartcols
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: vim-syntax
+Version: 7.4.481-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: libdbus-1-3
+Version: 1.8.10-r0
+Depends: libc6 (>= 2.21)
+Recommends: dbus-1
+Provides: dbus-lib
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: bzip2
+Version: 1.0.6-r5
+Depends: update-alternatives-opkg, libbz2-0 (>= 1.0.6), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: mc-fish
+Version: 4.8.13-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: tzdata
+Version: 2016a-r0
+Conflicts: timezone-asia, timezone-europe, timezone-iso3166.tab, timezone-america, timezones, timezone-zone.tab, timezone-pacific, timezone-atlantic, timezone-antarctica, timezone-arctic, timezone-africa, timezone-indian, timezone-australia
+Status: install ok installed
+Architecture: all
+Conffiles:
+ /etc/timezone 2f460ed6092190a959226e5d3f15f479
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: iputils-tracepath6
+Version: s20121221-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: pciutils
+Version: 3.3.0-r0
+Depends: libkmod2 (>= 19+git0+fd56638aed), libz1 (>= 1.2.8), pciutils-ids, libc6 (>= 2.21), libpci3 (>= 3.3.0)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: nfs-utils-client
+Version: 1.3.1-r0
+Depends: rpcbind, base-files, libcap2 (>= 2.24), libnfsidmap0 (>= 0.25), libevent (>= 2.0.21), libwrap0 (>= 7.6), libmount1 (>= 2.25.2), libc6 (>= 2.21), shadow, initscripts-functions, base-passwd, bash
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /var/lib/nfs/etab d41d8cd98f00b204e9800998ecf8427e
+ /var/lib/nfs/rmtab d41d8cd98f00b204e9800998ecf8427e
+ /var/lib/nfs/xtab d41d8cd98f00b204e9800998ecf8427e
+ /var/lib/nfs/statd/state d41d8cd98f00b204e9800998ecf8427e
+ /etc/nfsmount.conf ce3b9fee8612087cbb69d46db34ce8ec
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: openssl-conf
+Version: 1.0.2d-r0
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /usr/lib/ssl/openssl.cnf 7df26c55291b33344dc15e3935dabaf3
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: python-core
+Version: 2.7.9-r1
+Depends: python-re, libpython2.7-1.0 (>= 2.7.9), libz1 (>= 1.2.8), python-lang, libc6 (>= 2.21)
+Recommends: python-readline
+Provides: python
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libmount1
+Version: 2.25.2-r1
+Depends: libblkid1 (>= 2.25.2), libuuid1 (>= 2.25.2), libc6 (>= 2.21)
+Provides: util-linux-libmount
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: attr
+Version: 2.4.47-r0
+Depends: libattr1 (>= 2.4.47), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: util-linux-mount
+Version: 2.25.2-r1
+Depends: libmount1 (>= 2.25.2), update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: initscripts
+Version: 1.0-r155
+Depends: initscripts-functions
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/init.d/checkroot.sh fe1d34f46e920af9ee9402e4e8cd9bdd
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: byacc
+Version: 20141128-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: perl-module-io-handle
+Version: 5.20.0-r1
+Depends: perl-module-symbol, perl, perl-module-exporter, perl-module-carp, perl-module-io-file, perl-module-strict, perl-module-io, perl-module-selectsaver
+Provides: perl-module-arm-poky-linux-gnueabi-io-handle
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: libcrypto1.0.0
+Version: 1.0.2d-r0
+Depends: libc6 (>= 2.21)
+Recommends: openssl-conf
+Provides: libcrypto
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: libnetfilter-conntrack3
+Version: 1.0.2-r0
+Depends: libmnl0 (>= 1.0.3), libc6 (>= 2.21), libnfnetlink0 (>= 1.0.1)
+Provides: libnetfilter-conntrack
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+Auto-Installed: yes
+
+Package: php
+Version: 5.5.21-r0
+Recommends: update-rc.d
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490266826
+
+Package: libtinfo5
+Version: 5.9-r15.1
+Depends: libc6 (>= 2.21)
+Recommends: ncurses-terminfo-base
+Suggests: ncurses-terminfo
+Provides: ncurses-libtinfo
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: device-tree
+Version: 1.0-r0
+Status: install ok installed
+Architecture: microzed_zynq7
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: lighttpd-module-accesslog
+Version: 1.4.35-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: perl-module-xsloader
+Version: 5.20.0-r1
+Depends: perl-module-dynaloader, perl-module-carp, perl
+Provides: perl-module-arm-poky-linux-gnueabi-xsloader
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: bison
+Version: 2.7.1-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: util-linux-swaponoff
+Version: 2.25.2-r1
+Depends: libmount1 (>= 2.25.2), update-alternatives-opkg, libsmartcols1 (>= 2.25.2), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libelf1
+Version: 0.161-r0
+Depends: libc6 (>= 2.21)
+Provides: libelf
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: python-io
+Version: 2.7.9-r1
+Depends: libssl1.0.0 (>= 1.0.2d), libpython2.7-1.0 (>= 2.7.9), python-core, python-textutils, python-math, libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21), python-netclient
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: tar
+Version: 1.28-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: perl-module-exporter
+Version: 5.20.0-r1
+Depends: perl-module-exporter-heavy, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: perl-module-exporter-heavy
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-exporter, perl-module-carp, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: less
+Version: 471-r0
+Depends: update-alternatives-opkg, libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: iproute2
+Version: 3.17.0-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1461726914
+Auto-Installed: yes
+
+Package: perl-module-mro
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-warnings, libc6 (>= 2.21), perl-module-xsloader, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: python-textutils
+Version: 2.7.9-r1
+Depends: libpython2.7-1.0 (>= 2.7.9), python-core, python-io, libc6 (>= 2.21), python-re, python-stringold
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libxml2
+Version: 2.9.2-r0
+Depends: libgcc1 (>= linaro-4.9), libz1 (>= 1.2.8), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460975754
+Auto-Installed: yes
+
+Package: sed
+Version: 4.2.2-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: perl-module-sys-hostname
+Version: 5.20.0-r1
+Depends: perl-module-carp, libc6 (>= 2.21), perl, perl-module-exporter, perl-module-posix, perl-module-strict, perl-module-xsloader
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460961080
+
+Package: lighttpd
+Version: 1.4.35-r1
+Depends: lighttpd-module-auth, lighttpd-module-dirlisting, lighttpd-module-rewrite, libpcre1 (>= 8.38), lighttpd-module-fastcgi, libcrypto1.0.0 (>= 1.0.2d), lighttpd-module-access, libc6 (>= 2.21), libssl1.0.0 (>= 1.0.2d), lighttpd-module-staticfile, lighttpd-module-indexfile, lighttpd-module-accesslog
+Recommends: update-rc.d
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/lighttpd.conf 828b370fa8cd3a66f2fbec1ae86150de
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: python-crypt
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), libc6 (>= 2.21), libcrypto1.0.0 (>= 1.0.2d)
+Recommends: openssl
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: vim-common
+Version: 7.4.481-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: bs-amu-pmt
+Version: 0.53.0
+Status: install user installed
+Architecture: all
+Installed-Time: 1693019147
+
+Package: perl-module-io
+Version: 5.20.0-r1
+Depends: perl-module-carp, perl-module-xsloader, perl-module-warnings, libc6 (>= 2.21), perl-module-strict, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: libmnl0
+Version: 1.0.3-r0
+Depends: libc6 (>= 2.21)
+Provides: libmnl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+Auto-Installed: yes
+
+Package: libblkid1
+Version: 2.25.2-r1
+Depends: libuuid1 (>= 2.25.2), libc6 (>= 2.21)
+Provides: util-linux-libblkid
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: locale-base-en-gb
+Version: 2.21-r0
+Depends: glibc-binary-localedata-en-gb
+Provides: virtual-locale-en-gb, virtual-locale-en
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+
+Package: libsqlite3-0
+Version: 3:3.11.0-r0
+Depends: libc6 (>= 2.21)
+Provides: libsqlite3
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001001
+Auto-Installed: yes
+
+Package: python-math
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), libc6 (>= 2.21), python-crypt
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libevent
+Version: 2.0.21-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: tcpdump
+Version: 4.6.1-r0
+Depends: libcrypto1.0.0 (>= 1.0.2d), libpcap1 (>= 1.6.2), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: u-boot-mkimage
+Version: v2015.01+git0+92fa7f53f1-r0
+Depends: libssl1.0.0 (>= 1.0.2d), libc6 (>= 2.21), libcrypto1.0.0 (>= 1.0.2d)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490251844
+
+Package: mc-helpers-python
+Version: 4.8.13-r0
+Depends: python
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: mtd-utils
+Version: 1.5.1+git0+9f107132a6-r0
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+
+Package: nfs-utils
+Version: 1.3.1-r0
+Depends: libblkid1 (>= 2.25.2), nfs-utils-client, libwrap0 (>= 7.6), libc6 (>= 2.21), initscripts-functions, bash
+Recommends: update-rc.d, kernel-module-nfsd
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libxcb1
+Version: 1.11-r0
+Depends: libxau6 (>= 1.0.8), libxdmcp6 (>= 1.1.1), libc6 (>= 2.21)
+Provides: libxcb
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: python-elementtree
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: lighttpd-module-auth
+Version: 1.4.35-r1
+Depends: libssl1.0.0 (>= 1.0.2d), libc6 (>= 2.21), libcrypto1.0.0 (>= 1.0.2d)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-extended
+Version: 1.0-r6
+Depends: iproute2, iputils, iptables, module-init-tools, openssl
+Provides: packagegroup-core-basic-extended, task-core-basic-extended
+Replaces: packagegroup-core-basic-extended, task-core-basic-extended
+Conflicts: packagegroup-core-basic-extended, task-core-basic-extended
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: unzip
+Version: 1:6.0-r5
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001001
+
+Package: ethtool
+Version: 3.16-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-dev-utils
+Version: 1.0-r6
+Depends: diffutils, make, byacc, m4, patch
+Provides: packagegroup-core-dev-utils, task-core-dev-utils
+Replaces: packagegroup-core-dev-utils, task-core-dev-utils
+Conflicts: packagegroup-core-dev-utils, task-core-dev-utils
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libgeos-c1
+Version: 3.4.2-r0
+Depends: libgcc1 (>= linaro-4.9), libstdc++6 (>= linaro-4.9), geoslib (>= 3.4.2), libc6 (>= 2.21)
+Provides: geos-c1
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+
+Package: perl-module-symbol
+Version: 5.20.0-r1
+Depends: perl-module-exporter, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-libs
+Version: 1.0-r6
+Depends: glib-2.0
+Provides: task-core-basic-libs, packagegroup-core-basic-libs
+Replaces: task-core-basic-libs, packagegroup-core-basic-libs
+Conflicts: task-core-basic-libs, packagegroup-core-basic-libs
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: logrotate
+Version: 3.8.8-r0
+Depends: libpopt0 (>= 1.16), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /var/lib/logrotate.status d41d8cd98f00b204e9800998ecf8427e
+ /etc/logrotate.conf da79c640ccfbdb94734020cf99e8f03c
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libpcre1
+Version: 8.38-r0
+Depends: libc6 (>= 2.21)
+Provides: libpcre
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: iputils-tracepath
+Version: s20121221-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: bs-amu-ant
+Version: 1.4.41
+Status: install user installed
+Architecture: armhf
+Installed-Time: 1693107173
+
+Package: curl
+Version: 7.40.0-r0
+Depends: libcurl4 (>= 7.40.0), libz1 (>= 1.2.8), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001000
+
+Package: perl-module-io-file
+Version: 5.20.0-r1
+Depends: perl-module-fcntl, perl-module-symbol, perl-module-io-seekable, perl, perl-module-exporter, perl-module-carp, perl-module-strict, perl-module-selectsaver
+Provides: perl-module-arm-poky-linux-gnueabi-io-file
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: vim-vimrc
+Version: 7.4.481-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: libgmp10
+Version: 6.0.0-r0
+Depends: libc6 (>= 2.21)
+Provides: gmp
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: bs-amu-bmc
+Version: 1.40.0
+Status: install user installed
+Architecture: armhf
+Installed-Time: 1693019143
+
+Package: libpython2.7-1.0
+Version: 2.7.9-r1
+Depends: libc6 (>= 2.21)
+Provides: libpython2
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-multiuser
+Version: 1.0-r6
+Depends: gzip, shadow, sudo, cracklib
+Provides: packagegroup-core-multiuser, task-core-multiuser
+Replaces: packagegroup-core-multiuser, task-core-multiuser
+Conflicts: packagegroup-core-multiuser, task-core-multiuser
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libnetfilter-cthelper0
+Version: 1.0.0-r0
+Depends: libmnl0 (>= 1.0.3), libc6 (>= 2.21)
+Provides: libnetfilter-cthelper
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+Auto-Installed: yes
+
+Package: i2c-tools
+Version: 3.1.1-r0
+Depends: i2c-tools-misc, libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: perl-module-socket
+Version: 5.20.0-r1
+Depends: perl-module-carp, perl-module-warnings-register, perl-module-xsloader, perl-module-scalar-util, perl-module-exporter, libc6 (>= 2.21), perl-module-strict, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: opkg-arch-config
+Version: 1.0-r1
+Provides: opkg-config-base
+Replaces: opkg-config-base
+Conflicts: opkg-config-base
+Status: install ok installed
+Architecture: microzed_zynq7
+Conffiles:
+ /etc/opkg/arch.conf 6369d88ef6deb05f6beb86938918b827
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: rpcbind
+Version: 0.2.2-r0
+Depends: libc6 (>= 2.21), libtirpc1 (>= 0.2.5), base-files, shadow, initscripts-functions, base-passwd
+Recommends: update-rc.d
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: libncursesw5
+Version: 5.9-r15.1
+Depends: libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Provides: ncurses-libncursesw
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: e2fsprogs-badblocks
+Version: 1.42.9-r0
+Depends: libcom-err2 (>= 1.42.9), libext2fs2 (>= 1.42.9), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: psplash-default
+Version: 0.1+git0+14c8f7b705-r15
+Depends: psplash, update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: perl-module-scalar-util
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-list-util, perl-module-exporter, perl-module-carp, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: sudo
+Version: 1.8.11p2-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/sudoers 7ab43f29eb52f17da410e3121fb7067c
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: python-threading
+Version: 2.7.9-r1
+Depends: python-core, python-lang
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: lighttpd-module-staticfile
+Version: 1.4.35-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: ppp
+Version: 2.4.7-r0
+Depends: libpcap1 (>= 1.6.2), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/ppp/pap-secrets e0d80e4e091ba0ca3688784467a8205d
+ /etc/ppp/chap-secrets d1cb45f1aedb9500ab1c325f887d8f84
+ /etc/ppp/options 300f139554327e63b13b44a2e3040ce0
+Installed-Time: 1460950342
+
+Package: libkmod2
+Version: 19+git0+fd56638aed-r0
+Depends: libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: libkmod
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libacl1
+Version: 2.2.52-r0
+Depends: libattr1 (>= 2.4.47), libc6 (>= 2.21)
+Provides: libacl
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: perl-module-errno
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-exporter, perl-module-carp, perl
+Provides: perl-module-arm-poky-linux-gnueabi-errno
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+
+Package: base-passwd
+Version: 3.5.29-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: perl-module-posix
+Version: 5.20.0-r1
+Depends: perl-module-warnings, perl-module-xsloader, perl-module-exporter, perl-module-fcntl, libc6 (>= 2.21), perl-module-strict, perl, perl-module-tie-hash
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460961080
+Auto-Installed: yes
+
+Package: libreadline6
+Version: 6.3-r0
+Depends: libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Provides: readline
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-utils
+Version: 1.0-r6
+Depends: tar, ed, makedevs, sed, findutils, file, popt, mktemp, mc-helpers-perl, pax, coreutils, gmp, mc-helpers, mc-helpers-python, bc, ncurses, mc-fish, cpio, gawk, util-linux, bash, grep, attr, mc, zlib, e2fsprogs, acl, psmisc, net-tools, time, procps
+Provides: task-core-basic-utils, packagegroup-core-basic-utils
+Replaces: task-core-basic-utils, packagegroup-core-basic-utils
+Conflicts: task-core-basic-utils, packagegroup-core-basic-utils
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: cryptsetup
+Version: 1.6.6-r0
+Depends: libssl1.0.0 (>= 1.0.2d), lvm2 (>= 2.02.97), libpopt0 (>= 1.16), libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21), libuuid1 (>= 2.25.2)
+Recommends: kernel-module-cbc, kernel-module-md5, kernel-module-sha256-generic, kernel-module-dm-crypt, kernel-module-aes-generic
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+
+Package: killall
+Version: 22.21-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: shadow
+Version: 4.2.1-r0
+Depends: shadow-securetty, libc6 (>= 2.21), util-linux-sulogin, shadow-base, update-alternatives-opkg, base-passwd
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: python-re
+Version: 2.7.9-r1
+Depends: python-core
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: e2fsprogs-e2fsck
+Version: 1.42.9-r0
+Depends: libblkid1 (>= 2.25.2), libcom-err2 (>= 1.42.9), libe2p2 (>= 1.42.9), libc6 (>= 2.21), libext2fs2 (>= 1.42.9), libuuid1 (>= 2.25.2)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: kmod
+Version: 19+git0+fd56638aed-r0
+Depends: update-alternatives-opkg, libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: module-init-tools-depmod, module-init-tools, module-init-tools-insmod-static
+Replaces: module-init-tools-depmod, module-init-tools, module-init-tools-insmod-static
+Conflicts: module-init-tools-depmod, module-init-tools, module-init-tools-insmod-static
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libgnutls-openssl27
+Version: 3.3.12-r0
+Depends: nettle (>= 2.7.1), libz1 (>= 1.2.8), libgmp10 (>= 6.0.0), libgnutls28 (>= 3.3.12), libc6 (>= 2.21)
+Provides: gnutls-openssl
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: rsync
+Version: 3.1.1-r0
+Depends: libattr1 (>= 2.4.47), libpopt0 (>= 1.16), libacl1 (>= 2.2.52), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001001
+
+Package: openssh-keygen
+Version: 6.7p1-r0
+Depends: libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21)
+Conflicts: ssh-keygen
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: packagegroup-core-boot
+Version: 1.0-r17
+Depends: busybox, modutils-initscripts, sysvinit, udev, initscripts, netbase, base-files, init-ifupdown, update-alternatives-opkg, device-tree, base-passwd
+Status: install user installed
+Architecture: microzed_zynq7
+Installed-Time: 1460950348
+
+Package: lighttpd-module-access
+Version: 1.4.35-r1
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: openssh-scp
+Version: 6.7p1-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: libgnutls28
+Version: 3.3.12-r0
+Depends: nettle (>= 2.7.1), libz1 (>= 1.2.8), libgmp10 (>= 6.0.0), libc6 (>= 2.21)
+Provides: gnutls
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: glibc-binary-localedata-en-us
+Version: 2.21-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: libgettextsrc
+Version: 0.19.4-r0
+Depends: libgettextlib (>= 0.19.4), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: fuser
+Version: 22.21-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: gettext
+Version: 0.19.4-r0
+Depends: libgettextsrc (>= 0.19.4), libgettextlib (>= 0.19.4), libc6 (>= 2.21)
+Conflicts: proxy-libintl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: iptables
+Version: 1.4.21-r0
+Depends: libc6 (>= 2.21)
+Recommends: kernel-module-nf-defrag-ipv4, kernel-module-nf-conntrack, kernel-module-ipt-masquerade, kernel-module-x-tables, kernel-module-nf-nat, kernel-module-nf-conntrack-ipv4, kernel-module-iptable-nat, kernel-module-ip-tables, kernel-module-iptable-filter
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050530
+Auto-Installed: yes
+
+Package: python-dbus
+Version: 1.2.0-r0
+Depends: libdbus-glib-1-2 (>= 0.102), libffi6 (>= 3.2.1), python-threading, libdbus-1-3 (>= 1.8.10), libz1 (>= 1.2.8), libglib-2.0-0 (>= 2.42.1), python-io, python-logging, libc6 (>= 2.21), python-xml, python-stringold
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libext2fs2
+Version: 1.42.9-r0
+Depends: libcom-err2 (>= 1.42.9), libblkid1 (>= 2.25.2), libc6 (>= 2.21)
+Provides: libext2fs
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: iputils-ping
+Version: s20121221-r0
+Depends: libcap2 (>= 2.24), update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: perl
+Version: 5.20.0-r1
+Depends: libperl5 (>= 5.20.0), libc6 (>= 2.21)
+Provides: perl-module-strict, perl-module-config, perl-module-warnings, perl-module-vars, perl-module-warnings-register
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: udev
+Version: 182-r9
+Depends: libkmod2 (>= 19+git0+fd56638aed), libblkid1 (>= 2.25.2), libc6 (>= 2.21)
+Recommends: update-rc.d, udev-cache
+Provides: hotplug
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: python-mime
+Version: 2.7.9-r1
+Depends: python-core, python-io
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: procps
+Version: 3.3.10-r0
+Depends: update-alternatives-opkg, libtinfo5 (>= 5.9), libncurses5 (>= 5.9), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/sysctl.conf 5dea4aa6139bcf18672cae3c5e0de8ab
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: e2fsprogs
+Version: 1.42.9-r0
+Depends: libss2 (>= 1.42.9), libext2fs2 (>= 1.42.9), libcom-err2 (>= 1.42.9), libe2p2 (>= 1.42.9), e2fsprogs-badblocks, libc6 (>= 2.21), update-alternatives-opkg, libblkid1 (>= 2.25.2), libuuid1 (>= 2.25.2)
+Recommends: e2fsprogs-e2fsck, e2fsprogs-mke2fs
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: python-xml
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), python-elementtree, libc6 (>= 2.21), python-re
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libglib-2.0-locale-en-gb
+Version: 1:2.42.1-r0
+Recommends: virtual-locale-en-gb
+Provides: glib-2.0-locale, en-gb-translation, glib-2.0-locale-en-gb
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950368
+
+Package: ca-certificates
+Version: 20141019-r0
+Status: install ok installed
+Architecture: all
+Conffiles:
+ /etc/ca-certificates.conf 4373510ea9492be3082f8119391769aa
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: vim
+Version: 7.4.481-r0
+Depends: ncurses-terminfo-base, update-alternatives-opkg, libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Recommends: vim-help, vim-syntax, vim-common, vim-tutor, vim-vimrc
+Suggests: diffutils
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+
+Package: libncurses5
+Version: 5.9-r15.1
+Depends: libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Provides: ncurses-libncurses
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: vim-tutor
+Version: 7.4.481-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: perl-module-carp
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-exporter, perl-module-warnings, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: ncurses-terminfo-base
+Version: 5.9-r15.1
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: util-linux-cfdisk
+Version: 2.25.2-r1
+Depends: libncursesw5 (>= 5.9), libtinfo5 (>= 5.9), libsmartcols1 (>= 2.25.2), libc6 (>= 2.21), libblkid1 (>= 2.25.2), libuuid1 (>= 2.25.2)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: netcat
+Version: 0.7.1-r3
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573402932
+
+Package: libattr1
+Version: 2.4.47-r0
+Depends: libc6 (>= 2.21)
+Provides: libattr
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: sysvinit-pidof
+Version: 2.88dsf-r14
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: gawk
+Version: 4.1.1-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: iputils
+Version: s20121221-r0
+Depends: iputils-ping6, iputils-clockdiff, iputils-traceroute6, iputils-tracepath6, iputils-tracepath, iputils-arping, iputils-ping
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+
+Package: libpcap1
+Version: 1.6.2-r0
+Depends: libc6 (>= 2.21)
+Provides: libpcap
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: geos
+Version: 3.4.2-r0
+Depends: geoslib, libgeos-c1
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: libss2
+Version: 1.42.9-r0
+Depends: libcom-err2 (>= 1.42.9), libc6 (>= 2.21)
+Provides: libss
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: update-rc.d
+Version: 0.7-r5
+Status: install user installed
+Architecture: all
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: util-linux-fdisk
+Version: 2.25.2-r1
+Depends: libsmartcols1 (>= 2.25.2), update-alternatives-opkg, libblkid1 (>= 2.25.2), libuuid1 (>= 2.25.2), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: libcap2
+Version: 2.24-r0
+Depends: libc6 (>= 2.21)
+Provides: libcap
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: libsysfs2
+Version: 2.1.0-r5
+Depends: libc6 (>= 2.21)
+Provides: libsysfs
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libcurl4
+Version: 7.40.0-r0
+Depends: nettle (>= 2.7.1), libz1 (>= 1.2.8), libgmp10 (>= 6.0.0), libgnutls28 (>= 3.3.12), libc6 (>= 2.21)
+Recommends: ca-certificates
+Provides: libcurl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001000
+Auto-Installed: yes
+
+Package: flex
+Version: 2.5.39-r0
+Depends: m4, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: perl-module-overload
+Version: 5.20.0-r1
+Depends: perl-module-mro, perl-module-scalar-util, perl-module-warnings-register, perl-module-overloading, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+
+Package: findutils
+Version: 4.5.14-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: pciutils-ids
+Version: 3.3.0-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: file
+Version: 5.22-r0
+Depends: libz1 (>= 1.2.8), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-initscripts
+Version: 1.0-r6
+Depends: ethtool, initscripts, sysklogd, sysvinit, busybox
+Provides: task-core-initscripts, packagegroup-core-initscripts
+Replaces: task-core-initscripts, packagegroup-core-initscripts
+Conflicts: task-core-initscripts, packagegroup-core-initscripts
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libz1
+Version: 1.2.8-r0
+Depends: libc6 (>= 2.21)
+Provides: zlib
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: python-stringold
+Version: 2.7.9-r1
+Depends: python-core, libpython2.7-1.0 (>= 2.7.9), libc6 (>= 2.21), python-re
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: bs-amu-dsb
+Version: 1.0.8
+Status: install user installed
+Architecture: all
+Installed-Time: 1693019154
+
+Package: libglib-2.0-0
+Version: 1:2.42.1-r0
+Depends: libffi6 (>= 3.2.1), libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: glib-2.0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: libx11-6
+Version: 1:1.6.2-r0
+Depends: libxau6 (>= 1.0.8), libxdmcp6 (>= 1.1.1), libxcb1 (>= 1.11), libc6 (>= 2.21)
+Provides: libx11
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: packagegroup-core-full-cmdline-sys-services
+Version: 1.0-r6
+Depends: bzip2, rpcbind, less, dbus, pciutils, lighttpd, nfs-utils, tzdata, sysfsutils, logrotate, python-dbus, at, tcp-wrappers, libevent, gzip, libcap, libpcre, cronie, elfutils, dbus-glib
+Provides: packagegroup-core-sys-services, task-core-sys-services
+Replaces: packagegroup-core-sys-services, task-core-sys-services
+Conflicts: packagegroup-core-sys-services, task-core-sys-services
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: at
+Version: 3.1.16-r0
+Depends: flex (>= 2.5.39), initscripts-functions, libc6 (>= 2.21)
+Recommends: update-rc.d
+Replaces: atd
+Conflicts: atd
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: python-logging
+Version: 2.7.9-r1
+Depends: python-core, python-io, python-lang, python-pickle, python-stringold
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: perl-module-dynaloader
+Version: 5.20.0-r1
+Depends: perl-module-config, perl-module-carp, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: netbase
+Version: 1:5.3-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/hosts 27acad957c7cded40cd6ac50d23ddc66
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: bc
+Version: 1.06-r3
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: mktemp
+Version: 1.7-r3
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: sysklogd
+Version: 1.5.1-r0
+Depends: update-alternatives-opkg, initscripts-functions, libc6 (>= 2.21)
+Recommends: update-rc.d
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/syslog.conf.sysklogd 9a122b00fc6e1b091fb50f97b9bd7ecd
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: perl-module-io-seekable
+Version: 5.20.0-r1
+Depends: perl-module-carp, perl-module-io-handle, perl, perl-module-exporter, perl-module-fcntl, perl-module-strict
+Provides: perl-module-arm-poky-linux-gnueabi-io-seekable
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: libgcc1
+Version: linaro-4.9-r2015.03
+Depends: libc6 (>= 2.21)
+Provides: libgcc
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950342
+Auto-Installed: yes
+
+Package: udev-cache
+Version: 182-r9
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: perl-module-list-util
+Version: 5.20.0-r1
+Depends: perl-module-strict, perl-module-exporter, libc6 (>= 2.21), perl-module-xsloader, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: psplash
+Version: 0.1+git0+14c8f7b705-r15
+Depends: libc6 (>= 2.21)
+Recommends: update-rc.d, psplash-default
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: libproj0
+Version: 4.8.0-r0
+Depends: libc6 (>= 2.21)
+Provides: proj
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+
+Package: ncurses
+Version: 5.9-r15.1
+Depends: libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: geoslib
+Version: 3.4.2-r0
+Depends: libgcc1 (>= linaro-4.9), libstdc++6 (>= linaro-4.9), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: tcp-wrappers
+Version: 7.6-r10
+Depends: libwrap0 (>= 7.6), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libexpat1
+Version: 2.1.0-r0
+Depends: libgcc1 (>= linaro-4.9), libc6 (>= 2.21)
+Provides: expat
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: cpio
+Version: 2.11-r5
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: locale-base-en-us
+Version: 2.21-r0
+Depends: glibc-binary-localedata-en-us
+Provides: virtual-locale-en-us, virtual-locale-en
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+
+Package: pstree
+Version: 22.21-r0
+Depends: libtinfo5 (>= 5.9), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: util-linux-losetup
+Version: 2.25.2-r1
+Depends: update-alternatives-opkg, libsmartcols1 (>= 2.25.2), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: util-linux-readprofile
+Version: 2.25.2-r1
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: run-postinsts
+Version: 1.0-r9
+Recommends: update-rc.d
+Status: install ok installed
+Architecture: all
+Installed-Time: 1460950349
+Auto-Installed: yes
+
+Package: libnfsidmap0
+Version: 0.25-r0
+Depends: libc6 (>= 2.21)
+Provides: libnfsidmap
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: gzip
+Version: 1.6-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: openssl-engines
+Version: 1.0.2d-r0
+Depends: libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: util-linux
+Version: 2.25.2-r1
+Depends: libncursesw5 (>= 5.9), libtinfo5 (>= 5.9), libc6 (>= 2.21), util-linux-swaponoff, libuuid1 (>= 2.25.2), libmount1 (>= 2.25.2), util-linux-sulogin, libsmartcols1 (>= 2.25.2), update-alternatives-opkg, libblkid1 (>= 2.25.2), util-linux-umount, util-linux-losetup
+Recommends: util-linux-sfdisk, util-linux-cfdisk, util-linux-mount, util-linux-fdisk, util-linux-mkfs, util-linux-readprofile
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: perl-module-io-socket-inet
+Version: 5.20.0-r1
+Depends: perl-module-carp, perl-module-io-socket, perl-module-errno, perl, perl-module-exporter, perl-module-socket, perl-module-strict
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: libperl5
+Version: 5.20.0-r1
+Depends: libc6 (>= 2.21)
+Provides: perl-module-arm-poky-linux-gnueabi-config, perl-lib, perl-module-config-heavy, perl-module-arm-poky-linux-gnueabi-config-heavy, perl-module-config
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+
+Package: vim-help
+Version: 7.4.481-r0
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: libpci3
+Version: 3.3.0-r0
+Depends: libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: libpci
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: php-cgi
+Version: 5.5.21-r0
+Depends: libssl1.0.0 (>= 1.0.2d), libmysqlclient18 (>= 5.5.41), libxml2 (>= 2.9.2), libz1 (>= 1.2.8), libmcrypt4 (>= 2.5.8), libcrypto1.0.0 (>= 1.0.2d), libsqlite3-0 (>= 3.8.7.4), libc6 (>= 2.21), libbz2-0 (>= 1.0.6)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460975757
+
+Package: init-ifupdown
+Version: 1.0-r7
+Depends: netbase
+Recommends: update-rc.d
+Conflicts: netbase (<< 1:5.0)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/network/interfaces 0e79ac68d83a8845f49afc61043c79a5
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: libgettextlib
+Version: 0.19.4-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: ncurses-terminfo
+Version: 5.9-r15.1
+Depends: ncurses-terminfo-base
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: libudev0
+Version: 182-r9
+Depends: libc6 (>= 2.21)
+Provides: libudev
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950340
+Auto-Installed: yes
+
+Package: libxau6
+Version: 1:1.0.8-r0
+Depends: libc6 (>= 2.21)
+Provides: libxau
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: make
+Version: 4.1-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libdw1
+Version: 0.161-r0
+Depends: libz1 (>= 1.2.8), libbz2-0 (>= 1.0.6), libelf1 (>= 0.161), libc6 (>= 2.21)
+Provides: libdw
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: python-pickle
+Version: 2.7.9-r1
+Depends: libpython2.7-1.0 (>= 2.7.9), python-codecs, python-core, python-io, libc6 (>= 2.21), python-re
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: ed
+Version: 1.9-r0
+Depends: libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libtirpc1
+Version: 0.2.5-r0
+Depends: libc6 (>= 2.21)
+Provides: libtirpc
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: libnfnetlink0
+Version: 1.0.1-r0
+Depends: libc6 (>= 2.21)
+Provides: libnfnetlink
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+Auto-Installed: yes
+
+Package: e2fsprogs-mke2fs
+Version: 1.42.9-r0
+Depends: libblkid1 (>= 2.25.2), libcom-err2 (>= 1.42.9), libe2p2 (>= 1.42.9), libc6 (>= 2.21), libext2fs2 (>= 1.42.9), libuuid1 (>= 2.25.2)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+Auto-Installed: yes
+
+Package: perl-module-selectsaver
+Version: 5.20.0-r1
+Depends: perl-module-carp, perl-module-symbol, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: libmysqlclient18
+Version: 5.5.41-r0
+Depends: libgcc1 (>= linaro-4.9), libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: libmysqlclient
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Conffiles:
+ /etc/my.cnf.d/client.cnf ad56ee35d48d321420e1be1719c76e52
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: libproj-bin
+Version: 4.8.0-r0
+Depends: libproj0 (>= 4.8.0), libc6 (>= 2.21)
+Provides: proj-bin
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950348
+
+Package: cracklib
+Version: 2.9.2-r1
+Depends: libz1 (>= 1.2.8), libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: iproute2-tc
+Version: 3.17.0-r0
+Depends: iptables (>= 1.4.21), libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1461726986
+
+Package: libnetfilter-cttimeout1
+Version: 1.0.0-r0
+Depends: libmnl0 (>= 1.0.3), libc6 (>= 2.21)
+Provides: libnetfilter-cttimeout
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1487050529
+Auto-Installed: yes
+
+Package: sysvinit
+Version: 2.88dsf-r14
+Depends: update-alternatives-opkg, initscripts-functions, sysvinit-pidof, sysvinit-inittab, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950345
+Auto-Installed: yes
+
+Package: libpopt0
+Version: 1.16-r3
+Depends: libc6 (>= 2.21)
+Provides: popt
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950341
+Auto-Installed: yes
+
+Package: libdbus-glib-1-2
+Version: 0.102-r0
+Depends: libglib-2.0-0 (>= 2.42.1), libffi6 (>= 3.2.1), libdbus-1-3 (>= 1.8.10), libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: dbus-glib
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950344
+Auto-Installed: yes
+
+Package: perl-module-overloading
+Version: 5.20.0-r1
+Depends: perl-module-warnings, perl-module-overload-numbers, perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+Auto-Installed: yes
+
+Package: mc-helpers-perl
+Version: 4.8.13-r0
+Depends: perl
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: libe2p2
+Version: 1.42.9-r0
+Depends: libc6 (>= 2.21)
+Provides: libe2p
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950347
+Auto-Installed: yes
+
+Package: zip
+Version: 3.0-r2
+Depends: libc6 (>= 2.21)
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1573001002
+
+Package: perl-module-io-socket
+Version: 5.20.0-r1
+Depends: perl-module-io-socket-unix, perl-module-carp, perl-module-errno, perl-module-io-handle, perl-module-io-socket-inet, perl, perl-module-exporter, perl-module-io-select, perl-module-socket, perl-module-strict
+Provides: perl-module-arm-poky-linux-gnueabi-io-socket
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1490252159
+Auto-Installed: yes
+
+Package: util-linux-sulogin
+Version: 2.25.2-r1
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950343
+Auto-Installed: yes
+
+Package: patch
+Version: 2.7.1-r0
+Depends: libattr1 (>= 2.4.47), update-alternatives-opkg, libc6 (>= 2.21)
+Status: install ok installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460950346
+Auto-Installed: yes
+
+Package: perl-module-overload-numbers
+Version: 5.20.0-r1
+Depends: perl
+Status: install user installed
+Architecture: cortexa9-vfp-neon
+Installed-Time: 1460959367
+

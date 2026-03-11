@@ -1,0 +1,14 @@
+Package: iputils-clockdiff
+Version: s20121221-r0
+Description: Network monitoring tools
+ Utilities for the IP protocol, including traceroute6, tracepath,
+ tracepath6, ping, ping6 and arping.
+Section: console/network
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD & GPLv2+
+Architecture: cortexa9-vfp-neon
+OE: iputils
+Homepage: http://www.skbuff.net/iputils
+Depends: libcap2 (>= 2.24), libc6 (>= 2.21)
+Source: http://www.skbuff.net/iputils/iputils-s20121221.tar.bz2 file://debian/use_gethostbyname2.diff file://debian/targets.diff file://nsgmls-path-fix.patch file://fix-build-command-line-argument-with-gnutls.patch

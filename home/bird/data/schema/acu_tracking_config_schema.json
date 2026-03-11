@@ -1,0 +1,386 @@
+{
+  "Format_Version":10,
+  "type": "struct",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "Format_Version": {
+      "type": "uint16",
+      "attribute":"private",
+      "default":10
+    },
+    /* Hybrid tracking (mixing CON and CPN) configuration */
+    "Fixed_Weights_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":true
+    },
+    "CON_Weight_Fixed": {
+      "type": "float",
+      "attribute":"private",
+
+      "default":1.0,
+      "exclusiveMinimum":0.0,
+      "exclusiveMaximum":1.0
+    },
+    "CON_Threshold_Low_dB": {
+      "type": "float",
+      "attribute":"private",
+      "default":2.5
+    },
+    "CON_Threshold_High_dB": {
+      "type": "float",
+      "attribute":"private",
+      "default":3.5
+    },
+    "CON_Weight_High": {
+      "type": "float",
+      "attribute":"private",
+      "default":0.0,
+      "exclusiveMinimum":0.0,
+      "exclusiveMaximum":1.0
+    },
+
+    /* Recent Best Position configuration */
+    "RBP_Window_Duration_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMinimum":1200,
+      "exclusiveMaximum":6000,
+      "default":1200,
+    },
+    "RBP_History_Duration_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMinimum":2400,
+      "exclusiveMaximum":24000,
+      "default":12000,
+    },
+    "RBP_GS_Mute_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false,
+    },
+    "RBP_GS_Mute_BPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":0.5,
+    },
+    "RBP_GS_Unmute_BPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":0.2,
+    },
+    "RBP_GS_Mute_SPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":10.0,
+    },
+
+    /* Recent Average Position configuration */
+    "RAP_History_Duration_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMinimum":2400,
+      "exclusiveMaximum":24000,
+      "default":9600,
+    },
+    "RAP_GA_Mute_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false,
+    },
+    "RAP_GA_Mute_BPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":0.5,
+    },
+    "RAP_GA_Unmute_BPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":0.2,
+    },
+    "RAP_GA_Mute_SPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":10.0,
+    },
+
+
+    /* Beam Pattern mute configuration */
+    /* Note we will re-use RBP window/history durations to find the 'peak C/N' */
+    "BP_Delta_Window_Duration_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":100,
+      "default":70,
+    },
+    "BP_Mute_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false,
+    },
+    "BP_Mute_BPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":0.5,
+    },
+    "BP_Unmute_BPE_Threshold_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "default":0.2,
+    },
+
+    /* Mute application methods */
+    "mute_by_buc_dc_enabled": {
+      "type": "bool",
+      "attribute":"public",
+      "default":false,
+    },
+    "mute_by_L10_switch_enabled": {
+      "type": "bool",
+      "attribute":"public",
+      "default":false,
+    },
+    "mute_by_openamip_enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":true,
+    },
+
+    /* The minimum time we stay muted for, on entering the tracking state */
+    "Initial_Track_Mute_Time_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMaximum":30000,
+      "default":0,
+    },
+
+    /* Thresholds configuration */
+    "Immediate_Track_Threshold_dB": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":-10,
+      "exclusiveMaximum":30,
+      "default":5.0,
+    },
+    "Sidelobe_Check_Threshold_dB": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":-10,
+      "exclusiveMaximum":30,
+      "default":-2.0,
+    },
+    "Above_Old_Best_Threshold_dB": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":-10,
+      "exclusiveMaximum":30,
+      "default":6.0,
+    },
+    "Leave_Track_Threshold_dB": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":-10,
+      "exclusiveMaximum":30,
+      "default":-3.0,
+    },
+
+    /* Movement scaling configuration */
+    /* Note ACU_CONFIG_RECORD tracking_movement_scaling has same effect, but this field will be easier to modify (in file not DB)
+       and easier to understand (1.0 will always be 'nominal for the current antenna type') */
+    "SNR_Delta_To_Movement_Scale": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.2,
+      "exclusiveMaximum":2.0,
+      "default":1.0
+    },
+
+    /* Conical Centre Management */
+    "CCM_Algorithm_ID": {
+      "type": "uint8",
+      "attribute":"private",
+      "enum":[0,1],
+      "default":1,
+    },
+    "CCM_History_Duration_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMinimum":200,
+      "exclusiveMaximum":3000,
+      "default":600,
+    },
+    "CCM_Assume_Conical_Movement": {
+      "type": "bool",
+      "attribute":"private",
+      "default":true,
+    },
+    "CCM_Assumed_Conical_Radius_AZ_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.01,
+      "exclusiveMaximum":2.0,
+      "default":0.1,
+    },
+    "CCM_Assumed_Conical_Radius_EL_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.01,
+      "exclusiveMaximum":2.0,
+      "default":0.1,
+    },
+    "CCM_PE_To_Velocity_Scaling_seconds": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.2,
+      "exclusiveMaximum":8.0,
+      "default":0.6,
+    },
+    "CCM_Max_Abs_Velocity_dps": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.2,
+      "exclusiveMaximum":2.0,
+      "default":1.0,
+    },
+
+    /* Fast Search AGC (to re-program FTS after AGC growing) configuration */
+    "FSA_AGC_Grow_Sample_Duration_ms": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMinimum":200,
+      "exclusiveMaximum":5000,
+      "default":2000,
+    },
+    "FSA_AGC_Grow_Threshold_V": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.02,
+      "exclusiveMaximum":1.0,
+      "default":0.06,
+    },
+    "FSA_AGC_Grow_Then_AZ_Move_degs": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.0,
+      "exclusiveMaximum":10.0,
+      "default":5.0,
+    },
+    "FSA_RF_Power_Grow_Threshold_dBm": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0.3,
+      "exclusiveMaximum":20.0,
+      "default":3.0,
+    },
+    
+    /* Enable history carrier retrieval in high AGC position */
+    "FSA_Carrier_Retrieval_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false
+    },
+    /* Enable Blind Scan in high AGC position */
+    "FSA_Tuner_Blind_Scan_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false
+    },
+    /* Enable attempts of multi rolloff in high AGC position */
+    "FSA_Multi_Rolloff_Enabled": {
+      "type": "bool",
+      "attribute":"public",
+      "default":true
+    },
+    "FSA_Multi_Rolloff_Percent_Table": {
+      "type": "array",
+      "minItems":8,
+      "maxItems":8,
+      "items": {
+        "type": "float",
+        "enum":[0,5,10,15,20,25,30,35],
+        "attribute":"public",
+        "default":35.0
+      }
+    },
+
+    /* Enable Compass Searching. Also need the hardware support */
+    "Compass_Assist_Enabled": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false
+    },
+
+    /* When SM changed from Tracking to Require Stage 1, hold position for this time */
+    "Leave_Track_Hold_Position_Time_s": {
+      "type": "uint32",
+      "attribute":"private",
+      "exclusiveMaximum":120,
+      "default":4,
+    }
+  },
+  "relation":{
+    "CON_Threshold_High_dB":["CON_Threshold_Low_dB", ">="],
+    "RBP_Window_Duration_ms":["RBP_History_Duration_ms", "<"],
+    "RBP_GS_Mute_BPE_Threshold_degs":["RBP_GS_Unmute_BPE_Threshold_degs", ">="],
+    "RAP_GA_Mute_BPE_Threshold_degs":["RAP_GA_Unmute_BPE_Threshold_degs", ">="],
+    "BP_Mute_BPE_Threshold_degs":["BP_Unmute_BPE_Threshold_degs", ">="],
+  },
+  "required": [  
+      "Format_Version",
+      "Fixed_Weights_Enabled",
+      "CON_Weight_Fixed",
+      "CON_Threshold_Low_dB",
+      "CON_Threshold_High_dB",
+      "CON_Weight_High",
+      "RBP_Window_Duration_ms",
+      "RBP_History_Duration_ms",
+      "RBP_GS_Mute_Enabled",
+      "RBP_GS_Mute_BPE_Threshold_degs",
+      "RBP_GS_Unmute_BPE_Threshold_degs",
+      "RBP_GS_Mute_SPE_Threshold_degs",
+      "RAP_History_Duration_ms",
+      "RAP_GA_Mute_Enabled",
+      "RAP_GA_Mute_BPE_Threshold_degs",
+      "RAP_GA_Unmute_BPE_Threshold_degs",
+      "RAP_GA_Mute_SPE_Threshold_degs",
+      "BP_Delta_Window_Duration_ms",
+      "BP_Mute_Enabled",
+      "BP_Mute_BPE_Threshold_degs",
+      "BP_Unmute_BPE_Threshold_degs",
+      "mute_by_buc_dc_enabled",
+      "mute_by_L10_switch_enabled",
+      "mute_by_openamip_enabled",
+      "Initial_Track_Mute_Time_ms",
+      "Immediate_Track_Threshold_dB",
+      "Sidelobe_Check_Threshold_dB",
+      "Above_Old_Best_Threshold_dB",
+      "Leave_Track_Threshold_dB",
+      "SNR_Delta_To_Movement_Scale",
+      "CCM_Algorithm_ID",
+      "CCM_History_Duration_ms",
+      "CCM_Assume_Conical_Movement",
+      "CCM_Assumed_Conical_Radius_AZ_degs",
+      "CCM_Assumed_Conical_Radius_EL_degs",
+      "CCM_PE_To_Velocity_Scaling_seconds",
+      "CCM_Max_Abs_Velocity_dps",
+      "FSA_AGC_Grow_Sample_Duration_ms",
+      "FSA_AGC_Grow_Threshold_V",
+      "FSA_AGC_Grow_Then_AZ_Move_degs",
+      "FSA_Carrier_Retrieval_Enabled",
+      "FSA_Tuner_Blind_Scan_Enabled",
+      "FSA_Multi_Rolloff_Enabled",
+      "FSA_Multi_Rolloff_Percent_Table",
+      "Compass_Assist_Enabled",
+      "Leave_Track_Hold_Position_Time_s",
+  ],
+}

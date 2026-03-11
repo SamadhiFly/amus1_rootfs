@@ -1,0 +1,19 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Extract minor version number from input (in the form of major.minor.variant)
+######################################################################
+
+if [ -z "$1" ]; then
+  echo "0"
+else
+  MINOR=$(echo $1 | awk -F'.' '{print $2}')
+  echo "$MINOR"
+fi
+
+exit 0
+

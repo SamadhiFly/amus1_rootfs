@@ -1,0 +1,19 @@
+Package: syslog-ng-libs
+Version: 3.5.4.1-r0
+Description: Alternative system logger daemon
+ syslog-ng, as the name shows, is a syslogd replacement, but with new
+ functionality for the new generation. The original syslogd allows
+ messages only to be sorted based on priority/facility pairs; syslog-ng
+ adds the possibility to filter based on message contents using regular
+ expressions. The new configuration scheme is intuitive and powerful.
+ Forwarding logs over TCP and remembering all forwarding hops makes it
+ ideal for firewalled environments.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2 & LGPLv2.1
+Architecture: cortexa9-vfp-neon
+OE: syslog-ng
+Homepage: http://www.balabit.com/network-security/syslog-ng/opensource-logging-system
+Depends: libssl1.0.0 (>= 1.0.2d), libcrypto1.0.0 (>= 1.0.2d), libc6 (>= 2.21), libglib-2.0-0 (>= 2.42.1), libevtlog0 (>= 0.2.13), libuuid1 (>= 2.25.2)
+Source: http://www.balabit.com/downloads/files/syslog-ng/sources/3.5.4.1/source/syslog-ng_3.5.4.1.tar.gz file://syslog-ng.conf file://initscript file://volatiles.03_syslog-ng file://configure.ac-add-option-enable-thread-tls-to-manage-.patch file://afsql-afsql_dd_insert_db-refactor.patch file://deinit-the-new-config-when-reverting-to-the.patch file://fix-a-memory-leak-in-log_driver_free.patch file://fix-config-libnet.patch file://fix-invalid-ownership.patch file://Fix-the-memory-leak-problem-for-mutex.patch file://Fix-the-memory-leak-problem-when-HAVE_ENVIRON-defined.patch file://free-global-LogTemplateOptions.patch file://still-free-the-unconsumed-item.patch file://syslog-ng-verify-the-list-before-del.patch file://configure.patch file://dbifix.patch file://rewrite-expr-grammar.ym-Free-up-token.patch file://logwriter-dont-allocate-a-new-buffer.patch

@@ -1,0 +1,68 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Send a command to a specific module
+# Usage: see print_usage()
+######################################################################
+
+print_usage()
+{
+  echo "Execute AMU module command"
+  echo "Usage: $(basename $0) {modname} {outfile} {command} [args...]"
+  echo "  modname: name of module to process the command, one in [ant|acu|bme|test]"
+  echo "  outfile: command output from the module are saved in this file"
+  echo "  command: the name of the command to be executed"
+  echo "  args   : any command line arguments for the command"
+  echo
+}
+
+# Save all argument in the array
+args=( "$@" )
+
+# Requires at least modname/outfile/command from input 
+if [ "${#args[@]}" -lt 3 ]; then
+  print_usage
+  exit 1
+fi
+
+# Map modname to module CLI port
+case "${args[0]}" in
+  ant)
+    port=30210
+  ;;
+  acu)
+    port=30310
+  ;;
+  bmc)
+    port=30410
+  ;;
+  test)
+    port=31610
+  ;;
+  *)
+    print_usage
+    exit 1
+  ;;
+esac
+
+# second argument is the file to save command output 
+outfile=${args[1]}
+# remaining arguments are considered to be the module CLI 
+cmd=( "${args[@]:2}" )
+
+# Set timeout to be 1s and invoke the command via netcat
+timeout 1 /usr/bin/netcat localhost $port > $outfile << EOF
+${cmd[@]}
+EOF
+
+# check command output to determine if it is successful or not
+if grep "250 " $outfile; then
+  exit 0
+else
+  exit 1
+fi
+

@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline-extended
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: iproute2, iputils, iptables, module-init-tools, openssl
+Provides: packagegroup-core-basic-extended, task-core-basic-extended
+Replaces: packagegroup-core-basic-extended, task-core-basic-extended
+Conflicts: packagegroup-core-basic-extended, task-core-basic-extended
+Source: None

@@ -1,0 +1,14 @@
+Package: file
+Version: 5.22-r0
+Description: File classification tool
+ File attempts to classify files depending on their contents and prints a
+ description if a match is found.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9-vfp-neon
+OE: file
+Homepage: http://www.darwinsys.com/file/
+Depends: libz1 (>= 1.2.8), libc6 (>= 2.21)
+Source: ftp://ftp.astron.com/pub/file/file-5.22.tar.gz file://debian-742262.patch

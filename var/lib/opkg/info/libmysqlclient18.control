@@ -1,0 +1,14 @@
+Package: libmysqlclient18
+Version: 5.5.41-r0
+Description: A robust, scalable, and reliable SQL server
+ A robust, scalable, and reliable SQL server.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9-vfp-neon
+OE: mariadb
+Homepage: http://mariadb.org
+Depends: libgcc1 (>= linaro-4.9), libz1 (>= 1.2.8), libc6 (>= 2.21)
+Provides: libmysqlclient
+Source: http://mirror.stshosting.co.uk/mariadb/mariadb-5.5.41/source/mariadb-5.5.41.tar.gz file://fix-cmake-module-path.patch file://remove-bad-path.patch file://fix-mysqlclient-r-version.patch file://my.cnf file://mysqld.service file://configure.cmake-fix-valgrind.patch file://fix-CVE-2015-2305.patch

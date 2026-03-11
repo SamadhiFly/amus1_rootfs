@@ -1,0 +1,16 @@
+Package: findutils
+Version: 4.5.14-r0
+Description: find, locate, and xargs binaries
+ The GNU Find Utilities are the basic directory searching utilities of the
+ GNU operating system. These programs are typically used in conjunction
+ with other programs to provide modular and powerful directory search and
+ file locating capabilities to other commands.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3+
+Architecture: cortexa9-vfp-neon
+OE: findutils
+Homepage: http://www.gnu.org/software/findutils/
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: ftp://alpha.gnu.org/gnu/findutils/findutils-4.5.14.tar.gz

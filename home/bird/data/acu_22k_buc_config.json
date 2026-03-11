@@ -1,0 +1,11 @@
+{
+  "Switch_22k":false,
+  "BUC_Tx_Switch":true,
+  "BUC_Tx_Power":0.0,
+  "BUC_Power":8,
+  "BUC_Temperature":0,
+  "BUC_Temp_Out_Of_Range":false,
+  "BUC_PLL_Out_Of_Lock":false,
+  "BUC_Checksum_Err":false,
+  "BUC_Attenuator":0.0
+}

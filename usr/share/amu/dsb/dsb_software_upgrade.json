@@ -1,0 +1,10 @@
+{
+    "format_version":2,
+    "sensor_upgrade_force":0,
+    "sensor_software_version_stm32":"1.0.7",
+    "serch_include_path_stm32":"/usr/share/amu/dsb/bs-amu-dsb-H7_1.0.7_all.px4",
+    "sensor_software_version_gd32":"2.0.1",
+    "serch_include_path_gd32":"/usr/share/amu/dsb/fmt_amu-dsb_2.0.1.px4",
+    "crc_check":12456
+}
+  

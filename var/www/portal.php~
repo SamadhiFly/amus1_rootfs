@@ -1,0 +1,284 @@
+<?php
+	require_once 'include/functions.php';
+
+	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+	header("Cache-Control: post-check=0, pre-check=0", false);
+	header("Pragma: no-cache");
+
+	$html_header = "
+      <!DOCTYPE html>
+      <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+      <head>
+        <meta http-equiv='content-type' content='text/html;charset=utf-8' />
+        <title>Customer Login</title>
+      </head>
+      <body>
+		";
+
+	echo $html_header;
+  ob_flush();
+  flush();
+
+	function process($username, $password)
+	{
+		$messages = array();
+		$messages["usererror"] = "";
+		$messages["passerror"] = "";
+		$messages["loginmsg"] = "";
+		$messages["result"] = "failed";
+
+    if (empty($username))
+    {
+      $messages["usererror"] = "[406] Invalid account name";
+			return $messages;
+    }
+
+    if (empty($password))
+    {
+      $messages["passerror"] = "[406] Invalid password";
+			return $messages;
+    }
+		
+    $pwd_md5 = md5($password);
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $client_net_info = parse_ini_file("/home/thiss/wwwdata/client_net.cfg");
+    $if = $client_net_info["interface"];
+    $authsrvip = $client_net_info["auth_server_ip"];
+    $authsrvport = $client_net_info["auth_server_port"];    
+    $loginsrvip = $client_net_info["login_server_ip"];
+    $loginsrvport = $client_net_info["login_server_port"];
+    $mac = shell_exec("sudo /sbin/arp -an -i " . $if . " | grep " . $ip . " | awk '{print toupper($4)}'");
+
+   	if (empty($ip) || empty($if) || empty($mac))
+    {
+    	$messages["loginmsg"] = "[502] Cannot determine your network addresses";
+			return $messages;
+    }
+
+    $ip_allowed = shell_exec("sudo /usr/sbin/iptables --numeric --list --table mangle | grep " . $mac . " | awk '{print $4}'");
+
+    if ($ip_allowed == $ip)
+    {
+    	$messages["loginmsg"] = "[202] You have logged in already";
+			$messages["result"] = "successed";
+			return $messages;
+    }
+
+    if (empty($authsrvip) || empty($authsrvport) || empty($loginsrvip) || empty($loginsrvport))
+    {
+    	$messages["loginmsg"] = "[501] Billing service is not configured on this network";
+			return $messages;
+    }
+
+    $last_line = exec("sudo /usr/bin/tt-cu-clientauth " . $username . " " . $pwd_md5 . " " . $authsrvip . " " . $authsrvport,
+               $output, $return_code);
+
+		if ($return_code == 1)
+		{
+			$messages["loginmsg"] = "[503] Billing service is temporarily unavailable, please try again later";
+			return $messages;
+		}
+		else if ($return_code == 2)
+		{
+			$messages["loginmsg"] = "[401] Failed to verify your account, incorrect password?";
+			return $messages;
+		}
+		else if ($return_code == 3)
+		{
+			$messages["loginmsg"] = "[504] User account verification is encountering error(s)";
+			return $messages;
+		}
+		else if ($return_code == 0)
+		{
+			;
+		}
+		else
+		{
+			$messages["loginmsg"] = "[500] Unknown errors";
+			return $messages;
+		}
+
+    $last_line = exec("sudo /usr/bin/tt-cu-clientlogin " . $username . " " . $ip . " " . $loginsrvip . " " . $loginsrvport,
+               $output, $return_code);
+
+    if ($return_code == 1)
+    {
+      $messages["loginmsg"] = "[503] Billing service is temporarily unavailable, please try again later";
+      return $messages;
+    }
+    else if ($return_code == 2)
+    {
+      $messages["loginmsg"] = "[402] Failed to enable your account, not enough credit?";
+      return $messages;
+    }
+    else if ($return_code == 0)
+    {
+      $messages["loginmsg"] = "[200] You have successfully logged in to the network";
+      $messages["result"] = "successed";
+			
+			$file = '/tmp/clients.data';
+			$client = $ip . "\t" . $mac . "\n";
+			file_put_contents($file, $client, FILE_APPEND | LOCK_EX);
+
+      return $messages;
+    }
+    else
+    {
+      $messages["loginmsg"] = "[500] Unknown errors";
+      return $messages;
+    }
+
+/*
+		echo "Login return code = " . $return_code;
+    ob_flush();
+    flush();
+		
+    $last_line = exec("sudo /usr/bin/tt-cu-clientadd " . $ip . " " . $mac,
+               $output, $return_code);
+
+    if ($return_code == 1)
+    {
+      $messages["loginmsg"] = "[503] Error encountered while enable your account, please try again";
+      return $messages;
+    }
+    else if ($return_code == 0)
+    {
+    	$messages["loginmsg"] = "[200] You have successfully logged in to the network";
+			$messages["result"] = "successed";
+			return $messages;
+    }
+    else
+    {
+      $messages["loginmsg"] = "[500] Unknown errors";
+      return $messages;
+		}
+
+		echo "Add device return code = " . $return_code;
+    ob_flush();
+    flush();
+
+		$messages["ip"] = $ip;
+		$messages["mac"] = $mac;
+		return $messages;
+*/
+	}
+
+	//session_start();
+ 
+	if (isset($_POST['submit']))
+  {
+		$messages = process($_POST['username'], $_POST['password']);
+	}
+	else
+	{
+    $messages = array();
+    $messages["usererror"] = "";
+    $messages["passerror"] = "";
+    $messages["loginmsg"] = "";
+		$messages["result"] = "failed";
+	}
+
+	if ($messages["result"] == "failed")
+	{
+		$html_form_begin = "
+        <form name='user_login' id='user_login' action='" . $_SERVER['PHP_SELF'] . "' method='post'>
+          <table align='center'>
+            <tr><td colspan='2'>&nbsp;</td></tr>
+            <tr><th colspan='2'><img src='./include/starlight-logo.png' width='500' height='150'></th></tr>
+    				<tr><td colspan='2'>&nbsp;</td></tr>
+    				<tr><th colspan='2'>Satellite Network Billing System</th></tr>
+            <tr><td colspan='2'>&nbsp;</td></tr>
+            <tr><th colspan='2'>Customer Login</th></tr>	
+    				<tr><td colspan='2'>&nbsp;</td></tr>";
+	}
+	else
+	{
+		$html_form_begin = "
+          <table align='center'>
+            <tr><td colspan='2'>&nbsp;</td></tr>
+            <tr><th colspan='2'><img src='./include/starlight-logo.png' width='500' height='150'></th></tr>
+            <tr><td colspan='2'>&nbsp;</td></tr>
+            <tr><th colspan='2'>Satellite Network Billing System</th></tr>
+            <tr><td colspan='2'>&nbsp;</td></tr>
+            <tr><th colspan='2'>Customer Login</th></tr>  
+            <tr><td colspan='2'>&nbsp;</td></tr>";
+	}
+
+  echo $html_form_begin;
+  ob_flush();
+  flush();
+
+  $html_login_msg = "
+						<tr><td colspan='2'><hr></td></tr>
+						<tr>
+							<td colspan='2'>
+								<h4>" . $messages["loginmsg"] . "</h4>	
+							</td>
+						</tr>
+            <tr><td colspan='2'><hr></td></tr>
+		";
+
+  echo $html_login_msg;
+  ob_flush();
+  flush();
+
+	if ($messages["result"] == "failed")
+	{
+  	$html_form_body = "
+						<tr>
+							<td>Account Name:</td>
+							<td>" . html_input('text', 'username', '', '', '', '', '') . "</td>
+						</tr>
+           	<tr>
+              <td colspan='2'>
+                <div align='center' class='error'> " . $messages["usererror"] . "</div> 
+              </td>
+            </tr>
+    				<tr>
+							<td>Password:</td>
+							<td>" . html_input('password', 'password', '', '', '', '', '') . "</td>
+						</tr>
+            <tr>
+              <td colspan='2'>
+                <div align='center' class='error'>" . $messages["passerror"] . "</div> 
+              </td>
+            </tr>
+    				<tr>
+							<th colspan='2'>" . html_input('submit', 'submit', 'submit', 'Login', '', '', '') . "</th>
+						</tr>";
+	}
+	else
+	{
+    $html_form_body = "";
+	}
+
+  echo $html_form_body;
+  ob_flush();
+  flush();
+
+	if ($messages["result"] == "failed")
+	{
+		$html_form_end = "
+					</table>
+				</form>";
+	}
+	else
+	{
+    $html_form_end = "
+          </table>";
+	}
+
+  echo $html_form_end;
+  ob_flush();
+  flush();
+
+  $html_footer = "
+			</body>
+		</html>";
+
+  echo $html_footer;
+  ob_flush();
+  flush();
+
+?>
+

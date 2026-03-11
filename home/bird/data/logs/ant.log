@@ -1,0 +1,65 @@
+N,35,10/03/26,06:44:10.222942: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,06:44:10.233150: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,06:44:10.238892: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,06:44:10.249449: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,06:44:10.254825: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,06:59:37.625116: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,06:59:37.635576: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,06:59:37.641374: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,06:59:37.652273: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,06:59:37.658099: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,07:15:05.148004: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,07:15:05.158219: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,07:15:05.163587: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,07:15:05.173817: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,07:15:05.179365: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,41,10/03/26,07:29:03.670169: Slip ring antenna detected the photoelectric switch
+N,35,10/03/26,07:30:34.417748: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,07:30:34.427881: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,07:30:34.433291: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,07:30:34.443507: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,07:30:34.448866: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,07:46:02.998898: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,07:46:03.009123: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,07:46:03.014492: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,07:46:03.024694: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,07:46:03.030435: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,07:50:29.130450: SBINT_Handle_Move_SK_To_Limit: start (OK)
+N,35,10/03/26,07:50:29.140041: SK_Motor_Set_Current_Count : 462222 (650.00 degs from limit)
+N,48,10/03/26,07:50:29.140131: SK move to limit started
+N,35,10/03/26,07:50:29.141183: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+P,35,10/03/26,07:50:33.119920: SK switch change, now low
+N,48,10/03/26,07:50:33.120102: SK move to limit done, spend 3980 ms
+N,130,10/03/26,07:50:33.120177: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,35,10/03/26,07:50:33.121232: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,10/03/26,07:50:33.169921: SK switch change, now high
+N,35,10/03/26,07:52:37.948777: SBINT_Handle_Move_SK_To_Limit: start (OK)
+N,48,10/03/26,07:52:37.950124: SK move to limit started
+N,35,10/03/26,07:52:37.950991: SK_Motor_Set_Target_Count : 0 (0.00 degs from limit)
+P,35,10/03/26,07:52:41.929933: SK switch change, now low
+N,48,10/03/26,07:52:41.930106: SK move to limit done, spend 3980 ms
+N,130,10/03/26,07:52:41.930153: [PRODUCTEVENT] 903, N, Notice, SK move to limit done, spend 3980 ms
+
+N,35,10/03/26,07:52:41.931218: SK_Motor_Set_Target_Count : 28233 (39.70 degs from limit)
+P,35,10/03/26,07:52:41.979930: SK switch change, now high
+N,35,10/03/26,08:01:36.194046: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,08:01:36.204242: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:01:36.209700: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:01:36.219942: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:01:36.225823: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:17:08.096011: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,08:17:08.106421: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:17:08.112180: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:17:08.122837: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:17:08.128232: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:32:42.842595: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,08:32:42.853295: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:32:42.858539: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:32:42.868914: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:32:42.874406: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:48:14.322178: SBINT_Handle_Set_Config: OK
+N,35,10/03/26,08:48:14.332505: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:48:14.338026: SBINT_Handle_EL_RL_Stabilisation_Off: OK
+N,35,10/03/26,08:48:14.348311: SBINT_Handle_Conical_Scan_Off: OK
+N,35,10/03/26,08:48:14.354003: SBINT_Handle_EL_RL_Stabilisation_Off: OK

@@ -1,0 +1,13 @@
+Package: pax
+Version: 3.4-r2
+Description: Portable Archive eXchange
+ pax (Portable Archive eXchange) is the POSIX standard archive tool
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9-vfp-neon
+OE: pax
+Homepage: http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/bin/pax/
+Depends: libc6 (>= 2.21)
+Source: http://pkgs.fedoraproject.org/repo/pkgs/pax/pax-3.4.tar.bz2/fbd9023b590b45ac3ade95870702a0d6/pax-3.4.tar.bz2 file://fix_for_compile_with_gcc-4.6.0.patch file://pax-3.4_fix_for_x32.patch

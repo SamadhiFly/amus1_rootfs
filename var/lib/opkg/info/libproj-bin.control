@@ -1,0 +1,14 @@
+Package: libproj-bin
+Version: 4.8.0-r0
+Description: PROJ.4 - Cartographic Projections library
+ PROJ.4 - Cartographic Projections library.
+Section: libs
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: cortexa9-vfp-neon
+OE: proj
+Homepage: http://trac.osgeo.org/proj/
+Depends: libproj0 (>= 4.8.0), libc6 (>= 2.21)
+Provides: proj-bin
+Source: http://download.osgeo.org/proj/proj-4.8.0.tar.gz

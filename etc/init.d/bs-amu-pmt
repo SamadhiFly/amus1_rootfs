@@ -1,0 +1,64 @@
+#!/bin/sh -e
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# PMT start up script, install as /etc/init.d/bs-amu-pmt
+# 
+######################################################################
+
+DESC="AMU Product Management Tools"
+MODULE=pmt
+MODULE_NAME=bs-amu-pmt.sh
+BIN_PATH=/usr/bin
+MODULE_BIN=${BIN_PATH}/${MODULE_NAME}
+
+# Make sure the binary exists
+test -x $MODULE_BIN || exit 1
+
+do_start() {
+  nohup $MODULE_BIN >/dev/null 2>&1 &
+}
+
+do_stop() {
+  pgrep -f $MODULE_NAME >/dev/null 2>&1 && pkill -kill -f $MODULE_NAME
+  pgrep -f bs-amu-clean-cs >/dev/null 2>&1 && pkill -kill -f bs-amu-clean-cs
+}
+
+case "$1" in
+  start)
+    /usr/bin/write_log -p N "Starting ${DESC} ${MODULE_NAME}"
+    if do_start; then
+      /usr/bin/write_log -p N "$MODULE_NAME start ok"
+    else
+      /usr/bin/write_log -p E "$MODULE_NAME failed to start"
+    fi
+    ;;
+
+  stop)
+    /usr/bin/write_log -p N "Stopping ${DESC} ${MODULE_NAME}"
+    if do_stop; then
+      /usr/bin/write_log -p N "$MODULE_NAME stop ok"
+    else
+      /usr/bin/write_log -p E "$MODULE_NAME failed to stop"
+    fi
+    ;;
+
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+
+  reload|force-reload)
+    ;;
+
+  *)
+    echo "Usage: /etc/init.d/tt-cu-${MODULE} {start|stop|reload|force-reload|restart}"
+    exit 1
+esac
+
+exit 0
+

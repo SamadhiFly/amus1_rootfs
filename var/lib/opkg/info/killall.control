@@ -1,0 +1,17 @@
+Package: killall
+Version: 22.21-r0
+Description: Utilities for managing processes on your system
+ The psmisc package contains utilities for managing processes on your
+ system: pstree, killall and fuser.  The pstree command displays a tree
+ structure of all of the running processes on your system.  The killall
+ command sends a specified signal (SIGTERM if nothing is specified) to
+ processes identified by name.  The fuser command identifies the PIDs of
+ processes that are using specified files or filesystems.
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv2
+Architecture: cortexa9-vfp-neon
+OE: psmisc
+Depends: update-alternatives-opkg, libc6 (>= 2.21)
+Source: http://downloads.sourceforge.net/psmisc/psmisc-22.21.tar.gz file://0001-Typo-in-fuser-makes-M-on-all-the-time.patch file://0002-Include-limits.h-for-PATH_MAX.patch

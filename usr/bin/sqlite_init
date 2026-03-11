@@ -1,0 +1,117 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Initialize sqlite databases (NV) in AMUS (RT database, such as config 
+# and current_status will be initialized in bs-amu-pmt.sh the first time
+# it run on each power cycle).
+#
+# Argument: action, one of ["all"|"config"|"events"|"historical_status"] 
+######################################################################
+
+# Default action is to initialize all databases
+ACTION=all
+
+# If specified, override the default action
+if [ ! -z "$1" ]; then
+  ACTION=$1
+fi
+
+# Create sqlite database given its name
+# Argument: database name
+create_db()
+{
+  db_filename=$1
+  # warm if database file exists
+  if [ -f "$db_filename" ]; then
+    /usr/bin/write_log -p W "$db_filename is already initialized, all data in existing database will be lost!" 
+  fi
+  
+  # Set jounal mode to WAL and do full auto vacuum
+  sqlite3 $db_filename "pragma jounal_mode=wal; pragma auto_vacuum=full;"
+}
+
+# Execute SQL command/query on the given database
+# Argument 1: the full path to the database file
+# Argument 2: the sql commands/queries to be executed.
+sql_command()
+{
+  db_filename=$1
+  
+  # If the database is not exist, create it first.
+  if [ ! -f "$db_filename" ]; then
+    create_db "$db_filename"
+  fi
+
+  sql="$2"
+	
+  # Execute the SQL commands/queries
+  sqlite3 $db_filename "$sql"
+}
+
+# Check if a given database table exist in the database (no in used)
+# Argument 1: full path to sqlite database file
+# Argument 2: database table name to check
+# Return: 0 if exist, otherwise 1 
+check_table()
+{
+  db_filename=$1
+  table_name=$2
+
+  result=$(sqlite3 $db_filename "select name from sqlite_master where name = '$table_name'")
+  if [ ! -z "$result" ]; then
+    return 0
+  fi
+
+  return 1
+}
+
+# Config database
+if [ "$ACTION" = "all" ] || [ "$ACTION" = "config" ]; then
+  # config.sqlite
+  mkdir -p /home/bird/configs/
+  default_config=/home/bird/configs/default_config.sqlite
+  rm -f $default_config
+
+  sql_command $default_config "begin; create table schema_version (version integer); insert into schema_version values (1); commit"
+  sql_command $default_config "begin; create table config (id integer primary key autoincrement, utc_time_ms UNSIGNED BIG INT not null, active int not null, group_name text not null, group_type text not null, saved_name text, json_config text not null); update config set active = 0 where group_name = 'NET'; commit;"
+  net_json=$(cat /usr/share/amu/pmt/net_config.v3.default | tr -d [:space:])
+  sql_command $default_config "begin; insert into config values (null, strftime('%s', 'now')*1000, 1, 'NET', 'network', '', '$net_json'); commit"
+  pmt_json=$(printf "%s" '{"format_version":1,"log_levels":[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5]}')
+  sql_command $default_config "begin; insert into config values (null, strftime('%s', 'now')*1000, 1, 'PMT', 'local', '', '$pmt_json'); commit"
+  hi_json=$(printf "%s" '{"format_version":1,"antenna_model":"VS80B","antenna_serial":"", "amu_model":"AMUS1", "amu_serial":"", "buc_model":"NJR8032UF", "buc_serial":"", "lnb_model":"NJR823E", "lnb_serial":"", "BMB_model":"", "modem_model":"newtec_XYZ"}')
+  sql_command $default_config "begin; insert into config values (null, strftime('%s', 'now')*1000, 1, 'HI', 'local', '', '$hi_json'); commit"
+  
+  ln -s -f $default_config /home/bird/config.sqlite
+fi
+
+# events database
+if [ "$ACTION" = "all" ] || [ "$ACTION" = "events" ]; then
+  # events.sqlite
+  mkdir -p /home/bird/data
+  events=/home/bird/data/events.sqlite
+  rm -r $events
+
+  sql_command $events "begin; create table schema_version (version integer); insert into schema_version values (1); commit"
+  sql_command $events "begin; create table events (id integer primary key autoincrement, utc_time_us UNSIGNED BIG INT not null, module text not null, event_id integer not null, severity integer not null, info text not null, sent_flag int not null default 0); commit"
+
+  chown www-data:root $events
+fi
+
+# Historical status database
+if [ "$ACTION" = "all" ] || [ "$ACTION" = "historical_status" ]; then
+  # historical_status.sqlite
+  mkdir -p /home/bird/data
+  historical_status=/home/bird/data/historical_status.sqlite
+  rm -f $historical_status
+ 
+  sql_command $historical_status "begin; create table schema_version (version integer); insert into schema_version values (1); commit"
+  sql_command  $historical_status "begin; create table if not exists pmt_status (id integer primary key autoincrement, utc_time_ms UNSIGNED BIG INT not null, cpu_used_percent_min real not null, cpu_used_percent_max real not null, cpu_used_percent_avg real not null, cpu_used_percent_std real not null, ram_used_percent_min real not null, ram_used_percent_max real not null, ram_used_percent_avg real not null, ram_used_percent_std real not null, linux_uptime_s integer, flash_used_percent_min real not null, flash_used_percent_max real not null, flash_used_percent_avg real not null, flash_used_percent_std real not null, srv_link_speed_min real not null, srv_link_speed_max real not null, srv_link_speed_avg real not null, srv_link_speed_std real not null, srv_link_duplex_percent real not null, srv_link_state_percent real not null, srv_ip_address text not null, data_link_speed_min real not null, data_link_speed_max real not null, data_link_speed_avg real not null, data_link_speed_std real not null, data_link_duplex_percent real not null, data_link_state_percent real not null, data_modem_ip_address text not null, data_wan_ip_address text not null, sw_version text not null, fs_version text not null, os_version text not null, cfg_version text not null, sw_last_updated_time text not null, config_last_saved_time text not null); commit"
+
+  chown www-data:root $historical_status
+fi
+
+

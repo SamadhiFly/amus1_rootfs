@@ -1,0 +1,14 @@
+Package: lighttpd
+Version: 1.4.35-r1
+Description: Lightweight high-performance web server
+ Lightweight high-performance web server.
+Section: net
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9-vfp-neon
+OE: lighttpd
+Homepage: http://www.lighttpd.net/
+Depends: lighttpd-module-auth, lighttpd-module-dirlisting, lighttpd-module-rewrite, libpcre1 (>= 8.38), lighttpd-module-fastcgi, libcrypto1.0.0 (>= 1.0.2d), lighttpd-module-access, libc6 (>= 2.21), libssl1.0.0 (>= 1.0.2d), lighttpd-module-staticfile, lighttpd-module-indexfile, lighttpd-module-accesslog
+Recommends: update-rc.d
+Source: http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.35.tar.bz2 file://index.html.lighttpd file://lighttpd.conf file://lighttpd file://lighttpd.service file://pkgconfig.patch

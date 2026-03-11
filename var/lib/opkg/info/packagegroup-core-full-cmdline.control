@@ -1,0 +1,16 @@
+Package: packagegroup-core-full-cmdline
+Version: 1.0-r6
+Description: Standard full-featured Linux system
+ Package group bringing in packages needed for a more traditional full-
+ featured Linux system
+Section: base
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: MIT
+Architecture: all
+OE: packagegroup-core-full-cmdline
+Depends: packagegroup-core-full-cmdline-sys-services, packagegroup-core-full-cmdline-libs, packagegroup-core-full-cmdline-initscripts, packagegroup-core-full-cmdline-multiuser, packagegroup-core-full-cmdline-extended, packagegroup-core-full-cmdline-dev-utils, packagegroup-core-full-cmdline-utils
+Provides: task-core-basic, packagegroup-core-basic
+Replaces: task-core-basic, packagegroup-core-basic
+Conflicts: task-core-basic, packagegroup-core-basic
+Source: None

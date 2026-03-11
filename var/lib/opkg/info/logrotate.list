@@ -1,0 +1,6 @@
+/etc/logrotate.conf
+/usr/sbin/logrotate
+/etc/logrotate.d/
+/etc/cron.daily/
+/etc/cron.daily/logrotate
+/var/lib/logrotate.status

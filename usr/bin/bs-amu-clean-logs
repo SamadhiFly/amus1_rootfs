@@ -1,0 +1,65 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Clean up /home/bird/data/logs/backup directory
+# Usage: see print_usage()
+######################################################################
+
+log_backup_dir=/home/bird/data/logs/backup
+mlimit=500 #default no more than 500Mb
+dlimit=180 #default no older than 180 days
+
+print_usage()
+{
+  echo "Remove older logs 1) if $log_backup_dir size larger than ${mlimit}Mb or 2) log files are older than $dlimit days"
+  echo "Usage: $(basename $0) [-m mb] [-d days]"
+}
+
+while getopts ":m:d:" opt; do
+  case "${opt}" in
+    m)
+      mlimit=$(echo "${OPTARG}" | awk '{printf("%d", $1)}')
+    ;;
+    d)
+      dlimit=$(echo "${OPTARG}" | awk '{printf("%d", $1)}')
+    ;;    
+    *)
+      print_usage
+      exit 1
+    ;;
+  esac
+done
+shift $((OPTIND-1))
+
+mkdir -p ${log_backup_dir}/
+
+while true ; do
+  file_to_consider=$(ls -t -1 ${log_backup_dir}/ | tail -1)
+
+  if [ -z  "$file_to_consider" ]; then
+    break
+  fi
+
+  size_mb=$(du -m ${log_backup_dir} | tail -n 1 | awk '{printf("%d", $1)}')
+  if [[ $size_mb -ge $mlimit ]]; then
+    echo "Log backup dir size=${size_mb}Mb, removing file=$file_to_consider" | /usr/bin/write_log -p W
+    rm -rf ${log_backup_dir}/${file_to_consider}
+    continue
+  fi
+
+  file_timestamp=$(date -u +%s -r ${log_backup_dir}/${file_to_consider})
+  current_date_seconds=$(date -u +%s -d "$(date +%Y/%m/%d)")
+  min_timestamp_allowed=$(( ${current_date_seconds} - ${dlimit} * 24 * 60 *60 ))
+  if [[ $file_timestamp -lt $min_timestamp_allowed ]]; then
+    echo "Removing log file=$file_to_consider, date=$(date -u -d @${file_timestamp} +%Y/%m/%d)" | /usr/bin/write_log -p W
+    rm -rf ${log_backup_dir}/${file_to_consider}
+    continue
+  fi
+
+  break
+done
+

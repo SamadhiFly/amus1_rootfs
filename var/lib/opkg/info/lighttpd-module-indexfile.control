@@ -1,0 +1,13 @@
+Package: lighttpd-module-indexfile
+Version: 1.4.35-r1
+Description: Lighttpd module for indexfile
+ Lighttpd module for indexfile
+Section: net
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: BSD
+Architecture: cortexa9-vfp-neon
+OE: lighttpd
+Homepage: http://www.lighttpd.net/
+Depends: libc6 (>= 2.21)
+Source: http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.35.tar.bz2 file://index.html.lighttpd file://lighttpd.conf file://lighttpd file://lighttpd.service file://pkgconfig.patch

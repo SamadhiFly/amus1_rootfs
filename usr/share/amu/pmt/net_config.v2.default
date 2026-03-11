@@ -1,0 +1,42 @@
+{
+  "format_version": "2.0", 
+
+  "spare_port" : 
+  {
+    "device_name": "eth0", 
+    "mode": "static",
+    "address": "192.168.100.1/24"
+  }, 
+
+  "service_port" : 
+  {
+    "device_name": "eth1", 
+    "mode": "static",
+    "address": "10.10.10.100/24",
+     
+    "virtual_interfaces" : 
+    {
+      "openamip" :
+      {
+        "vlanid": "", 
+        "mode": "static", 
+        "address": "192.168.0.2/24"
+      },
+         
+      "wan" :
+      {
+        "vlanid": "",
+        "mode": "dhcp",
+        "address": ""
+      },
+
+      "aux" : 
+      {
+        "vlanid": "",
+        "mode": "static",
+        "address": ""
+      }
+    }
+  }
+}
+

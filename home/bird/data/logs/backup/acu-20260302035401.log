@@ -1,0 +1,1407 @@
+N,132,22/11/24,06:48:02.020782: Serial port (Fd=77) closed
+P,67,22/11/24,06:48:02.021120: ACU BUC switch config ERR
+N,132,22/11/24,06:48:02.021457: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,06:48:02.022081: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,06:48:02.256451: GPS communication established (valid RMC message arrived now)
+N,76,22/11/24,06:48:02.256519: GPS RMC parsed failed: $GNRMC,064801.093,V,,,,,0.25,0.00,221124,,,N*53
+
+N,132,22/11/24,06:48:02.523104: Serial port (Fd=77) closed
+P,67,22/11/24,06:48:02.523465: ACU BUC Attenuator config ERR
+N,67,22/11/24,06:48:02.525185: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,06:48:02.525247: ACU mechanical calibration file validated OK
+N,67,22/11/24,06:48:02.526390: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,06:48:02.526459: ACU history forward carriers file validated OK
+N,67,22/11/24,06:48:02.526558: Ku 100cm beam pattern actived
+P,64,22/11/24,06:48:02.555596: TSK_Init: ACU Initialisation Complete
+N,64,22/11/24,06:48:02.555678: Antenna Model      :VS100K
+N,64,22/11/24,06:48:02.555706: Antenna Serial     :KW002291N0095
+N,64,22/11/24,06:48:02.555724: AMU Model          :AMUS6.1
+N,64,22/11/24,06:48:02.555741: Sensor Board       :dsb3.3
+N,132,22/11/24,06:48:02.555791: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,68,22/11/24,06:48:02.557976: ACU: Resetting state machine (due starting of antenna tracking task)
+N,68,22/11/24,06:48:02.562005: TSK_Antenna_Track: Active
+N,68,22/11/24,06:48:02.564640: TSK_Tracking_Correction: Active
+N,77,22/11/24,06:48:02.567022: TSK_FTS_Management: Active
+N,75,22/11/24,06:48:02.567019: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,22/11/24,06:48:02.567205: TSK_OpenAMIP: Initialisation Complete
+N,70,22/11/24,06:48:02.567235: TSK_SNR_Update: Active
+N,75,22/11/24,06:48:02.567965: OpenAMIP: wait modem connect to me...
+E,76,22/11/24,06:48:02.568594: GPS lock lost (>3s since locked RMC message arrived)
+N,75,22/11/24,06:48:02.568688: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,06:48:02.568853: OpenAMIP: Restart TCP server
+N,75,22/11/24,06:48:02.569692: OpenAMIP: wait modem connect to me...
+N,132,22/11/24,06:48:02.570548: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,132,22/11/24,06:48:02.570800: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,77,22/11/24,06:48:02.577145: STID135 module reset start
+N,67,22/11/24,06:48:02.588846: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,06:48:02.588929: FTS I2C initialised (mode=standard)
+N,77,22/11/24,06:48:02.739112: STID135 module reset complete
+N,80,22/11/24,06:48:02.741876: Starting STID135 library/chip initialisation...
+E,132,22/11/24,06:48:02.834859: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+N,76,22/11/24,06:48:03.257495: GPS RMC parsed failed: $GNRMC,064802.093,V,,,,,0.30,0.00,221124,,,N*54
+
+W,132,22/11/24,06:48:03.561180: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,06:48:03.562114: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,06:48:03.563121: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,22/11/24,06:48:03.564034: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,22/11/24,06:48:03.564795: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,06:48:03.565542: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,75,22/11/24,06:48:03.570542: OpenAMIP: Modem is connected.
+N,75,22/11/24,06:48:03.663119: OpenAMIP: Modem linked, interval 0 seconds
+N,80,22/11/24,06:48:04.046249: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,06:48:04.046669: STID135 cut 2 detected
+N,80,22/11/24,06:48:04.046733: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+P,67,22/11/24,06:48:04.206363: STVVGLNA_Initialise over
+P,67,22/11/24,06:48:04.206423: STVVGLNA_Configure
+P,67,22/11/24,06:48:04.207239: STVVGLNA A = 00 : D=20
+P,67,22/11/24,06:48:04.207494: STVVGLNA A = 01 : D=40
+P,67,22/11/24,06:48:04.207692: STVVGLNA A = 02 : D=54
+P,67,22/11/24,06:48:04.207885: STVVGLNA A = 03 : D=20
+N,80,22/11/24,06:48:04.210196: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,06:48:04.210230: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,06:48:04.210250: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,06:48:04.210267: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,06:48:04.210283: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,06:48:04.210299: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,06:48:04.210315: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,06:48:04.210343: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,06:48:04.210371: STID135 library/chip initialisation success
+N,77,22/11/24,06:48:04.210431: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,06:48:04.219098: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,76,22/11/24,06:48:04.256333: GPS RMC parsed failed: $GNRMC,064803.093,V,,,,,0.22,0.00,221124,,,N*56
+
+N,132,22/11/24,06:48:04.572322: [PRODUCTFAULT] Fault Code=206, Status=0, OpenAMIP link normal 
+N,76,22/11/24,06:48:05.256079: GPS RMC parsed failed: $GNRMC,064804.093,V,,,,,0.06,0.00,221124,,,N*57
+
+N,132,22/11/24,06:48:05.586306: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,06:48:05.964047: Exec_ms=1753ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,06:48:05.964131: ACU_Tuner_Set_22kHz
+N,67,22/11/24,06:48:05.964181: LNB DC set to 13V
+W,68,22/11/24,06:48:05.964203: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,06:48:05.969325: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,06:48:05.969404: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,06:48:05.973030: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+A,70,22/11/24,06:48:05.973468: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+N,68,22/11/24,06:48:05.973550: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,06:48:05.973590: LNB DC set to 18V
+A,68,22/11/24,06:48:05.973829: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+W,67,22/11/24,06:48:05.973853: ACU : satellite switch requested while GPS not locked, smart switch not possible
+E,68,22/11/24,06:48:05.973953: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+W,68,22/11/24,06:48:05.984422: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+E,68,22/11/24,06:48:05.994659: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,06:48:05.999842: ACU: Slip ring antenna detected
+N,68,22/11/24,06:48:05.999882: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,06:48:05.999924: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+N,76,22/11/24,06:48:06.257883: GPS RMC parsed failed: $GNRMC,064805.093,V,,,,,0.16,0.00,221124,,,N*57
+
+N,132,22/11/24,06:48:06.591739: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.104A
+N,132,22/11/24,06:48:06.592426: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,06:48:06.593686: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,06:48:06.595070: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,76,22/11/24,06:48:07.260949: GPS RMC parsed failed: $GNRMC,064806.093,V,,,,,0.04,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:08.249677: GPS RMC parsed failed: $GNRMC,064807.093,V,,,,,0.12,0.00,221124,,,N*51
+
+N,76,22/11/24,06:48:09.250358: GPS RMC parsed failed: $GNRMC,064808.093,V,,,,,0.20,0.00,221124,,,N*5F
+
+N,76,22/11/24,06:48:10.261635: GPS RMC parsed failed: $GNRMC,064809.093,V,,,,,0.26,0.00,221124,,,N*58
+
+N,80,22/11/24,06:48:10.320002: Exec_ms=4346ms LBF=2092000kHz SR=4000ksps (success)
+N,76,22/11/24,06:48:11.258573: GPS RMC parsed failed: $GNRMC,064810.093,V,,,,,0.18,0.00,221124,,,N*5D
+
+N,76,22/11/24,06:48:12.258377: GPS RMC parsed failed: $GNRMC,064811.093,V,,,,,0.31,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:13.258354: GPS RMC parsed failed: $GNRMC,064812.093,V,,,,,0.30,0.00,221124,,,N*55
+
+N,76,22/11/24,06:48:14.257007: GPS RMC parsed failed: $GNRMC,064813.093,V,,,,,0.06,0.00,221124,,,N*51
+
+N,76,22/11/24,06:48:15.257028: GPS RMC parsed failed: $GNRMC,064814.093,V,,,,,0.29,0.00,221124,,,N*5B
+
+N,76,22/11/24,06:48:16.259851: GPS RMC parsed failed: $GNRMC,064815.093,V,,,,,0.04,0.00,221124,,,N*55
+
+N,76,22/11/24,06:48:17.256944: GPS RMC parsed failed: $GNRMC,064816.093,V,,,,,0.13,0.00,221124,,,N*50
+
+N,132,22/11/24,06:48:17.514748: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,76,22/11/24,06:48:18.259211: GPS RMC parsed failed: $GNRMC,064817.093,V,,,,,0.15,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:19.257602: GPS RMC parsed failed: $GNRMC,064818.093,V,,,,,0.16,0.00,221124,,,N*5B
+
+N,76,22/11/24,06:48:20.254462: GPS RMC parsed failed: $GNRMC,064819.093,V,,,,,0.13,0.00,221124,,,N*5F
+
+N,76,22/11/24,06:48:21.257300: GPS RMC parsed failed: $GNRMC,064820.093,V,,,,,0.10,0.00,221124,,,N*56
+
+N,76,22/11/24,06:48:22.288501: GPS RMC parsed failed: $GNRMC,064821.093,V,,,,,0.10,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:23.285457: GPS RMC parsed failed: $GNRMC,064822.093,V,,,,,0.29,0.00,221124,,,N*5E
+
+N,76,22/11/24,06:48:24.296768: GPS RMC parsed failed: $GNRMC,064823.093,V,,,,,0.21,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:25.301872: GPS RMC parsed failed: $GNRMC,064824.093,V,,,,,0.15,0.00,221124,,,N*57
+
+E,68,22/11/24,06:48:26.039283: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,06:48:26.049487: Set config: OK (0ms)
+E,68,22/11/24,06:48:26.049533: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,74,22/11/24,06:48:26.059808: antenna conical scan off: OK (1ms)
+N,74,22/11/24,06:48:26.064962: antenna  EL RL restabilisation off: OK (0ms)
+W,68,22/11/24,06:48:26.065102: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,06:48:26.075342: antenna conical scan off: OK (0ms)
+N,74,22/11/24,06:48:26.080548: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,06:48:26.080596: ACU: SubState change from 'Initial' to 'Waiting'
+N,76,22/11/24,06:48:26.320523: GPS RMC parsed failed: $GNRMC,064825.093,V,,,,,0.15,0.00,221124,,,N*56
+
+N,76,22/11/24,06:48:28.243984: GPS RMC parsed failed: $GNRMC,064827.000,V,,,,,0.15,0.00,221124,,,N*5E
+
+N,76,22/11/24,06:48:29.269862: GPS RMC parsed failed: $GNRMC,064828.000,V,,,,,0.20,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:30.274769: GPS RMC parsed failed: $GNRMC,064829.000,V,,,,,0.21,0.00,221124,,,N*57
+
+N,76,22/11/24,06:48:31.266784: GPS RMC parsed failed: $GNRMC,064830.000,V,,,,,0.25,0.00,221124,,,N*5B
+
+N,76,22/11/24,06:48:32.269517: GPS RMC parsed failed: $GNRMC,064831.000,V,,,,,0.27,0.00,221124,,,N*58
+
+N,76,22/11/24,06:48:33.268549: GPS RMC parsed failed: $GNRMC,064832.000,V,,,,,0.19,0.00,221124,,,N*56
+
+N,76,22/11/24,06:48:34.273828: GPS RMC parsed failed: $GNRMC,064833.000,V,,,,,0.30,0.00,221124,,,N*5C
+
+N,76,22/11/24,06:48:35.273555: GPS RMC parsed failed: $GNRMC,064834.000,V,,,,,0.23,0.00,221124,,,N*59
+
+N,76,22/11/24,06:48:36.274444: GPS RMC parsed failed: $GNRMC,064835.000,V,,,,,0.10,0.00,221124,,,N*58
+
+N,76,22/11/24,06:48:37.274402: GPS RMC parsed failed: $GNRMC,064836.000,V,,,,,0.10,0.00,221124,,,N*5B
+
+N,76,22/11/24,06:48:38.275362: GPS RMC parsed failed: $GNRMC,064837.000,V,,,,,0.09,0.00,221124,,,N*52
+
+N,76,22/11/24,06:48:39.274083: GPS RMC parsed failed: $GNRMC,064838.000,V,,,,,0.10,0.00,221124,,,N*55
+
+N,76,22/11/24,06:48:40.276935: GPS RMC parsed failed: $GNRMC,064839.000,V,,,,,0.09,0.00,221124,,,N*5C
+
+W,76,22/11/24,06:48:41.392128: GPS lock obtained (now receiving RMC with locked content): $GNRMC,064840.000,A,2952.8881,N,12139.3657,E,0.14,0.00,221124,,,A*77
+
+N,132,22/11/24,06:48:41.392242: [PRODUCTFAULT] Fault Code=2101, Status=0, GPS gained signal 
+W,68,22/11/24,06:48:42.117905: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,06:48:42.128124: antenna conical scan off: OK (1ms)
+N,74,22/11/24,06:48:42.133919: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,06:48:42.139118: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,06:48:42.154415: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,06:48:42.154464: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,74,22/11/24,06:48:43.817953: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,06:48:43.818005: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,06:48:43.823127: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,06:48:46.834007: ACU: RXCIAK : No reacquire conditions in last 3s, moving to full search
+W,68,22/11/24,06:48:46.834138: ACU: State change from 'Check if rx already OK' to 'Searching (fast)' (reason 0)
+N,74,22/11/24,06:48:46.844780: antenna conical scan off: OK (1ms)
+N,74,22/11/24,06:48:46.849942: antenna  EL RL restabilisation off: OK (2ms)
+N,74,22/11/24,06:48:46.850027: Movement speed AZ (11) OK
+N,68,22/11/24,06:48:46.850049: ACU: SubState change from 'Initial' to 'Initialise fast search sweep'
+N,68,22/11/24,06:48:46.855164: ACU,FS: Init azimuth sweep: AZSI=1 AZFSO=100.0 AzInc=1 AZRCP=-0.0 AZGCP=0.0 ELCP=55.2 ELTP=55.0 ELTPL=55.0
+N,68,22/11/24,06:48:46.855253: ACU: SubState change from 'Initialise fast search sweep' to 'Set elevation'
+N,74,22/11/24,06:48:46.870520: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,06:48:46.870586: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,74,22/11/24,06:48:49.886749: antenna  EL RL restabilisation off: OK (0ms)
+N,74,22/11/24,06:48:49.891875: antenna move offset AZ (100.00) OK (0ms)
+N,68,22/11/24,06:48:49.891938: ACU: SubState change from 'Moving elevation' to 'Sweeping azimuth (gyro)'
+C,132,22/11/24,06:48:50.969274: [PRODUCTEVENT] 202, C, Forward carrier change, Multi rolloff, id=1 rf=12692000khz sym=3500ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+N,68,22/11/24,06:48:50.969372: ACU,FSA: Re-program FTS: LBF=2092000 SR=3500 AGC=-35.189V AZRCP=10.2 AZGCP=10.3 AZCCP=155.5 ELCP=55.0
+N,80,22/11/24,06:48:55.324340: Exec_ms=4353ms LBF=2092000kHz SR=3500ksps (success)
+C,132,22/11/24,06:48:58.385221: [PRODUCTEVENT] 202, C, Forward carrier change, Multi rolloff, id=1 rf=12692000khz sym=3652ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+N,68,22/11/24,06:48:58.385312: ACU,FSA: Re-program FTS: LBF=2092000 SR=3652 AGC=-33.838V AZRCP=9.5 AZGCP=9.6 AZCCP=154.3 ELCP=55.0
+N,67,22/11/24,06:49:02.575752: Get PMT current status (success)
+N,80,22/11/24,06:49:02.733287: Exec_ms=4343ms LBF=2092000kHz SR=3652ksps (success)
+C,132,22/11/24,06:49:05.800112: [PRODUCTEVENT] 202, C, Forward carrier change, Multi rolloff, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+N,68,22/11/24,06:49:05.800199: ACU,FSA: Re-program FTS: LBF=2092000 SR=4000 AGC=-37.418V AZRCP=9.4 AZGCP=9.6 AZCCP=154.2 ELCP=55.0
+N,80,22/11/24,06:49:10.156695: Exec_ms=4356ms LBF=2092000kHz SR=4000ksps (success)
+N,68,22/11/24,06:49:13.216246: ACU,FSA: No CON in high AGC: LBF=2092000 SR=4000 AGC=-35.428V AZRCP=9.3 AZGCP=9.6 AZCCP=154.1 ELCP=55.0
+N,68,22/11/24,06:49:13.216327: ACU,FSA: Moving AZ 5.0 degs after AGC grow : AzInc=1 AZRCP=9.3 AZGCP=9.6 ELCP=55.0
+N,74,22/11/24,06:49:13.216404: Movement speed AZ (1) OK
+N,74,22/11/24,06:49:13.221485: antenna move offset AZ (5.00) OK (1ms)
+N,74,22/11/24,06:49:17.830734: Movement speed AZ (11) OK
+N,68,22/11/24,06:49:17.830788: ACU,FSA: Continuing FS after No CON : AzInc=1 AZRCP=13.3 AZGCP=13.6 AZCCP=157.9 ELCP=55.0
+N,74,22/11/24,06:49:17.836068: antenna move offset AZ (86.38) OK (0ms)
+C,132,22/11/24,06:49:17.992198: [PRODUCTEVENT] 202, C, Forward carrier change, Multi rolloff, id=1 rf=12692000khz sym=3500ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+N,68,22/11/24,06:49:17.992297: ACU,FSA: Re-program FTS: LBF=2092000 SR=3500 AGC=-26.248V AZRCP=13.8 AZGCP=14.0 AZCCP=158.4 ELCP=55.0
+N,80,22/11/24,06:49:22.342145: Exec_ms=4342ms LBF=2092000kHz SR=3500ksps (success)
+C,132,22/11/24,06:49:25.408428: [PRODUCTEVENT] 202, C, Forward carrier change, Multi rolloff, id=1 rf=12692000khz sym=3652ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+N,68,22/11/24,06:49:25.408512: ACU,FSA: Re-program FTS: LBF=2092000 SR=3652 AGC=-25.508V AZRCP=13.7 AZGCP=14.1 AZCCP=158.1 ELCP=55.0
+N,80,22/11/24,06:49:29.758583: Exec_ms=4347ms LBF=2092000kHz SR=3652ksps (success)
+C,132,22/11/24,06:49:32.823349: [PRODUCTEVENT] 202, C, Forward carrier change, Multi rolloff, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+N,68,22/11/24,06:49:32.823439: ACU,FSA: Re-program FTS: LBF=2092000 SR=4000 AGC=-25.298V AZRCP=13.7 AZGCP=14.1 AZCCP=158.2 ELCP=55.0
+N,80,22/11/24,06:49:33.006508: Exec_ms=175ms LBF=2092000kHz SR=4000ksps (success)
+N,70,22/11/24,06:49:33.026038: FTS demod Locked : CON=14.50 dB AGC=-25.298 V
+N,68,22/11/24,06:49:33.079369: ACU,FS: Low EL, going to tracking : SNR(C)=14.60 SNR(NC)=-30.85 AZRCP=13.7 AZGCP=14.1 AzInc=1 ELCP=55.0
+N,74,22/11/24,06:49:33.079485: Movement speed AZ (6) OK
+W,68,22/11/24,06:49:33.079869: ACU: State change from 'Searching (fast)' to 'Tracking' (reason 0)
+N,132,22/11/24,06:49:33.085050: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+W,68,22/11/24,06:49:33.087011: ACU: CCM interval 90522ms
+N,68,22/11/24,06:49:33.087185: CCM: Carrier change (old RF=0, new RF=12692000)
+N,74,22/11/24,06:49:33.090331: antenna conical scan on: OK (1ms)
+N,74,22/11/24,06:49:33.095475: Set tracking config: OK (0ms)
+N,74,22/11/24,06:49:33.095546: Movement speed AZ (6) OK
+N,68,22/11/24,06:49:33.100671: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,06:49:34.318764: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,06:49:34.319568: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,74,22/11/24,06:51:34.365064: Set tracking config: OK (0ms)
+W,68,22/11/24,06:51:34.365130: ACU,Track: Switch to low RL tilt reliance (AverageTilt=-0.02deg LatestGyroDrift=0.033DPS)
+N,132,22/11/24,07:05:49.491773: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,22/11/24,07:05:49.547433: Creating TCP SBINT server socket (port 30330)
+E,66,22/11/24,07:05:49.620661: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,22/11/24,07:05:49.620982: JSON_CFG_Initialise Success, (ACU)
+P,67,22/11/24,07:05:49.627612: JSON_CFG_Valid Success, (ACU)
+P,67,22/11/24,07:05:49.629811: MF config read from RT DB OK
+P,67,22/11/24,07:05:49.629873: MF config validated OK
+P,67,22/11/24,07:05:49.630602: HI config FV2 read from RT DB OK
+P,67,22/11/24,07:05:49.630671: HI config validated OK
+W,67,22/11/24,07:05:49.630757: The file /home/bird/data/amu_hi_config.json exists  
+P,67,22/11/24,07:05:49.634553: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,22/11/24,07:05:49.634633: The antenna is an antenna with SB motor removed. 
+A,35,22/11/24,07:05:49.634799: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=7671F000 Size=65536 fd=62
+A,35,22/11/24,07:05:49.638468: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BC00000 Size=117440512 fd=63
+N,132,22/11/24,07:05:49.638690: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,22/11/24,07:05:49.640401: amu_model=AMUS6.1 ,use STiD135
+P,64,22/11/24,07:05:49.642126: TSK_Antenna_Track created OK
+P,64,22/11/24,07:05:49.643931: TSK_Tracking_Correction created OK
+P,64,22/11/24,07:05:49.644312: TSK_SNR_Update created OK
+P,64,22/11/24,07:05:49.645792: TSK_FTS_Management created OK
+P,64,22/11/24,07:05:49.647941: TSK_OpenAMIP created OK
+P,64,22/11/24,07:05:49.906383: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,22/11/24,07:05:49.906523: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,22/11/24,07:05:49.906557: FPGA version running = 3.9
+P,64,22/11/24,07:05:49.906585: acu pcb version 6.1 
+N,132,22/11/24,07:05:49.906683: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,22/11/24,07:05:49.906711: PL interrupt for I2C module (ID=0) initialised
+A,67,22/11/24,07:05:49.929787: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=7671E000 Size=4096 fd=75 pagesize=4096
+P,67,22/11/24,07:05:49.980377: AMU hardware initialised
+N,132,22/11/24,07:05:49.980872: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,22/11/24,07:05:49.981336: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,22/11/24,07:05:49.981554: GPS interface initialised
+N,76,22/11/24,07:05:49.981608: GPS processing initialised
+E,66,22/11/24,07:05:50.009988: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,22/11/24,07:05:50.010688: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,07:05:50.023418: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,07:05:50.025045: ACU 22k&&BUC config file parsed OK
+N,132,22/11/24,07:05:50.025392: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,07:05:50.026240: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,22/11/24,07:05:50.527151: Serial port (Fd=77) closed
+P,67,22/11/24,07:05:50.527232: ACU BUC switch config ERR
+N,132,22/11/24,07:05:50.527758: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,07:05:50.528230: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,07:05:50.959874: GPS communication established (valid RMC message arrived now)
+N,132,22/11/24,07:05:51.028861: Serial port (Fd=77) closed
+P,67,22/11/24,07:05:51.029223: ACU BUC Attenuator config ERR
+N,67,22/11/24,07:05:51.030236: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,07:05:51.030284: ACU mechanical calibration file validated OK
+N,67,22/11/24,07:05:51.031353: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,07:05:51.031408: ACU history forward carriers file validated OK
+N,67,22/11/24,07:05:51.031499: Ku 100cm beam pattern actived
+P,64,22/11/24,07:05:51.046884: TSK_Init: ACU Initialisation Complete
+N,68,22/11/24,07:05:51.047698: ACU: Resetting state machine (due starting of antenna tracking task)
+N,64,22/11/24,07:05:51.050191: Antenna Model      :VS100K
+N,64,22/11/24,07:05:51.050936: Antenna Serial     :KW002291N0095
+N,64,22/11/24,07:05:51.052169: AMU Model          :AMUS6.1
+N,68,22/11/24,07:05:51.052701: TSK_Antenna_Track: Active
+N,77,22/11/24,07:05:51.052873: TSK_FTS_Management: Active
+N,64,22/11/24,07:05:51.052939: Sensor Board       :dsb3.3
+N,132,22/11/24,07:05:51.054201: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,68,22/11/24,07:05:51.057264: TSK_Tracking_Correction: Active
+N,75,22/11/24,07:05:51.057761: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,22/11/24,07:05:51.057828: TSK_OpenAMIP: Initialisation Complete
+N,75,22/11/24,07:05:51.058711: OpenAMIP: wait modem connect to me...
+N,75,22/11/24,07:05:51.059309: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,07:05:51.059382: OpenAMIP: Restart TCP server
+N,75,22/11/24,07:05:51.059927: OpenAMIP: wait modem connect to me...
+N,70,22/11/24,07:05:51.060999: TSK_SNR_Update: Active
+N,77,22/11/24,07:05:51.062941: STID135 module reset start
+N,67,22/11/24,07:05:51.072148: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,07:05:51.072223: FTS I2C initialised (mode=standard)
+N,77,22/11/24,07:05:51.222470: STID135 module reset complete
+N,80,22/11/24,07:05:51.227971: Starting STID135 library/chip initialisation...
+E,132,22/11/24,07:05:51.320625: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+W,132,22/11/24,07:05:52.057238: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,07:05:52.057645: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,07:05:52.057944: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,22/11/24,07:05:52.059227: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,22/11/24,07:05:52.059647: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,07:05:52.060336: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,75,22/11/24,07:05:52.060583: OpenAMIP: Modem is connected.
+N,75,22/11/24,07:05:52.396707: OpenAMIP: Modem linked, interval 0 seconds
+N,80,22/11/24,07:05:52.478277: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,07:05:52.478722: STID135 cut 2 detected
+N,80,22/11/24,07:05:52.478755: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+P,67,22/11/24,07:05:52.638318: STVVGLNA_Initialise over
+P,67,22/11/24,07:05:52.638361: STVVGLNA_Configure
+P,67,22/11/24,07:05:52.639075: STVVGLNA A = 00 : D=20
+P,67,22/11/24,07:05:52.639272: STVVGLNA A = 01 : D=40
+P,67,22/11/24,07:05:52.639461: STVVGLNA A = 02 : D=54
+P,67,22/11/24,07:05:52.639664: STVVGLNA A = 03 : D=20
+N,80,22/11/24,07:05:52.641974: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,07:05:52.642012: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,07:05:52.642034: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,07:05:52.642051: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,07:05:52.642069: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,07:05:52.642129: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,07:05:52.642155: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,07:05:52.642212: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,07:05:52.642245: STID135 library/chip initialisation success
+N,77,22/11/24,07:05:52.642319: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,07:05:52.649757: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,132,22/11/24,07:05:53.068991: [PRODUCTFAULT] Fault Code=206, Status=0, OpenAMIP link normal 
+N,132,22/11/24,07:05:54.083496: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,07:05:54.394287: Exec_ms=1752ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,07:05:54.394367: ACU_Tuner_Set_22kHz
+N,67,22/11/24,07:05:54.394407: LNB DC set to 13V
+W,68,22/11/24,07:05:54.394428: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,07:05:54.399544: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,07:05:54.399624: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,07:05:54.402264: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+N,68,22/11/24,07:05:54.402555: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,07:05:54.402606: LNB DC set to 18V
+A,68,22/11/24,07:05:54.402632: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+C,132,22/11/24,07:05:54.404537: [PRODUCTEVENT] 818, C, ACUSM: switch satellite, ACU : satellite switch requested: From [SatLong=0.0 AZN/EL/SK=107.1/-34.3/58.8] to [SatLong=122.0 AZN/EL/SK=179.3/55.2/2.2]
+
+E,68,22/11/24,07:05:54.404702: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+A,70,22/11/24,07:05:54.406016: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+W,68,22/11/24,07:05:54.415674: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+E,68,22/11/24,07:05:54.426364: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,07:05:54.431583: ACU: Slip ring antenna detected
+N,68,22/11/24,07:05:54.431629: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,07:05:54.431666: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+E,68,22/11/24,07:05:54.436814: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,07:05:54.447150: Set config: OK (0ms)
+E,68,22/11/24,07:05:54.447203: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,132,22/11/24,07:05:55.089264: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.105A
+N,132,22/11/24,07:05:55.090318: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,07:05:55.091081: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,07:05:55.091806: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,80,22/11/24,07:05:58.747912: Exec_ms=4343ms LBF=2092000kHz SR=4000ksps (success)
+N,132,22/11/24,07:06:04.986823: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,74,22/11/24,07:06:05.025408: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:06:05.030637: antenna  EL RL restabilisation off: OK (1ms)
+W,68,22/11/24,07:06:05.030829: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,07:06:05.041979: antenna conical scan off: OK (1ms)
+N,74,22/11/24,07:06:05.047715: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,07:06:05.047790: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,07:06:05.053028: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+W,68,22/11/24,07:06:05.058178: ACU: Satellite switch requested while not tracking, smart satellite switch movement sequence not used
+W,68,22/11/24,07:06:05.058317: ACU: State change from 'Check if rx already OK' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,07:06:05.068598: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:06:05.073968: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,07:06:05.074048: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,07:06:05.079242: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,07:06:05.089439: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:06:05.094718: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,07:06:05.099920: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,07:06:05.115268: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,07:06:05.115332: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,70,22/11/24,07:06:06.334192: FTS demod Locked : CON=3.80 dB AGC=2.330 V
+N,74,22/11/24,07:06:06.679282: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,07:06:06.679340: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,07:06:06.684470: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,07:06:06.689602: ACU: RXCIAK : Single burst SNR(C)=12.50 SNR(NC)=2.33, moving to track
+W,68,22/11/24,07:06:06.689812: ACU: State change from 'Check if rx already OK' to 'Tracking' (reason 0)
+W,68,22/11/24,07:06:06.694428: ACU: CCM interval 15637ms
+N,68,22/11/24,07:06:06.694576: CCM: Carrier change (old RF=0, new RF=12692000)
+N,132,22/11/24,07:06:06.695378: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+N,74,22/11/24,07:06:06.700636: antenna conical scan on: OK (1ms)
+N,74,22/11/24,07:06:06.705868: Set tracking config: OK (2ms)
+N,74,22/11/24,07:06:06.706385: Movement speed AZ (6) OK
+N,68,22/11/24,07:06:06.711830: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,07:06:08.176949: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,07:06:08.177387: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,67,22/11/24,07:06:51.075740: Get PMT current status (success)
+N,74,22/11/24,07:08:07.915671: Set tracking config: OK (0ms)
+W,68,22/11/24,07:08:07.915724: ACU,Track: Switch to low RL tilt reliance (AverageTilt=-0.00deg LatestGyroDrift=0.002DPS)
+N,132,22/11/24,07:35:39.254225: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,22/11/24,07:35:39.313824: Creating TCP SBINT server socket (port 30330)
+E,66,22/11/24,07:35:39.392206: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,22/11/24,07:35:39.392540: JSON_CFG_Initialise Success, (ACU)
+P,67,22/11/24,07:35:39.398350: JSON_CFG_Valid Success, (ACU)
+P,67,22/11/24,07:35:39.400168: MF config read from RT DB OK
+P,67,22/11/24,07:35:39.400218: MF config validated OK
+P,67,22/11/24,07:35:39.400814: HI config FV2 read from RT DB OK
+P,67,22/11/24,07:35:39.400857: HI config validated OK
+W,67,22/11/24,07:35:39.400934: The file /home/bird/data/amu_hi_config.json exists  
+P,67,22/11/24,07:35:39.403665: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,22/11/24,07:35:39.403730: The antenna is an antenna with SB motor removed. 
+A,35,22/11/24,07:35:39.403905: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72BD0000 Size=65536 fd=62
+A,35,22/11/24,07:35:39.406180: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BBD0000 Size=117440512 fd=63
+N,132,22/11/24,07:35:39.406414: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,22/11/24,07:35:39.407733: amu_model=AMUS6.1 ,use STiD135
+P,64,22/11/24,07:35:39.408117: TSK_Antenna_Track created OK
+P,64,22/11/24,07:35:39.409743: TSK_Tracking_Correction created OK
+P,64,22/11/24,07:35:39.411450: TSK_SNR_Update created OK
+P,64,22/11/24,07:35:39.411703: TSK_FTS_Management created OK
+P,64,22/11/24,07:35:39.412047: TSK_OpenAMIP created OK
+P,64,22/11/24,07:35:39.662205: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,22/11/24,07:35:39.662554: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,22/11/24,07:35:39.662595: FPGA version running = 3.9
+P,64,22/11/24,07:35:39.662614: acu pcb version 6.1 
+N,132,22/11/24,07:35:39.662697: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,22/11/24,07:35:39.662723: PL interrupt for I2C module (ID=0) initialised
+A,67,22/11/24,07:35:39.682731: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=6AF4F000 Size=4096 fd=75 pagesize=4096
+P,67,22/11/24,07:35:39.733735: AMU hardware initialised
+N,132,22/11/24,07:35:39.734139: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,22/11/24,07:35:39.734856: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,22/11/24,07:35:39.736129: GPS interface initialised
+N,76,22/11/24,07:35:39.736448: GPS processing initialised
+E,66,22/11/24,07:35:39.753850: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,22/11/24,07:35:39.754729: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,07:35:39.767885: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,07:35:39.774853: ACU 22k&&BUC config file parsed OK
+N,132,22/11/24,07:35:39.775366: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,07:35:39.775905: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,07:35:40.191646: GPS communication established (valid RMC message arrived now)
+N,132,22/11/24,07:35:40.276642: Serial port (Fd=77) closed
+P,67,22/11/24,07:35:40.276828: ACU BUC switch config ERR
+N,132,22/11/24,07:35:40.277099: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,07:35:40.277515: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,22/11/24,07:35:40.778429: Serial port (Fd=77) closed
+P,67,22/11/24,07:35:40.778813: ACU BUC Attenuator config ERR
+N,67,22/11/24,07:35:40.780587: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,07:35:40.780652: ACU mechanical calibration file validated OK
+N,67,22/11/24,07:35:40.781854: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,07:35:40.781920: ACU history forward carriers file validated OK
+N,67,22/11/24,07:35:40.782036: Ku 100cm beam pattern actived
+P,64,22/11/24,07:35:40.798747: TSK_Init: ACU Initialisation Complete
+N,64,22/11/24,07:35:40.798812: Antenna Model      :VS100K
+N,64,22/11/24,07:35:40.798838: Antenna Serial     :KW002291N0095
+N,64,22/11/24,07:35:40.798855: AMU Model          :AMUS6.1
+N,64,22/11/24,07:35:40.799667: Sensor Board       :dsb3.3
+N,132,22/11/24,07:35:40.799718: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,68,22/11/24,07:35:40.806602: ACU: Resetting state machine (due starting of antenna tracking task)
+N,68,22/11/24,07:35:40.811069: TSK_Antenna_Track: Active
+N,68,22/11/24,07:35:40.815853: TSK_Tracking_Correction: Active
+N,75,22/11/24,07:35:40.816558: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,22/11/24,07:35:40.816612: TSK_OpenAMIP: Initialisation Complete
+N,75,22/11/24,07:35:40.817740: OpenAMIP: wait modem connect to me...
+N,70,22/11/24,07:35:40.818143: TSK_SNR_Update: Active
+N,75,22/11/24,07:35:40.818482: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,07:35:40.818551: OpenAMIP: Restart TCP server
+N,77,22/11/24,07:35:40.819204: TSK_FTS_Management: Active
+N,75,22/11/24,07:35:40.819295: OpenAMIP: wait modem connect to me...
+N,77,22/11/24,07:35:40.829291: STID135 module reset start
+N,67,22/11/24,07:35:40.836953: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,07:35:40.837031: FTS I2C initialised (mode=standard)
+N,77,22/11/24,07:35:40.987216: STID135 module reset complete
+N,80,22/11/24,07:35:40.992642: Starting STID135 library/chip initialisation...
+E,132,22/11/24,07:35:41.084590: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+W,132,22/11/24,07:35:41.812648: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,07:35:41.813144: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,07:35:41.813898: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,22/11/24,07:35:41.814642: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,22/11/24,07:35:41.815063: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,07:35:41.815446: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,75,22/11/24,07:35:41.820420: OpenAMIP: Modem is connected.
+N,80,22/11/24,07:35:42.276322: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,07:35:42.276760: STID135 cut 2 detected
+N,80,22/11/24,07:35:42.276790: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+N,75,22/11/24,07:35:42.349419: OpenAMIP: Modem linked, interval 0 seconds
+P,67,22/11/24,07:35:42.435388: STVVGLNA_Initialise over
+P,67,22/11/24,07:35:42.435431: STVVGLNA_Configure
+P,67,22/11/24,07:35:42.436140: STVVGLNA A = 00 : D=20
+P,67,22/11/24,07:35:42.436378: STVVGLNA A = 01 : D=40
+P,67,22/11/24,07:35:42.436581: STVVGLNA A = 02 : D=54
+P,67,22/11/24,07:35:42.436783: STVVGLNA A = 03 : D=20
+N,80,22/11/24,07:35:42.439153: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,07:35:42.439207: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,07:35:42.439229: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,07:35:42.439245: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,07:35:42.439262: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,07:35:42.439277: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,07:35:42.439292: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,07:35:42.439355: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,07:35:42.439463: STID135 library/chip initialisation success
+N,77,22/11/24,07:35:42.439539: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,07:35:42.448167: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,132,22/11/24,07:35:42.827244: [PRODUCTFAULT] Fault Code=206, Status=0, OpenAMIP link normal 
+N,132,22/11/24,07:35:43.833712: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,07:35:44.189804: Exec_ms=1750ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,07:35:44.190003: ACU_Tuner_Set_22kHz
+N,67,22/11/24,07:35:44.190109: LNB DC set to 13V
+W,68,22/11/24,07:35:44.190199: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,07:35:44.195402: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,07:35:44.195484: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,07:35:44.198153: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+N,68,22/11/24,07:35:44.198597: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,07:35:44.199297: LNB DC set to 18V
+A,68,22/11/24,07:35:44.199343: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+C,132,22/11/24,07:35:44.199600: [PRODUCTEVENT] 818, C, ACUSM: switch satellite, ACU : satellite switch requested: From [SatLong=0.0 AZN/EL/SK=107.1/-34.3/58.8] to [SatLong=122.0 AZN/EL/SK=179.3/55.2/2.2]
+
+E,68,22/11/24,07:35:44.199944: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+A,70,22/11/24,07:35:44.203160: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+W,68,22/11/24,07:35:44.210898: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+E,68,22/11/24,07:35:44.221118: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,07:35:44.226307: ACU: Slip ring antenna detected
+N,68,22/11/24,07:35:44.226405: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,07:35:44.226434: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+E,68,22/11/24,07:35:44.231626: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,07:35:44.241967: Set config: OK (0ms)
+E,68,22/11/24,07:35:44.242023: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,132,22/11/24,07:35:44.842064: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.106A
+N,132,22/11/24,07:35:44.843507: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,07:35:44.844167: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,07:35:44.844405: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,80,22/11/24,07:35:48.547989: Exec_ms=4348ms LBF=2092000kHz SR=4000ksps (success)
+N,132,22/11/24,07:35:54.771260: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,74,22/11/24,07:35:54.820648: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:35:54.825959: antenna  EL RL restabilisation off: OK (1ms)
+W,68,22/11/24,07:35:54.826116: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,07:35:54.836357: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:35:54.841568: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,07:35:54.841622: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,07:35:54.846830: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+W,68,22/11/24,07:35:54.851949: ACU: Satellite switch requested while not tracking, smart satellite switch movement sequence not used
+W,68,22/11/24,07:35:54.852071: ACU: State change from 'Check if rx already OK' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,07:35:54.862259: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:35:54.867462: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,07:35:54.867529: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,07:35:54.872709: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,07:35:54.882925: antenna conical scan off: OK (0ms)
+N,74,22/11/24,07:35:54.888108: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,07:35:54.893348: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,07:35:54.908669: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,07:35:54.908712: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,70,22/11/24,07:35:56.151456: FTS demod Locked : CON=2.40 dB AGC=2.330 V
+N,74,22/11/24,07:35:56.472422: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,07:35:56.472496: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,07:35:56.477657: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,07:35:56.482807: ACU: RXCIAK : Single burst SNR(C)=11.80 SNR(NC)=2.33, moving to track
+W,68,22/11/24,07:35:56.483005: ACU: State change from 'Check if rx already OK' to 'Tracking' (reason 0)
+N,132,22/11/24,07:35:56.488477: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+W,68,22/11/24,07:35:56.491374: ACU: CCM interval 15676ms
+N,68,22/11/24,07:35:56.491477: CCM: Carrier change (old RF=0, new RF=12692000)
+N,74,22/11/24,07:35:56.494807: antenna conical scan on: OK (1ms)
+N,74,22/11/24,07:35:56.500012: Set tracking config: OK (0ms)
+N,74,22/11/24,07:35:56.500120: Movement speed AZ (6) OK
+N,68,22/11/24,07:35:56.505975: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,07:35:57.931971: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,07:35:57.932486: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,67,22/11/24,07:36:40.833206: Get PMT current status (success)
+N,74,22/11/24,07:37:57.531791: Set tracking config: OK (0ms)
+W,68,22/11/24,07:37:57.531855: ACU,Track: Switch to low RL tilt reliance (AverageTilt=0.00deg LatestGyroDrift=-0.003DPS)
+N,132,22/11/24,08:02:39.155428: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,22/11/24,08:02:39.204079: Creating TCP SBINT server socket (port 30330)
+E,66,22/11/24,08:02:39.274383: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,22/11/24,08:02:39.278002: JSON_CFG_Initialise Success, (ACU)
+P,67,22/11/24,08:02:39.287781: JSON_CFG_Valid Success, (ACU)
+P,67,22/11/24,08:02:39.290408: MF config read from RT DB OK
+P,67,22/11/24,08:02:39.290463: MF config validated OK
+P,67,22/11/24,08:02:39.291299: HI config FV2 read from RT DB OK
+P,67,22/11/24,08:02:39.291409: HI config validated OK
+W,67,22/11/24,08:02:39.291507: The file /home/bird/data/amu_hi_config.json exists  
+P,67,22/11/24,08:02:39.292630: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,22/11/24,08:02:39.292670: The antenna is an antenna with SB motor removed. 
+A,35,22/11/24,08:02:39.292802: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=7663E000 Size=65536 fd=62
+A,35,22/11/24,08:02:39.294975: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB00000 Size=117440512 fd=63
+N,132,22/11/24,08:02:39.295158: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,22/11/24,08:02:39.296715: amu_model=AMUS6.1 ,use STiD135
+P,64,22/11/24,08:02:39.297936: TSK_Antenna_Track created OK
+P,64,22/11/24,08:02:39.298176: TSK_Tracking_Correction created OK
+P,64,22/11/24,08:02:39.298544: TSK_SNR_Update created OK
+P,64,22/11/24,08:02:39.300585: TSK_FTS_Management created OK
+P,64,22/11/24,08:02:39.301963: TSK_OpenAMIP created OK
+P,64,22/11/24,08:02:39.554496: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,22/11/24,08:02:39.554908: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,22/11/24,08:02:39.554969: FPGA version running = 3.9
+P,64,22/11/24,08:02:39.554990: acu pcb version 6.1 
+N,132,22/11/24,08:02:39.555077: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,22/11/24,08:02:39.555110: PL interrupt for I2C module (ID=0) initialised
+A,67,22/11/24,08:02:39.575750: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=7663D000 Size=4096 fd=75 pagesize=4096
+P,67,22/11/24,08:02:39.626335: AMU hardware initialised
+N,132,22/11/24,08:02:39.627031: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,22/11/24,08:02:39.627468: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,22/11/24,08:02:39.628997: GPS interface initialised
+N,76,22/11/24,08:02:39.630482: GPS processing initialised
+E,66,22/11/24,08:02:39.654879: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,22/11/24,08:02:39.658932: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,08:02:39.678548: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,08:02:39.696926: ACU 22k&&BUC config file parsed OK
+N,132,22/11/24,08:02:39.697694: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,08:02:39.698959: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,08:02:40.114107: GPS communication established (valid RMC message arrived now)
+N,132,22/11/24,08:02:40.200079: Serial port (Fd=77) closed
+P,67,22/11/24,08:02:40.200354: ACU BUC switch config ERR
+N,132,22/11/24,08:02:40.200673: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,08:02:40.201120: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,22/11/24,08:02:40.701577: Serial port (Fd=77) closed
+P,67,22/11/24,08:02:40.701889: ACU BUC Attenuator config ERR
+N,67,22/11/24,08:02:40.703289: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,08:02:40.703340: ACU mechanical calibration file validated OK
+N,67,22/11/24,08:02:40.704557: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,08:02:40.704770: ACU history forward carriers file validated OK
+N,67,22/11/24,08:02:40.704913: Ku 100cm beam pattern actived
+P,64,22/11/24,08:02:40.718948: TSK_Init: ACU Initialisation Complete
+N,64,22/11/24,08:02:40.719046: Antenna Model      :VS100K
+N,64,22/11/24,08:02:40.719074: Antenna Serial     :KW002291N0095
+N,64,22/11/24,08:02:40.720162: AMU Model          :AMUS6.1
+N,64,22/11/24,08:02:40.721642: Sensor Board       :dsb3.3
+N,132,22/11/24,08:02:40.722120: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,68,22/11/24,08:02:40.725449: ACU: Resetting state machine (due starting of antenna tracking task)
+N,68,22/11/24,08:02:40.729749: TSK_Antenna_Track: Active
+N,77,22/11/24,08:02:40.735671: TSK_FTS_Management: Active
+N,70,22/11/24,08:02:40.735981: TSK_SNR_Update: Active
+N,68,22/11/24,08:02:40.738124: TSK_Tracking_Correction: Active
+N,75,22/11/24,08:02:40.739754: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,22/11/24,08:02:40.739805: TSK_OpenAMIP: Initialisation Complete
+N,75,22/11/24,08:02:40.740887: OpenAMIP: wait modem connect to me...
+N,75,22/11/24,08:02:40.741700: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,08:02:40.741780: OpenAMIP: Restart TCP server
+N,75,22/11/24,08:02:40.742369: OpenAMIP: wait modem connect to me...
+N,77,22/11/24,08:02:40.745770: STID135 module reset start
+N,67,22/11/24,08:02:40.753335: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,08:02:40.753406: FTS I2C initialised (mode=standard)
+N,77,22/11/24,08:02:40.903536: STID135 module reset complete
+N,80,22/11/24,08:02:40.908908: Starting STID135 library/chip initialisation...
+E,132,22/11/24,08:02:41.000690: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+W,132,22/11/24,08:02:41.727594: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,08:02:41.728928: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,08:02:41.729577: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,22/11/24,08:02:41.730929: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,22/11/24,08:02:41.731409: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,08:02:41.732978: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,75,22/11/24,08:02:41.743027: OpenAMIP: Modem is connected.
+N,75,22/11/24,08:02:41.743408: OpenAMIP: Modem linked, interval 0 seconds
+N,80,22/11/24,08:02:42.103122: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,08:02:42.103576: STID135 cut 2 detected
+N,80,22/11/24,08:02:42.103610: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+P,67,22/11/24,08:02:42.262580: STVVGLNA_Initialise over
+P,67,22/11/24,08:02:42.262637: STVVGLNA_Configure
+P,67,22/11/24,08:02:42.263368: STVVGLNA A = 00 : D=20
+P,67,22/11/24,08:02:42.263606: STVVGLNA A = 01 : D=40
+P,67,22/11/24,08:02:42.263801: STVVGLNA A = 02 : D=54
+P,67,22/11/24,08:02:42.263998: STVVGLNA A = 03 : D=20
+N,80,22/11/24,08:02:42.266322: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,08:02:42.266355: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,08:02:42.266375: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,08:02:42.266391: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,08:02:42.266409: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,08:02:42.266426: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,08:02:42.266442: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,08:02:42.266469: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,08:02:42.266498: STID135 library/chip initialisation success
+N,77,22/11/24,08:02:42.266562: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,08:02:42.275897: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,132,22/11/24,08:02:42.742251: [PRODUCTFAULT] Fault Code=206, Status=0, OpenAMIP link normal 
+N,132,22/11/24,08:02:43.756472: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,08:02:44.018666: Exec_ms=1752ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,08:02:44.018750: ACU_Tuner_Set_22kHz
+N,67,22/11/24,08:02:44.018828: LNB DC set to 13V
+W,68,22/11/24,08:02:44.018854: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,08:02:44.023983: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,08:02:44.024069: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,08:02:44.027217: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+N,68,22/11/24,08:02:44.027614: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,08:02:44.027727: LNB DC set to 18V
+A,68,22/11/24,08:02:44.028021: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+C,132,22/11/24,08:02:44.028284: [PRODUCTEVENT] 818, C, ACUSM: switch satellite, ACU : satellite switch requested: From [SatLong=0.0 AZN/EL/SK=107.1/-34.3/58.8] to [SatLong=122.0 AZN/EL/SK=179.3/55.2/2.2]
+
+E,68,22/11/24,08:02:44.028515: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+W,68,22/11/24,08:02:44.039047: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+A,70,22/11/24,08:02:44.041019: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+E,68,22/11/24,08:02:44.049577: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,08:02:44.054760: ACU: Slip ring antenna detected
+N,68,22/11/24,08:02:44.054824: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,08:02:44.054842: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+E,68,22/11/24,08:02:44.059953: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,08:02:44.070312: Set config: OK (1ms)
+E,68,22/11/24,08:02:44.070390: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,132,22/11/24,08:02:44.765602: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.106A
+N,132,22/11/24,08:02:44.766566: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,08:02:44.767663: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,08:02:44.768391: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,80,22/11/24,08:02:48.374002: Exec_ms=4345ms LBF=2092000kHz SR=4000ksps (success)
+N,132,22/11/24,08:02:54.659917: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,74,22/11/24,08:02:54.698685: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:02:54.704699: antenna  EL RL restabilisation off: OK (1ms)
+W,68,22/11/24,08:02:54.704880: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,08:02:54.715147: antenna conical scan off: OK (1ms)
+N,74,22/11/24,08:02:54.720347: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,08:02:54.720401: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,08:02:54.725688: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+W,68,22/11/24,08:02:54.730925: ACU: Satellite switch requested while not tracking, smart satellite switch movement sequence not used
+W,68,22/11/24,08:02:54.731108: ACU: State change from 'Check if rx already OK' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,08:02:54.741398: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:02:54.746960: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,08:02:54.747045: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,08:02:54.752270: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,08:02:54.762689: antenna conical scan off: OK (1ms)
+N,74,22/11/24,08:02:54.767874: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,08:02:54.788577: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,08:02:54.804012: antenna  EL RL restabilisation on: OK (1ms)
+N,68,22/11/24,08:02:54.804066: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,70,22/11/24,08:02:56.149109: FTS demod Locked : CON=0.00 dB AGC=2.330 V
+N,74,22/11/24,08:02:56.418776: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,08:02:56.418835: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,08:02:56.423965: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,08:02:56.429132: ACU: RXCIAK : Single burst SNR(C)=10.90 SNR(NC)=2.33, moving to track
+W,68,22/11/24,08:02:56.429405: ACU: State change from 'Check if rx already OK' to 'Tracking' (reason 0)
+N,132,22/11/24,08:02:56.434790: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+N,74,22/11/24,08:02:56.440246: antenna conical scan on: OK (1ms)
+N,74,22/11/24,08:02:56.445484: Set tracking config: OK (0ms)
+N,74,22/11/24,08:02:56.445612: Movement speed AZ (6) OK
+W,68,22/11/24,08:02:56.449738: ACU: CCM interval 15712ms
+N,68,22/11/24,08:02:56.449842: CCM: Carrier change (old RF=0, new RF=12692000)
+N,68,22/11/24,08:02:56.450751: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,08:02:57.858387: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,08:02:57.858827: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,67,22/11/24,08:03:40.746861: Get PMT current status (success)
+N,74,22/11/24,08:04:57.471686: Set tracking config: OK (0ms)
+W,68,22/11/24,08:04:57.471755: ACU,Track: Switch to low RL tilt reliance (AverageTilt=-0.00deg LatestGyroDrift=0.004DPS)
+N,132,22/11/24,08:29:41.036169: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,22/11/24,08:29:41.093807: Creating TCP SBINT server socket (port 30330)
+E,66,22/11/24,08:29:41.195597: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,22/11/24,08:29:41.195897: JSON_CFG_Initialise Success, (ACU)
+P,67,22/11/24,08:29:41.203170: JSON_CFG_Valid Success, (ACU)
+P,67,22/11/24,08:29:41.205380: MF config read from RT DB OK
+P,67,22/11/24,08:29:41.205429: MF config validated OK
+P,67,22/11/24,08:29:41.206006: HI config FV2 read from RT DB OK
+P,67,22/11/24,08:29:41.206042: HI config validated OK
+W,67,22/11/24,08:29:41.206109: The file /home/bird/data/amu_hi_config.json exists  
+P,67,22/11/24,08:29:41.206994: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,22/11/24,08:29:41.207029: The antenna is an antenna with SB motor removed. 
+A,35,22/11/24,08:29:41.207145: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72BA0000 Size=65536 fd=62
+A,35,22/11/24,08:29:41.209287: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BBA0000 Size=117440512 fd=63
+N,132,22/11/24,08:29:41.209444: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,22/11/24,08:29:41.210752: amu_model=AMUS6.1 ,use STiD135
+P,64,22/11/24,08:29:41.213006: TSK_Antenna_Track created OK
+P,64,22/11/24,08:29:41.215329: TSK_Tracking_Correction created OK
+P,64,22/11/24,08:29:41.216644: TSK_SNR_Update created OK
+P,64,22/11/24,08:29:41.219644: TSK_FTS_Management created OK
+P,64,22/11/24,08:29:41.221430: TSK_OpenAMIP created OK
+P,64,22/11/24,08:29:41.472372: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,22/11/24,08:29:41.472970: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,22/11/24,08:29:41.473038: FPGA version running = 3.9
+P,64,22/11/24,08:29:41.473062: acu pcb version 6.1 
+N,132,22/11/24,08:29:41.473153: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,22/11/24,08:29:41.473180: PL interrupt for I2C module (ID=0) initialised
+A,67,22/11/24,08:29:41.486249: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=76700000 Size=4096 fd=75 pagesize=4096
+P,67,22/11/24,08:29:41.536929: AMU hardware initialised
+N,132,22/11/24,08:29:41.537349: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,22/11/24,08:29:41.537809: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,22/11/24,08:29:41.538423: GPS interface initialised
+N,76,22/11/24,08:29:41.538462: GPS processing initialised
+E,66,22/11/24,08:29:41.565457: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,22/11/24,08:29:41.566274: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,08:29:41.579319: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,08:29:41.593110: ACU 22k&&BUC config file parsed OK
+N,132,22/11/24,08:29:41.595862: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,08:29:41.596327: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,22/11/24,08:29:42.097061: Serial port (Fd=77) closed
+P,67,22/11/24,08:29:42.097126: ACU BUC switch config ERR
+N,132,22/11/24,08:29:42.097389: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,08:29:42.097823: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,08:29:42.118743: GPS communication established (valid RMC message arrived now)
+N,132,22/11/24,08:29:42.598427: Serial port (Fd=77) closed
+P,67,22/11/24,08:29:42.598724: ACU BUC Attenuator config ERR
+N,67,22/11/24,08:29:42.602795: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,08:29:42.602850: ACU mechanical calibration file validated OK
+N,67,22/11/24,08:29:42.604053: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,08:29:42.604101: ACU history forward carriers file validated OK
+N,67,22/11/24,08:29:42.604193: Ku 100cm beam pattern actived
+P,64,22/11/24,08:29:42.617050: TSK_Init: ACU Initialisation Complete
+N,68,22/11/24,08:29:42.618063: ACU: Resetting state machine (due starting of antenna tracking task)
+N,64,22/11/24,08:29:42.621597: Antenna Model      :VS100K
+N,68,22/11/24,08:29:42.621931: TSK_Antenna_Track: Active
+N,64,22/11/24,08:29:42.623655: Antenna Serial     :KW002291N0095
+N,70,22/11/24,08:29:42.623818: TSK_SNR_Update: Active
+N,64,22/11/24,08:29:42.624429: AMU Model          :AMUS6.1
+N,77,22/11/24,08:29:42.625634: TSK_FTS_Management: Active
+N,64,22/11/24,08:29:42.625851: Sensor Board       :dsb3.3
+N,132,22/11/24,08:29:42.626526: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,75,22/11/24,08:29:42.628580: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,22/11/24,08:29:42.628651: TSK_OpenAMIP: Initialisation Complete
+N,75,22/11/24,08:29:42.629717: OpenAMIP: wait modem connect to me...
+N,75,22/11/24,08:29:42.630391: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,08:29:42.630470: OpenAMIP: Restart TCP server
+N,75,22/11/24,08:29:42.631213: OpenAMIP: wait modem connect to me...
+N,68,22/11/24,08:29:42.631504: TSK_Tracking_Correction: Active
+N,77,22/11/24,08:29:42.635769: STID135 module reset start
+N,67,22/11/24,08:29:42.643795: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,08:29:42.643856: FTS I2C initialised (mode=standard)
+N,77,22/11/24,08:29:42.794097: STID135 module reset complete
+N,80,22/11/24,08:29:42.799554: Starting STID135 library/chip initialisation...
+E,132,22/11/24,08:29:42.892484: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+W,132,22/11/24,08:29:43.628759: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,08:29:43.630076: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,08:29:43.630379: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,22/11/24,08:29:43.632074: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,75,22/11/24,08:29:43.632472: OpenAMIP: Modem is connected.
+N,132,22/11/24,08:29:43.633506: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,08:29:43.635264: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,80,22/11/24,08:29:44.069194: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,08:29:44.069715: STID135 cut 2 detected
+N,80,22/11/24,08:29:44.069749: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+N,75,22/11/24,08:29:44.122757: OpenAMIP: Modem linked, interval 0 seconds
+P,67,22/11/24,08:29:44.228176: STVVGLNA_Initialise over
+P,67,22/11/24,08:29:44.228218: STVVGLNA_Configure
+P,67,22/11/24,08:29:44.228910: STVVGLNA A = 00 : D=20
+P,67,22/11/24,08:29:44.229116: STVVGLNA A = 01 : D=40
+P,67,22/11/24,08:29:44.229311: STVVGLNA A = 02 : D=54
+P,67,22/11/24,08:29:44.229500: STVVGLNA A = 03 : D=20
+N,80,22/11/24,08:29:44.231917: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,08:29:44.231952: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,08:29:44.231975: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,08:29:44.231991: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,08:29:44.232007: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,08:29:44.232023: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,08:29:44.232038: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,08:29:44.232069: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,08:29:44.232097: STID135 library/chip initialisation success
+N,77,22/11/24,08:29:44.232176: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,08:29:44.239269: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,132,22/11/24,08:29:44.645343: [PRODUCTFAULT] Fault Code=206, Status=0, OpenAMIP link normal 
+N,132,22/11/24,08:29:45.650155: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,08:29:45.980754: Exec_ms=1749ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,08:29:45.980854: ACU_Tuner_Set_22kHz
+N,67,22/11/24,08:29:45.980891: LNB DC set to 13V
+W,68,22/11/24,08:29:45.980913: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,08:29:45.986051: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,08:29:45.986135: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,08:29:45.988636: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+N,68,22/11/24,08:29:45.988927: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,08:29:45.988974: LNB DC set to 18V
+A,70,22/11/24,08:29:45.991476: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+A,68,22/11/24,08:29:45.991680: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+C,132,22/11/24,08:29:45.991931: [PRODUCTEVENT] 818, C, ACUSM: switch satellite, ACU : satellite switch requested: From [SatLong=0.0 AZN/EL/SK=107.1/-34.3/58.8] to [SatLong=122.0 AZN/EL/SK=179.3/55.2/2.2]
+
+E,68,22/11/24,08:29:45.992114: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+W,68,22/11/24,08:29:46.002484: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+E,68,22/11/24,08:29:46.013017: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,08:29:46.018186: ACU: Slip ring antenna detected
+N,68,22/11/24,08:29:46.018244: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,08:29:46.018271: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+E,68,22/11/24,08:29:46.023384: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,08:29:46.033730: Set config: OK (0ms)
+E,68,22/11/24,08:29:46.033825: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,132,22/11/24,08:29:46.658798: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.106A
+N,132,22/11/24,08:29:46.659286: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,08:29:46.661138: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,08:29:46.661697: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,80,22/11/24,08:29:50.346171: Exec_ms=4344ms LBF=2092000kHz SR=4000ksps (success)
+N,132,22/11/24,08:29:56.522498: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,74,22/11/24,08:29:56.562347: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:29:56.567622: antenna  EL RL restabilisation off: OK (0ms)
+W,68,22/11/24,08:29:56.567758: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,08:29:56.578161: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:29:56.583341: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,08:29:56.583395: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,08:29:56.588563: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+W,68,22/11/24,08:29:56.593677: ACU: Satellite switch requested while not tracking, smart satellite switch movement sequence not used
+W,68,22/11/24,08:29:56.593797: ACU: State change from 'Check if rx already OK' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,08:29:56.603956: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:29:56.609106: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,08:29:56.609152: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,08:29:56.614319: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,08:29:56.624838: antenna conical scan off: OK (1ms)
+N,74,22/11/24,08:29:56.630004: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,08:29:56.635126: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,08:29:56.650499: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,08:29:56.650575: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,70,22/11/24,08:29:57.980452: FTS demod Locked : CON=2.30 dB AGC=2.330 V
+N,74,22/11/24,08:29:58.264837: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,08:29:58.264892: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,08:29:58.270063: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,08:29:58.275239: ACU: RXCIAK : Single burst SNR(C)=11.30 SNR(NC)=2.33, moving to track
+W,68,22/11/24,08:29:58.275432: ACU: State change from 'Check if rx already OK' to 'Tracking' (reason 0)
+W,68,22/11/24,08:29:58.276578: ACU: CCM interval 15645ms
+N,68,22/11/24,08:29:58.276712: CCM: Carrier change (old RF=0, new RF=12692000)
+N,132,22/11/24,08:29:58.280594: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+N,74,22/11/24,08:29:58.286008: antenna conical scan on: OK (1ms)
+N,74,22/11/24,08:29:58.291296: Set tracking config: OK (0ms)
+N,74,22/11/24,08:29:58.291442: Movement speed AZ (6) OK
+N,68,22/11/24,08:29:58.296581: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,08:29:59.763083: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,08:29:59.763862: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,67,22/11/24,08:30:42.659076: Get PMT current status (success)
+N,74,22/11/24,08:31:59.379611: Set tracking config: OK (0ms)
+W,68,22/11/24,08:31:59.379663: ACU,Track: Switch to low RL tilt reliance (AverageTilt=0.00deg LatestGyroDrift=-0.008DPS)
+N,132,22/11/24,08:56:40.171670: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,22/11/24,08:56:40.234406: Creating TCP SBINT server socket (port 30330)
+E,66,22/11/24,08:56:40.306548: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,22/11/24,08:56:40.307332: JSON_CFG_Initialise Success, (ACU)
+P,67,22/11/24,08:56:40.314036: JSON_CFG_Valid Success, (ACU)
+P,67,22/11/24,08:56:40.315893: MF config read from RT DB OK
+P,67,22/11/24,08:56:40.315946: MF config validated OK
+P,67,22/11/24,08:56:40.316709: HI config FV2 read from RT DB OK
+P,67,22/11/24,08:56:40.316753: HI config validated OK
+W,67,22/11/24,08:56:40.316845: The file /home/bird/data/amu_hi_config.json exists  
+P,67,22/11/24,08:56:40.317950: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,22/11/24,08:56:40.318011: The antenna is an antenna with SB motor removed. 
+A,35,22/11/24,08:56:40.318154: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72BD0000 Size=65536 fd=62
+A,35,22/11/24,08:56:40.324031: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BBD0000 Size=117440512 fd=63
+N,132,22/11/24,08:56:40.324371: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,22/11/24,08:56:40.325978: amu_model=AMUS6.1 ,use STiD135
+P,64,22/11/24,08:56:40.326570: TSK_Antenna_Track created OK
+P,64,22/11/24,08:56:40.327908: TSK_Tracking_Correction created OK
+P,64,22/11/24,08:56:40.329431: TSK_SNR_Update created OK
+P,64,22/11/24,08:56:40.329604: TSK_FTS_Management created OK
+P,64,22/11/24,08:56:40.329954: TSK_OpenAMIP created OK
+P,64,22/11/24,08:56:40.580090: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,22/11/24,08:56:40.580208: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,22/11/24,08:56:40.580243: FPGA version running = 3.9
+P,64,22/11/24,08:56:40.580261: acu pcb version 6.1 
+N,132,22/11/24,08:56:40.580338: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,22/11/24,08:56:40.580366: PL interrupt for I2C module (ID=0) initialised
+A,67,22/11/24,08:56:40.597236: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=76702000 Size=4096 fd=75 pagesize=4096
+P,67,22/11/24,08:56:40.647621: AMU hardware initialised
+N,132,22/11/24,08:56:40.648226: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,22/11/24,08:56:40.648855: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,22/11/24,08:56:40.650335: GPS interface initialised
+N,76,22/11/24,08:56:40.650566: GPS processing initialised
+E,66,22/11/24,08:56:40.676057: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,22/11/24,08:56:40.676773: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,08:56:40.684483: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,08:56:40.690939: ACU 22k&&BUC config file parsed OK
+N,132,22/11/24,08:56:40.691681: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,08:56:40.692539: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,22/11/24,08:56:41.193668: Serial port (Fd=77) closed
+P,67,22/11/24,08:56:41.193745: ACU BUC switch config ERR
+N,132,22/11/24,08:56:41.194267: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,08:56:41.194886: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,08:56:41.231092: GPS communication established (valid RMC message arrived now)
+N,132,22/11/24,08:56:41.695670: Serial port (Fd=77) closed
+P,67,22/11/24,08:56:41.696142: ACU BUC Attenuator config ERR
+N,67,22/11/24,08:56:41.697869: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,08:56:41.698165: ACU mechanical calibration file validated OK
+N,67,22/11/24,08:56:41.700058: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,08:56:41.700112: ACU history forward carriers file validated OK
+N,67,22/11/24,08:56:41.700219: Ku 100cm beam pattern actived
+P,64,22/11/24,08:56:41.713607: TSK_Init: ACU Initialisation Complete
+N,68,22/11/24,08:56:41.717639: ACU: Resetting state machine (due starting of antenna tracking task)
+N,68,22/11/24,08:56:41.721825: TSK_Antenna_Track: Active
+N,64,22/11/24,08:56:41.717675: Antenna Model      :VS100K
+N,64,22/11/24,08:56:41.723520: Antenna Serial     :KW002291N0095
+N,64,22/11/24,08:56:41.723573: AMU Model          :AMUS6.1
+N,64,22/11/24,08:56:41.723594: Sensor Board       :dsb3.3
+N,132,22/11/24,08:56:41.723642: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,68,22/11/24,08:56:41.723738: TSK_Tracking_Correction: Active
+N,75,22/11/24,08:56:41.726669: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+N,70,22/11/24,08:56:41.726731: TSK_SNR_Update: Active
+P,75,22/11/24,08:56:41.726737: TSK_OpenAMIP: Initialisation Complete
+N,75,22/11/24,08:56:41.727571: OpenAMIP: wait modem connect to me...
+N,77,22/11/24,08:56:41.727696: TSK_FTS_Management: Active
+N,75,22/11/24,08:56:41.728627: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,08:56:41.728728: OpenAMIP: Restart TCP server
+N,75,22/11/24,08:56:41.729368: OpenAMIP: wait modem connect to me...
+N,77,22/11/24,08:56:41.737779: STID135 module reset start
+N,67,22/11/24,08:56:41.748600: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,08:56:41.748684: FTS I2C initialised (mode=standard)
+N,77,22/11/24,08:56:41.898859: STID135 module reset complete
+N,80,22/11/24,08:56:41.904411: Starting STID135 library/chip initialisation...
+E,132,22/11/24,08:56:41.997328: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+N,75,22/11/24,08:56:42.730160: OpenAMIP: Modem is connected.
+N,75,22/11/24,08:56:42.730551: OpenAMIP: Modem linked, interval 0 seconds
+W,132,22/11/24,08:56:42.732161: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,08:56:42.732913: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,08:56:42.734591: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,22/11/24,08:56:42.735330: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,08:56:42.735769: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,80,22/11/24,08:56:43.111357: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,08:56:43.112126: STID135 cut 2 detected
+N,80,22/11/24,08:56:43.112166: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+P,67,22/11/24,08:56:43.271275: STVVGLNA_Initialise over
+P,67,22/11/24,08:56:43.271319: STVVGLNA_Configure
+P,67,22/11/24,08:56:43.272072: STVVGLNA A = 00 : D=20
+P,67,22/11/24,08:56:43.272300: STVVGLNA A = 01 : D=40
+P,67,22/11/24,08:56:43.272493: STVVGLNA A = 02 : D=54
+P,67,22/11/24,08:56:43.272689: STVVGLNA A = 03 : D=20
+N,80,22/11/24,08:56:43.275022: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,08:56:43.275056: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,08:56:43.275077: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,08:56:43.275094: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,08:56:43.275110: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,08:56:43.275125: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,08:56:43.275140: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,08:56:43.275203: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,08:56:43.275234: STID135 library/chip initialisation success
+N,77,22/11/24,08:56:43.275296: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,08:56:43.278643: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,132,22/11/24,08:56:44.753634: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,08:56:45.030255: Exec_ms=1755ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,08:56:45.030372: ACU_Tuner_Set_22kHz
+N,67,22/11/24,08:56:45.030416: LNB DC set to 13V
+W,68,22/11/24,08:56:45.030438: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,08:56:45.035639: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,08:56:45.035725: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,08:56:45.038877: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+N,68,22/11/24,08:56:45.039369: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,08:56:45.039430: LNB DC set to 18V
+A,68,22/11/24,08:56:45.039456: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+C,132,22/11/24,08:56:45.040011: [PRODUCTEVENT] 818, C, ACUSM: switch satellite, ACU : satellite switch requested: From [SatLong=0.0 AZN/EL/SK=107.1/-34.3/58.8] to [SatLong=122.0 AZN/EL/SK=179.3/55.2/2.2]
+
+E,68,22/11/24,08:56:45.040194: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+W,68,22/11/24,08:56:45.051170: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+A,70,22/11/24,08:56:45.051775: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+E,68,22/11/24,08:56:45.061588: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,08:56:45.066791: ACU: Slip ring antenna detected
+N,68,22/11/24,08:56:45.066846: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,08:56:45.066865: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+E,68,22/11/24,08:56:45.072023: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,08:56:45.082352: Set config: OK (0ms)
+E,68,22/11/24,08:56:45.082404: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,132,22/11/24,08:56:45.759272: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.106A
+N,132,22/11/24,08:56:45.760145: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,08:56:45.760879: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,08:56:45.761439: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,80,22/11/24,08:56:49.384577: Exec_ms=4344ms LBF=2092000kHz SR=4000ksps (success)
+N,132,22/11/24,08:56:55.716843: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,74,22/11/24,08:56:55.760708: antenna conical scan off: OK (1ms)
+N,74,22/11/24,08:56:55.766046: antenna  EL RL restabilisation off: OK (1ms)
+W,68,22/11/24,08:56:55.766377: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,08:56:55.776768: antenna conical scan off: OK (1ms)
+N,74,22/11/24,08:56:55.781955: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,08:56:55.781998: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,08:56:55.787154: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+W,68,22/11/24,08:56:55.792248: ACU: Satellite switch requested while not tracking, smart satellite switch movement sequence not used
+W,68,22/11/24,08:56:55.792348: ACU: State change from 'Check if rx already OK' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,08:56:55.802520: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:56:55.808058: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,08:56:55.808111: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,08:56:55.813348: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,08:56:55.823582: antenna conical scan off: OK (0ms)
+N,74,22/11/24,08:56:55.828743: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,08:56:55.833911: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,08:56:55.849292: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,08:56:55.849341: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,70,22/11/24,08:56:57.179214: FTS demod Locked : CON=1.70 dB AGC=2.330 V
+N,74,22/11/24,08:56:57.463805: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,08:56:57.463872: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,08:56:57.469010: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,08:56:57.474189: ACU: RXCIAK : Single burst SNR(C)=11.20 SNR(NC)=2.33, moving to track
+W,68,22/11/24,08:56:57.474400: ACU: State change from 'Check if rx already OK' to 'Tracking' (reason 0)
+W,68,22/11/24,08:56:57.479633: ACU: CCM interval 15756ms
+N,132,22/11/24,08:56:57.479627: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+N,68,22/11/24,08:56:57.479754: CCM: Carrier change (old RF=0, new RF=12692000)
+N,74,22/11/24,08:56:57.485238: antenna conical scan on: OK (1ms)
+N,74,22/11/24,08:56:57.490450: Set tracking config: OK (1ms)
+N,74,22/11/24,08:56:57.490544: Movement speed AZ (6) OK
+N,68,22/11/24,08:56:57.495785: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,08:56:58.867283: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,08:56:58.868970: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,67,22/11/24,08:57:41.746886: Get PMT current status (success)
+N,74,22/11/24,08:58:58.594036: Set tracking config: OK (2ms)
+W,68,22/11/24,08:58:58.594099: ACU,Track: Switch to low RL tilt reliance (AverageTilt=0.00deg LatestGyroDrift=-0.002DPS)
+N,132,22/11/24,09:23:42.123935: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,22/11/24,09:23:42.172871: Creating TCP SBINT server socket (port 30330)
+E,66,22/11/24,09:23:42.247932: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,22/11/24,09:23:42.248649: JSON_CFG_Initialise Success, (ACU)
+P,67,22/11/24,09:23:42.257983: JSON_CFG_Valid Success, (ACU)
+P,67,22/11/24,09:23:42.260952: MF config read from RT DB OK
+P,67,22/11/24,09:23:42.261012: MF config validated OK
+P,67,22/11/24,09:23:42.261945: HI config FV2 read from RT DB OK
+P,67,22/11/24,09:23:42.262004: HI config validated OK
+W,67,22/11/24,09:23:42.262077: The file /home/bird/data/amu_hi_config.json exists  
+P,67,22/11/24,09:23:42.263290: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,22/11/24,09:23:42.263353: The antenna is an antenna with SB motor removed. 
+A,35,22/11/24,09:23:42.263499: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=76713000 Size=65536 fd=62
+A,35,22/11/24,09:23:42.266106: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BC00000 Size=117440512 fd=63
+N,132,22/11/24,09:23:42.266453: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,22/11/24,09:23:42.268096: amu_model=AMUS6.1 ,use STiD135
+P,64,22/11/24,09:23:42.269147: TSK_Antenna_Track created OK
+P,64,22/11/24,09:23:42.270233: TSK_Tracking_Correction created OK
+P,64,22/11/24,09:23:42.271519: TSK_SNR_Update created OK
+P,64,22/11/24,09:23:42.271891: TSK_FTS_Management created OK
+P,64,22/11/24,09:23:42.273229: TSK_OpenAMIP created OK
+P,64,22/11/24,09:23:42.523846: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,22/11/24,09:23:42.524096: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,22/11/24,09:23:42.524141: FPGA version running = 3.9
+P,64,22/11/24,09:23:42.524162: acu pcb version 6.1 
+N,132,22/11/24,09:23:42.524238: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,22/11/24,09:23:42.524263: PL interrupt for I2C module (ID=0) initialised
+A,67,22/11/24,09:23:42.536787: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=76712000 Size=4096 fd=75 pagesize=4096
+P,67,22/11/24,09:23:42.587133: AMU hardware initialised
+N,132,22/11/24,09:23:42.587539: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,22/11/24,09:23:42.588147: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,22/11/24,09:23:42.588510: GPS interface initialised
+N,76,22/11/24,09:23:42.588559: GPS processing initialised
+E,66,22/11/24,09:23:42.606488: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,22/11/24,09:23:42.607823: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,09:23:42.625883: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,22/11/24,09:23:42.642294: ACU 22k&&BUC config file parsed OK
+N,132,22/11/24,09:23:42.642996: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,09:23:42.643765: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,22/11/24,09:23:43.144191: Serial port (Fd=77) closed
+P,67,22/11/24,09:23:43.144253: ACU BUC switch config ERR
+N,132,22/11/24,09:23:43.144493: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,22/11/24,09:23:43.144871: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,76,22/11/24,09:23:43.198099: GPS communication established (valid RMC message arrived now)
+N,132,22/11/24,09:23:43.645644: Serial port (Fd=77) closed
+P,67,22/11/24,09:23:43.645706: ACU BUC Attenuator config ERR
+N,67,22/11/24,09:23:43.649718: ACU mechanical calibration file loaded and parsed OK
+N,67,22/11/24,09:23:43.649773: ACU mechanical calibration file validated OK
+N,67,22/11/24,09:23:43.651236: ACU history forward carriers file loaded and parsed OK
+N,67,22/11/24,09:23:43.651298: ACU history forward carriers file validated OK
+N,67,22/11/24,09:23:43.651397: Ku 100cm beam pattern actived
+P,64,22/11/24,09:23:43.667210: TSK_Init: ACU Initialisation Complete
+N,64,22/11/24,09:23:43.667291: Antenna Model      :VS100K
+N,64,22/11/24,09:23:43.667320: Antenna Serial     :KW002291N0095
+N,64,22/11/24,09:23:43.667337: AMU Model          :AMUS6.1
+N,64,22/11/24,09:23:43.667398: Sensor Board       :dsb3.3
+N,132,22/11/24,09:23:43.667891: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,68,22/11/24,09:23:43.671052: ACU: Resetting state machine (due starting of antenna tracking task)
+N,68,22/11/24,09:23:43.675630: TSK_Antenna_Track: Active
+N,70,22/11/24,09:23:43.677237: TSK_SNR_Update: Active
+N,77,22/11/24,09:23:43.678506: TSK_FTS_Management: Active
+N,75,22/11/24,09:23:43.678545: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,22/11/24,09:23:43.678596: TSK_OpenAMIP: Initialisation Complete
+N,75,22/11/24,09:23:43.679782: OpenAMIP: wait modem connect to me...
+N,75,22/11/24,09:23:43.680676: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,22/11/24,09:23:43.680752: OpenAMIP: Restart TCP server
+N,68,22/11/24,09:23:43.681040: TSK_Tracking_Correction: Active
+N,75,22/11/24,09:23:43.681561: OpenAMIP: wait modem connect to me...
+N,77,22/11/24,09:23:43.688599: STID135 module reset start
+N,67,22/11/24,09:23:43.696270: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,22/11/24,09:23:43.696332: FTS I2C initialised (mode=standard)
+N,77,22/11/24,09:23:43.846529: STID135 module reset complete
+N,80,22/11/24,09:23:43.852097: Starting STID135 library/chip initialisation...
+E,132,22/11/24,09:23:43.943195: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+W,132,22/11/24,09:23:44.673783: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,22/11/24,09:23:44.674919: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,22/11/24,09:23:44.675792: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,22/11/24,09:23:44.676918: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,22/11/24,09:23:44.677668: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,22/11/24,09:23:44.679199: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,75,22/11/24,09:23:44.682477: OpenAMIP: Modem is connected.
+N,75,22/11/24,09:23:44.683905: OpenAMIP: Modem linked, interval 0 seconds
+N,80,22/11/24,09:23:45.383309: STID135 library/chip initialisation done (OK)
+N,80,22/11/24,09:23:45.384012: STID135 cut 2 detected
+N,80,22/11/24,09:23:45.384057: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+P,67,22/11/24,09:23:45.543302: STVVGLNA_Initialise over
+P,67,22/11/24,09:23:45.543344: STVVGLNA_Configure
+P,67,22/11/24,09:23:45.544449: STVVGLNA A = 00 : D=20
+P,67,22/11/24,09:23:45.544669: STVVGLNA A = 01 : D=40
+P,67,22/11/24,09:23:45.544878: STVVGLNA A = 02 : D=54
+P,67,22/11/24,09:23:45.545074: STVVGLNA A = 03 : D=20
+N,80,22/11/24,09:23:45.547407: STVVGLNA Automatic_Mode = Auto Mode
+N,80,22/11/24,09:23:45.547438: STVVGLNA Gain_Band_Select = 2 
+N,80,22/11/24,09:23:45.547458: STVVGLNA Gain_Intra_Band = 21 
+N,80,22/11/24,09:23:45.547475: STVVGLNA Target_Output_Power_dBm = -20
+N,80,22/11/24,09:23:45.547491: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,22/11/24,09:23:45.547506: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,22/11/24,09:23:45.547522: STVVGLNA Gain_dB = 2.200000 
+N,80,22/11/24,09:23:45.547549: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,22/11/24,09:23:45.547577: STID135 library/chip initialisation success
+N,77,22/11/24,09:23:45.547643: FTS manager : Init Success (attempt 1)
+N,68,22/11/24,09:23:45.553197: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+N,132,22/11/24,09:23:45.692324: [PRODUCTFAULT] Fault Code=206, Status=0, OpenAMIP link normal 
+N,132,22/11/24,09:23:46.706716: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,22/11/24,09:23:47.298098: Exec_ms=1750ms LBF=1961000kHz SR=12400ksps (success)
+N,80,22/11/24,09:23:47.298177: ACU_Tuner_Set_22kHz
+N,67,22/11/24,09:23:47.298219: LNB DC set to 13V
+W,68,22/11/24,09:23:47.298241: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,22/11/24,09:23:47.303379: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,22/11/24,09:23:47.303488: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,22/11/24,09:23:47.306746: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+N,68,22/11/24,09:23:47.307174: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,22/11/24,09:23:47.307243: LNB DC set to 18V
+A,68,22/11/24,09:23:47.307269: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+C,132,22/11/24,09:23:47.307585: [PRODUCTEVENT] 818, C, ACUSM: switch satellite, ACU : satellite switch requested: From [SatLong=0.0 AZN/EL/SK=107.1/-34.3/58.8] to [SatLong=122.0 AZN/EL/SK=179.3/55.2/2.2]
+
+E,68,22/11/24,09:23:47.307747: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+W,68,22/11/24,09:23:47.318278: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+A,70,22/11/24,09:23:47.322250: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+E,68,22/11/24,09:23:47.328542: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,22/11/24,09:23:47.334217: ACU: Slip ring antenna detected
+N,68,22/11/24,09:23:47.334298: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,22/11/24,09:23:47.334325: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+E,68,22/11/24,09:23:47.339453: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,22/11/24,09:23:47.349805: Set config: OK (0ms)
+E,68,22/11/24,09:23:47.349869: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,132,22/11/24,09:23:47.714009: [PRODUCTEVENT] 111, N, LNB fault off, Voltage: 17.84V, Currents: 0.106A
+N,132,22/11/24,09:23:47.714408: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,22/11/24,09:23:47.715445: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,132,22/11/24,09:23:47.715869: [PRODUCTFAULT] Fault Code=403, Status=0, LNB current normal 
+N,80,22/11/24,09:23:51.650163: Exec_ms=4342ms LBF=2092000kHz SR=4000ksps (success)
+N,132,22/11/24,09:23:57.614387: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,74,22/11/24,09:23:57.626742: antenna conical scan off: OK (1ms)
+N,74,22/11/24,09:23:57.631907: antenna  EL RL restabilisation off: OK (0ms)
+W,68,22/11/24,09:23:57.632078: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,09:23:57.642290: antenna conical scan off: OK (0ms)
+N,74,22/11/24,09:23:57.648135: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,09:23:57.648254: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,09:23:57.653539: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+W,68,22/11/24,09:23:57.658671: ACU: Satellite switch requested while not tracking, smart satellite switch movement sequence not used
+W,68,22/11/24,09:23:57.658799: ACU: State change from 'Check if rx already OK' to 'Waiting for necessary conditions' (reason 0)
+N,74,22/11/24,09:23:57.669194: antenna conical scan off: OK (0ms)
+N,74,22/11/24,09:23:57.674474: antenna  EL RL restabilisation off: OK (1ms)
+N,68,22/11/24,09:23:57.674529: ACU: SubState change from 'Initial' to 'Waiting'
+W,68,22/11/24,09:23:57.679827: ACU: State change from 'Waiting for necessary conditions' to 'Check if rx already OK' (reason 0)
+N,74,22/11/24,09:23:57.690222: antenna conical scan off: OK (0ms)
+N,74,22/11/24,09:23:57.695881: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,09:23:57.701168: ACU: SubState change from 'Initial' to 'Set elevation'
+N,74,22/11/24,09:23:57.716671: antenna  EL RL restabilisation on: OK (0ms)
+N,68,22/11/24,09:23:57.716738: ACU: SubState change from 'Set elevation' to 'Moving elevation'
+N,70,22/11/24,09:23:58.990580: FTS demod Locked : CON=0.90 dB AGC=2.330 V
+N,74,22/11/24,09:23:59.331344: antenna  EL RL restabilisation off: OK (0ms)
+N,68,22/11/24,09:23:59.331429: ACU: SubState change from 'Moving elevation' to 'Moving skew'
+N,68,22/11/24,09:23:59.336568: ACU: SubState change from 'Moving skew' to 'Measuring'
+N,68,22/11/24,09:23:59.341760: ACU: RXCIAK : Single burst SNR(C)=11.50 SNR(NC)=2.33, moving to track
+W,68,22/11/24,09:23:59.342058: ACU: State change from 'Check if rx already OK' to 'Tracking' (reason 0)
+N,132,22/11/24,09:23:59.347303: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = AT_INITIAL_TRACK_TIME
+W,68,22/11/24,09:23:59.351233: ACU: CCM interval 15670ms
+N,68,22/11/24,09:23:59.351380: CCM: Carrier change (old RF=0, new RF=12692000)
+N,74,22/11/24,09:23:59.352653: antenna conical scan on: OK (1ms)
+N,74,22/11/24,09:23:59.358210: Set tracking config: OK (1ms)
+N,74,22/11/24,09:23:59.358307: Movement speed AZ (6) OK
+N,68,22/11/24,09:23:59.363443: ACU: SubState change from 'Initial' to 'Measuring'
+C,132,22/11/24,09:24:00.826427: [PRODUCTEVENT] 206, C, Tracking stable, Tracking stable
+N,132,22/11/24,09:24:00.827916: [PRODUCTFAULT] Fault Code=211, Status=0, ACU tracking stable 
+N,67,22/11/24,09:24:43.695870: Get PMT current status (success)
+N,74,22/11/24,09:26:00.516758: Set tracking config: OK (0ms)
+W,68,22/11/24,09:26:00.516816: ACU,Track: Switch to low RL tilt reliance (AverageTilt=-0.00deg LatestGyroDrift=0.009DPS)
+N,132,02/03/26,03:53:33.751656: acu starting: Version 1.1.51 (compiled 20:07:30 Jun  8 2023)
+N,132,02/03/26,03:53:33.824955: Creating TCP SBINT server socket (port 30330)
+E,66,02/03/26,03:53:33.919052: JSON_CFG_CHECK: (Schema_Ver = 3, Instance_Ver =  3, Soft_Ver = 3)
+P,67,02/03/26,03:53:33.919743: JSON_CFG_Initialise Success, (ACU)
+P,67,02/03/26,03:53:33.936758: JSON_CFG_Valid Success, (ACU)
+P,67,02/03/26,03:53:33.939438: MF config read from RT DB OK
+P,67,02/03/26,03:53:33.939525: MF config validated OK
+P,67,02/03/26,03:53:33.940492: HI config FV2 read from RT DB OK
+P,67,02/03/26,03:53:33.940561: HI config validated OK
+W,67,02/03/26,03:53:33.940653: The file /home/bird/data/amu_hi_config.json exists  
+P,67,02/03/26,03:53:33.942020: The RM_SB_MOTOR FLAFG 's value is 1
+P,67,02/03/26,03:53:33.942109: The antenna is an antenna with SB motor removed. 
+A,35,02/03/26,03:53:33.942271: Init_PL_Memory_Mapped_Access OK : P=43C00000 V=72B90000 Size=65536 fd=62
+A,35,02/03/26,03:53:33.951528: Init_PS_PL_Shared_Memory_Mapped_Access OK : P=09000000 V=6BB90000 Size=117440512 fd=63
+N,132,02/03/26,03:53:33.955186: [PRODUCTEVENT] 814, N, TX mute on, First reason on = INITIALISING
+N,80,02/03/26,03:53:33.957231: amu_model=AMUS6.1 ,use STiD135
+P,64,02/03/26,03:53:33.960268: TSK_Antenna_Track created OK
+P,64,02/03/26,03:53:33.960648: TSK_Tracking_Correction created OK
+P,64,02/03/26,03:53:33.960833: TSK_SNR_Update created OK
+P,64,02/03/26,03:53:33.961202: TSK_FTS_Management created OK
+P,64,02/03/26,03:53:33.962985: TSK_OpenAMIP created OK
+P,64,02/03/26,03:53:34.213266: THISS Starlight : ACU process (AMUSx) version 1.1.51 compiled on 20:07:32 Jun  8 2023)
+N,67,02/03/26,03:53:34.213375: PCB version resolved OK, amu_model=AMUS6.1, version=6.1
+P,64,02/03/26,03:53:34.213407: FPGA version running = 3.9
+P,64,02/03/26,03:53:34.213427: acu pcb version 6.1 
+N,132,02/03/26,03:53:34.213504: Interrupt (I2C0_Complete) added [file=/dev/uio1 fd=74]
+N,67,02/03/26,03:53:34.213531: PL interrupt for I2C module (ID=0) initialised
+A,67,02/03/26,03:53:34.230147: Init_XADC_Memory_Mapped_Access OK : P=F8007000 V=76701000 Size=4096 fd=75 pagesize=4096
+P,67,02/03/26,03:53:34.280559: AMU hardware initialised
+N,132,02/03/26,03:53:34.281266: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,02/03/26,03:53:34.281993: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,02/03/26,03:53:34.283234: GPS interface initialised
+N,76,02/03/26,03:53:34.283486: GPS processing initialised
+E,66,02/03/26,03:53:34.307064: JSON_CFG_CHECK: (Schema_Ver = 10, Instance_Ver =  10, Soft_Ver = 10)
+P,67,02/03/26,03:53:34.308205: JSON_CFG_Initialise Success, (/home/bird/data/acu_tracking_config.json)
+P,67,02/03/26,03:53:34.319092: JSON_CFG_Valid Success, (/home/bird/data/acu_tracking_config.json)
+P,67,02/03/26,03:53:34.321006: ACU 22k&&BUC config file parsed OK
+N,132,02/03/26,03:53:34.323162: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,02/03/26,03:53:34.326196: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,02/03/26,03:53:34.826564: Serial port (Fd=77) closed
+P,67,02/03/26,03:53:34.826734: ACU BUC switch config ERR
+N,132,02/03/26,03:53:34.827200: Serial port /dev/ttyUL4 (Fd=77) opened
+N,132,02/03/26,03:53:34.827782: Serial port (Fd=77) set attributes OK (B9600 D8 P0 S1 F0)
+N,132,02/03/26,03:53:35.328368: Serial port (Fd=77) closed
+P,67,02/03/26,03:53:35.328625: ACU BUC Attenuator config ERR
+N,67,02/03/26,03:53:35.332769: ACU mechanical calibration file loaded and parsed OK
+N,67,02/03/26,03:53:35.332841: ACU mechanical calibration file validated OK
+N,67,02/03/26,03:53:35.334202: ACU history forward carriers file loaded and parsed OK
+N,67,02/03/26,03:53:35.334262: ACU history forward carriers file validated OK
+N,67,02/03/26,03:53:35.334558: Ku 100cm beam pattern actived
+P,64,02/03/26,03:53:35.352137: TSK_Init: ACU Initialisation Complete
+N,64,02/03/26,03:53:35.352671: Antenna Model      :VS100K
+N,68,02/03/26,03:53:35.354294: ACU: Resetting state machine (due starting of antenna tracking task)
+N,64,02/03/26,03:53:35.356389: Antenna Serial     :KW002291N0095
+N,64,02/03/26,03:53:35.358581: AMU Model          :AMUS6.1
+N,68,02/03/26,03:53:35.358784: TSK_Antenna_Track: Active
+N,64,02/03/26,03:53:35.358929: Sensor Board       :dsb3.3
+N,132,02/03/26,03:53:35.361316: [PRODUCTEVENT] 815, N, TX mute off, Last reason off = INITIALISING
+N,70,02/03/26,03:53:35.367901: TSK_SNR_Update: Active
+N,68,02/03/26,03:53:35.368390: TSK_Tracking_Correction: Active
+N,77,02/03/26,03:53:35.368518: TSK_FTS_Management: Active
+N,75,02/03/26,03:53:35.368603: OpenAMIP: The tcp server reset time interval was set to 300 seconds
+P,75,02/03/26,03:53:35.368639: TSK_OpenAMIP: Initialisation Complete
+N,75,02/03/26,03:53:35.369352: OpenAMIP: wait modem connect to me...
+N,75,02/03/26,03:53:35.369873: OpenAMIP: The IP address of OpenAMIP was modified
+N,75,02/03/26,03:53:35.369927: OpenAMIP: Restart TCP server
+N,75,02/03/26,03:53:35.370549: OpenAMIP: wait modem connect to me...
+E,76,02/03/26,03:53:35.373691: GPS lock lost (>3s since locked RMC message arrived)
+N,132,02/03/26,03:53:35.373754: [PRODUCTEVENT] 102, N, GPS lock lost, >3s since locked RMC message arrived
+N,132,02/03/26,03:53:35.373817: [PRODUCTFAULT] Fault Code=2101, Status=1, GPS lost signal 
+N,77,02/03/26,03:53:35.378589: STID135 module reset start
+N,67,02/03/26,03:53:35.391596: I2C initialised (ID=0, requested bit rate 400000Hz, achieved bit rate=396825Hz, divider=63)
+N,80,02/03/26,03:53:35.391673: FTS I2C initialised (mode=standard)
+N,77,02/03/26,03:53:35.541857: STID135 module reset complete
+N,80,02/03/26,03:53:35.551930: Starting STID135 library/chip initialisation...
+E,132,02/03/26,03:53:35.657645: Oxford_CheckPowerStatus: Timeout=0, Overall_ok=1 (1=ok) DCDC_ok_field=1 (0=working) LDO_ok_field=1 (1=working)
+W,132,02/03/26,03:53:36.370394: [PRODUCTEVENT] 110, W, LNB fault on, Voltage: 0.00V, Currents: 0.000A
+N,132,02/03/26,03:53:36.371102: [PRODUCTFAULT] Fault Code=211, Status=1, ACU tracking unstable 
+N,132,02/03/26,03:53:36.372617: [PRODUCTFAULT] Fault Code=206, Status=1, OpenAMIP link failed 
+N,132,02/03/26,03:53:36.373748: [PRODUCTFAULT] Fault Code=311, Status=1, DC LNB fault 
+N,132,02/03/26,03:53:36.374458: [PRODUCTFAULT] Fault Code=403, Status=1, LNB current fault 
+N,132,02/03/26,03:53:36.374903: [PRODUCTFAULT] Fault Code=3301, Status=1, SB motor fault 
+N,80,02/03/26,03:53:36.740093: STID135 library/chip initialisation done (OK)
+N,80,02/03/26,03:53:36.740507: STID135 cut 2 detected
+N,80,02/03/26,03:53:36.740537: STID135 LLA revision is STiD135-LLA_REL_1.5.4-Jun_2019
+P,67,02/03/26,03:53:36.899363: STVVGLNA_Initialise over
+P,67,02/03/26,03:53:36.899404: STVVGLNA_Configure
+P,67,02/03/26,03:53:36.900086: STVVGLNA A = 00 : D=20
+P,67,02/03/26,03:53:36.900280: STVVGLNA A = 01 : D=40
+P,67,02/03/26,03:53:36.900472: STVVGLNA A = 02 : D=54
+P,67,02/03/26,03:53:36.900669: STVVGLNA A = 03 : D=20
+N,80,02/03/26,03:53:36.902997: STVVGLNA Automatic_Mode = Auto Mode
+N,80,02/03/26,03:53:36.903031: STVVGLNA Gain_Band_Select = 2 
+N,80,02/03/26,03:53:36.903052: STVVGLNA Gain_Intra_Band = 21 
+N,80,02/03/26,03:53:36.903068: STVVGLNA Target_Output_Power_dBm = -20
+N,80,02/03/26,03:53:36.903084: STVVGLNA Automatic_Gain_At_High_Limit = False
+N,80,02/03/26,03:53:36.903100: STVVGLNA Automatic_Gain_At_Low_Limit = False 
+N,80,02/03/26,03:53:36.903115: STVVGLNA Gain_dB = 2.200000 
+N,80,02/03/26,03:53:36.903143: STVVGLNA Input_Power_dBm = -22.200001 
+N,80,02/03/26,03:53:36.903171: STID135 library/chip initialisation success
+N,77,02/03/26,03:53:36.903231: FTS manager : Init Success (attempt 1)
+N,68,02/03/26,03:53:36.904798: ACU_Check_Co_Polarisation:Get Previous_LNB_V : 0.00
+W,132,02/03/26,03:53:37.381488: [PRODUCTEVENT] 108, W, BUC fault on, Voltage: 23.47V, Currents: 0.000A
+N,132,02/03/26,03:53:37.382785: [PRODUCTFAULT] Fault Code=402, Status=1, BUC current fault 
+N,132,02/03/26,03:53:38.394740: [PRODUCTFAULT] Fault Code=3301, Status=0, SB motor normal 
+N,80,02/03/26,03:53:38.648303: Exec_ms=1745ms LBF=1961000kHz SR=12400ksps (success)
+N,80,02/03/26,03:53:38.648371: ACU_Tuner_Set_22kHz
+N,67,02/03/26,03:53:38.648430: LNB DC set to 13V
+W,68,02/03/26,03:53:38.648449: ACUSM: Switch to Cross-Polarisation, 22kHz disabled!
+C,132,02/03/26,03:53:38.653579: [PRODUCTEVENT] 202, C, Forward carrier change, id=1 rf=12692000khz sym=4000ksps sat_long=122.0 sat_skew=0.0 polar_id=2 
+
+C,68,02/03/26,03:53:38.653660: ACU: Antenna type changed from None to VS100K8W, resetting state machine
+N,132,02/03/26,03:53:38.656348: [PRODUCTEVENT] 814, N, TX mute on, First reason on = AT_STATE
+W,79,02/03/26,03:53:38.656614: OpenAMIP link down, cannot change mute state immediately to on
+N,68,02/03/26,03:53:38.656683: ACUSM: Carrier change (old RF=0 SR=0, new RF=12692000 SR=4000), Auto LNB DC 
+N,67,02/03/26,03:53:38.656744: LNB DC set to 18V
+A,68,02/03/26,03:53:38.656771: ACU: Antenna type is VS100K8W: Configured polarisation is Vertical, using polarisation of Vertical
+W,67,02/03/26,03:53:38.656795: ACU : satellite switch requested while GPS not locked, smart switch not possible
+E,68,02/03/26,03:53:38.656957: ACU: State change from 'Disabled' to 'No communications' (reason 0)
+W,68,02/03/26,03:53:38.667820: ACU: State change from 'No communications' to 'Initialising' (reason 0)
+A,70,02/03/26,03:53:38.672930: ACU: Tracking initialised for 20.00ms SNR estimate interval (30 SNR estimates per 600ms conical scan)
+E,68,02/03/26,03:53:38.678101: ACU: SubState change from 'Initial' to 'Init: Get antenna information'
+A,68,02/03/26,03:53:38.683235: ACU: Slip ring antenna detected
+N,68,02/03/26,03:53:38.683286: ACU: Compass assist NOT enabled in ACU_Tracking_Config.json
+E,68,02/03/26,03:53:38.683308: ACU: SubState change from 'Init: Get antenna information' to 'Init: Wait for GPS lock'
+N,132,02/03/26,03:53:39.403188: [PRODUCTEVENT] 109, N, BUC fault off, Voltage: 0.00V, Currents: 0.000A
+N,132,02/03/26,03:53:39.404179: [PRODUCTFAULT] Fault Code=209, Status=0, ACU and ANT communicate normal 
+N,132,02/03/26,03:53:39.405138: [PRODUCTFAULT] Fault Code=311, Status=0, DC LNB normal 
+N,80,02/03/26,03:53:42.992167: Exec_ms=4334ms LBF=2092000kHz SR=4000ksps (success)
+N,132,02/03/26,03:53:49.278022: [PRODUCTEVENT] 201, N, Antenna initialisation complete, 
+N,132,02/03/26,03:53:54.285316: [PRODUCTEVENT] 102, N, GPS lock lost, GPS interface re-initialise (>20s since valid RMC message arrived)
+E,133,02/03/26,03:53:54.285638: GPS interface closed:76
+N,132,02/03/26,03:53:54.286854: Serial port (Fd=76) closed
+N,132,02/03/26,03:53:54.287731: Serial port /dev/ttyUL1 (Fd=76) opened
+N,132,02/03/26,03:53:54.288133: Serial port (Fd=76) set attributes OK (B9600 D8 P0 S1 F0)
+N,133,02/03/26,03:53:54.288441: GPS interface initialised
+E,68,02/03/26,03:53:58.719639: ACU: SubState change from 'Init: Wait for GPS lock' to 'Init: Configure antenna'
+N,74,02/03/26,03:53:58.729852: Set config: OK (0ms)
+E,68,02/03/26,03:53:58.729914: ACU: SubState change from 'Init: Configure antenna' to 'Init: Wait for antenna operating'
+N,74,02/03/26,03:53:58.740120: antenna conical scan off: OK (0ms)
+N,74,02/03/26,03:53:58.745287: antenna  EL RL restabilisation off: OK (0ms)
+W,68,02/03/26,03:53:58.745421: ACU: State change from 'Initialising' to 'Waiting for necessary conditions' (reason 0)
+N,74,02/03/26,03:53:58.755684: antenna conical scan off: OK (0ms)
+N,74,02/03/26,03:53:58.760844: antenna  EL RL restabilisation off: OK (1ms)
+N,68,02/03/26,03:53:58.760894: ACU: SubState change from 'Initial' to 'Waiting'

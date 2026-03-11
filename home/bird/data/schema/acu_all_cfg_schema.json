@@ -1,0 +1,323 @@
+{
+  "Format_Version":3,
+  "type": "struct",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "Format_Version": {
+      "type": "uint16",
+      "attribute":"private",
+      "default":3
+    },
+    "log_levels": {
+      "type": "array",
+      "items": {
+        "type": "uint8",
+        "exclusiveMaximum":9,
+        "attribute":"private",
+        "default":5
+      },
+	    "minItems":32,
+	    "maxItems":32
+    },
+
+    /* GPS simulation, handy when no GPS antenna plugged into MDC/AMUS */
+    "gps_sim_enabled": {
+      "type": "bool",
+      "attribute":"public",
+      "default":false
+    },
+    "gps_sim_locked": {
+      "type": "bool",
+      "attribute":"public",
+      "default":true
+    },
+    "gps_sim_latitude_degs": {
+      "type":"float",
+      "attribute":"public",
+      "exclusiveMinimum":-90,
+      "exclusiveMaximum":90,
+      "default":28.60
+    },
+    "gps_sim_longitude_degs": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":-180,
+      "exclusiveMaximum":180,
+      "default":121.43
+    },
+
+    /* False: Use OpenAMIP - True: Use manual forward configuration */
+    "mf_enabled": {
+      "type": "bool",
+      "attribute":"public",
+      "default":false
+    },
+    "mf_carrier_id": {
+      "type": "uint32",
+      "attribute":"public",
+      "maximum":64,
+      "default":1
+    },
+
+    /* Manual Mute the TX */
+    "manual_mute": {
+      "type": "bool",
+      "attribute":"public",
+      "default":false
+    },
+
+    /* Pointing mode ID Idle(0)/Automatic(1)/Manual(2)/*/
+    "pointing_mode_id": {
+      "type": "uint8",
+      "attribute":"public",
+      "enum":[0,1,2],
+      "default":1
+    },
+    "azr_manual_degs": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":720,
+      "default":200.0
+    },
+    "azc_manual_degs": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":360,
+      "default":180.0
+    },
+    "el_manual_degs": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":90,
+      "default":29.7
+    },
+    "rl_manual_degs": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":-30,
+      "exclusiveMaximum":30,
+      "default":0.0
+    },
+    "sk_manual_degs": {
+      "type": "float",
+      "attribute":"public",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":180,
+      "default":49.2
+    },
+
+    /*BUC DC, LNB DC, LNB 10MHz*/
+    "lnb_dc_auto": {
+      "type": "bool",
+      "attribute":"public",
+      "default":true
+    },
+    "lnb_dc_manual_v": {
+      "type": "string",
+      "attribute":"public",
+      "enum":["13V","18V","VIN"],
+      "default":"18V"
+    },
+
+    /*Detect the maximum and minimum pcb_voltage values*/
+    "min_pcb_input_v": {
+      "type": "float",
+      "attribute":"private",
+	    "exclusiveMinimum":1,
+      "exclusiveMaximum":50,
+      "default":20.0   
+    },
+    "max_pcb_input_v": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":1,
+      "exclusiveMaximum":50,
+      "default":26.0
+    },
+    "max_internal_rail_error_percent": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":20,
+      "default":5.0
+    },
+
+    /* Temperatue alarm thershold */
+    "min_cpu_temperature_degc": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":-40,
+      "exclusiveMaximum":80,
+      "default":-30.0
+    },
+    "max_cpu_temperature_degc": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":-40,
+      "exclusiveMaximum":80,
+      "default":80.0
+    },
+    "min_air_temperature_degc": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":-40,
+      "exclusiveMaximum":80,
+      "default":-40.0
+    },
+    "max_air_temperature_degc": {
+      "type": "float",
+      "attribute":"private",
+      "exclusiveMinimum":-40,
+      "exclusiveMaximum":80,
+      "default":70.0
+    },
+    
+    /*OpenAMIP config*/
+    "openamip_tcp_port": {
+      "type": "uint16",
+      "attribute":"public",
+      "exclusiveMinimum":1,
+      "default":4003
+    },
+    "openamip_tcp_reset_interval_s": {
+      "type": "uint32",
+      "attribute":"private",
+      "default":300
+    },
+    "openamip_modem_alive_interval_s": {
+      "type": "uint32",
+      "attribute":"private",
+      "default":5
+    },
+    "openamip_rx_rolloff_percent": {
+      "type": "float",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":100,
+      "attribute":"public",
+      "default":20.0
+    },
+    "openamip_tx_rolloff_percent": {
+      "type": "float",
+      "exclusiveMinimum":0,
+      "exclusiveMaximum":100,
+      "attribute":"public",
+      "default":20.0
+    },
+    "openamip_ip_address": {
+      "type": "string",
+      "attribute":"private",
+      "default":"192.168.0.2",
+    },
+
+    "minimum_elevation_degs": {
+      "type": "float",
+      "attribute":"private",
+      "default":5.0
+    },
+
+    /*Skew calibration offset*/
+    "sk_cal_offset_degs": {
+      "type": "float",
+      "attribute":"public",
+      "default":0.0
+    },
+    "sk_hori_pol_cal_offest_degs": {
+      "type": "float",
+      "attribute":"public",
+      "inherit": "sk_cal_offset_degs",
+      "default":0.0
+    },
+    "sk_ver_pol_cal_offest_degs": {
+      "type": "float",
+      "attribute":"public",
+      "inherit": "sk_cal_offset_degs",
+      "default":0.0
+    },
+
+    "search_success_threshold_demod_con_db": {
+      "type": "float",
+      "attribute":"private",
+      "default":-2.0
+    },
+    "tracking_movement_scaling": {
+      "type": "float",
+      "attribute":"private",
+      "default":0.091
+    },
+
+    /*bat config*/
+    "bat_auto_connect": {
+      "type": "bool",
+      "attribute":"private",
+      "default":false
+    },
+    "bat_host_string": {
+      "type": "string",
+      "attribute":"private",
+      "format":"ipv4",
+      "default":"192.168.0.110"
+    },
+    "bat_port": {
+      "type": "uint16",
+      "enum":[35430],
+      "attribute":"private",
+      "default":35430
+    },
+    "pr_version": {
+      "type": "string",
+      "format":"PRVersion",
+      "attribute":"public",
+      "default":"1.0.0"
+    }
+  },
+  "relation":{
+    "min_pcb_input_v":["max_pcb_input_v", "<"],
+    "min_cpu_temperature_degc":["max_cpu_temperature_degc", "<"],
+    "min_air_temperature_degc":["max_air_temperature_degc","<"]
+  },
+  "required": [
+    "Format_Version",
+    "log_levels",
+    "gps_sim_enabled",
+    "gps_sim_locked",
+    "gps_sim_latitude_degs",
+    "gps_sim_longitude_degs",
+    "mf_enabled",
+    "mf_carrier_id",
+    "manual_mute",
+    "pointing_mode_id",
+    "azr_manual_degs",
+    "azc_manual_degs",
+    "el_manual_degs",
+    "rl_manual_degs",
+    "sk_manual_degs",
+    "lnb_dc_auto",
+    "lnb_dc_manual_v",
+    "min_pcb_input_v",
+    "max_pcb_input_v",
+    "max_internal_rail_error_percent",
+    "min_cpu_temperature_degc",
+    "max_cpu_temperature_degc",
+    "min_air_temperature_degc",
+    "max_air_temperature_degc",
+    "openamip_tcp_port",
+    "openamip_tcp_reset_interval_s",
+    "openamip_modem_alive_interval_s",
+    "openamip_rx_rolloff_percent",
+    "openamip_tx_rolloff_percent",
+    "openamip_ip_address",
+    "minimum_elevation_degs",
+    "sk_cal_offset_degs",
+    "sk_hori_pol_cal_offest_degs",
+    "sk_ver_pol_cal_offest_degs",
+    "search_success_threshold_demod_con_db",
+    "tracking_movement_scaling",
+    "bat_auto_connect",
+    "bat_host_string",
+    "bat_port",
+    "pr_version"
+  ],
+}

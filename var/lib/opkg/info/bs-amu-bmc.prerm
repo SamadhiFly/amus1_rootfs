@@ -1,0 +1,61 @@
+#!/bin/sh
+
+#================================================================
+# THISS Technologies
+# Peter Stootman
+# February 2019
+#
+# This script performs pre remove actions for the
+# bs-amu-bmc package.
+#
+#================================================================
+
+
+set -e
+
+# summary of how this script can be called:
+#        * <prerm> `remove'
+#        * <old-prerm> `upgrade' <new-version>
+#        * <new-prerm> `failed-upgrade' <old-version>
+#        * <conflictor's-prerm> `remove' `in-favour' <package> <new-version>
+#        * <deconfigured's-prerm> `deconfigure' `in-favour'
+#          <package-being-installed> <version> `removing'
+#          <conflicting-package> <version>
+
+
+case "$1" in
+    remove)
+    echo ""
+    echo "===== Preremove Commencing : bs-amu-bmc ====="
+    echo ""
+    if [ -x /etc/init.d/bs-amu-bmc ]; then
+       if [ -x /usr/sbin/invoke-rc.d ]; then
+           invoke-rc.d bs-amu-bmc stop
+       else
+           /etc/init.d/bs-amu-bmc stop
+       fi
+    fi
+#    # Deconfigure the syslog entry pointing to the event FIFO
+#    /usr/share/amu/bmc/config_syslog.sh remove
+#    /etc/init.d/sysklogd restart
+
+    echo ""
+    echo "===== Preremove Complete : bs-amu-bmc ====="
+    echo ""
+    ;;
+
+    upgrade|deconfigure)
+    ;;
+
+    failed-upgrade)
+    ;;
+
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+
+

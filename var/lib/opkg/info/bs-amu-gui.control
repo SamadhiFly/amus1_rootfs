@@ -1,0 +1,8 @@
+Package: bs-amu-gui
+Version: 0.3.12
+Architecture: all
+Maintainer: BIRD Technologies Pte Ltd <info@thiss.net>
+Installed-Size: 4156
+Section: devel
+Priority: optional
+Description: AMU Product Graphical User Interface

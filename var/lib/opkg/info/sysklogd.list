@@ -1,0 +1,4 @@
+/etc/syslog.conf.sysklogd
+/sbin/syslogd.sysklogd
+/etc/init.d/syslog.sysklogd
+/sbin/klogd.sysklogd

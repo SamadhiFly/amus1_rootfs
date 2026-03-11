@@ -1,0 +1,55 @@
+#!/bin/bash -e
+
+# Date: March 13, 2020
+# Author: Angelo Zhang Bing An/Cai Yuan
+
+# A very small utility function to replace one field in HI JSON, for R&D only.
+
+# Caveats: 
+# Empty string in field value is not supported for now
+# It is DB update, not DB insert, no tracable auditing
+# Event will not be generated
+# Configuration won't be saved permanently to flash
+# ACU/ANT won't be restarted
+
+
+
+VERSION=1 # Initial draft
+
+print_usage()
+{
+  echo "Version $VERSION: Change one field in HI JSON"
+  echo "$(basename $0) field value"
+  echo "Example change modem mac address: $(basename $0) modem_mac 010203040506"
+  exit 1 
+}
+
+field=$1
+value=$2
+
+if [ -z "$field" ] || [ -z "$value" ]; then
+  echo "field or value required"
+  print_usage
+fi
+
+echo "To change $field to $value"
+
+# Update field directly using SQLite JSON replace command, see https://sqlite.org/json1.html for more details
+# For json_replace, it will only change existing field, and won't create any new field.
+sqlite3 /tmp/config.sqlite "update config set json_config=(select json_replace((select json_config from config where group_name = 'HI' and active > 0 limit 1), '$.$field', '$value')) where group_name = 'HI' and active > 0"
+
+# Show updated value
+new_value=$(sqlite3 /tmp/config.sqlite "select json_extract((select json_config from config where group_name = 'HI' and active > 0 limit 1), '$.$field')") 
+
+if [ -z "$new_value" ]; then
+  echo "Not updated, are you sure $field is defined?"
+else
+  if [ "$value" != "$new_value" ]; then
+    echo "$field's value is ($new_value) instead of ($value)"
+  else
+    echo "$field updated to $value successfully"
+  fi 
+fi
+
+
+

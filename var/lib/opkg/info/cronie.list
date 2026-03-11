@@ -1,0 +1,12 @@
+/etc/cron.hourly/
+/etc/cron.monthly/
+/etc/cron.d/
+/etc/cron.deny
+/usr/sbin/crond
+/etc/crontab
+/etc/init.d/crond
+/etc/sysconfig/
+/etc/cron.weekly/
+/var/spool/cron/
+/usr/bin/crontab
+/etc/sysconfig/crond

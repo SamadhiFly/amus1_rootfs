@@ -1,0 +1,14 @@
+/usr/lib/sudo/libsudo_util.so.0.0.0
+/usr/lib/sudo/sudo_noexec.so
+/etc/sudoers
+/usr/lib/sudo/sudoers.so
+/usr/bin/sudo
+/usr/lib/sudo/group_file.so
+/usr/sbin/visudo
+/usr/lib/sudo/system_group.so
+/usr/lib/sudo/
+/etc/sudoers.d/
+/usr/bin/sudoreplay
+/usr/lib/sudo/libsudo_util.so.0
+/usr/bin/sudoedit
+/var/lib/sudo/

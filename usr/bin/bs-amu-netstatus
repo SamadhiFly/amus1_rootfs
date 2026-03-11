@@ -1,0 +1,22 @@
+#!/bin/bash
+
+######################################################################
+# Copyright BIRD/Thiss Technologies
+#
+# Date: December 20, 2019
+#
+# Print AMUS network status
+######################################################################
+
+# Link status
+/sbin/ip link show
+echo 
+
+# IP addresses
+/sbin/ip address show
+echo
+
+# Network stats
+/bin/netstat -s
+echo
+

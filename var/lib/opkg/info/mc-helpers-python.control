@@ -1,0 +1,13 @@
+Package: mc-helpers-python
+Version: 4.8.13-r0
+Description: Midnight Commander Python-based helper scripts
+ Midnight Commander is an ncurses based file manager.
+Section: console/utils
+Priority: optional
+Maintainer: Poky <poky@yoctoproject.org>
+License: GPLv3
+Architecture: cortexa9-vfp-neon
+OE: mc
+Homepage: http://www.midnight-commander.org/
+Depends: python
+Source: http://www.midnight-commander.org/downloads/mc-4.8.13.tar.bz2 file://mc-CTRL.patch
